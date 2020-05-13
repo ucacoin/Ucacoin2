@@ -1,0 +1,6 @@
+usr/local/bin/ucacoin-qt usr/bin
+share/pixmaps/ucacoin32.xpm usr/share/pixmaps
+share/pixmaps/ucacoin16.xpm usr/share/pixmaps
+share/pixmaps/ucacoin128.png usr/share/pixmaps
+debian/ucacoin-qt.desktop usr/share/applications
+debian/ucacoin-qt.protocol usr/share/kde4/services/

@@ -1,0 +1,37 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/ucacoin_bg.qm</file>
+        <file alias="ca">locale/ucacoin_ca.qm</file>
+        <file alias="cs">locale/ucacoin_cs.qm</file>
+        <file alias="da">locale/ucacoin_da.qm</file>
+        <file alias="de">locale/ucacoin_de.qm</file>
+        <file alias="en">locale/ucacoin_en.qm</file>
+        <file alias="en_GB">locale/ucacoin_en_GB.qm</file>
+        <file alias="en_US">locale/ucacoin_en_US.qm</file>
+        <file alias="eo">locale/ucacoin_eo.qm</file>
+        <file alias="es">locale/ucacoin_es.qm</file>
+        <file alias="es_ES">locale/ucacoin_es_ES.qm</file>
+        <file alias="fi">locale/ucacoin_fi.qm</file>
+        <file alias="fr_FR">locale/ucacoin_fr_FR.qm</file>
+        <file alias="hi_IN">locale/ucacoin_hi_IN.qm</file>
+        <file alias="hr">locale/ucacoin_hr.qm</file>
+        <file alias="hr_HR">locale/ucacoin_hr_HR.qm</file>
+        <file alias="it">locale/ucacoin_it.qm</file>
+        <file alias="ja">locale/ucacoin_ja.qm</file>
+        <file alias="ko_KR">locale/ucacoin_ko_KR.qm</file>
+        <file alias="lt_LT">locale/ucacoin_lt_LT.qm</file>
+        <file alias="nl">locale/ucacoin_nl.qm</file>
+        <file alias="pl">locale/ucacoin_pl.qm</file>
+        <file alias="pt">locale/ucacoin_pt.qm</file>
+        <file alias="pt_BR">locale/ucacoin_pt_BR.qm</file>
+        <file alias="ro_RO">locale/ucacoin_ro_RO.qm</file>
+        <file alias="ru">locale/ucacoin_ru.qm</file>
+        <file alias="sk">locale/ucacoin_sk.qm</file>
+        <file alias="sv">locale/ucacoin_sv.qm</file>
+        <file alias="tr">locale/ucacoin_tr.qm</file>
+        <file alias="uk">locale/ucacoin_uk.qm</file>
+        <file alias="vi">locale/ucacoin_vi.qm</file>
+        <file alias="zh_CN">locale/ucacoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/ucacoin_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,81 @@
+policy_module(ucacoin, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type ucacoin_t;
+type ucacoin_exec_t;
+init_daemon_domain(ucacoin_t, ucacoin_exec_t)
+
+permissive ucacoin_t;
+
+type ucacoin_initrc_exec_t;
+init_script_file(ucacoin_initrc_exec_t)
+
+type ucacoin_conf_t;
+files_type(ucacoin_conf_t)
+
+type ucacoin_var_lib_t;
+files_type(ucacoin_var_lib_t)
+
+type ucacoin_var_run_t;
+files_type(ucacoin_var_run_t)
+
+type ucacoin_port_t;
+corenet_port(ucacoin_port_t)
+
+########################################
+#
+# ucacoin local policy
+#
+allow ucacoin_t self:process { fork };
+
+allow ucacoin_t self:fifo_file rw_fifo_file_perms;
+allow ucacoin_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(ucacoin_t, ucacoin_conf_t, ucacoin_conf_t)
+manage_files_pattern(ucacoin_t, ucacoin_conf_t, ucacoin_conf_t)
+
+manage_dirs_pattern(ucacoin_t, ucacoin_var_lib_t, ucacoin_var_lib_t)
+manage_files_pattern(ucacoin_t, ucacoin_var_lib_t, ucacoin_var_lib_t)
+files_var_lib_filetrans(ucacoin_t, ucacoin_var_lib_t, { dir file })
+
+manage_dirs_pattern(ucacoin_t, ucacoin_var_run_t, ucacoin_var_run_t)
+manage_files_pattern(ucacoin_t, ucacoin_var_run_t, ucacoin_var_run_t)
+
+sysnet_dns_name_resolve(ucacoin_t)
+corenet_all_recvfrom_unlabeled(ucacoin_t)
+
+allow ucacoin_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(ucacoin_t)
+corenet_tcp_sendrecv_generic_node(ucacoin_t)
+corenet_tcp_sendrecv_all_ports(ucacoin_t)
+corenet_tcp_bind_generic_node(ucacoin_t)
+
+gen_require(`
+    type ucacoin_port_t;
+')
+allow ucacoin_t ucacoin_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type ucacoin_port_t;
+')
+allow ucacoin_t ucacoin_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(ucacoin_t)
+
+files_read_etc_files(ucacoin_t)
+
+miscfiles_read_localization(ucacoin_t)
+
+sysnet_dns_name_resolve(ucacoin_t)
+
+allow ucacoin_t ucacoin_exec_t:file execute_no_trans;
+allow ucacoin_t self:process setsched;
+corecmd_exec_ls(ucacoin_t)
+corenet_tcp_connect_http_port(ucacoin_t)
+dev_read_urand(ucacoin_t)
+fs_getattr_xattr_fs(ucacoin_t)
+kernel_read_system_state(ucacoin_t)

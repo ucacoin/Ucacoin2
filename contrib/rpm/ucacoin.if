@@ -1,0 +1,157 @@
+
+## <summary>policy for ucacoin</summary>
+
+
+########################################
+## <summary>
+##	Transition to ucacoin.
+## </summary>
+## <param name="domain">
+## <summary>
+##	Domain allowed to transition.
+## </summary>
+## </param>
+#
+interface(`ucacoin_domtrans',`
+	gen_require(`
+		type ucacoin_t, ucacoin_exec_t;
+	')
+
+	corecmd_search_bin($1)
+	domtrans_pattern($1, ucacoin_exec_t, ucacoin_t)
+')
+
+
+########################################
+## <summary>
+##	Execute ucacoin server in the ucacoin domain.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`ucacoin_initrc_domtrans',`
+	gen_require(`
+		type ucacoin_initrc_exec_t;
+	')
+
+	init_labeled_script_domtrans($1, ucacoin_initrc_exec_t)
+')
+
+
+########################################
+## <summary>
+##	Search ucacoin lib directories.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`ucacoin_search_lib',`
+	gen_require(`
+		type ucacoin_var_lib_t;
+	')
+
+	allow $1 ucacoin_var_lib_t:dir search_dir_perms;
+	files_search_var_lib($1)
+')
+
+########################################
+## <summary>
+##	Read ucacoin lib files.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`ucacoin_read_lib_files',`
+	gen_require(`
+		type ucacoin_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	read_files_pattern($1, ucacoin_var_lib_t, ucacoin_var_lib_t)
+')
+
+########################################
+## <summary>
+##	Manage ucacoin lib files.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`ucacoin_manage_lib_files',`
+	gen_require(`
+		type ucacoin_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	manage_files_pattern($1, ucacoin_var_lib_t, ucacoin_var_lib_t)
+')
+
+########################################
+## <summary>
+##	Manage ucacoin lib directories.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`ucacoin_manage_lib_dirs',`
+	gen_require(`
+		type ucacoin_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	manage_dirs_pattern($1, ucacoin_var_lib_t, ucacoin_var_lib_t)
+')
+
+
+########################################
+## <summary>
+##	All of the rules required to administrate
+##	a ucacoin environment
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+## <param name="role">
+##	<summary>
+##	Role allowed access.
+##	</summary>
+## </param>
+## <rolecap/>
+#
+interface(`ucacoin_admin',`
+	gen_require(`
+		type ucacoin_t;
+		type ucacoin_initrc_exec_t;
+		type ucacoin_var_lib_t;
+	')
+
+	allow $1 ucacoin_t:process { ptrace signal_perms };
+	ps_process_pattern($1, ucacoin_t)
+
+	ucacoin_initrc_domtrans($1)
+	domain_system_change_exemption($1)
+	role_transition $2 ucacoin_initrc_exec_t system_r;
+	allow $2 system_r;
+
+	files_search_var_lib($1)
+	admin_pattern($1, ucacoin_var_lib_t)
+
+')
+

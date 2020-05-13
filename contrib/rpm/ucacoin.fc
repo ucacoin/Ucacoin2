@@ -1,0 +1,8 @@
+/usr/bin/ucacoin-cli		--	gen_context(system_u:object_r:ucacoin_exec_t,s0)
+/usr/sbin/ucacoind		--	gen_context(system_u:object_r:ucacoin_exec_t,s0)
+/usr/lib(64)?/ucacoin/ucacoind		--	gen_context(system_u:object_r:ucacoin_exec_t,s0)
+
+/etc/ucacoin(/.*)?		gen_context(system_u:object_r:ucacoin_conf_t,s0)
+/var/lib/ucacoin(/.*)?		gen_context(system_u:object_r:ucacoin_var_lib_t,s0)
+
+(/var)?/run/ucacoind(/.*)?   gen_context(system_u:object_r:ucacoin_var_run_t,s0)

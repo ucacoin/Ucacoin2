@@ -1,0 +1,3 @@
+usr/local/bin/ucacoind usr/bin
+usr/local/bin/ucacoin-cli usr/bin
+debian/examples/ucacoin.conf etc/ucacoin

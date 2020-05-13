@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=ucacoin Core
+Comment=ucacoin P2P Cryptocurrency
+Comment[fr]=ucacoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=ucacoin, eşten eşe kriptografik sanal para birimi
+Exec=ucacoin-qt %u
+Terminal=false
+Type=Application
+Icon=ucacoin128
+MimeType=x-scheme-handler/ucacoin;
+Categories=Office;Finance;
+StartupWMClass=ucacoin-qt

@@ -1,0 +1,753 @@
+# Copyright (c) 2013-2016 The Bitcoin Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+bin_PROGRAMS += qt/ucacoin-qt
+EXTRA_LIBRARIES += qt/libbitcoinqt.a
+
+# ucacoin qt core #
+include Makefile.qt_locale.include
+
+QT_FORMS_UI = \
+  qt/forms/addressbookpage.ui \
+  qt/forms/askpassphrasedialog.ui \
+  qt/forms/coincontroldialog.ui \
+  qt/forms/editaddressdialog.ui \
+  qt/forms/governancepage.ui \
+  qt/forms/helpmessagedialog.ui \
+  qt/forms/intro.ui \
+  qt/forms/openuridialog.ui \
+  qt/forms/optionsdialog.ui \
+  qt/forms/rpcconsole.ui \
+  qt/ucacoin/forms/loadingdialog.ui \
+  qt/ucacoin/forms/snackbar.ui \
+  qt/ucacoin/forms/navmenuwidget.ui \
+  qt/ucacoin/forms/lockunlock.ui \
+  qt/ucacoin/forms/expandablebutton.ui \
+  qt/ucacoin/forms/receivedialog.ui \
+  qt/ucacoin/forms/walletpassworddialog.ui \
+  qt/ucacoin/forms/topbar.ui \
+  qt/ucacoin/forms/txrow.ui \
+  qt/ucacoin/forms/dashboardwidget.ui \
+  qt/ucacoin/forms/coincontrolucawidget.ui \
+  qt/ucacoin/forms/addresslabelrow.ui \
+  qt/ucacoin/forms/contactdropdownrow.ui \
+  qt/ucacoin/forms/mninfodialog.ui \
+  qt/ucacoin/forms/optionbutton.ui \
+  qt/ucacoin/forms/masternodewizarddialog.ui \
+  qt/ucacoin/forms/mnrow.ui \
+  qt/ucacoin/forms/masternodeswidget.ui \
+  qt/ucacoin/forms/myaddressrow.ui \
+  qt/ucacoin/forms/csrow.ui \
+  qt/ucacoin/forms/sendchangeaddressdialog.ui \
+  qt/ucacoin/forms/sendconfirmdialog.ui \
+  qt/ucacoin/forms/sendcustomfeedialog.ui \
+  qt/ucacoin/forms/sendchangeaddressdialog.ui \
+  qt/ucacoin/forms/sendmultirow.ui \
+  qt/ucacoin/forms/send.ui \
+  qt/ucacoin/forms/addnewaddressdialog.ui \
+  qt/ucacoin/forms/addnewcontactdialog.ui \
+  qt/ucacoin/forms/requestdialog.ui \
+  qt/ucacoin/forms/receivewidget.ui \
+  qt/ucacoin/forms/tooltipmenu.ui \
+  qt/ucacoin/forms/addresseswidget.ui \
+  qt/ucacoin/forms/defaultdialog.ui \
+  qt/ucacoin/forms/denomgenerationdialog.ui \
+  qt/ucacoin/forms/coldstakingwidget.ui \
+  qt/ucacoin/settings/forms/settingsbackupwallet.ui \
+  qt/ucacoin/settings/forms/settingsbittoolwidget.ui \
+  qt/ucacoin/settings/forms/settingsconsolewidget.ui \
+  qt/ucacoin/settings/forms/settingsdisplayoptionswidget.ui \
+  qt/ucacoin/settings/forms/settingsfaqwidget.ui \
+  qt/ucacoin/settings/forms/settingsinformationwidget.ui \
+  qt/ucacoin/settings/forms/settingsmainoptionswidget.ui \
+  qt/ucacoin/settings/forms/settingsmultisenddialog.ui \
+  qt/ucacoin/settings/forms/settingsmultisendwidget.ui \
+  qt/ucacoin/settings/forms/settingssignmessagewidgets.ui \
+  qt/ucacoin/settings/forms/settingswalletoptionswidget.ui \
+  qt/ucacoin/settings/forms/settingswalletrepairwidget.ui \
+  qt/ucacoin/settings/forms/settingswidget.ui \
+  qt/ucacoin/forms/welcomecontentwidget.ui \
+  qt/ucacoin/forms/splash.ui
+
+QT_MOC_CPP = \
+  qt/moc_addressbookpage.cpp \
+  qt/moc_addresstablemodel.cpp \
+  qt/moc_askpassphrasedialog.cpp \
+  qt/moc_bantablemodel.cpp \
+  qt/moc_bitcoinaddressvalidator.cpp \
+  qt/moc_bitcoinamountfield.cpp \
+  qt/ucacoin/moc_ucacoingui.cpp \
+  qt/moc_bitcoinunits.cpp \
+  qt/moc_clientmodel.cpp \
+  qt/moc_coincontroldialog.cpp \
+  qt/moc_coincontroltreewidget.cpp \
+  qt/moc_csvmodelwriter.cpp \
+  qt/moc_editaddressdialog.cpp \
+  qt/moc_governancepage.cpp \
+  qt/moc_guiutil.cpp \
+  qt/moc_intro.cpp \
+  qt/moc_macdockiconhandler.cpp \
+  qt/moc_macnotificationhandler.cpp \
+  qt/moc_notificator.cpp \
+  qt/moc_openuridialog.cpp \
+  qt/moc_optionsdialog.cpp \
+  qt/moc_optionsmodel.cpp \
+  qt/moc_peertablemodel.cpp \
+  qt/moc_paymentserver.cpp \
+  qt/moc_qvalidatedlineedit.cpp \
+  qt/moc_qvaluecombobox.cpp \
+  qt/moc_proposalframe.cpp \
+  qt/moc_recentrequeststablemodel.cpp \
+  qt/moc_rpcconsole.cpp \
+  qt/moc_splashscreen.cpp \
+  qt/moc_trafficgraphwidget.cpp \
+  qt/moc_transactiondesc.cpp \
+  qt/moc_transactionfilterproxy.cpp \
+  qt/moc_transactiontablemodel.cpp \
+  qt/moc_utilitydialog.cpp \
+  qt/moc_walletmodel.cpp \
+  qt/ucacoin/moc_loadingdialog.cpp \
+  qt/ucacoin/moc_pwidget.cpp \
+  qt/ucacoin/moc_snackbar.cpp \
+  qt/ucacoin/moc_navmenuwidget.cpp \
+  qt/ucacoin/moc_lockunlock.cpp \
+  qt/ucacoin/moc_expandablebutton.cpp \
+  qt/ucacoin/moc_furabstractlistitemdelegate.cpp \
+  qt/ucacoin/moc_receivedialog.cpp \
+  qt/ucacoin/moc_walletpassworddialog.cpp \
+  qt/ucacoin/moc_pfborderimage.cpp \
+  qt/ucacoin/moc_topbar.cpp \
+  qt/ucacoin/moc_txrow.cpp \
+  qt/ucacoin/moc_dashboardwidget.cpp \
+  qt/ucacoin/moc_coincontrolucawidget.cpp \
+  qt/ucacoin/moc_addresslabelrow.cpp \
+  qt/ucacoin/moc_contactdropdownrow.cpp \
+  qt/ucacoin/moc_mninfodialog.cpp \
+  qt/ucacoin/moc_optionbutton.cpp \
+  qt/ucacoin/moc_coldstakingmodel.cpp \
+  qt/ucacoin/moc_mnmodel.cpp \
+  qt/ucacoin/moc_masternodewizarddialog.cpp \
+  qt/ucacoin/moc_mnrow.cpp \
+  qt/ucacoin/moc_masternodeswidget.cpp \
+  qt/ucacoin/moc_myaddressrow.cpp \
+  qt/ucacoin/moc_csrow.cpp \
+  qt/ucacoin/moc_contactsdropdown.cpp \
+  qt/ucacoin/moc_sendchangeaddressdialog.cpp \
+  qt/ucacoin/moc_sendconfirmdialog.cpp \
+  qt/ucacoin/moc_sendcustomfeedialog.cpp \
+  qt/ucacoin/moc_sendchangeaddressdialog.cpp \
+  qt/ucacoin/moc_sendmultirow.cpp \
+  qt/ucacoin/moc_send.cpp \
+  qt/ucacoin/moc_addnewaddressdialog.cpp \
+  qt/ucacoin/moc_addnewcontactdialog.cpp \
+  qt/ucacoin/moc_requestdialog.cpp \
+  qt/ucacoin/moc_receivewidget.cpp \
+  qt/ucacoin/moc_tooltipmenu.cpp \
+  qt/ucacoin/moc_addresseswidget.cpp \
+  qt/ucacoin/moc_defaultdialog.cpp \
+  qt/ucacoin/moc_denomgenerationdialog.cpp \
+  qt/ucacoin/moc_coldstakingwidget.cpp \
+  qt/ucacoin/settings/moc_settingsbackupwallet.cpp \
+  qt/ucacoin/settings/moc_settingsbittoolwidget.cpp \
+  qt/ucacoin/settings/moc_settingsconsolewidget.cpp \
+  qt/ucacoin/settings/moc_settingsdisplayoptionswidget.cpp \
+  qt/ucacoin/settings/moc_settingsfaqwidget.cpp \
+  qt/ucacoin/settings/moc_settingsinformationwidget.cpp \
+  qt/ucacoin/settings/moc_settingsmainoptionswidget.cpp \
+  qt/ucacoin/settings/moc_settingsmultisenddialog.cpp \
+  qt/ucacoin/settings/moc_settingsmultisendwidget.cpp \
+  qt/ucacoin/settings/moc_settingssignmessagewidgets.cpp \
+  qt/ucacoin/settings/moc_settingswalletoptionswidget.cpp \
+  qt/ucacoin/settings/moc_settingswalletrepairwidget.cpp \
+  qt/ucacoin/settings/moc_settingswidget.cpp \
+  qt/ucacoin/moc_welcomecontentwidget.cpp \
+  qt/ucacoin/moc_splash.cpp
+
+BITCOIN_MM = \
+  qt/macdockiconhandler.mm \
+  qt/macnotificationhandler.mm
+
+QT_MOC = \
+  qt/ucacoin.moc \
+  qt/bitcoinamountfield.moc \
+  qt/intro.moc \
+  qt/rpcconsole.moc \
+  qt/ucacoin/settings/moc_settingsconsolewidget.cpp
+
+QT_QRC_CPP = qt/qrc_ucacoin.cpp
+QT_QRC = qt/ucacoin.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_ucacoin_locale.cpp
+QT_QRC_LOCALE = qt/ucacoin_locale.qrc
+
+PROTOBUF_CC = qt/paymentrequest.pb.cc
+PROTOBUF_H = qt/paymentrequest.pb.h
+PROTOBUF_PROTO = qt/paymentrequest.proto
+
+BITCOIN_QT_H = \
+  qt/addressbookpage.h \
+  qt/addresstablemodel.h \
+  qt/askpassphrasedialog.h \
+  qt/bantablemodel.h \
+  qt/bitcoinaddressvalidator.h \
+  qt/bitcoinamountfield.h \
+  qt/ucacoin/ucacoingui.h \
+  qt/bitcoinunits.h \
+  qt/clientmodel.h \
+  qt/coincontroldialog.h \
+  qt/coincontroltreewidget.h \
+  qt/csvmodelwriter.h \
+  qt/editaddressdialog.h \
+  qt/governancepage.h \
+  qt/guiconstants.h \
+  qt/guiutil.h \
+  qt/intro.h \
+  qt/macdockiconhandler.h \
+  qt/macnotificationhandler.h \
+  qt/networkstyle.h \
+  qt/notificator.h \
+  qt/openuridialog.h \
+  qt/optionsdialog.h \
+  qt/optionsmodel.h \
+  qt/paymentrequestplus.h \
+  qt/paymentserver.h \
+  qt/peertablemodel.h \
+  qt/platformstyle.h \
+  qt/proposalframe.h \
+  qt/qvalidatedlineedit.h \
+  qt/qvaluecombobox.h \
+  qt/recentrequeststablemodel.h \
+  qt/rpcconsole.h \
+  qt/splashscreen.h \
+  qt/trafficgraphwidget.h \
+  qt/transactiondesc.h \
+  qt/transactionfilterproxy.h \
+  qt/transactionrecord.h \
+  qt/transactiontablemodel.h \
+  qt/utilitydialog.h \
+  qt/walletmodel.h \
+  qt/walletmodeltransaction.h \
+  qt/ucacoin/prunnable.h \
+  qt/ucacoin/pfborderimage.h \
+  qt/ucacoin/loadingdialog.h \
+  qt/winshutdownmonitor.h \
+  qt/ucacoin/pwidget.h \
+  qt/ucacoin/guitransactionsutils.h \
+  qt/ucacoin/snackbar.h \
+  qt/ucacoin/navmenuwidget.h \
+  qt/ucacoin/lockunlock.h \
+  qt/ucacoin/receivedialog.h \
+  qt/ucacoin/furlistrow.h \
+  qt/ucacoin/furabstractlistitemdelegate.h \
+  qt/ucacoin/txviewholder.h \
+  qt/ucacoin/qtutils.h \
+  qt/ucacoin/expandablebutton.h \
+  qt/ucacoin/walletpassworddialog.h \
+  qt/ucacoin/topbar.h \
+  qt/ucacoin/txrow.h \
+  qt/ucacoin/addressholder.h \
+  qt/ucacoin/addressfilterproxymodel.h \
+  qt/ucacoin/dashboardwidget.h \
+  qt/ucacoin/coincontrolucawidget.h \
+  qt/ucacoin/addresslabelrow.h \
+  qt/ucacoin/contactdropdownrow.h \
+  qt/ucacoin/mninfodialog.h \
+  qt/ucacoin/optionbutton.h \
+  qt/ucacoin/coldstakingmodel.h \
+  qt/ucacoin/mnmodel.h \
+  qt/ucacoin/masternodewizarddialog.h \
+  qt/ucacoin/mnrow.h \
+  qt/ucacoin/masternodeswidget.h \
+  qt/ucacoin/myaddressrow.h \
+  qt/ucacoin/csrow.h \
+  qt/ucacoin/contactsdropdown.h \
+  qt/ucacoin/sendchangeaddressdialog.h \
+  qt/ucacoin/sendconfirmdialog.h \
+  qt/ucacoin/sendcustomfeedialog.h \
+  qt/ucacoin/sendchangeaddressdialog.h \
+  qt/ucacoin/sendmultirow.h \
+  qt/ucacoin/send.h \
+  qt/ucacoin/addnewaddressdialog.h \
+  qt/ucacoin/addnewcontactdialog.h \
+  qt/ucacoin/requestdialog.h \
+  qt/ucacoin/receivewidget.h \
+  qt/ucacoin/tooltipmenu.h \
+  qt/ucacoin/addresseswidget.h \
+  qt/ucacoin/defaultdialog.h \
+  qt/ucacoin/denomgenerationdialog.h \
+  qt/ucacoin/coldstakingwidget.h \
+  qt/ucacoin/settings/settingsbackupwallet.h \
+  qt/ucacoin/settings/settingsbittoolwidget.h \
+  qt/ucacoin/settings/settingsconsolewidget.h \
+  qt/ucacoin/settings/settingsdisplayoptionswidget.h \
+  qt/ucacoin/settings/settingsfaqwidget.h \
+  qt/ucacoin/settings/settingsinformationwidget.h \
+  qt/ucacoin/settings/settingsmainoptionswidget.h \
+  qt/ucacoin/settings/settingsmultisenddialog.h \
+  qt/ucacoin/settings/settingsmultisendwidget.h \
+  qt/ucacoin/settings/settingssignmessagewidgets.h \
+  qt/ucacoin/settings/settingswalletoptionswidget.h \
+  qt/ucacoin/settings/settingswalletrepairwidget.h \
+  qt/ucacoin/settings/settingswidget.h \
+  qt/ucacoin/welcomecontentwidget.h \
+  qt/ucacoin/splash.h
+
+RES_ICONS = \
+  qt/res/icons/add.png \
+  qt/res/icons/address-book.png \
+  qt/res/icons/bitcoin.ico \
+  qt/res/icons/bitcoin.png \
+  qt/res/icons/bitcoin_testnet.ico \
+  qt/res/icons/bitcoin_testnet.png \
+  qt/res/icons/browse.png \
+  qt/res/icons/configure.png \
+  qt/res/icons/debugwindow.png \
+  qt/res/icons/edit.png \
+  qt/res/icons/editcopy.png \
+  qt/res/icons/editpaste.png \
+  qt/res/icons/explorer.png \
+  qt/res/icons/export.png \
+  qt/res/icons/eye.png \
+  qt/res/icons/eye_minus.png \
+  qt/res/icons/eye_plus.png \
+  qt/res/icons/filesave.png \
+  qt/res/icons/history.png \
+  qt/res/icons/key.png \
+  qt/res/icons/masternodes.png \
+  qt/res/icons/onion.png \
+  qt/res/icons/qrcode.png \
+  qt/res/icons/quit.png \
+  qt/res/icons/remove.png \
+  qt/res/icons/staking_active.png \
+  qt/res/icons/staking_inactive.png \
+  qt/res/icons/synced.png \
+  qt/res/icons/trade.png \
+  qt/res/icons/ic-transaction-received.png \
+  qt/res/icons/ic-transaction-mint.png \
+  qt/res/icons/ic-transaction-sent.png \
+  qt/res/icons/ic-transaction-staked.png \
+  qt/res/icons/yesvote.png \
+  qt/res/icons/novote.png \
+  qt/res/icons/abstainvote.png \
+  qt/ucacoin/res/img/bg-dashboard-banner.png \
+  qt/ucacoin/res/img/bg-multi-number-dark.png \
+  qt/ucacoin/res/img/ic-check-locked.png \
+  qt/ucacoin/res/img/ic-nav-address.png \
+  qt/ucacoin/res/img/ic-update.png \
+  qt/ucacoin/res/img/bg-multi-number.png \
+  qt/ucacoin/res/img/ic-check-mint-off.png \
+  qt/ucacoin/res/img/ic-nav-cold-staking.png \
+  qt/ucacoin/res/img/ic-nav-cold-staking-active.png \
+  qt/ucacoin/res/img/ic-nav-dashboard-active.png \
+  qt/ucacoin/res/img/ic-wallet-status-locked.png \
+  qt/ucacoin/res/img/about.png \
+  qt/ucacoin/res/img/bg-splash.png \
+  qt/ucacoin/res/img/ic-check-mint.png \
+  qt/ucacoin/res/img/ic-nav-dashboard-hover.png \
+  qt/ucacoin/res/img/ic-wallet-status-staking.png \
+  qt/ucacoin/res/img/ic-check-peers-off.png \
+  qt/ucacoin/res/img/ic-nav-dashboard.png \
+  qt/ucacoin/res/img/ic-wallet-status-unlocked.png \
+  qt/ucacoin/res/img/ic-check-peers.png \
+  qt/ucacoin/res/img/ic-nav-master-active.png \
+  qt/ucacoin/res/img/ic-watch-password-white.png \
+  qt/ucacoin/res/img/bg-welcome-container.jpg \
+  qt/ucacoin/res/img/bg-welcome-container.png \
+  qt/ucacoin/res/img/bg-welcome-container@2x.png \
+  qt/ucacoin/res/img/bg-welcome-container@3x.png \
+  qt/ucacoin/res/img/ic-check-staking-off.png \
+  qt/ucacoin/res/img/ic-nav-master-hover.png \
+  qt/ucacoin/res/img/ic-watch-password.png \
+  qt/ucacoin/res/img/bg-welcome.jpg \
+  qt/ucacoin/res/img/bg-welcome.png \
+  qt/ucacoin/res/img/bg-welcome@2x.png \
+  qt/ucacoin/res/img/bg-welcome@3x.png \
+  qt/ucacoin/res/img/ic-check-staking.png \
+  qt/ucacoin/res/img/ic-nav-master.png \
+  qt/ucacoin/res/img/img-dashboard-banner.jpg \
+  qt/ucacoin/res/img/btn-radio-active.png \
+  qt/ucacoin/res/img/ic-check-sync-off.png \
+  qt/ucacoin/res/img/img-empty-contacts.png \
+  qt/ucacoin/res/img/btn-radio-off.png \
+  qt/ucacoin/res/img/ic-check-sync.png \
+  qt/ucacoin/res/img/img-empty-dark-contacts.png \
+  qt/ucacoin/res/img/ic-contact-arrow-down.png \
+  qt/ucacoin/res/img/ic-contact-arrow-down-white.png \
+  qt/ucacoin/res/img/ic-check-sync.png \
+  qt/ucacoin/res/img/ic-check-faq.png \
+  qt/ucacoin/res/img/img-empty-dark-error.png \
+  qt/ucacoin/res/img/ic-add-label.png \
+  qt/ucacoin/res/img/ic-pending.png \
+  qt/ucacoin/res/img/ic-check-theme-dark.png \
+  qt/ucacoin/res/img/ic-nav-receive-active.png \
+  qt/ucacoin/res/img/img-empty-dark-masternode.png \
+  qt/ucacoin/res/img/ic-add-liliac.png \
+  qt/ucacoin/res/img/ic-check-theme-light.png \
+  qt/ucacoin/res/img/ic-nav-receive-hover.png \
+  qt/ucacoin/res/img/img-empty-dark-multisend.png \
+  qt/ucacoin/res/img/ic-add-primary.png \
+  qt/ucacoin/res/img/ic-check-white.png \
+  qt/ucacoin/res/img/ic-nav-receive.png \
+  qt/ucacoin/res/img/img-empty-dark-peers.png \
+  qt/ucacoin/res/img/ic-add.png \
+  qt/ucacoin/res/img/ic-check.png \
+  qt/ucacoin/res/img/ic-nav-send-active.png \
+  qt/ucacoin/res/img/img-empty-dark-staking-off.png \
+  qt/ucacoin/res/img/img-empty-dark-staking-on.png \
+  qt/ucacoin/res/img/ic-address-book-grey.png \
+  qt/ucacoin/res/img/ic-chevron-left.png \
+  qt/ucacoin/res/img/ic-nav-send-hover.png \
+  qt/ucacoin/res/img/img-empty-dark-transactions.png \
+  qt/ucacoin/res/img/ic-address-book-white.png \
+  qt/ucacoin/res/img/ic-chevron-right.png \
+  qt/ucacoin/res/img/ic-nav-send.png \
+  qt/ucacoin/res/img/img-empty-error.png \
+  qt/ucacoin/res/img/ic-address-book.png \
+  qt/ucacoin/res/img/ic-clear-liliac.png \
+  qt/ucacoin/res/img/ic-nav-settings-active.png \
+  qt/ucacoin/res/img/img-empty-masternode.png \
+  qt/ucacoin/res/img/ic-address-send-white.png \
+  qt/ucacoin/res/img/ic-clear-primary.png \
+  qt/ucacoin/res/img/ic-nav-settings-hover.png \
+  qt/ucacoin/res/img/img-empty-multisend.png \
+  qt/ucacoin/res/img/ic-address-send.png \
+  qt/ucacoin/res/img/ic-close-white.png \
+  qt/ucacoin/res/img/ic-nav-settings.png \
+  qt/ucacoin/res/img/img-empty-peers.png \
+  qt/ucacoin/res/img/ic-arrow-drop-down-white.png \
+  qt/ucacoin/res/img/ic-close.png \
+  qt/ucacoin/res/img/ic-radio-liliac-on.png \
+  qt/ucacoin/res/img/img-empty-staking-off.png \
+  qt/ucacoin/res/img/ic-arrow-drop-down.png \
+  qt/ucacoin/res/img/ic-coin-uca.png \
+  qt/ucacoin/res/img/ic-receive-off.png \
+  qt/ucacoin/res/img/img-empty-staking-on.png \
+  qt/ucacoin/res/img/ic-arrow-drop-up-white.png \
+  qt/ucacoin/res/img/ic-receive-on.png \
+  qt/ucacoin/res/img/img-empty-transactions.png \
+  qt/ucacoin/res/img/ic-arrow-drop-up.png \
+  qt/ucacoin/res/img/ic-received.png \
+  qt/ucacoin/res/img/img-logo-ucacoin.png \
+  qt/ucacoin/res/img/ic-arrow-drop-white-down.png \
+  qt/ucacoin/res/img/ic-combo-box.png \
+  qt/ucacoin/res/img/ic-send.png \
+  qt/ucacoin/res/img/img-logo-ucacoin@2x.png \
+  qt/ucacoin/res/img/ic-arrow-primary-down.png \
+  qt/ucacoin/res/img/ic-connect.png \
+  qt/ucacoin/res/img/ic-submenu-lock.png \
+  qt/ucacoin/res/img/img-logo-ucacoin@3x.png \
+  qt/ucacoin/res/img/img-logo-ucacoin.png \
+  qt/ucacoin/res/img/ic-arrow-right-white.png \
+  qt/ucacoin/res/img/ic-arrow-left-white.png \
+  qt/ucacoin/res/img/ic-arrow-left.png \
+  qt/ucacoin/res/img/ic-copy-liliac.png \
+  qt/ucacoin/res/img/ic-submenu-staking.png \
+  qt/ucacoin/res/img/img-nav-logo-ucacoin.png \
+  qt/ucacoin/res/img/ic-arrow-right.png \
+  qt/ucacoin/res/img/ic-copy.png \
+  qt/ucacoin/res/img/ic-copy-big.png \
+  qt/ucacoin/res/img/ic-copy-big-white.png \
+  qt/ucacoin/res/img/ic-submenu-unlock.png \
+  qt/ucacoin/res/img/img-nav-logo.png \
+  qt/ucacoin/res/img/ic-arrow-white-left.png \
+  qt/ucacoin/res/img/ic-exit.png \
+  qt/ucacoin/res/img/ic-switch-liliac-on.png \
+  qt/ucacoin/res/img/img-nav-logo.png \
+  qt/ucacoin/res/img/ic-arrow-white-right.png \
+  qt/ucacoin/res/img/ic-expand.png \
+  qt/ucacoin/res/img/ic-switch-off.png \
+  qt/ucacoin/res/img/img-qr-test-big.png \
+  qt/ucacoin/res/img/ic-check-active.png \
+  qt/ucacoin/res/img/ic-folder.png \
+  qt/ucacoin/res/img/ic-switch-on.png \
+  qt/ucacoin/res/img/img-qr-test.png \
+  qt/ucacoin/res/img/ic-check-box.png \
+  qt/ucacoin/res/img/ic-check-box-dark-active.png \
+  qt/ucacoin/res/img/ic-check-box-indeterminate.png \
+  qt/ucacoin/res/img/ic-check-box-liliac-indeterminate.png \
+  qt/ucacoin/res/img/ic-label-liliac.png \
+  qt/ucacoin/res/img/ic-transaction-warning.png \
+  qt/ucacoin/res/img/ic-transaction-mint.png \
+  qt/ucacoin/res/img/ic-transaction-mint-inactive.png \
+  qt/ucacoin/res/img/ic-check-cold-staking.png \
+  qt/ucacoin/res/img/ic-check-cold-staking-off.png \
+  qt/ucacoin/res/img/ic-check-cold-staking-enabled.png \
+  qt/ucacoin/res/img/dark/ic-transaction-cs-contract.png \
+  qt/ucacoin/res/img/dark/ic-transaction-cs-contract-inactive.png \
+  qt/ucacoin/res/img/img-qr.png \
+  qt/ucacoin/res/img/ic-check-connect-off.png \
+  qt/ucacoin/res/img/ic-label.png \
+  qt/ucacoin/res/img/ic-transaction-received.png \
+  qt/ucacoin/res/img/dark/ic-transaction-received.png \
+  qt/ucacoin/res/img/dark/ic-transaction-warning.png \
+  qt/ucacoin/res/img/dark/ic-transaction-mint.png \
+  qt/ucacoin/res/img/dark/ic-transaction-mint-inactive.png \
+  qt/ucacoin/res/img/ic-transaction-received-inactive.png \
+  qt/ucacoin/res/img/dark/ic-transaction-received-inactive.png \
+  qt/ucacoin/res/img/img-welcome-step1.png \
+  qt/ucacoin/res/img/ic-check-connect.png \
+  qt/ucacoin/res/img/ic-menu-hover.png \
+  qt/ucacoin/res/img/ic-transaction-sent.png \
+  qt/ucacoin/res/img/ic-transaction-sent-inactive.png \
+  qt/ucacoin/res/img/dark/ic-transaction-sent.png \
+  qt/ucacoin/res/img/dark/ic-transaction-sent-inactive.png \
+  qt/ucacoin/res/img/img-welcome-step2.png \
+  qt/ucacoin/res/img/ic-check-dark.png \
+  qt/ucacoin/res/img/ic-mint.png \
+  qt/ucacoin/res/img/ic-transaction-staked.png \
+  qt/ucacoin/res/img/ic-transaction-staked-inactive.png \
+  qt/ucacoin/res/img/dark/ic-transaction-staked.png \
+  qt/ucacoin/res/img/dark/ic-transaction-staked-inactive.png \
+  qt/ucacoin/res/img/img-welcome-step3.png \
+  qt/ucacoin/res/img/ic-check-liliac-on.png \
+  qt/ucacoin/res/img/ic-nav-address-active.png \
+  qt/ucacoin/res/img/ic-unlock-staking.png \
+  qt/ucacoin/res/img/img-welcome-step4.png \
+  qt/ucacoin/res/img/ic-check-locked-off.png \
+  qt/ucacoin/res/img/ic-nav-address-hover.png \
+  qt/ucacoin/res/img/ic-update-liliac.png \
+  qt/ucacoin/res/img/ic-arrow-drop-down-primary.png \
+  qt/ucacoin/res/img/ic-arrow-drop-up-primary.png \
+  qt/ucacoin/res/img/ic-check-liliac-indeterminate.png \
+  qt/ucacoin/res/img/ic-check-box-liliac-indeterminate.png \
+  qt/ucacoin/res/img/ic-transaction-stake-delegated.png \
+  qt/ucacoin/res/img/ic-transaction-stake-delegated-inactive.png \
+  qt/ucacoin/res/img/ic-transaction-stake-hot.png \
+  qt/ucacoin/res/img/ic-transaction-stake-hot-inactive.png \
+  qt/ucacoin/res/img/dark/ic-transaction-stake-hot.png \
+  qt/ucacoin/res/img/dark/ic-transaction-stake-hot-inactive.png \
+  qt/ucacoin/res/img/dark/ic-transaction-stake-delegated.png \
+  qt/ucacoin/res/img/dark/ic-transaction-stake-delegated-inactive.png \
+  qt/ucacoin/res/img/ic-transaction-cs-contract.png \
+  qt/ucacoin/res/img/ic-transaction-cs-contract-inactive.png \
+  qt/ucacoin/res/img/ic-check-box-indeterminate.png \
+  qt/ucacoin/res/img/ani-loading-dark.gif \
+  qt/ucacoin/res/img/ani-loading.gif
+
+
+
+BITCOIN_QT_BASE_CPP = \
+  qt/bantablemodel.cpp \
+  qt/bitcoinaddressvalidator.cpp \
+  qt/bitcoinamountfield.cpp \
+  qt/ucacoin/ucacoingui.cpp \
+  qt/bitcoinunits.cpp \
+  qt/clientmodel.cpp \
+  qt/csvmodelwriter.cpp \
+  qt/guiutil.cpp \
+  qt/intro.cpp \
+  qt/networkstyle.cpp \
+  qt/notificator.cpp \
+  qt/optionsdialog.cpp \
+  qt/optionsmodel.cpp \
+  qt/peertablemodel.cpp \
+  qt/platformstyle.cpp \
+  qt/qvalidatedlineedit.cpp \
+  qt/qvaluecombobox.cpp \
+  qt/rpcconsole.cpp \
+  qt/splashscreen.cpp \
+  qt/trafficgraphwidget.cpp \
+  qt/utilitydialog.cpp
+
+BITCOIN_QT_WINDOWS_CPP = qt/winshutdownmonitor.cpp
+
+BITCOIN_QT_WALLET_CPP = \
+  qt/addressbookpage.cpp \
+  qt/addresstablemodel.cpp \
+  qt/askpassphrasedialog.cpp \
+  qt/coincontroldialog.cpp \
+  qt/coincontroltreewidget.cpp \
+  qt/editaddressdialog.cpp \
+  qt/governancepage.cpp \
+  qt/openuridialog.cpp \
+  qt/paymentrequestplus.cpp \
+  qt/paymentserver.cpp \
+  qt/proposalframe.cpp \
+  qt/recentrequeststablemodel.cpp \
+  qt/transactiondesc.cpp \
+  qt/transactionfilterproxy.cpp \
+  qt/transactionrecord.cpp \
+  qt/transactiontablemodel.cpp \
+  qt/walletmodel.cpp \
+  qt/walletmodeltransaction.cpp \
+  qt/ucacoin/loadingdialog.cpp \
+  qt/ucacoin/pwidget.cpp \
+  qt/ucacoin/guitransactionsutils.cpp \
+  qt/ucacoin/snackbar.cpp \
+  qt/ucacoin/navmenuwidget.cpp \
+  qt/ucacoin/lockunlock.cpp \
+  qt/ucacoin/receivedialog.cpp \
+  qt/ucacoin/furabstractlistitemdelegate.cpp \
+  qt/ucacoin/txviewholder.cpp \
+  qt/ucacoin/qtutils.cpp \
+  qt/ucacoin/expandablebutton.cpp \
+  qt/ucacoin/walletpassworddialog.cpp \
+  qt/ucacoin/topbar.cpp \
+  qt/ucacoin/txrow.cpp \
+  qt/ucacoin/addressholder.cpp \
+  qt/ucacoin/addressfilterproxymodel.cpp \
+  qt/ucacoin/dashboardwidget.cpp \
+  qt/ucacoin/coincontrolucawidget.cpp \
+  qt/ucacoin/addresslabelrow.cpp \
+  qt/ucacoin/contactdropdownrow.cpp \
+  qt/ucacoin/contactsdropdown.cpp \
+  qt/ucacoin/optionbutton.cpp \
+  qt/ucacoin/mninfodialog.cpp \
+  qt/ucacoin/coldstakingmodel.cpp \
+  qt/ucacoin/mnmodel.cpp \
+  qt/ucacoin/masternodewizarddialog.cpp \
+  qt/ucacoin/mnrow.cpp \
+  qt/ucacoin/masternodeswidget.cpp \
+  qt/ucacoin/myaddressrow.cpp \
+  qt/ucacoin/csrow.cpp \
+  qt/ucacoin/sendchangeaddressdialog.cpp \
+  qt/ucacoin/sendconfirmdialog.cpp \
+  qt/ucacoin/sendcustomfeedialog.cpp \
+  qt/ucacoin/sendchangeaddressdialog.cpp \
+  qt/ucacoin/sendmultirow.cpp \
+  qt/ucacoin/send.cpp \
+  qt/ucacoin/addnewaddressdialog.cpp \
+  qt/ucacoin/addnewcontactdialog.cpp \
+  qt/ucacoin/requestdialog.cpp \
+  qt/ucacoin/receivewidget.cpp \
+  qt/ucacoin/tooltipmenu.cpp \
+  qt/ucacoin/addresseswidget.cpp \
+  qt/ucacoin/defaultdialog.cpp \
+  qt/ucacoin/denomgenerationdialog.cpp \
+  qt/ucacoin/coldstakingwidget.cpp \
+  qt/ucacoin/settings/settingsbackupwallet.cpp \
+  qt/ucacoin/settings/settingsbittoolwidget.cpp \
+  qt/ucacoin/settings/settingsconsolewidget.cpp \
+  qt/ucacoin/settings/settingsdisplayoptionswidget.cpp \
+  qt/ucacoin/settings/settingsfaqwidget.cpp \
+  qt/ucacoin/settings/settingsinformationwidget.cpp \
+  qt/ucacoin/settings/settingsmainoptionswidget.cpp \
+  qt/ucacoin/settings/settingsmultisenddialog.cpp \
+  qt/ucacoin/settings/settingsmultisendwidget.cpp \
+  qt/ucacoin/settings/settingssignmessagewidgets.cpp \
+  qt/ucacoin/settings/settingswalletoptionswidget.cpp \
+  qt/ucacoin/settings/settingswalletrepairwidget.cpp \
+  qt/ucacoin/settings/settingswidget.cpp \
+  qt/ucacoin/welcomecontentwidget.cpp \
+  qt/ucacoin/splash.cpp
+
+
+BITCOIN_QT_CPP = $(BITCOIN_QT_BASE_CPP)
+if TARGET_WINDOWS
+BITCOIN_QT_CPP += $(BITCOIN_QT_WINDOWS_CPP)
+endif
+if ENABLE_WALLET
+BITCOIN_QT_CPP += $(BITCOIN_QT_WALLET_CPP)
+endif
+
+RES_CSS = \
+  qt/ucacoin/res/css/style_dark.css \
+  qt/ucacoin/res/css/style_light.css
+
+RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
+
+BITCOIN_RC = qt/res/ucacoin-qt-res.rc
+
+BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
+  -I$(builddir)/qt/forms -DQT_NO_KEYWORDS
+
+qt_libbitcoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+  $(QT_INCLUDES) $(QT_DBUS_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS) $(SVG_CFLAGS) $(CHARTS_CFLAGS)
+qt_libbitcoinqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_libbitcoinqt_a_OBJCXXFLAGS = $(AM_OBJCXXFLAGS) $(QT_PIE_FLAGS)
+
+qt_libbitcoinqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
+  $(QT_QRC) $(QT_QRC_LOCALE) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_CSS) $(RES_MOVIES)
+
+nodist_qt_libbitcoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
+  $(PROTOBUF_H) $(QT_QRC_CPP) $(QT_QRC_LOCALE_CPP)
+
+# forms/foo.h -> forms/ui_foo.h
+QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
+
+# Most files will depend on the forms and moc files as includes. Generate them
+# before anything else.
+$(QT_MOC): $(QT_FORMS_H)
+$(qt_libbitcoinqt_a_OBJECTS) $(qt_ucacoin_qt_OBJECTS) : | $(QT_MOC)
+
+#Generating these with a half-written protobuf header leads to wacky results.
+#This makes sure it's done.
+$(QT_MOC): $(PROTOBUF_H)
+$(QT_MOC_CPP): $(PROTOBUF_H)
+
+# ucacoin-qt binary #
+qt_ucacoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+  $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS) $(SVG_CFLAGS) $(CHARTS_CFLAGS)
+qt_ucacoin_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+
+qt_ucacoin_qt_SOURCES = qt/ucacoin.cpp
+if TARGET_DARWIN
+  qt_ucacoin_qt_SOURCES += $(BITCOIN_MM)
+endif
+if TARGET_WINDOWS
+  qt_ucacoin_qt_SOURCES += $(BITCOIN_RC)
+endif
+qt_ucacoin_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
+if ENABLE_WALLET
+qt_ucacoin_qt_LDADD += $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET)
+endif
+if ENABLE_ZMQ
+qt_ucacoin_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+endif
+qt_ucacoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
+  $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(SVG_LIBS) $(CHARTS_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
+  $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+qt_ucacoin_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_ucacoin_qt_LIBTOOLFLAGS = $(AM_LIBTOOLFLAGS) --tag CXX
+
+#locale/foo.ts -> locale/foo.qm
+QT_QM=$(QT_TS:.ts=.qm)
+
+SECONDARY: $(QT_QM)
+
+$(srcdir)/qt/ucacoinstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES) $(libbitcoin_zmq_a_SOURCES) $(libbitcoin_util_a_SOURCES)
+	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
+	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) PACKAGE_NAME="$(PACKAGE_NAME)" $(PYTHON) ../share/qt/extract_strings_qt.py $^
+
+translate: $(srcdir)/qt/ucacoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_BASE_CPP) qt/ucacoin.cpp $(BITCOIN_QT_WINDOWS_CPP) $(BITCOIN_QT_WALLET_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts $(srcdir)/qt/locale/ucacoin_en.ts
+
+$(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
+	@test -f $(RCC)
+	@cp -f $< $(@D)/temp_$(<F)
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name ucacoin_locale $(@D)/temp_$(<F) | \
+	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
+	@rm $(@D)/temp_$(<F)
+
+$(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_CSS) $(RES_MOVIES) $(PROTOBUF_H)
+	@test -f $(RCC)
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name ucacoin $< | \
+	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
+
+CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno qt/temp_ucacoin_locale.qrc
+
+CLEANFILES += $(CLEAN_QT)
+
+ucacoin_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_ucacoin_qt_OBJECTS) qt/ucacoin-qt$(EXEEXT) $(LIBBITCOINQT)
+
+ucacoin_qt : qt/ucacoin-qt$(EXEEXT)
+
+ui_%.h: %.ui
+	@test -f $(UIC)
+	@$(MKDIR_P) $(@D)
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(UIC) -o $@ $< || (echo "Error creating $@"; false)
+
+%.moc: %.cpp
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(MOC) $(DEFAULT_INCLUDES) $(QT_INCLUDES) $(MOC_DEFS) $< | \
+	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
+
+moc_%.cpp: %.h
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(MOC) $(DEFAULT_INCLUDES) $(QT_INCLUDES) $(MOC_DEFS) $< | \
+	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
+
+%.qm: %.ts
+	@test -f $(LRELEASE)
+	@$(MKDIR_P) $(@D)
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LRELEASE) -silent $< -qm $@
