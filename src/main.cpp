@@ -1578,7 +1578,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 	if (nHeight <= 200) {
 		ret = blockValue * 0.10;
 	}
-	else if (nHeight < 270000) { ret = blockValue * 0.30; }
+	else if (nHeight < 248200) { ret = blockValue * 0.30; }
 	else { ret = blockValue * 0.70; }
 
 	return ret;
@@ -2188,7 +2188,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 		nExpectedMint += nFees;
 	//Check that the block does not overmint
 	if (!IsBlockValueValid(block, nExpectedMint, nMint)) {
-		if (pindex->nHeight > 254000) {
+		if (pindex->nHeight > 248139) {
 			return state.DoS(100, error("ConnectBlock() : reward pays too much (actual=%s vs limit=%s)",
 				FormatMoney(nMint), FormatMoney(nExpectedMint)),
 				REJECT_INVALID, "bad-cb-amount");

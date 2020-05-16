@@ -95,11 +95,15 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 	(154870, uint256("0xca1277dfbee8180306af988ae3d2e8fb81f6f5607c5fda17350e6ef3946a12a7"))
 	(201548, uint256("0x45fcc0238a06429b1bc9b8fde312b3dfa5118f4313d407daf79c3ce8615db1ac"))
 	(244652, uint256("0x371c922e9a235929e6659a0795ffac80858fc8460c8100953df9fe40fb5950ee"))
+	(248139, uint256("0xf712ddd2c846115595e13d418cba32d9658aa822df2cf973b10bf82947f0102f"))
+	(248140, uint256("0x99cbd30e1a10593c5159225510ca595f15de5e4e8190be8d5c52749f6bea9910"))
+	(248980, uint256("0xa8341cf17f1aefaae4b5fa51e312b3e3a924d879e91affe145e83b1ff343bd15"))
+	(249547, uint256("0x71eee70099bb8fda0f12049e2c61e72dc0c747d133c74a5091aeba24d4823755"))
 	;
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-	1589249443, // * UNIX timestamp of last checkpoint block
-	510858,     // * total number of transactions between genesis and last checkpoint
+	1589610540, // * UNIX timestamp of last checkpoint block
+	520869,     // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     1440        // * estimated number of transactions per day after checkpoint
 };
@@ -157,10 +161,10 @@ public:
         consensus.strObfuscationPoolDummyAddress = "SsJVWUkt6HtSCY2SaJ2akeyJUg8bg1hW3S";
 
         // spork keys
-        consensus.strSporkPubKey = "02c0eb8ac943a62b75347f4ec2207502a7d8bb69550f7430caceb8f87381f7a150";
+        consensus.strSporkPubKey = "04f6224661f5216fba336683f8569811089ad112992b8a723d482a3aa6e208884757f5e52e7bc4c76205961682884038f7ef76c0324b13da0a80c41adb3bab881d";
         consensus.strSporkPubKeyOld = "02c0eb8ac943a62b75347f4ec2207502a7d8bb69550f7430caceb8f87381f7a150";
-        consensus.nTime_EnforceNewSporkKey = 1586509200;    //!> 10 April 2020 09:00:00 AM GMT
-        consensus.nTime_RejectOldSporkKey = 1588150800;     //!> 29 April 2020 09:00:00 AM GMT
+        consensus.nTime_EnforceNewSporkKey = 1589570680;    //!> May 15, 2020 7:24:40 PM
+        consensus.nTime_RejectOldSporkKey = 1589587200;     //!> May 16, 2020 12:00:00 AM
 
         // majorities for block version upgrades
         consensus.nEnforceBlockUpgradeMajority = 750; // 75%
@@ -169,12 +173,12 @@ public:
 
 		// height-based activations
 		consensus.height_last_PoW = 201;
-		consensus.height_start_BIP65 = 269900;
+		consensus.height_start_BIP65 = 248140;
 		consensus.height_start_InvalidUTXOsCheck = 999999999;
-		consensus.height_start_MessSignaturesV2 = 270400;  // TimeProtocolV2, Blocks V7 and newMessageSignatures
+		consensus.height_start_MessSignaturesV2 = 248500;  // TimeProtocolV2, Blocks V7 and newMessageSignatures
 		consensus.height_start_StakeModifierNewSelection = 1;
-		consensus.height_start_StakeModifierV2 = 270000;
-		consensus.height_start_TimeProtoV2 = 270400;    // TimeProtocolV2, Blocks V7 and newMessageSignatures
+		consensus.height_start_StakeModifierV2 = 248200;
+		consensus.height_start_TimeProtoV2 = 248500;    // TimeProtocolV2, Blocks V7 and newMessageSignatures
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
