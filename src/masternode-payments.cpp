@@ -555,6 +555,16 @@ bool CMasternodePayments::AddWinningMasternode(CMasternodePaymentWinner& winnerI
         return false;
     }
 
+	{
+		CTxDestination address1;
+		ExtractDestination(winnerIn.payee, address1);
+		CBitcoinAddress address2(address1);
+		int n = mnodeman.GetMasternodeRank(winnerIn.vinMasternode, winnerIn.nBlockHeight - 100, ActiveProtocol());
+		if (n > 20 || n < 0) {
+			return false;
+		}
+	}
+
     {
         LOCK2(cs_mapMasternodePayeeVotes, cs_mapMasternodeBlocks);
 
