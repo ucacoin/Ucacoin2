@@ -99,11 +99,17 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 	(248140, uint256("0x99cbd30e1a10593c5159225510ca595f15de5e4e8190be8d5c52749f6bea9910"))
 	(248980, uint256("0xa8341cf17f1aefaae4b5fa51e312b3e3a924d879e91affe145e83b1ff343bd15"))
 	(249547, uint256("0x71eee70099bb8fda0f12049e2c61e72dc0c747d133c74a5091aeba24d4823755"))
+	(289215, uint256("0x05f1200ead1d503825c4b9204cdd474aec9501fdc4d3764031e937b90d9987b0"))
+	(327154, uint256("0x9382235a439d3f5a7d9f440ef0e7245f1ae11697b5839ec077388060e2258036"))
+	(354325, uint256("0x88859420ef6318820425abc64271160bb3e861232c810af6970ea436d9839f3d"))
+	(356993, uint256("0xa88f1cbbaaced78c1869a11f44af4fcbd6138569d0602433c277324debc7b59b"))
+	(357189, uint256("0x646b5b34e0eea84a54a88b5d2d04d6fc972afe8806b4a9cdb252711a923fb075"))
+	(358066, uint256("0x340540fbb8a469fbe1f72d6e5fb36ec974b0b542b45d09a7c1c81cc85c569cba"))
 	;
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-	1589610540, // * UNIX timestamp of last checkpoint block
-	520869,     // * total number of transactions between genesis and last checkpoint
+	1596252585, // * UNIX timestamp of last checkpoint block
+	748251,     // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     1440        // * estimated number of transactions per day after checkpoint
 };
@@ -197,6 +203,7 @@ public:
 		vSeeds.push_back(CDNSSeedData("167.71.245.49", "167.71.245.49"));
 		vSeeds.push_back(CDNSSeedData("178.128.98.125", "178.128.98.125"));
 		vSeeds.push_back(CDNSSeedData("142.93.175.145", "142.93.175.145"));
+		vSeeds.push_back(CDNSSeedData("135.181.37.92", "135.181.37.92"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 68);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 130);
