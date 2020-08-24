@@ -31,7 +31,7 @@ RUN set -x \
 	&& apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN set -x \
-    && wget -O /tmp/tmp.${COMPONENT}.tar.gz "https://github.com/ucacoin/Ucacoin2/releases/download/v${VERSION}/ucacoind_ubuntu18.04.tar.gz" 
+    && wget -O /tmp/tmp.${COMPONENT}.tar.gz "https://github.com/ucacoin/Ucacoin2/releases/download/v${VERSION}/ucacoind_ubuntu1804.tar.gz" 
 RUN cd /tmp/ \
     && tar xvf tmp.${COMPONENT}.tar.gz 
 RUN ls -la /tmp/ && mkdir /opt/${COMPONENT} \
