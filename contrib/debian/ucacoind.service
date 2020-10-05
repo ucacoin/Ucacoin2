@@ -8,7 +8,7 @@
 # /etc/ucacoin/ucacoin.conf
 
 [Unit]
-Description=ucacoin daemon
+Description=UCACoin daemon
 After=network.target
 
 [Service]

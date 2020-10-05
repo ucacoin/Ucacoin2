@@ -1,5 +1,6 @@
 // Copyright (c) 2019 The Bitcoin Core developers
-// Copyright (c) 2020 The ucacoin Core developers
+// Copyright (c) 2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -53,7 +54,7 @@ bool ScriptPubKeyMan::CanGenerateKeys()
 {
     // A wallet can generate keys if it has an HD seed (IsHDEnabled) or it is a non-HD wallet (pre FEATURE_HD)
     LOCK(wallet->cs_wallet);
-    return IsHDEnabled();
+    return IsHDEnabled() || wallet->GetVersion() < FEATURE_PRE_SPLIT_KEYPOOL;
 }
 
 bool ScriptPubKeyMan::IsHDEnabled() const

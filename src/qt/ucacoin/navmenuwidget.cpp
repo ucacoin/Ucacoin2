@@ -1,4 +1,5 @@
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,7 +11,7 @@
 #include "optionsmodel.h"
 #include <QScrollBar>
 
-NavMenuWidget::NavMenuWidget(ucacoinGUI *mainWindow, QWidget *parent) :
+NavMenuWidget::NavMenuWidget(UCACoinGUI *mainWindow, QWidget *parent) :
     PWidget(mainWindow, parent),
     ui(new Ui::NavMenuWidget)
 {
@@ -25,33 +26,19 @@ NavMenuWidget::NavMenuWidget(ucacoinGUI *mainWindow, QWidget *parent) :
 
     // Buttons
     ui->btnDashboard->setProperty("name", "dash");
-    ui->btnDashboard->setText("HOME\n");
     ui->btnDashboard->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
-
     ui->btnSend->setProperty("name", "send");
     ui->btnSend->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
-    ui->btnSend->setText("SEND\n");
-
-    ui->btnAddress->setProperty("name", "address");
-    ui->btnAddress->setText("CONTACTS\n");
-    ui->btnAddress->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
-
-    ui->btnMaster->setProperty("name", "master");
-    ui->btnMaster->setText("MASTER\r\nNODES");
-    ui->btnMaster->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
-
-    ui->btnColdStaking->setProperty("name", "cold-staking");
-    ui->btnColdStaking->setText("COLD\r\nSTAKING");
-    ui->btnColdStaking->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
-
-    ui->btnSettings->setProperty("name", "settings");
-    ui->btnSettings->setText("SETTINGS\n");
-    ui->btnSettings->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
-
     ui->btnReceive->setProperty("name", "receive");
-    ui->btnReceive->setText("RECEIVE\n");
     ui->btnReceive->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
-
+    ui->btnAddress->setProperty("name", "address");
+    ui->btnAddress->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+    ui->btnMaster->setProperty("name", "master");
+    ui->btnMaster->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+    ui->btnColdStaking->setProperty("name", "cold-staking");
+    ui->btnColdStaking->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+    ui->btnSettings->setProperty("name", "settings");
+    ui->btnSettings->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
     btns = {ui->btnDashboard, ui->btnSend, ui->btnReceive, ui->btnAddress, ui->btnMaster, ui->btnColdStaking, ui->btnSettings, ui->btnColdStaking};
     onNavSelected(ui->btnDashboard, true);
 
@@ -69,9 +56,8 @@ NavMenuWidget::NavMenuWidget(ucacoinGUI *mainWindow, QWidget *parent) :
 }
 
 void NavMenuWidget::loadWalletModel() {
-    if (walletModel) {
-        if (walletModel->getOptionsModel())
-            ui->btnColdStaking->setVisible(walletModel->getOptionsModel()->isColdStakingScreenEnabled());
+    if (walletModel && walletModel->getOptionsModel()) {
+        ui->btnColdStaking->setVisible(walletModel->getOptionsModel()->isColdStakingScreenEnabled());
     }
 }
 
@@ -79,13 +65,13 @@ void NavMenuWidget::loadWalletModel() {
  * Actions
  */
 void NavMenuWidget::connectActions() {
-    connect(ui->btnDashboard,SIGNAL(clicked()),this, SLOT(onDashboardClicked()));
-    connect(ui->btnSend,SIGNAL(clicked()),this, SLOT(onSendClicked()));
-    connect(ui->btnAddress,SIGNAL(clicked()),this, SLOT(onAddressClicked()));
-    connect(ui->btnMaster,SIGNAL(clicked()),this, SLOT(onMasterNodesClicked()));
-    connect(ui->btnSettings,SIGNAL(clicked()),this, SLOT(onSettingsClicked()));
-    connect(ui->btnReceive,SIGNAL(clicked()),this, SLOT(onReceiveClicked()));
-    connect(ui->btnColdStaking,SIGNAL(clicked()),this, SLOT(onColdStakingClicked()));
+    connect(ui->btnDashboard, &QPushButton::clicked, this, &NavMenuWidget::onDashboardClicked);
+    connect(ui->btnSend, &QPushButton::clicked, this, &NavMenuWidget::onSendClicked);
+    connect(ui->btnAddress, &QPushButton::clicked, this, &NavMenuWidget::onAddressClicked);
+    connect(ui->btnMaster, &QPushButton::clicked, this, &NavMenuWidget::onMasterNodesClicked);
+    connect(ui->btnSettings, &QPushButton::clicked, this, &NavMenuWidget::onSettingsClicked);
+    connect(ui->btnReceive, &QPushButton::clicked, this, &NavMenuWidget::onReceiveClicked);
+    connect(ui->btnColdStaking, &QPushButton::clicked, this, &NavMenuWidget::onColdStakingClicked);
 
     ui->btnDashboard->setShortcut(QKeySequence(SHORT_KEY + Qt::Key_1));
     ui->btnSend->setShortcut(QKeySequence(SHORT_KEY + Qt::Key_2));

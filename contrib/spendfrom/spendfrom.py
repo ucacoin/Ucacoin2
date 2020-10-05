@@ -35,9 +35,9 @@ def check_json_precision():
 def determine_db_dir():
     """Return the default location of the ucacoin data directory"""
     if platform.system() == "Darwin":
-        return os.path.expanduser("~/Library/Application Support/ucacoin/")
+        return os.path.expanduser("~/Library/Application Support/UCACoin/")
     elif platform.system() == "Windows":
-        return os.path.join(os.environ['APPDATA'], "ucacoin")
+        return os.path.join(os.environ['APPDATA'], "UCACoin")
     return os.path.expanduser("~/.ucacoin")
 
 def read_bitcoin_config(dbdir):

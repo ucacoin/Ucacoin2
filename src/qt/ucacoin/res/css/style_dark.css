@@ -402,6 +402,31 @@ QPushButton[cssClass="btn-qr"] {
     border-radius: 2px;
 }
 
+/** btn HD Upgrade */
+
+QPushButton[cssClass="btn-check-hd-upgrade"] {
+    background-color:#50C69D10;
+    color:#FFFFFF;
+    font-weight: bold;
+    font-size: 15px;
+    padding-right:6px;
+    padding-left:6px;
+    border-bottom:2px solid #FED599;
+    border-radius:2px;
+}
+
+QPushButton[cssClass="btn-check-hd-upgrade"]:hover {
+    font-size: 14px;
+}
+
+QPushButton[cssClass="btn-check-hd-upgrade"]:checked {
+    background-color:#50C69D10;
+    border-bottom:2px solid #FED599;
+    border-radius:2px;
+}
+
+/** End btn HD Upgrade */
+
 
 QPushButton[cssClass="btn-check-faq"] {
     qproperty-icon: url("://ic-check-faq");
@@ -459,6 +484,31 @@ QPushButton[cssClass="btn-check-sync"]:checked {
     border-radius: 2px;
 }
 
+QPushButton[cssClass="btn-check-mint"] {
+    qproperty-icon: url("://ic-check-mint") ;
+    qproperty-iconSize: 24px 24px;
+    background-color:#50C69D10;
+    color:#FFFFFF;
+    border-bottom:2px solid #FED599;
+    border-radius:2px;
+}
+
+
+QPushButton[cssClass="btn-check-mint-inactive"] {
+    qproperty-icon: url("://ic-check-mint-off") ;
+    qproperty-iconSize: 24px 24px;
+    background-color:#50C69D10;
+    color:#B3FFFFFF;
+    border-bottom:2px solid #4c1b70;
+    border-radius:2px;
+}
+
+QPushButton[cssClass="btn-check-mint"]:checked {
+    background-color:#50C69D10;
+    color:#ffffff;
+    border-bottom:2px solid #b89236;
+}
+
 QPushButton[cssClass="btn-check-stack"] {
     qproperty-icon: url("://ic-check-staking");
     qproperty-iconSize: 24px 24px;
@@ -509,6 +559,35 @@ QPushButton[cssClass="btn-check-connect"]:checked {
     color: #ffffff;
     border-bottom: 2px solid #FED599;
 }
+
+/* Tor status*/
+
+QPushButton[cssClass="btn-check-tor"] {
+    qproperty-icon: url("://ic-check-tor") ;
+    qproperty-iconSize: 24px 24px;
+    color:#ffffff;
+    background-color:#50C69D10;
+    border-bottom:2px solid #FED599;
+    border-radius:2px;
+}
+
+
+QPushButton[cssClass="btn-check-tor-inactive"] {
+    qproperty-icon: url("://ic-check-tor-off");
+    qproperty-iconSize: 24px 24px;
+    color:#B3FFFFFF;
+    background-color:#40C69D10;
+    border-bottom:2px solid #C69D10;
+    border-radius:2px;
+}
+
+QPushButton[cssClass="btn-check-tor"]:checked {
+    background-color:#50C69D10;
+    color:#ffffff;
+    border-bottom:2px solid #FED599;
+}
+
+/* End tor status*/
 
 QPushButton[cssClass="btn-check-status-lock"] {
     background-color: #50C69D10;
@@ -886,6 +965,10 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
     font-size: 17px;
 }
 
+*[cssClass="text-main-hash"] {
+    color:#FFFFFF;
+    font-size:12px;
+}
 
 *[cssClass="text-main-settings"] {
     color: #FFFFFF;
@@ -1505,9 +1588,6 @@ QPushButton[cssClass="btn-text-primary"] {
         color: #FED599;
     }
 
-
-
-
 /*HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 HH       LINE EDIT
 HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
@@ -1950,6 +2030,21 @@ QComboBox[cssClass="btn-combo"] {
         width: 24px;
         height: 24px;
     }
+
+QComboBox[cssClass="btn-combo-small"] {
+    background-color:#14100B;
+    padding:8px 14px 8px 8px;
+    font-size:13px;
+    border:1px solid #14100B;
+    color: #707070;
+    text-align: right;
+}
+
+QComboBox[cssClass="btn-combo-small"]::down-arrow {
+    image: url("://ic-arrow-drop-down");
+    width: 15px;
+    height: 15px;
+}
 
 QComboBox[cssClass="btn-combo-edit"] {
     background-color: #14100B;

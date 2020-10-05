@@ -1,5 +1,5 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -23,10 +23,14 @@ class SettingsMainOptionsWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit SettingsMainOptionsWidget(ucacoinGUI* _window, QWidget *parent = nullptr);
+    explicit SettingsMainOptionsWidget(UCACoinGUI* _window, QWidget *parent = nullptr);
     ~SettingsMainOptionsWidget();
 
     void setMapper(QDataWidgetMapper *mapper);
+
+Q_SIGNALS:
+    void saveSettings();
+    void discardSettings();
 
 public Q_SLOTS:
     void onResetClicked();

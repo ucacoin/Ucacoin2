@@ -1,4 +1,5 @@
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,7 +13,7 @@
 #include <QTimer>
 #include <QProgressBar>
 
-class ucacoinGUI;
+class UCACoinGUI;
 class WalletModel;
 class ClientModel;
 
@@ -25,7 +26,7 @@ class TopBar : public PWidget
     Q_OBJECT
 
 public:
-    explicit TopBar(ucacoinGUI* _mainWindow, QWidget *parent = nullptr);
+    explicit TopBar(UCACoinGUI* _mainWindow, QWidget *parent = nullptr);
     ~TopBar();
 
     void showTop();
@@ -34,7 +35,14 @@ public:
     void loadWalletModel() override;
     void loadClientModel() override;
 
+    void openPassPhraseDialog(AskPassphraseDialog::Mode mode, AskPassphraseDialog::Context ctx);
     void encryptWallet();
+    void showUpgradeDialog();
+
+    void run(int type) override;
+    void onError(QString error, int type) override;
+    void unlockWallet();
+
 public Q_SLOTS:
     void updateBalances(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance,
                         const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance,
@@ -45,6 +53,7 @@ public Q_SLOTS:
     void setNumBlocks(int count);
     void setStakingStatusActive(bool fActive);
     void updateStakingStatus();
+    void updateHDState(const bool& upgraded, const QString& upgradeError);
 
 Q_SIGNALS:
     void themeChanged(bool isLight);
@@ -72,6 +81,8 @@ private:
     int nDisplayUnit = -1;
     QTimer* timerStakingIcon = nullptr;
     bool isInitializing = true;
+
+    void updateTorIcon();
 };
 
 #endif // TOPBAR_H

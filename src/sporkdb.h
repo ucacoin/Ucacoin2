@@ -1,16 +1,16 @@
 // Copyright (c) 2017-2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ucacoin_CSPORKDB_H
-#define ucacoin_CSPORKDB_H
+#ifndef UCACoin_CSPORKDB_H
+#define UCACoin_CSPORKDB_H
 
-#include <boost/filesystem/path.hpp>
-#include "leveldbwrapper.h"
+#include "fs.h"
+#include "dbwrapper.h"
 #include "spork.h"
 
-class CSporkDB : public CLevelDBWrapper
+class CSporkDB : public CDBWrapper
 {
 public:
     CSporkDB(size_t nCacheSize, bool fMemory = false, bool fWipe = false);
@@ -26,4 +26,4 @@ public:
 };
 
 
-#endif //ucacoin_CSPORKDB_H
+#endif //UCACoin_CSPORKDB_H

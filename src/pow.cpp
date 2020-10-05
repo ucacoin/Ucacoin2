@@ -1,8 +1,8 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2015-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -39,13 +39,11 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
         return consensus.powLimit.GetCompact();
     }
 
-    if (pindexLast->nHeight > Params().GetConsensus().height_last_PoW) {
-        const bool fTimeV2 = consensus.IsTimeProtocolV2(pindexLast->nHeight+1);
+    if (pindexLast->nHeight > 201) {
+        const bool fTimeV2 = !Params().IsRegTestNet() && consensus.IsTimeProtocolV2(pindexLast->nHeight+1);
         const uint256& bnTargetLimit = consensus.ProofOfStakeLimit(fTimeV2);
         const int64_t& nTargetTimespan = 60 * 40;
 		const int64_t& nTargetSpacing = 60;
-
-
 
         int64_t nActualSpacing = 0;
         if (pindexLast->nHeight != 0)
@@ -133,7 +131,7 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits)
     bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
 
     // Check range
-    if (fNegative || bnTarget == 0 || fOverflow || bnTarget > Params().GetConsensus().powLimit)
+    if (fNegative || bnTarget.IsNull() || fOverflow || bnTarget > Params().GetConsensus().powLimit)
         return error("CheckProofOfWork() : nBits below minimum work");
 
     // Check proof of work matches claimed amount
@@ -149,8 +147,8 @@ uint256 GetBlockProof(const CBlockIndex& block)
     bool fNegative;
     bool fOverflow;
     bnTarget.SetCompact(block.nBits, &fNegative, &fOverflow);
-    if (fNegative || fOverflow || bnTarget == 0)
-        return 0;
+    if (fNegative || fOverflow || bnTarget.IsNull())
+        return UINT256_ZERO;
     // We need to compute 2**256 / (bnTarget+1), but we can't represent 2**256
     // as it's too large for a uint256. However, as 2**256 is at least as large
     // as bnTarget+1, it is equal to ((2**256 - bnTarget - 1) / (bnTarget+1)) + 1,

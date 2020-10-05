@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2020 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -48,6 +48,7 @@ static const CRPCConvertParam vRPCConvertParams[] =
         {"settxfee", 0},
         {"getreceivedbyaddress", 1},
         {"getreceivedbyaccount", 1},
+        {"getreceivedbylabel", 1},
         {"listcoldutxos", 0},
         {"listdelegators", 0},
         {"listreceivedbyaddress", 0},
@@ -56,8 +57,12 @@ static const CRPCConvertParam vRPCConvertParams[] =
         {"listreceivedbyaccount", 0},
         {"listreceivedbyaccount", 1},
         {"listreceivedbyaccount", 2},
+        {"listreceivedbylabel", 0},
+        {"listreceivedbylabel", 1},
+        {"listreceivedbylabel", 2},
         {"getbalance", 1},
         {"getbalance", 2},
+        {"getbalance", 3},
         {"getblockhash", 0},
         { "waitforblockheight", 0 },
         { "waitforblockheight", 1 },
@@ -91,6 +96,8 @@ static const CRPCConvertParam vRPCConvertParams[] =
         {"listunspent", 1},
         {"listunspent", 2},
         {"listunspent", 3},
+        {"logging", 0},
+        {"logging", 1},
         {"getblock", 1},
         {"getblockheader", 1},
         {"gettransaction", 1},
@@ -98,6 +105,7 @@ static const CRPCConvertParam vRPCConvertParams[] =
         {"createrawtransaction", 0},
         {"createrawtransaction", 1},
         {"createrawtransaction", 2},
+        {"fundrawtransaction", 1},
         {"signrawtransaction", 1},
         {"signrawtransaction", 2},
         {"sendrawtransaction", 1},
@@ -110,6 +118,8 @@ static const CRPCConvertParam vRPCConvertParams[] =
         {"importprivkey", 2},
         {"importprivkey", 3},
         {"importaddress", 2},
+        {"importaddress", 3},
+        {"importpubkey", 2},
         {"verifychain", 0},
         {"verifychain", 1},
         {"keypoolrefill", 0},
@@ -135,11 +145,13 @@ static const CRPCConvertParam vRPCConvertParams[] =
         {"setstakesplitthreshold", 0},
         {"autocombinerewards", 0},
         {"autocombinerewards", 1},
-        {"getmintsvalues", 2},
         {"enableautomintaddress", 0},
         {"getblockindexstats", 0},
         {"getblockindexstats", 1},
         {"getblockindexstats", 2},
+        {"getserials", 0},
+        {"getserials", 1},
+        {"getserials", 2},
         {"getfeeinfo", 0},
     };
 

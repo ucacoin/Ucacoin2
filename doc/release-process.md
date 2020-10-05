@@ -5,7 +5,7 @@ Release Process
 
 ### Before every release candidate
 
-* Update translations (ping Fuzzbawls on Discord) see [translation_process.md](https://github.com/ucacoin-Project/ucacoin/blob/master/doc/translation_process.md#synchronising-translations).
+* Update translations (ping Fuzzbawls on Discord) see [translation_process.md](https://github.com/UCACoin-Project/UCACoin/blob/master/doc/translation_process.md#synchronising-translations).
 * Update manpages, see [gen-manpages.sh](https://github.com/ucacoin-project/ucacoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
 * Update release candidate version in `configure.ac` (`CLIENT_VERSION_RC`)
 
@@ -54,7 +54,7 @@ Check out the source code in the following directory hierarchy.
     git clone https://github.com/devrandom/gitian-builder.git
     git clone https://github.com/ucacoin-project/ucacoin.git
 
-### ucacoin maintainers/release engineers, suggestion for writing release notes
+### UCACoin maintainers/release engineers, suggestion for writing release notes
 
 Write release notes. git shortlog helps a lot, for example:
 
@@ -124,7 +124,7 @@ NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from 
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign ucacoin Core for Linux, Windows, and macOS:
+### Build and sign UCACoin for Linux, Windows, and macOS:
 
     pushd ./gitian-builder
     ./bin/gbuild --num-make 2 --memory 3000 --commit ucacoin=v${VERSION} ../ucacoin/contrib/gitian-descriptors/gitian-linux.yml
@@ -285,6 +285,6 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 
-  - Create a [new GitHub release](https://github.com/ucacoin-Project/ucacoin/releases/new) with a link to the archived release notes.
+  - Create a [new GitHub release](https://github.com/UCACoin-Project/UCACoin/releases/new) with a link to the archived release notes.
 
   - Celebrate

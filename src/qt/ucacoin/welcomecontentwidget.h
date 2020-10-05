@@ -1,5 +1,5 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -26,7 +26,6 @@ public:
     bool isOk = false;
 
     void setModel(OptionsModel *model);
-    void checkLanguage();
 
 Q_SIGNALS:
     void onLanguageSelected();
@@ -35,6 +34,7 @@ public Q_SLOTS:
     void onNextClicked();
     void onBackClicked();
     void onSkipClicked();
+    void checkLanguage();
 
 private:
     Ui::WelcomeContentWidget *ui;

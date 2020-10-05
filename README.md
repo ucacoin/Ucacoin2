@@ -2,14 +2,14 @@
 
 Ucacoin is a peer-to-peer decentralized digital currency for ordinary people, easy to use and acquire.
 
-Ucacoin is fork of Pivx, improved with some of the following features: 
+Ucacoin is fork of Pivx, improved with some of the following features:
 
-- Segwit protocol applied: fast transaction aprox. 300 tx/s 
-- DNS hardcoded 
+- Segwit protocol applied: fast transaction aprox. 300 tx/s
+- DNS hardcoded
 - Supersecure
-- Consesus by masternode 
+- Consesus by masternode
 - POS 3.0. stake fixed
-- Fast transactions featuring guaranteed zero confirmation transaction: Instantsend 
+- Fast transactions featuring guaranteed zero confirmation transaction: Instantsend
 - Intregated BIP38, multisignature, blockexplorer, wallet repair and multisend functions in wallet
 - Low transaction fee
 
@@ -34,7 +34,7 @@ POS Rewards:
 Starting at 475 ucacoins
 ```
 
-Masternode Governance: 
+Masternode Governance:
 
 ```
 70% of all block rewards
@@ -62,7 +62,7 @@ Build with
 
 Replace 3.1 with the most current version found in https://github.com/ucacoin/Ucacoin2/releases
 
-If you have permission issues add your local users userid and groupid as buildargs with 
+If you have permission issues add your local users userid and groupid as buildargs with
 
 `--build-arg USER_ID=youruserid`
 
@@ -72,6 +72,6 @@ On linux based systems you will find those if you type `id` into your console.
 
 Start with
 
-`docker run -it -v ucacoin-data:/ucacoin ucacoin` 
+`docker run -it -v ucacoin-data:/ucacoin ucacoin`
 
 Config can be found in `/var/lib/docker/volumes/ucacoin-data/_data/.ucacoin/ucacoin.conf`

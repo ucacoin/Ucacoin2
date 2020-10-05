@@ -1,17 +1,17 @@
 # Copyright (c) 2018-2019 The Ion developers
-# Copyright (c) 2019 The ucacoin developers
+# Copyright (c) 2019 The PIVX developers
 name: ucacoin-core
 base: core18
-version: 4.0.99
-summary:   ucacoin (Private – Instant – Verified – Transaction)
+version: 4.2.0
+summary:   UCACoin (Private – Instant – Verified – Transaction)
 description: |
-  ucacoin is an MIT licensed,
+  UCACoin is an MIT licensed,
   open source, blockchain-based cryptocurrency with
   ultra fast transactions, low fees, high network decentralization, and
   Zero Knowledge cryptography proofs for industry-leading
   transaction anonymity.
 
-  - [Download](https://ucacoin.org/wp-content/uploads/2018/10/ucacoin-White.pdf) ucacoin White Paper PDF
+  - [Download](https://ucacoin.org/wp-content/uploads/2018/10/UCACoin-White.pdf) UCACoin White Paper PDF
 grade: devel
 confinement: strict
 apps:
@@ -68,7 +68,7 @@ apps:
     plugs: [home]
 parts:
   ucacoin-core:
-    source: https://github.com/ucacoin-Project/ucacoin
+    source: https://github.com/UCACoin-Project/UCACoin
     source-type: git
     source-tag: master
     plugin: nil

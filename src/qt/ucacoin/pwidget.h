@@ -1,5 +1,5 @@
-// Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,8 +10,9 @@
 #include <QWidget>
 #include <QString>
 #include "qt/ucacoin/prunnable.h"
+#include "walletmodel.h"
 
-class ucacoinGUI;
+class UCACoinGUI;
 class ClientModel;
 class WalletModel;
 class WorkerTask;
@@ -30,13 +31,13 @@ class PWidget : public QWidget, public Runnable, public Translator
 {
     Q_OBJECT
 public:
-    explicit PWidget(ucacoinGUI* _window = nullptr, QWidget *parent = nullptr);
+    explicit PWidget(UCACoinGUI* _window = nullptr, QWidget *parent = nullptr);
     explicit PWidget(PWidget *parent = nullptr);
 
     void setClientModel(ClientModel* model);
     void setWalletModel(WalletModel* model);
 
-    ucacoinGUI* getWindow() { return this->window; }
+    UCACoinGUI* getWindow() { return this->window; }
 
     void run(int type) override;
     void onError(QString error, int type) override;
@@ -56,7 +57,7 @@ protected Q_SLOTS:
     void onChangeTheme(bool isLightTheme, QString &theme);
 
 protected:
-    ucacoinGUI* window = nullptr;
+    UCACoinGUI* window = nullptr;
     ClientModel* clientModel = nullptr;
     WalletModel* walletModel = nullptr;
 
@@ -64,12 +65,10 @@ protected:
     virtual void loadWalletModel();
 
     void showHideOp(bool show);
-    bool execute(int type);
+    bool execute(int type, std::unique_ptr<WalletModel::UnlockContext> pctx = nullptr);
     void warn(const QString& title, const QString& message);
     bool ask(const QString& title, const QString& message);
     void showDialog(QDialog *dialog, int xDiv = 3, int yDiv = 5);
-
-    bool verifyWalletUnlocked();
 
 private:
     QSharedPointer<WorkerTask> task;

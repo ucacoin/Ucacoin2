@@ -1,10 +1,10 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ucacoin_ADDRESSBOOK_H
-#define ucacoin_ADDRESSBOOK_H
+#ifndef UCACoin_ADDRESSBOOK_H
+#define UCACoin_ADDRESSBOOK_H
 
 #include <map>
 #include <string>
@@ -44,4 +44,4 @@ namespace AddressBook {
 
 }
 
-#endif //ucacoin_ADDRESSBOOK_H
+#endif //UCACoin_ADDRESSBOOK_H

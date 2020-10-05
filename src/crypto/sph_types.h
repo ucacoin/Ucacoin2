@@ -228,6 +228,7 @@
  * family; to each family corresponds a specific header file. Each
  * individual function has its associated "short name". Please refer to
  * the documentation for that header file to get details on the hash
+ * function denomination and provenance.
  *
  * Note: the functions marked with a '(64)' in the list below are
  * available only if the C compiler provides an integer type of length

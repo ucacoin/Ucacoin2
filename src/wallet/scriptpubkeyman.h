@@ -1,10 +1,11 @@
 // Copyright (c) 2019 The Bitcoin Core developers
-// Copyright (c) 2020 The ucacoin Core developers
+// Copyright (c) 2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ucacoin_SCRIPTPUBKEYMAN_H
-#define ucacoin_SCRIPTPUBKEYMAN_H
+#ifndef UCACoin_SCRIPTPUBKEYMAN_H
+#define UCACoin_SCRIPTPUBKEYMAN_H
 
 #include "wallet/hdchain.h"
 #include "wallet/wallet.h"
@@ -160,4 +161,4 @@ private:
 };
 
 
-#endif //ucacoin_SCRIPTPUBKEYMAN_H
+#endif //UCACoin_SCRIPTPUBKEYMAN_H

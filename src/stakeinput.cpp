@@ -1,5 +1,5 @@
-// Copyright (c) 2017-2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2017-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,32 +10,63 @@
 #include "txdb.h"
 #include "wallet/wallet.h"
 
+bool CUcaCoinStake::InitFromTxIn(const CTxIn& txin)
+{
+    // Find the previous transaction in database
+    uint256 hashBlock;
+    CTransaction txPrev;
+    if (!GetTransaction(txin.prevout.hash, txPrev, hashBlock, true))
+        return error("%s : INFO: read txPrev failed, tx id prev: %s", __func__, txin.prevout.hash.GetHex());
+    SetPrevout(txPrev, txin.prevout.n);
 
-bool CUcaStake::SetInput(CTransaction txPrev, unsigned int n)
+    // Find the index of the block of the previous transaction
+    if (mapBlockIndex.count(hashBlock)) {
+        CBlockIndex* pindex = mapBlockIndex.at(hashBlock);
+        if (chainActive.Contains(pindex)) pindexFrom = pindex;
+    }
+    // Check that the input is in the active chain
+    if (!pindexFrom)
+        return error("%s : Failed to find the block index for stake origin", __func__);
+
+    // All good
+    return true;
+}
+
+bool CUcaCoinStake::SetPrevout(CTransaction txPrev, unsigned int n)
 {
     this->txFrom = txPrev;
     this->nPosition = n;
     return true;
 }
 
-bool CUcaStake::GetTxFrom(CTransaction& tx) const
+bool CUcaCoinStake::GetTxFrom(CTransaction& tx) const
 {
+    if (txFrom.IsNull())
+        return false;
     tx = txFrom;
     return true;
 }
 
-bool CUcaStake::CreateTxIn(CWallet* pwallet, CTxIn& txIn, uint256 hashTxOut)
+bool CUcaCoinStake::GetTxOutFrom(CTxOut& out) const
+{
+    if (txFrom.IsNull() || nPosition >= txFrom.vout.size())
+        return false;
+    out = txFrom.vout[nPosition];
+    return true;
+}
+
+bool CUcaCoinStake::CreateTxIn(CWallet* pwallet, CTxIn& txIn, uint256 hashTxOut)
 {
     txIn = CTxIn(txFrom.GetHash(), nPosition);
     return true;
 }
 
-CAmount CUcaStake::GetValue() const
+CAmount CUcaCoinStake::GetValue() const
 {
     return txFrom.vout[nPosition].nValue;
 }
 
-bool CUcaStake::CreateTxOuts(CWallet* pwallet, std::vector<CTxOut>& vout, CAmount nTotal)
+bool CUcaCoinStake::CreateTxOuts(CWallet* pwallet, std::vector<CTxOut>& vout, CAmount nTotal)
 {
     std::vector<valtype> vSolutions;
     txnouttype whichType;
@@ -85,7 +116,7 @@ bool CUcaStake::CreateTxOuts(CWallet* pwallet, std::vector<CTxOut>& vout, CAmoun
     return true;
 }
 
-CDataStream CUcaStake::GetUniqueness() const
+CDataStream CUcaCoinStake::GetUniqueness() const
 {
     //The unique identifier for a UCA stake is the outpoint
     CDataStream ss(SER_NETWORK, 0);
@@ -94,11 +125,11 @@ CDataStream CUcaStake::GetUniqueness() const
 }
 
 //The block that the UTXO was added to the chain
-CBlockIndex* CUcaStake::GetIndexFrom()
+CBlockIndex* CUcaCoinStake::GetIndexFrom()
 {
     if (pindexFrom)
         return pindexFrom;
-    uint256 hashBlock = 0;
+    uint256 hashBlock = UINT256_ZERO;
     CTransaction tx;
     if (GetTransaction(txFrom.GetHash(), tx, hashBlock, true)) {
         // If the index is in the chain, then set it as the "index from"
@@ -113,3 +144,19 @@ CBlockIndex* CUcaStake::GetIndexFrom()
 
     return pindexFrom;
 }
+
+// Verify stake contextual checks
+bool CUcaCoinStake::ContextCheck(int nHeight, uint32_t nTime)
+{
+    const Consensus::Params& consensus = Params().GetConsensus();
+    // Get Stake input block time/height
+    CBlockIndex* pindexFrom = GetIndexFrom();
+    if (!pindexFrom)
+        return error("%s: unable to get previous index for stake input", __func__);
+    const int nHeightBlockFrom = pindexFrom->nHeight;
+    const uint32_t nTimeBlockFrom = pindexFrom->nTime;
+
+    // All good
+    return true;
+}
+

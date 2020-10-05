@@ -1,19 +1,23 @@
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef MASTERNODESWIDGET_H
 #define MASTERNODESWIDGET_H
 
-#include <QWidget>
 #include "qt/ucacoin/pwidget.h"
 #include "qt/ucacoin/furabstractlistitemdelegate.h"
 #include "qt/ucacoin/mnmodel.h"
 #include "qt/ucacoin/tooltipmenu.h"
-#include <QTimer>
+#include "walletmodel.h"
+
 #include <atomic>
 
-class ucacoinGUI;
+#include <QTimer>
+#include <QWidget>
+
+class UCACoinGUI;
 
 namespace Ui {
 class MasterNodesWidget;
@@ -29,7 +33,7 @@ class MasterNodesWidget : public PWidget
 
 public:
 
-    explicit MasterNodesWidget(ucacoinGUI *parent = nullptr);
+    explicit MasterNodesWidget(UCACoinGUI *parent = nullptr);
     ~MasterNodesWidget();
 
     void loadWalletModel() override;

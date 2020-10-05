@@ -6,8 +6,8 @@
         <translation>Finestra di dialogo</translation>
     </message>
     <message>
-        <source>My Address</source>
-        <translation>Il mio indirizzo</translation>
+        <source>New Address</source>
+        <translation>Nuovo Indirizzo</translation>
     </message>
     <message>
         <source>Address</source>
@@ -22,8 +22,8 @@
         <translation>CANCELLA</translation>
     </message>
     <message>
-        <source>OK</source>
-        <translation>OK</translation>
+        <source>SAVE</source>
+        <translation>SALVA</translation>
     </message>
 </context>
 <context>
@@ -33,16 +33,8 @@
         <translation>Finestra di dialogo</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
         <source>CANCEL</source>
         <translation>CANCELLA</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
     <message>
         <source>Edit Contact</source>
@@ -53,7 +45,7 @@
         <translation>Imposta un'etichetta per l'indirizzo selezionato</translation>
     </message>
     <message>
-        <source>Enter a name for the address (e.g Exchange)</source>
+        <source>Enter a label for the address (e.g. Exchange)</source>
         <translation>Inserisci un nome per l'indirizzo (ad es. Exchange)</translation>
     </message>
     <message>
@@ -130,12 +122,12 @@
         <translation>Indirizzi di ricezione</translation>
     </message>
     <message>
-        <source>These are your ucacoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Questi sono gli indirizzi ucacoin per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo di ricezione prima di inviare valuta.</translation>
+        <source>These are your UCACoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Questi sono gli indirizzi UCACoin per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo di ricezione prima di inviare valuta.</translation>
     </message>
     <message>
-        <source>These are your ucacoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Questi sono gli indirizzi ucacoin per la ricezione di pagamenti. Si raccomanda di utilizzare un indirizzo diverso per ogni transazione.</translation>
+        <source>These are your UCACoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Questi sono gli indirizzi UCACoin per la ricezione di pagamenti. Si raccomanda di utilizzare un indirizzo diverso per ogni transazione.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -196,6 +188,10 @@
         <translation>Data</translation>
     </message>
     <message>
+        <source>Type</source>
+        <translation>Tipo</translation>
+    </message>
+    <message>
         <source>(no label)</source>
         <translation>(nessuna etichetta)</translation>
     </message>
@@ -207,28 +203,12 @@
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>Send</source>
-        <translation>Invia</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
-        <source>No active Master Node yet</source>
-        <translation>Ancora nessun MasterNode attivo</translation>
-    </message>
-    <message>
         <source>Contact name</source>
         <translation>Nome del contatto</translation>
     </message>
     <message>
         <source>Enter address</source>
         <translation>Inserire indirizzo</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
     <message>
         <source>Contacts</source>
@@ -243,16 +223,16 @@
         <translation>Ancora nessun contatto</translation>
     </message>
     <message>
-        <source>e.g. John Doe</source>
-        <translation>ad es. John Doe</translation>
-    </message>
-    <message>
-        <source>Enter a ucacoin address</source>
-        <translation>Inserisci un indirizzo ucacoin</translation>
-    </message>
-    <message>
         <source>SAVE</source>
         <translation>SALVA</translation>
+    </message>
+    <message>
+        <source>Add new contact</source>
+        <translation>Aggiungi nuovo contatto</translation>
+    </message>
+    <message>
+        <source>Generate a new address to receive tokens.</source>
+        <translation>Generare un nuovo indirizzo per ricevere i token.</translation>
     </message>
     <message>
         <source>Invalid Contact Address</source>
@@ -368,28 +348,44 @@ per lo staking</translation>
         <translation>Conferma cifratura portafoglio</translation>
     </message>
     <message>
+        <source>WARNING</source>
+        <translation>ATTENZIONE</translation>
+    </message>
+    <message>
+        <source>If you encrypt your wallet and lose your passphrase, you will</source>
+        <translation>Se crittografi il portafoglio e poi perdi la parola d'ordine,</translation>
+    </message>
+    <message>
         <source>ENCRYPT</source>
-        <translation>Crittografa</translation>
+        <translation>CRITTOGRAFA</translation>
     </message>
     <message>
         <source>CANCEL</source>
         <translation>CANCELLA</translation>
     </message>
     <message>
-        <source>ucacoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your UCAs from being stolen by malware infecting your computer.</source>
-        <translation>ucacoin verrà ora chiuso per completare il processo di cifratura. Ricorda che crittografare il tuo portafoglio non protegge completamente i tuoi UCA dal furto da parte di software malevoli che potrebbero infettare il tuo computer.</translation>
+        <source>UCACoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your UCAs from being stolen by malware infecting your computer.</source>
+        <translation>UCACoin verrà ora chiuso per completare il processo di cifratura. Ricorda che crittografare il tuo portafoglio non protegge completamente i tuoi UCA dal furto da parte di software malevoli che potrebbero infettare il tuo computer.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Confermi di voler crittografare il portafoglio?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR UCA&lt;/b&gt;!</source>
-        <translation>Attenzione: Se crittografi il portafoglio e poi perdi la parola d'ordine, &lt;b&gt;PERDERAI TUTTI I TUOI UCA&lt;7b&gt;!</translation>
-    </message>
-    <message>
         <source>Wallet encrypted</source>
         <translation>Portafoglio crittografato</translation>
+    </message>
+    <message>
+        <source>WARNING:</source>
+        <translation>ATTENZIONE:</translation>
+    </message>
+    <message>
+        <source>The caps lock key is on!</source>
+        <translation>Attenzione: il tasto Caps Lock è attivo!</translation>
+    </message>
+    <message>
+        <source>Passphrases do not match!</source>
+        <translation>Le passphrase non corrispondono!</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -412,6 +408,10 @@ per lo staking</translation>
         <translation>Le parole d'ordine fornite con coincidono.</translation>
     </message>
     <message>
+        <source>LOSE ALL OF YOUR COINS</source>
+        <translation>PERDERAI TUTTI I TUOI TOKEN</translation>
+    </message>
+    <message>
         <source>Wallet unlock failed</source>
         <translation>Sblocco portafoglio fallito</translation>
     </message>
@@ -427,10 +427,6 @@ per lo staking</translation>
         <source>Wallet passphrase was successfully changed.</source>
         <translation>La passphrase del portafoglio è stata modificata correttamente.</translation>
     </message>
-    <message>
-        <source>Warning: The Caps Lock key is on!</source>
-        <translation>Attenzione: il tasto Caps Lock è attivo!</translation>
-    </message>
 </context>
 <context>
     <name>BanTableModel</name>
@@ -441,37 +437,6 @@ per lo staking</translation>
     <message>
         <source>Banned Until</source>
         <translation>Bloccato fino a</translation>
-    </message>
-</context>
-<context>
-    <name>BlockExplorer</name>
-    <message>
-        <source>Blockchain Explorer</source>
-        <translation>Esplora catena dei blocchi</translation>
-    </message>
-    <message>
-        <source>Back</source>
-        <translation>Indietro</translation>
-    </message>
-    <message>
-        <source>Forward</source>
-        <translation>Avanti</translation>
-    </message>
-    <message>
-        <source>Address / Block / Transaction</source>
-        <translation>Indirizzo / Blocco / Transazione</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Cerca</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ucacoin.conf).</source>
-        <translation>Non tutte le transazioni verranno visualizzate. Per vedere tutte le transazioni è necessario aggiungere txindex=1 nel file di configurazione (ucacoin.conf)</translation>
     </message>
 </context>
 <context>
@@ -507,10 +472,6 @@ per lo staking</translation>
         <source>Total: %1 (IPv4: %2 / IPv6: %3 / Tor: %4 / Unknown: %5)</source>
         <translation>Totale: %1 (IPv4: %2 / IPv6: %3 / Tor: %4 / Sconosciuti: %5)</translation>
     </message>
-    <message>
-        <source>Network Alert</source>
-        <translation>Avviso di rete</translation>
-    </message>
 </context>
 <context>
     <name>CoinControlDialog</name>
@@ -529,6 +490,10 @@ per lo staking</translation>
     <message>
         <source>Coin Selection</source>
         <translation>Selezione valuta</translation>
+    </message>
+    <message>
+        <source>Select UCA Outputs to Spend</source>
+        <translation>Seleziona UCA da spendere</translation>
     </message>
     <message>
         <source>Dust:</source>
@@ -553,14 +518,6 @@ per lo staking</translation>
     <message>
         <source>Amount</source>
         <translation>Ammontare</translation>
-    </message>
-    <message>
-        <source>Transaction Details</source>
-        <translation>Dettagli della transazione</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
     </message>
     <message>
         <source>0.00 UCA</source>
@@ -631,40 +588,40 @@ per lo staking</translation>
         <translation>Sblocca non spesi</translation>
     </message>
     <message>
-        <source>Copy quantity</source>
-        <translation>Copia importo</translation>
-    </message>
-    <message>
-        <source>Copy fee</source>
-        <translation>Copia commissione</translation>
-    </message>
-    <message>
-        <source>Copy after fee</source>
-        <translation>Copia importo al netto della commissione</translation>
-    </message>
-    <message>
-        <source>Copy bytes</source>
-        <translation>Copia byte</translation>
-    </message>
-    <message>
-        <source>Copy priority</source>
-        <translation>Copia priorità</translation>
-    </message>
-    <message>
-        <source>Copy dust</source>
-        <translation>Copia polvere</translation>
-    </message>
-    <message>
-        <source>Copy change</source>
-        <translation>Copia resto</translation>
-    </message>
-    <message>
         <source>Unselect all</source>
         <translation>Deseleziona tutto</translation>
     </message>
     <message>
         <source>Please switch to "List mode" to use this function.</source>
         <translation>Prego selezionare "Modalità lista" per utilizzare questa funzione</translation>
+    </message>
+    <message>
+        <source>Quantity Copied</source>
+        <translation>Quantità Copiata</translation>
+    </message>
+    <message>
+        <source>Amount Copied</source>
+        <translation>Importo Copiato</translation>
+    </message>
+    <message>
+        <source>Fee Copied</source>
+        <translation>Fee Copiate</translation>
+    </message>
+    <message>
+        <source>After Fee Copied</source>
+        <translation>Netto Fee copiato</translation>
+    </message>
+    <message>
+        <source>Bytes Copied</source>
+        <translation>Bytes Copiati</translation>
+    </message>
+    <message>
+        <source>Dust Copied</source>
+        <translation>Povere Copiata</translation>
+    </message>
+    <message>
+        <source>Change Copied</source>
+        <translation>Cambio Copiato</translation>
     </message>
     <message>
         <source>highest</source>
@@ -715,6 +672,18 @@ per lo staking</translation>
         <translation>si</translation>
     </message>
     <message>
+        <source>Can vary +/- %1 u%2 per input.</source>
+        <translation>Può variare  +/- %1 u%2 per input.</translation>
+    </message>
+    <message>
+        <source>delegated to %1 for cold staking</source>
+        <translation>delegato a %1 per il cold staking</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Seleziona tutto</translation>
+    </message>
+    <message>
         <source>no</source>
         <translation>no</translation>
     </message>
@@ -743,10 +712,6 @@ per lo staking</translation>
         <translation>Questa etichetta diventa rossa se uno dei destinatari riceve un importo inferiore a %1.</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 uuca per input.</source>
-        <translation>Può variare di +/- %1 uUCA per input.</translation>
-    </message>
-    <message>
         <source>(no label)</source>
         <translation>(nessuna etichetta)</translation>
     </message>
@@ -760,125 +725,18 @@ per lo staking</translation>
     </message>
 </context>
 <context>
-    <name>CoinControlUcaWidget</name>
-    <message>
-        <source>Dialog</source>
-        <translation>Finestra di dialogo</translation>
-    </message>
-    <message>
-        <source>Transaction Details</source>
-        <translation>Dettagli della transazione</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
-    </message>
-    <message>
-        <source>UCA:</source>
-        <translation>UCA:</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
-        <source>Quantity:</source>
-        <translation>Quantità:</translation>
-    </message>
-    <message>
-        <source>Fee:</source>
-        <translation>Commissione:</translation>
-    </message>
-    <message>
-        <source>Amount</source>
-        <translation>Ammontare</translation>
-    </message>
-    <message>
-        <source>Label</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
-        <source>Address</source>
-        <translation>Indirizzo</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation>Tipo</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation>Data</translation>
-    </message>
-    <message>
-        <source>Confirmations</source>
-        <translation>Conferme</translation>
-    </message>
-    <message>
-        <source>CheckBox</source>
-        <translation>CheckBox</translation>
-    </message>
-    <message>
-        <source>Bytes:</source>
-        <translation>Byte:</translation>
-    </message>
-    <message>
-        <source>Dust:</source>
-        <translation>Polvere:</translation>
-    </message>
-    <message>
-        <source>Change:</source>
-        <translation>Differenza:</translation>
-    </message>
-    <message>
-        <source>After Fee: </source>
-        <translation>Al netto della commissione:</translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>CANCELLA</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-</context>
-<context>
     <name>ColdStakingWidget</name>
     <message>
         <source>Form</source>
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>Title</source>
-        <translation>Titolo</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
-    </message>
-    <message>
-        <source>Owner Address (optional, if empty a new address will be created)</source>
+        <source>Owner address (optional, if empty a new address will be created)</source>
         <translation>Indirizzo del proprietario (facoltativo, se vuoto verrà creato un nuovo indirizzo)</translation>
     </message>
     <message>
-        <source>List of delegated balance by address</source>
-        <translation>Lista dei saldi delegati per indirizzo</translation>
-    </message>
-    <message>
-        <source>Total</source>
-        <translation>Totale</translation>
-    </message>
-    <message>
-        <source>Unconfirmed balance will not be shown</source>
-        <translation>Il saldo non confermato non verrà visualizzato</translation>
-    </message>
-    <message>
-        <source>No balance delegated</source>
-        <translation>Nessun saldo delegato</translation>
+        <source>Total Staking:</source>
+        <translation>Totale Staking:</translation>
     </message>
     <message>
         <source>Cold Staking</source>
@@ -893,30 +751,12 @@ per lo staking</translation>
         <translation>Delega</translation>
     </message>
     <message>
-        <source>You can delegate your UCAs and let a hot node (24/7 online node)
-stake in your behalf, keeping the keys in a secure place offline.</source>
-        <translation>Puoi delegare i tuoi UCA e lasciare un nodo attivo (nodo online 24/7) ad
-effettuare lo stake a tuo nome, mantenendo le chiavi in ​​un luogo sicuro offline.</translation>
-    </message>
-    <message>
-        <source>Add owner address</source>
-        <translation>Aggiungi indirizzo proprietario</translation>
-    </message>
-    <message>
-        <source>Delegate or Accept UCA delegation</source>
-        <translation>Delegare o accettare la delega UCA</translation>
-    </message>
-    <message>
         <source>Delegate</source>
         <translation>Delegato</translation>
     </message>
     <message>
         <source>Clear All</source>
         <translation>Cancella tutto</translation>
-    </message>
-    <message>
-        <source>Add the staking address</source>
-        <translation>Aggiungere l'indirizzo di staking</translation>
     </message>
     <message>
         <source>Delegated balance history</source>
@@ -935,20 +775,72 @@ effettuare lo stake a tuo nome, mantenendo le chiavi in ​​un luogo sicuro of
         <translation>Errore durante il caricamento delle deleghe: %1</translation>
     </message>
     <message>
+        <source>You can delegate your UCAs, letting a hot node (24/7 online node)
+stake on your behalf, while you keep the keys securely offline.</source>
+        <translation>Puoi delegare i tuoi UCA, delegando ad un nodo attivo (online 24/7)
+lo staking delle tue monete, mantenendo le tue chiavi private in ​​un luogo sicuro e offline.</translation>
+    </message>
+    <message>
+        <source>Enter owner address</source>
+        <translation>Inserire l'indirizzo del proprietario</translation>
+    </message>
+    <message>
+        <source>Accept UCA delegation / Delegate UCA</source>
+        <translation>Accettare delegazione UCA / Delega UCA</translation>
+    </message>
+    <message>
+        <source>Cold Staking address</source>
+        <translation>Indirizzo Cold Staking</translation>
+    </message>
+    <message>
+        <source>No receive addresses available, you can go to the receive screen and create some there!</source>
+        <translation>Nessun indirizzo di ricezione disponibile, puoi andare alla schermata ricevi e aggiungerne alcuni!</translation>
+    </message>
+    <message>
         <source>No contacts available, you can go to the contacts screen and add some there!</source>
         <translation>Nessun contatto disponibile, puoi andare alla schermata dei contatti e aggiungerne alcuni!</translation>
+    </message>
+    <message>
+        <source>Cannot send delegation, wallet locked</source>
+        <translation>Impossibile inviare delega, portafoglio bloccato</translation>
     </message>
     <message>
         <source>Cold staking is networkely disabled</source>
         <translation>Il cold staking è disabilitato sulla rete</translation>
     </message>
     <message>
+        <source>Coin Control</source>
+        <translation>Controllo Valuta</translation>
+    </message>
+    <message>
+        <source>Select %1 outputs to delegate.</source>
+        <translation>Seleziona %1 da delegare.</translation>
+    </message>
+    <message>
+        <source>Create Cold Staking Address</source>
+        <translation>Crea indirizzo Cold Staking</translation>
+    </message>
+    <message>
+        <source>Creates an address to receive delegated coins
+and stake them on their owner's behalf.</source>
+        <translation>Crea un indirizzo per ricevere le monete delegate
+e fai staking per conto dei proprietari.</translation>
+    </message>
+    <message>
+        <source>My Cold Staking Addresses</source>
+        <translation>Mio indirizzo Cold Staking</translation>
+    </message>
+    <message>
+        <source>List your own cold staking addresses.</source>
+        <translation>Elenca i tuoi indirizzi per il cold staking.</translation>
+    </message>
+    <message>
         <source>Invalid entry</source>
         <translation>Valore non valido</translation>
     </message>
     <message>
-        <source>Invalid entry, minimum delegable amount is 10 UCA</source>
-        <translation>Voce non valida, importo minimo delegabile è 10 UCA</translation>
+        <source>Invalid entry, minimum delegable amount is </source>
+        <translation>Importo non valido, l'importo minimo delegabile è</translation>
     </message>
     <message>
         <source>Owner address invalid</source>
@@ -987,8 +879,12 @@ Vuoi procedere?</translation>
         <translation>Valute delegate</translation>
     </message>
     <message>
-        <source>You don't have any UCA to select.</source>
-        <translation>Non hai alcun UCA da selezionare.</translation>
+        <source>You don't have any %1 to select.</source>
+        <translation>Non hai alcun %1 da selezionare.</translation>
+    </message>
+    <message>
+        <source>Cannot perform operation, wallet locked</source>
+        <translation>Impossibile completare l'operazione, portafoglio bloccato</translation>
     </message>
     <message>
         <source>URI copied to clipboard</source>
@@ -1071,14 +967,6 @@ proprietario</translation>
         <source>Form</source>
         <translation>Modulo</translation>
     </message>
-    <message>
-        <source>Bob Allen</source>
-        <translation>Bob Allen</translation>
-    </message>
-    <message>
-        <source>DN6i46dytMPVhV1JMGZFuQBh7BZZ6nNLox</source>
-        <translation>DN6i46dytMPVhV1JMGZFuQBh7BZZ6nNLox</translation>
-    </message>
 </context>
 <context>
     <name>DashboardWidget</name>
@@ -1091,36 +979,20 @@ proprietario</translation>
         <translation>Transazioni</translation>
     </message>
     <message>
-        <source>You can see here the history of your account</source>
-        <translation>Puoi vedere qui la cronologia del tuo account</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Avvertimento</translation>
-    </message>
-    <message>
-        <source>No transactions</source>
-        <translation>Nessuna transazione</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
-    </message>
-    <message>
         <source>Staking Rewards</source>
         <translation>Premi dello Staking</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
     </message>
     <message>
         <source>Staking statistics</source>
         <translation>Statistiche dello Staking</translation>
     </message>
     <message>
-        <source>UCA</source>
-        <translation>UCA</translation>
+        <source>View your account's history</source>
+        <translation>Guarda la cronologia del tuo account</translation>
+    </message>
+    <message>
+        <source>How to get UCA</source>
+        <translation>Come ottenere UCA</translation>
     </message>
     <message>
         <source>Sort by</source>
@@ -1143,52 +1015,8 @@ proprietario</translation>
         <translation>Filtra per</translation>
     </message>
     <message>
-        <source>LabelText</source>
-        <translation>LabelText</translation>
-    </message>
-    <message>
-        <source>You can view your account's history</source>
-        <translation>Puoi vedere la cronologia del tuo account</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation>Tutto</translation>
-    </message>
-    <message>
-        <source>Received</source>
-        <translation>Ricevuto</translation>
-    </message>
-    <message>
-        <source>Sent</source>
-        <translation>Inviato</translation>
-    </message>
-    <message>
-        <source>Mined</source>
-        <translation>Minato</translation>
-    </message>
-    <message>
-        <source>MN reward</source>
-        <translation>Premio del MN</translation>
-    </message>
-    <message>
-        <source>To yourself</source>
-        <translation>A te stesso</translation>
-    </message>
-    <message>
-        <source>Cold stakes</source>
-        <translation>Cold stakes</translation>
-    </message>
-    <message>
-        <source>Hot stakes</source>
-        <translation>Hot stakes</translation>
-    </message>
-    <message>
-        <source>Delegated</source>
-        <translation>Delegato</translation>
-    </message>
-    <message>
-        <source>Delegations</source>
-        <translation>Deleghe</translation>
+        <source>Amount of UCA and zUCA staked.</source>
+        <translation>Quantità di UCA e zUCA dallo stake.</translation>
     </message>
     <message>
         <source>Please wait until the wallet is fully synced to see your correct balance</source>
@@ -1236,83 +1064,12 @@ Si avvierà automaticamente non appena il portafoglio avrà sufficienti conferme
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>Transaction Details</source>
-        <translation>Dettagli della transazione</translation>
-    </message>
-    <message>
-        <source>Text Label</source>
-        <translation>Etichetta del testo</translation>
+        <source>OK</source>
+        <translation>OK</translation>
     </message>
     <message>
         <source>CANCEL</source>
         <translation>CANCELLA</translation>
-    </message>
-    <message>
-        <source>SAVE</source>
-        <translation>SALVA</translation>
-    </message>
-</context>
-<context>
-    <name>DenomGenerationDialog</name>
-    <message>
-        <source>Form</source>
-        <translation>Modulo</translation>
-    </message>
-    <message>
-        <source>Transaction Details</source>
-        <translation>Dettagli della transazione</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
-    </message>
-    <message>
-        <source>This will unlock your wallet fully, so that anyone with access to it can spend until the wallet is closed or locked again.</source>
-        <translation>Questo sbloccherà completamente il tuo portafoglio, in modo che chiunque abbia accesso ad esso possa spendere fino a quando il portafoglio non verrà chiuso o nuovamente bloccato.</translation>
-    </message>
-    <message>
-        <source>5000</source>
-        <translation>5000</translation>
-    </message>
-    <message>
-        <source>100</source>
-        <translation>100</translation>
-    </message>
-    <message>
-        <source>10</source>
-        <translation>10</translation>
-    </message>
-    <message>
-        <source>1000</source>
-        <translation>1000</translation>
-    </message>
-    <message>
-        <source>50</source>
-        <translation>50</translation>
-    </message>
-    <message>
-        <source>500</source>
-        <translation>500</translation>
-    </message>
-    <message>
-        <source>5</source>
-        <translation>5</translation>
-    </message>
-    <message>
-        <source>1</source>
-        <translation>1</translation>
-    </message>
-    <message>
-        <source>Select All</source>
-        <translation>Seleziona tutto</translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>CANCELLA</translation>
-    </message>
-    <message>
-        <source>SAVE</source>
-        <translation>SALVA</translation>
     </message>
 </context>
 <context>
@@ -1354,8 +1111,8 @@ Si avvierà automaticamente non appena il portafoglio avrà sufficienti conferme
         <translation>Modifica indirizzo di invio</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid ucacoin address.</source>
-        <translation>L'indirizzo inserito "%1" non è un indirizzo ucacoin valido.</translation>
+        <source>The entered address "%1" is not a valid UCACoin address.</source>
+        <translation>L'indirizzo inserito "%1" non è un indirizzo UCACoin valido.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1401,65 +1158,22 @@ Si avvierà automaticamente non appena il portafoglio avrà sufficienti conferme
     </message>
 </context>
 <context>
-    <name>GovernancePage</name>
-    <message>
-        <source>Form</source>
-        <translation>Modulo</translation>
-    </message>
-    <message>
-        <source>GOVERNANCE</source>
-        <translation>GOVERNANCE</translation>
-    </message>
-    <message>
-        <source>Update Proposals</source>
-        <translation>Proposte di aggiornamento</translation>
-    </message>
-    <message>
-        <source>Next super block:</source>
-        <translation>Prossimo super blocco:</translation>
-    </message>
-    <message>
-        <source>0</source>
-        <translation>0</translation>
-    </message>
-    <message>
-        <source>Blocks to next super block:</source>
-        <translation>Blocchi al prossimo super blocco:</translation>
-    </message>
-    <message>
-        <source>Days to budget payout (estimate):</source>
-        <translation>Giorni di pagamento del budget (stima):</translation>
-    </message>
-    <message>
-        <source>Allotted budget:</source>
-        <translation>Budget assegnato:</translation>
-    </message>
-    <message>
-        <source>Budget left:</source>
-        <translation>Budget residuo:</translation>
-    </message>
-    <message>
-        <source>Masternodes count:</source>
-        <translation>Numero dei Masternodes:</translation>
-    </message>
-</context>
-<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
         <translation>versione</translation>
     </message>
     <message>
-        <source>ucacoin Core</source>
-        <translation>ucacoin Core</translation>
+        <source>UCACoin</source>
+        <translation>UCACoin</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About ucacoin Core</source>
-        <translation>Informazioni su ucacoin Core</translation>
+        <source>About UCACoin</source>
+        <translation>Informazioni su UCACoin</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1486,6 +1200,10 @@ Si avvierà automaticamente non appena il portafoglio avrà sufficienti conferme
         <translation>Mostra schermata di benvenuto all'avvio (predefinita: %u)</translation>
     </message>
     <message>
+        <source>Hide QT staking charts on startup (default: %u)</source>
+        <translation>Nascondi grafici QT staking all'avvio (default: %u)</translation>
+    </message>
+    <message>
         <source>Set language, for example "de_DE" (default: system locale)</source>
         <translation>Imposta lingua, per esempio "it_IT" (predefinito: lingua di sistema)</translation>
     </message>
@@ -1509,16 +1227,16 @@ Si avvierà automaticamente non appena il portafoglio avrà sufficienti conferme
         <translation>Benvenuto</translation>
     </message>
     <message>
-        <source>Welcome to ucacoin Core.</source>
+        <source>Welcome to UCACoin.</source>
         <translation>Benvenuto in UCAIX Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where ucacoin Core will store its data.</source>
-        <translation>Essendo il primo avvio dell'applicazione, puoi scegliere dove ucacoin Core salverà i propri dati.</translation>
+        <source>As this is the first time the program is launched, you can choose where UCACoin will store its data.</source>
+        <translation>Essendo il primo avvio dell'applicazione, puoi scegliere dove UCACoin salverà i propri dati.</translation>
     </message>
     <message>
-        <source>ucacoin Core will download and store a copy of the ucacoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>ucacoin Core scaricherà e salverà una copia della blockchain ucacoin. Verranno salvati almeno %1GB di dati in questa cartella, che cresceranno nel tempo. In questa cartella verrà salvato anche il portafoglio.</translation>
+        <source>UCACoin will download and store a copy of the UCACoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>UCACoin scaricherà e salverà una copia della blockchain UCACoin. Verranno salvati almeno %1GB di dati in questa cartella, che cresceranno nel tempo. In questa cartella verrà salvato anche il portafoglio.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1537,8 +1255,8 @@ Si avvierà automaticamente non appena il portafoglio avrà sufficienti conferme
         <translation>OK</translation>
     </message>
     <message>
-        <source>ucacoin Core</source>
-        <translation>ucacoin Core</translation>
+        <source>UCACoin</source>
+        <translation>UCACoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1602,16 +1320,12 @@ Si avvierà automaticamente non appena il portafoglio avrà sufficienti conferme
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>user_masternode</source>
-        <translation>user_masternode</translation>
+        <source>Collateral tx not found</source>
+        <translation>Tx Collaterale non trovata</translation>
     </message>
     <message>
-        <source>Address: 88.26.164.88:51474</source>
-        <translation>Address: 88.26.164.88:51474</translation>
-    </message>
-    <message>
-        <source>Jan. 19, 2019</source>
-        <translation>19 Gennaio 2019</translation>
+        <source>Status: %1</source>
+        <translation>Status: %1</translation>
     </message>
 </context>
 <context>
@@ -1645,28 +1359,32 @@ Si avvierà automaticamente non appena il portafoglio avrà sufficienti conferme
         <translation>Indirizzo</translation>
     </message>
     <message>
-        <source>Create New Master Node Controller</source>
+        <source>Create New Masternode Controller</source>
         <translation>Crea nuovo controller Masternode</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a ucacoin Masternode you must dedicate 10.000 UCA (the unit of ucacoin) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Per creare un Masternode ucacoin devi dedicare 10.000 UCA (l'unità di ucacoin) alla rete (tuttavia, queste valute sono ancora tue e saranno sempre in tuo possesso). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Puoi disattivare il nodo e sbloccare le valute in qualsiasi momento.</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a UCACoin Masternode you must dedicate 10,000 UCA (the unit of UCACoin) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Per creare un Masternode UCACoin devi dedicare 10.000 UCA (l'unità di UCACoin) alla rete (tuttavia, queste coin sono ancora tue e saranno sempre in tuo possesso). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Puoi disattivare il nodo e sbloccare le valute in qualsiasi momento.</translation>
+    </message>
+    <message>
+        <source>Set Masternode Name</source>
+        <translation>Imposta Nome Masternode</translation>
+    </message>
+    <message>
+        <source>Set Masternode IP and Port</source>
+        <translation>Imposta IP e Porta Masternode</translation>
+    </message>
+    <message>
+        <source>Enter port</source>
+        <translation>Inserisci porta</translation>
     </message>
     <message>
         <source>Make sure you have this amount of coins.</source>
         <translation>Assicurati di avere questa quantità di valuta.</translation>
     </message>
     <message>
-        <source>Set Master Node’s Name</source>
-        <translation>Imposta il nome del Masternode</translation>
-    </message>
-    <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 UCA will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Verrà effettuata una transazione di 10.000 UCA&lt;/p&gt;&lt;p&gt;a un nuovo indirizzo vuoto nel tuo portafoglio.&lt;p&gt;L'indirizzo è etichettato con il nome del Masternode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>Set Master Node’s IP and port</source>
-        <translation>Imposta indirizzo IP e porta del Masternode</translation>
     </message>
     <message>
         <source>Address of the node that must always be online running the actual master node.</source>
@@ -1675,22 +1393,6 @@ Si avvierà automaticamente non appena il portafoglio avrà sufficienti conferme
     <message>
         <source>Enter IP address</source>
         <translation>Inserire indirizzo IP</translation>
-    </message>
-    <message>
-        <source>Enter Port</source>
-        <translation>Inserisci porta</translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>CANCELLA</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <source>e.g user_masternode</source>
-        <translation>ad es. user_masternode</translation>
     </message>
     <message>
         <source>NEXT</source>
@@ -1709,12 +1411,42 @@ Si avvierà automaticamente non appena il portafoglio avrà sufficienti conferme
         <translation>IP o porta non possono essere vuoti</translation>
     </message>
     <message>
-        <source>Invalid port number</source>
-        <translation>Valore della porta non valido</translation>
+        <source>Invalid IP address</source>
+        <translation>Indirizzo IP non valido</translation>
     </message>
     <message>
-        <source>Prepare master node failed..</source>
-        <translation>Preparazione del Masternode non riuscita...</translation>
+        <source>Unknown error</source>
+        <translation>Errore sconosciuto</translation>
+    </message>
+    <message>
+        <source>Prepare master node failed.
+
+%1
+</source>
+        <translation>Preparazione del Masternode non riuscita.
+
+%1
+</translation>
+    </message>
+    <message>
+        <source>Invalid collateral output index</source>
+        <translation>Indice di output collaterale non valido</translation>
+    </message>
+    <message>
+        <source>Master node created! Wait %1 confirmations before starting it.</source>
+        <translation>Masternode creato! Attendi %1 conferme prima di avviarlo.</translation>
+    </message>
+    <message>
+        <source>Cannot send collateral transaction.
+
+%1</source>
+        <translation>Impossibile inviare Tx Collaterale.
+
+%1</translation>
+    </message>
+    <message>
+        <source>walletModel not set</source>
+        <translation>walletModel non impostato</translation>
     </message>
     <message>
         <source>Invalid masternode.conf file</source>
@@ -1725,56 +1457,8 @@ Si avvierà automaticamente non appena il portafoglio avrà sufficienti conferme
         <translation>Errore durante l'analisi del file masternode.conf</translation>
     </message>
     <message>
-        <source>Invalid collaterall output index</source>
-        <translation>Indice di output collaterale non valido</translation>
-    </message>
-    <message>
-        <source>Master node created!</source>
-        <translation>Masternode creato!</translation>
-    </message>
-    <message>
         <source>masternode.conf file doesn't exists</source>
         <translation>il file masternode.conf non esiste</translation>
-    </message>
-    <message>
-        <source>The recipient address is not valid, please recheck.</source>
-        <translation>L'indirizzo destinatario non è un indirizzo valido, controllare.</translation>
-    </message>
-    <message>
-        <source>The amount to pay must be larger than 0.</source>
-        <translation>L'importo da pagare deve essere maggiore di 0.</translation>
-    </message>
-    <message>
-        <source>The amount exceeds your balance.</source>
-        <translation>L'importo eccede il tuo saldo.</translation>
-    </message>
-    <message>
-        <source>The total exceeds your balance when the %1 transaction fee is included.</source>
-        <translation>Il totale supera il saldo quando è incluso %1 quale commissione di transazione.</translation>
-    </message>
-    <message>
-        <source>Duplicate address found, can only send to each address once per send operation.</source>
-        <translation>È stato trovato un indirizzo duplicato, può essere inviato a ciascun indirizzo solo una volta per operazione di invio.</translation>
-    </message>
-    <message>
-        <source>Transaction creation failed!</source>
-        <translation>Creazione della transazione non riuscita!</translation>
-    </message>
-    <message>
-        <source>The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>La transazione è stata rifiutata! Ciò può accadere se alcune delle valute nel tuo portafoglio fossero già state spese, come se tu avessi usato una copia di wallet.dat e le valute fossero state spese nella copia ma non contrassegnate come spese qui.</translation>
-    </message>
-    <message>
-        <source>Error: The wallet was unlocked only to anonymize coins.</source>
-        <translation>Errore: il portafoglio è stato sbloccato solo per rendere anonime le valute.</translation>
-    </message>
-    <message>
-        <source>A fee %1 times higher than %2 per kB is considered an insanely high fee.</source>
-        <translation>Una commissione %1 volte superiore a %2 per kB è considerata una commissione follemente alta.</translation>
-    </message>
-    <message>
-        <source>Error: The wallet was unlocked only to anonymize coins. Unlock canceled.</source>
-        <translation>Errore: il portafoglio è stato sbloccato solo per rendere anonime le valute. Sblocco annullato.</translation>
     </message>
 </context>
 <context>
@@ -1784,16 +1468,12 @@ Si avvierà automaticamente non appena il portafoglio avrà sufficienti conferme
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
+        <source>Start All</source>
+        <translation>Avvia Tutto</translation>
     </message>
     <message>
-        <source>No active Master Node yet</source>
-        <translation>Ancora nessun MasterNode attivo</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
+        <source>Start Inactive/s</source>
+        <translation>Avvia Inattivo/i</translation>
     </message>
     <message>
         <source>Masternodes</source>
@@ -1826,6 +1506,10 @@ e votano il sistema di tesoreria ricevendo una ricompensa periodica.</translatio
         <translation>Info</translation>
     </message>
     <message>
+        <source>Please wait until the node is fully synced</source>
+        <translation>Per favore attendere la sincronizzazione completa</translation>
+    </message>
+    <message>
         <source>Start Masternode</source>
         <translation>Avvia Masternode</translation>
     </message>
@@ -1836,14 +1520,70 @@ e votano il sistema di tesoreria ricevendo una ricompensa periodica.</translatio
 </translation>
     </message>
     <message>
-        <source>Cannot start masternode, the collateral transaction has not been accepted by the network.
-Please wait few more minutes.</source>
-        <translation>Impossibile avviare il masternode, la transazione collaterale non è stata accettata dalla rete.
-Per favore, attendi qualche minuto.</translation>
+        <source>Cannot edit masternode, wallet locked</source>
+        <translation>Impossibile modificare masternode, portafoglio bloccato</translation>
+    </message>
+    <message>
+        <source>Cannot start masternode, the collateral transaction has not been confirmed by the network yet.
+Please wait few more minutes (masternode collaterals require %1 confirmations).</source>
+        <translation>Impossibile avviare il masternode, la transazione per il collaterale non è stata ancora confermata dalla rete.
+Per favore, attendi qualche minuto (il collaterale del masternode richiede %1 conferme).</translation>
+    </message>
+    <message>
+        <source>Background task is being executed, please wait</source>
+        <translation>L'attività in background è in esecuzione, si prega di attendere</translation>
+    </message>
+    <message>
+        <source>Start ALL masternodes failed</source>
+        <translation>Inizializzazione di TUTTI i masternode fallita.</translation>
+    </message>
+    <message>
+        <source>Wallet unlock cancelled</source>
+        <translation>Sblocco portafoglio cancellato</translation>
+    </message>
+    <message>
+        <source>Cannot perform Masternodes start</source>
+        <translation>Impossibile eseguire l'avvio dei Masternode</translation>
+    </message>
+    <message>
+        <source>%1 Masternodes failed to start, %2 started</source>
+        <translation>Avvio di %1 Masternode fallito, %2 avviato/i</translation>
+    </message>
+    <message>
+        <source>All Masternodes started!</source>
+        <translation>Tutti i Masternode sono avviati!</translation>
+    </message>
+    <message>
+        <source>Cannot show Masternode information, wallet locked</source>
+        <translation>Impossibile mostrare informazioni Masternode, wallet bloccato</translation>
+    </message>
+    <message>
+        <source>Masternode data copied to the clipboard.</source>
+        <translation>Dati Masternode copiati negli appunti.</translation>
+    </message>
+    <message>
+        <source>Not enough balance to create a masternode, 10,000 %1 required.</source>
+        <translation>Saldo insufficiente per creare un masternode, sono necessari 10.000 %1.</translation>
     </message>
     <message>
         <source>Remote Masternode Data</source>
         <translation>Remote Masternode Data</translation>
+    </message>
+    <message>
+        <source>What is a Masternode?</source>
+        <translation>Cos'è un Masternode?</translation>
+    </message>
+    <message>
+        <source>FAQ explaining what Masternodes are</source>
+        <translation>FAQ cosa sono i Masternode</translation>
+    </message>
+    <message>
+        <source>What is a Controller?</source>
+        <translation>Cos'è un Masternode controller?</translation>
+    </message>
+    <message>
+        <source>FAQ explaining what is a Masternode Controller</source>
+        <translation>FAQ Cos'è un Masternode Controller</translation>
     </message>
     <message>
         <source>You are just about to export the required data to run a Masternode
@@ -1864,10 +1604,6 @@ come controller (selezionare il Masternode nell'elenco e premere "start").
 </translation>
     </message>
     <message>
-        <source>Masternode exported!, check your clipboard</source>
-        <translation>Masternode esportato!, controlla gli appunti</translation>
-    </message>
-    <message>
         <source>Delete Masternode</source>
         <translation>Cancella Masternode</translation>
     </message>
@@ -1883,7 +1619,7 @@ Sei sicuro?</translation>
     </message>
     <message>
         <source>Invalid masternode.conf file</source>
-        <translation>il file masternode.conf non è valido</translation>
+        <translation>Il file masternode.conf non è valido</translation>
     </message>
     <message>
         <source>Error parsing masternode.conf file</source>
@@ -1894,8 +1630,8 @@ Sei sicuro?</translation>
         <translation>il file masternode.conf non esiste</translation>
     </message>
     <message>
-        <source>Not enough balance to create a masternode, 10,000 UCA required.</source>
-        <translation>Saldo insufficiente per creare un masternode, sono necessari 10.000 UCA.</translation>
+        <source>Cannot create Masternode controller, wallet locked</source>
+        <translation>Impossibile creare un Masternode controller, wallet bloccato</translation>
     </message>
     <message>
         <source>Error creating masternode</source>
@@ -1909,24 +1645,16 @@ Sei sicuro?</translation>
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>Master Node Information</source>
-        <translation>Informazioni sul Masternode</translation>
+        <source>Masternode Information</source>
+        <translation>Informazioni Masternode</translation>
     </message>
     <message>
         <source>Public Key:</source>
         <translation>Chiave pubblica:</translation>
     </message>
     <message>
-        <source>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</source>
-        <translation>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</translation>
-    </message>
-    <message>
         <source>Address: </source>
         <translation>Indirizzo:</translation>
-    </message>
-    <message>
-        <source>127.0.0.2:43223</source>
-        <translation>127.0.0.2:43223</translation>
     </message>
     <message>
         <source>Collaterall tx id:</source>
@@ -1945,12 +1673,16 @@ Sei sicuro?</translation>
         <translation>Stato:</translation>
     </message>
     <message>
-        <source>MISSING</source>
-        <translation>MANCANTE</translation>
+        <source>Export data to run the Masternode on a remote server</source>
+        <translation>Esporta i dati per eseguire il Masternode su un server remoto</translation>
     </message>
     <message>
-        <source>Export data to run the Master Node on a remote server</source>
-        <translation>Esporta i dati per eseguire il Masternode su un server remoto</translation>
+        <source>Masternode public key copied</source>
+        <translation>Copia pubblica Masternode copiata</translation>
+    </message>
+    <message>
+        <source>Collateral tx id copied</source>
+        <translation>Tx Collaterale copiata</translation>
     </message>
 </context>
 <context>
@@ -1959,24 +1691,54 @@ Sei sicuro?</translation>
         <source>Form</source>
         <translation>Modulo</translation>
     </message>
-    <message>
-        <source>Savings</source>
-        <translation>Risparmi</translation>
-    </message>
-    <message>
-        <source>Jan. 19, 2019</source>
-        <translation>19 Gennaio 2019</translation>
-    </message>
-    <message>
-        <source>DN6i46dytMPVhV1JMGZFuQBh7BZZ6nNLox</source>
-        <translation>DN6i46dytMPVhV1JMGZFuQBh7BZZ6nNLox</translation>
-    </message>
 </context>
 <context>
     <name>NavMenuWidget</name>
     <message>
         <source>Form</source>
         <translation>Modulo</translation>
+    </message>
+    <message>
+        <source>HOME
+</source>
+        <translation>HOME
+</translation>
+    </message>
+    <message>
+        <source>SEND
+</source>
+        <translation>INVIA
+</translation>
+    </message>
+    <message>
+        <source>RECEIVE
+</source>
+        <translation>RICEVI
+</translation>
+    </message>
+    <message>
+        <source>CONTACTS
+</source>
+        <translation>CONTATTI
+</translation>
+    </message>
+    <message>
+        <source>MASTER
+NODES</source>
+        <translation>MASTER
+NODE</translation>
+    </message>
+    <message>
+        <source>COLD
+STAKING</source>
+        <translation>COLD
+STAKING</translation>
+    </message>
+    <message>
+        <source>SETTINGS
+</source>
+        <translation>IMPOSTAZIONI
+</translation>
     </message>
     <message>
         <source>V 1.0.0</source>
@@ -2036,10 +1798,6 @@ Sei sicuro?</translation>
         <source>Form</source>
         <translation>Modulo</translation>
     </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -2076,8 +1834,8 @@ Sei sicuro?</translation>
         <translation>Se si disabilita la spesa per la modifica non confermata, la modifica da una transazione&lt;br/&gt;non può essere utilizzata fino a quando tale transazione non ha almeno una conferma.&lt;br/&gt;Ciò influisce anche sul modo in cui viene calcolato il saldo.</translation>
     </message>
     <message>
-        <source>Automatically open the ucacoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Apri automaticamente la porta client ucacoin sul router. Funziona solo quando il router supporta UPnP ed è abilitato.</translation>
+        <source>Automatically open the UCACoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Apri automaticamente la porta client UCACoin sul router. Funziona solo quando il router supporta UPnP ed è abilitato.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -2096,12 +1854,12 @@ Sei sicuro?</translation>
         <translation>Esperto</translation>
     </message>
     <message>
-        <source>Automatically start ucacoin after logging in to the system.</source>
-        <translation>Avvia automaticamente ucacoin dopo aver effettuato l'accesso al sistema.</translation>
+        <source>Automatically start UCACoin after logging in to the system.</source>
+        <translation>Avvia automaticamente UCACoin dopo aver effettuato l'accesso al sistema.</translation>
     </message>
     <message>
-        <source>&amp;Start ucacoin on system login</source>
-        <translation>&amp;Start ucacoin all'accesso al sistema</translation>
+        <source>&amp;Start UCACoin on system login</source>
+        <translation>&amp;Start UCACoin all'accesso al sistema</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -2128,8 +1886,8 @@ Sei sicuro?</translation>
         <translation>&amp;Network</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting ucacoin.</source>
-        <translation>La lingua dell'interfaccia utente può essere impostata qui. Questa impostazione avrà effetto dopo il riavvio di ucacoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting UCACoin.</source>
+        <translation>La lingua dell'interfaccia utente può essere impostata qui. Questa impostazione avrà effetto dopo il riavvio di UCACoin.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
@@ -2142,12 +1900,44 @@ https://www.transifex.com/ucacoin-project/ucacoin-project-translations</translat
         <translation>Mappa la porta utilizzando &amp;UPnP</translation>
     </message>
     <message>
+        <source>Enable automatic minting of UCA units to zUCA</source>
+        <translation>Attiva la forgiatura automatica di unità UCA in zUCA</translation>
+    </message>
+    <message>
+        <source>Enable zUCA Automint</source>
+        <translation>Attiva forgiatura automatica zUCA</translation>
+    </message>
+    <message>
+        <source>Enable automatic zUCA minting from specific addresses</source>
+        <translation>Attiva la forgiatura automatica di zUCA da indirizzi specifici</translation>
+    </message>
+    <message>
+        <source>Enable Automint Addresses</source>
+        <translation>Abilita indirizzi forgiatura automatica</translation>
+    </message>
+    <message>
+        <source>Percentage of incoming UCA which get automatically converted to zUCA via Zerocoin Protocol (min: 10%)</source>
+        <translation>Percentuale di UCA in entrata che viene automaticamente convertita in zUCA attraverso il protocollo Zerocoin (min: 10%)</translation>
+    </message>
+    <message>
+        <source>Percentage of autominted zUCA</source>
+        <translation>Percentuale di zUCA Percentuale di zUCA da forgiare automaticamente</translation>
+    </message>
+    <message>
+        <source>Wait with automatic conversion to Zerocoin until enough UCA for this denomination is available</source>
+        <translation>Attendere la conversione automatica in Zerocoin fino a quando non saranno disponibili abbastanza UCA per questa denominazione</translation>
+    </message>
+    <message>
+        <source>Preferred Automint zUCA Denomination</source>
+        <translation>Denominazione preferita forgiatura automatica zUCA</translation>
+    </message>
+    <message>
         <source>Stake split threshold:</source>
         <translation>Soglia di divisione dello stake</translation>
     </message>
     <message>
-        <source>Connect to the ucacoin network through a SOCKS5 proxy.</source>
-        <translation>Connettiti alla rete ucacoin tramite un proxy SOCKS5.</translation>
+        <source>Connect to the UCACoin network through a SOCKS5 proxy.</source>
+        <translation>Connettiti alla rete UCACoin tramite un proxy SOCKS5.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -2291,10 +2081,10 @@ https://www.transifex.com/ucacoin-project/ucacoin-project-translations</translat
     </message>
 </context>
 <context>
-    <name>ucacoinGUI</name>
+    <name>UCACoinGUI</name>
     <message>
-        <source>ucacoin Core</source>
-        <translation>ucacoin Core</translation>
+        <source>UCACoin</source>
+        <translation>UCACoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2321,8 +2111,8 @@ https://www.transifex.com/ucacoin-project/ucacoin-project-translations</translat
         <translation>Chiude l'applicazione</translation>
     </message>
     <message>
-        <source>ucacoin Core client</source>
-        <translation>ucacoin Core</translation>
+        <source>UCACoin client</source>
+        <translation>UCACoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -2364,17 +2154,6 @@ Tipo: %3
 Indirizzo: %4
 </translation>
     </message>
-    <message>
-        <source>A fatal error occurred. ucacoin can no longer continue safely and will quit.</source>
-        <translation>Si è verificato un errore irreversibile. ucacoin non può più continuare in modo sicuro e verrà chiuso.</translation>
-    </message>
-</context>
-<context>
-    <name>PWidget</name>
-    <message>
-        <source>Wallet locked, you need to unlock it to perform this action</source>
-        <translation>Portafoglio bloccato, è necessario sbloccarlo per eseguire questa azione</translation>
-    </message>
 </context>
 <context>
     <name>PaymentServer</name>
@@ -2403,8 +2182,8 @@ Indirizzo: %4
         <translation>Impossibile avviare ucacoin: gestore click-to-pay</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid ucacoin address or malformed URI parameters.</source>
-        <translation>Impossibile leggere il file della richiesta di pagamento! Ciò può essere causato da un indirizzo ucacoin non valido o parametri URI non validi.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid UCACoin address or malformed URI parameters.</source>
+        <translation>Impossibile leggere il file della richiesta di pagamento! Ciò può essere causato da un indirizzo UCACoin non valido o parametri URI non validi.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2483,83 +2262,14 @@ Indirizzo: %4
     </message>
 </context>
 <context>
-    <name>ProposalFrame</name>
-    <message>
-        <source>Open proposal page in browser</source>
-        <translation>Apri la pagina della proposta nel browser</translation>
-    </message>
-    <message>
-        <source> remaining payment(s).</source>
-        <translation>pagamenti rimanenti.</translation>
-    </message>
-    <message>
-        <source>Yes:</source>
-        <translation>Si:</translation>
-    </message>
-    <message>
-        <source>Abstain:</source>
-        <translation>Astenersi:</translation>
-    </message>
-    <message>
-        <source>No:</source>
-        <translation>No:</translation>
-    </message>
-    <message>
-        <source>A proposal URL can be used for phishing, scams and computer viruses. Open this link only if you trust the following URL.
-</source>
-        <translation>Un URL proposto può essere utilizzato per phishing, truffe e virus informatici. Apri questo link solo se ti fidi del seguente URL.
-</translation>
-    </message>
-    <message>
-        <source>Open link</source>
-        <translation>Apri link</translation>
-    </message>
-    <message>
-        <source>Copy link</source>
-        <translation>Copia link</translation>
-    </message>
-    <message>
-        <source>Wallet Locked</source>
-        <translation>Portafoglio bloccato</translation>
-    </message>
-    <message>
-        <source>You must unlock your wallet to vote.</source>
-        <translation>Devi sbloccare il portafoglio per votare</translation>
-    </message>
-    <message>
-        <source>Do you want to vote %1 on</source>
-        <translation>Vuoi votare %1 su</translation>
-    </message>
-    <message>
-        <source>using all your masternodes?</source>
-        <translation>utilizzare tutti i masternode?</translation>
-    </message>
-    <message>
-        <source>Proposal Hash:</source>
-        <translation>Hash proposto:</translation>
-    </message>
-    <message>
-        <source>Proposal URL:</source>
-        <translation>URL proposto:</translation>
-    </message>
-    <message>
-        <source>Confirm Vote</source>
-        <translation>Conferma il voto</translation>
-    </message>
-    <message>
-        <source>Vote Results</source>
-        <translation>Risultati del voto</translation>
-    </message>
-</context>
-<context>
     <name>QObject</name>
     <message>
         <source>Amount</source>
         <translation>Ammontare</translation>
     </message>
     <message>
-        <source>Enter a ucacoin address (e.g. %1)</source>
-        <translation>Inserisci un indirizzo ucacoin (ad es. %1)</translation>
+        <source>Enter UCACoin address (e.g. %1)</source>
+        <translation>Inserisci un indirizzo UCACoin (ad es. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2586,10 +2296,6 @@ Indirizzo: %4
         <translation>BLOOM</translation>
     </message>
     <message>
-        <source>ZK_BLOOM</source>
-        <translation>ZK_BLOOM</translation>
-    </message>
-    <message>
         <source>UNKNOWN</source>
         <translation>SCONOSCIUTO</translation>
     </message>
@@ -2606,8 +2312,12 @@ Indirizzo: %4
         <translation>%1 ms</translation>
     </message>
     <message>
-        <source>ucacoin Core</source>
-        <translation>ucacoin Core</translation>
+        <source>A fatal error occurred. UCACoin can no longer continue safely and will quit.</source>
+        <translation>Si è verificato un errore irreversibile. UCACoin non può più continuare in modo sicuro e verrà chiuso.</translation>
+    </message>
+    <message>
+        <source>UCACoin</source>
+        <translation>UCACoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" does not exist.</source>
@@ -2626,8 +2336,172 @@ Indirizzo: %4
         <translation>Errore durante la lettura del file di configurazione del Masternode: %1</translation>
     </message>
     <message>
-        <source>ucacoin Core didn't yet exit safely...</source>
-        <translation>ucacoin Core non è ancora uscito in modo sicuro...</translation>
+        <source>UCACoin didn't yet exit safely...</source>
+        <translation>UCACoin non è ancora uscito in modo sicuro...</translation>
+    </message>
+    <message>
+        <source>Contact</source>
+        <translation>Contatta</translation>
+    </message>
+    <message>
+        <source>Receiving</source>
+        <translation>Ricevi</translation>
+    </message>
+    <message>
+        <source>Delegator</source>
+        <translation>Delegante</translation>
+    </message>
+    <message>
+        <source>Delegable</source>
+        <translation>Delegabile</translation>
+    </message>
+    <message>
+        <source>Cold Staking</source>
+        <translation>Cold Staking</translation>
+    </message>
+    <message>
+        <source>Cold Staking Contact</source>
+        <translation>Contatta Cold Staking</translation>
+    </message>
+    <message>
+        <source>Hidden</source>
+        <translation>Nascosti</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Sconosciuto</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Tutto</translation>
+    </message>
+    <message>
+        <source>Contacts</source>
+        <translation>Contatti</translation>
+    </message>
+    <message>
+        <source>Staking Contacts</source>
+        <translation>Contatti Staking</translation>
+    </message>
+    <message>
+        <source>Date desc</source>
+        <translation>Data disc</translation>
+    </message>
+    <message>
+        <source>Date asc</source>
+        <translation>Data asc</translation>
+    </message>
+    <message>
+        <source>Amount desc</source>
+        <translation>Importo disc</translation>
+    </message>
+    <message>
+        <source>Amount asc</source>
+        <translation>Importo asc</translation>
+    </message>
+    <message>
+        <source>Received</source>
+        <translation>Ricevuto</translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation>Inviato</translation>
+    </message>
+    <message>
+        <source>Mined</source>
+        <translation>Minato</translation>
+    </message>
+    <message>
+        <source>Minted</source>
+        <translation>Forgiato</translation>
+    </message>
+    <message>
+        <source>MN reward</source>
+        <translation>Premio del MN</translation>
+    </message>
+    <message>
+        <source>To yourself</source>
+        <translation>A te stesso</translation>
+    </message>
+    <message>
+        <source>Cold stakes</source>
+        <translation>Cold stakes</translation>
+    </message>
+    <message>
+        <source>Hot stakes</source>
+        <translation>Hot stakes</translation>
+    </message>
+    <message>
+        <source>Delegated</source>
+        <translation>Delegato</translation>
+    </message>
+    <message>
+        <source>Delegations</source>
+        <translation>Deleghe</translation>
+    </message>
+    <message>
+        <source>by Label</source>
+        <translation>per Etichetta</translation>
+    </message>
+    <message>
+        <source>by Address</source>
+        <translation>per Indirizzo</translation>
+    </message>
+    <message>
+        <source>by Date</source>
+        <translation>per Data</translation>
+    </message>
+    <message>
+        <source>Jan</source>
+        <translation>Gen</translation>
+    </message>
+    <message>
+        <source>Feb</source>
+        <translation>Feb</translation>
+    </message>
+    <message>
+        <source>Mar</source>
+        <translation>Mar</translation>
+    </message>
+    <message>
+        <source>Apr</source>
+        <translation>Apr</translation>
+    </message>
+    <message>
+        <source>May</source>
+        <translation>Mag</translation>
+    </message>
+    <message>
+        <source>Jun</source>
+        <translation>Giu</translation>
+    </message>
+    <message>
+        <source>Jul</source>
+        <translation>Lug</translation>
+    </message>
+    <message>
+        <source>Aug</source>
+        <translation>Ago</translation>
+    </message>
+    <message>
+        <source>Sep</source>
+        <translation>Set</translation>
+    </message>
+    <message>
+        <source>Oct</source>
+        <translation>Ott</translation>
+    </message>
+    <message>
+        <source>Nov</source>
+        <translation>Nov</translation>
+    </message>
+    <message>
+        <source>Dec</source>
+        <translation>Dic</translation>
+    </message>
+    <message>
+        <source>Address with no label</source>
+        <translation>Indirizzo senza etichetta</translation>
     </message>
 </context>
 <context>
@@ -2701,8 +2575,8 @@ Indirizzo: %4
         <translation>Blockchain</translation>
     </message>
     <message>
-        <source>Open the ucacoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Aprire il file di registro di debug ucacoin dalla directory dei dati corrente. Questa operazione può richiedere alcuni secondi per file di registro di grandi dimensioni.</translation>
+        <source>Open the UCACoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Aprire il file di registro di debug UCACoin dalla directory dei dati corrente. Questa operazione può richiedere alcuni secondi per file di registro di grandi dimensioni.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -2845,6 +2719,10 @@ Indirizzo: %4
         <translation>Percorso di backup personalizzato:</translation>
     </message>
     <message>
+        <source>Custom zUCA Backup Path:</source>
+        <translation>Percorso di backup zUCA personalizzato:</translation>
+    </message>
+    <message>
         <source>Custom Backups Threshold:</source>
         <translation>Soglia backup personalizzati:</translation>
     </message>
@@ -2921,8 +2799,8 @@ Indirizzo: %4
         <translation>Out:</translation>
     </message>
     <message>
-        <source>Welcome to the ucacoin RPC console.</source>
-        <translation>Benvenuti nella console RPC di ucacoin.</translation>
+        <source>Welcome to the UCACoin RPC console.</source>
+        <translation>Benvenuti nella console RPC di UCACoin.</translation>
     </message>
     <message>
         <source>&amp;Disconnect Node</source>
@@ -3040,24 +2918,16 @@ Indirizzo: %4
         <translation>Finestra di dialogo</translation>
     </message>
     <message>
-        <source>Transaction Details</source>
-        <translation>Dettagli della transazione</translation>
+        <source>My Address</source>
+        <translation>Il mio indirizzo</translation>
     </message>
     <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
-    </message>
-    <message>
-        <source>GMeCEsjP732YA4uvBKRbp1mwvg5PGhK2C5 </source>
-        <translation>GMeCEsjP732YA4uvBKRbp1mwvg5PGhK2C5 </translation>
+        <source>COPY</source>
+        <translation>COPIA</translation>
     </message>
     <message>
         <source>CANCEL</source>
         <translation>CANCELLA</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -3067,12 +2937,12 @@ Indirizzo: %4
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
         <source>No address</source>
         <translation>Nessun indirizzo</translation>
+    </message>
+    <message>
+        <source>Scan the QR code or copy the address to receive UCA</source>
+        <translation>Scansiona il codice QR o copia l'indirizzo per ricevere UCA</translation>
     </message>
     <message>
         <source>Add Label</source>
@@ -3091,12 +2961,20 @@ Indirizzo: %4
         <translation>Ricevi</translation>
     </message>
     <message>
-        <source>Scan the QR code or copy the address to receive UCA.</source>
-        <translation>Scansiona il codice QR o copia l'indirizzo per ricevere UCA.</translation>
+        <source>My Addresses</source>
+        <translation>Mio indirizzo</translation>
     </message>
     <message>
-        <source>No address </source>
-        <translation>Nessun indirizzo</translation>
+        <source>List your own addresses</source>
+        <translation>Elenca i tuoi indirizzi</translation>
+    </message>
+    <message>
+        <source>Create Request</source>
+        <translation>Crea Richiesta</translation>
+    </message>
+    <message>
+        <source>Request payment with a fixed amount</source>
+        <translation>Richiedi pagamento con importo fissato</translation>
     </message>
     <message>
         <source>No available address, try unlocking the wallet</source>
@@ -3107,8 +2985,8 @@ Indirizzo: %4
         <translation>Errore generando l'indirizzo</translation>
     </message>
     <message>
-        <source>Change Label</source>
-        <translation>Cambia etichetta</translation>
+        <source>Edit Label</source>
+        <translation>Modifica etichetta</translation>
     </message>
     <message>
         <source>Edit Address Label</source>
@@ -3123,12 +3001,20 @@ Indirizzo: %4
         <translation>Errore salvando l'etichetta indirizzo</translation>
     </message>
     <message>
+        <source>Cannot create new address, wallet locked</source>
+        <translation>Impossibile creare un nuovo indirizzo, wallet bloccato</translation>
+    </message>
+    <message>
         <source>New address created</source>
         <translation>Nuovo indirizzo creato</translation>
     </message>
     <message>
         <source>Address copied</source>
         <translation>Indirizzo copiato</translation>
+    </message>
+    <message>
+        <source>Cannot perform operation, wallet locked</source>
+        <translation>Impossibile completare l'operazione, portafoglio bloccato</translation>
     </message>
     <message>
         <source>URI copied to clipboard</source>
@@ -3181,14 +3067,6 @@ Indirizzo: %4
         <translation>Finestra di dialogo</translation>
     </message>
     <message>
-        <source>New Request Payment</source>
-        <translation>Nuova richiesta di pagamento</translation>
-    </message>
-    <message>
-        <source>Lorem ipsum dolor sit amet, consectur cling elit, sed do </source>
-        <translation>Lorem ipsum dolor sit amet, consectur cling elit, sed do </translation>
-    </message>
-    <message>
         <source>Amount</source>
         <translation>Ammontare</translation>
     </message>
@@ -3197,8 +3075,8 @@ Indirizzo: %4
         <translation>UCA</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
+        <source>Instead of sharing only a UCACoin address, you can create a payment request, bundling up more information</source>
+        <translation>Invece di condividere solo un indirizzo UCACoin, è possibile creare un messaggio di richiesta pagamento, raccogliendo più informazioni</translation>
     </message>
     <message>
         <source>GMeCEsjP732YA4uvBKRbp1mwvg5PGhK2C5 </source>
@@ -3217,28 +3095,24 @@ Indirizzo: %4
         <translation>CANCELLA</translation>
     </message>
     <message>
-        <source>REQUEST</source>
-        <translation>RICHIESTA</translation>
-    </message>
-    <message>
-        <source>Instead of only sharing a ucacoin address, you can create a Payment Request message which bundles up more information than is contained in just a ucacoin address.</source>
-        <translation>Invece di condividere solo un indirizzo ucacoin, è possibile creare un messaggio di richiesta di pagamento che raggruppa più informazioni di quelle contenute in un solo indirizzo ucacoin.</translation>
-    </message>
-    <message>
         <source>Label</source>
         <translation>Etichetta</translation>
-    </message>
-    <message>
-        <source>Enter a label to be saved within the address</source>
-        <translation>Inserisci un'etichetta da salvare con l'indirizzo</translation>
     </message>
     <message>
         <source>Description (optional)</source>
         <translation>Descrizione (opzionale)</translation>
     </message>
     <message>
-        <source>Add description </source>
-        <translation>Aggiungi descrizione</translation>
+        <source>New Payment Request</source>
+        <translation>Nuova Richiesta Pagamento</translation>
+    </message>
+    <message>
+        <source>Enter a label for the address</source>
+        <translation>Inserisci un ' etichetta per l'indirizzo</translation>
+    </message>
+    <message>
+        <source>Enter description</source>
+        <translation>Inserisci descrizione</translation>
     </message>
     <message>
         <source>Error</source>
@@ -3256,6 +3130,26 @@ Indirizzo: %4
         <source>New Cold Staking Address</source>
         <translation>Nuovo indirizzo di Cold Staking</translation>
     </message>
+    <message>
+        <source>Amount (optional)</source>
+        <translation>Importo (opzionale)</translation>
+    </message>
+    <message>
+        <source>Address label cannot be empty</source>
+        <translation>L'etichetta dell'indirizzo non può essere vuota</translation>
+    </message>
+    <message>
+        <source>Invalid amount</source>
+        <translation>Importo non valido</translation>
+    </message>
+    <message>
+        <source>Request for </source>
+        <translation>Richiesta per</translation>
+    </message>
+    <message>
+        <source>Cold Staking Address Generated</source>
+        <translation>Indirizzo Cold Staking Generato</translation>
+    </message>
 </context>
 <context>
     <name>SendChangeAddressDialog</name>
@@ -3264,32 +3158,32 @@ Indirizzo: %4
         <translation>Finestra di dialogo</translation>
     </message>
     <message>
-        <source>Transaction Details</source>
-        <translation>Dettagli della transazione</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
-    </message>
-    <message>
-        <source>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</source>
-        <translation>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</translation>
-    </message>
-    <message>
         <source>CANCEL</source>
         <translation>CANCELLA</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
     <message>
         <source>Custom Change Address</source>
         <translation>Modifica indirizzo personalizzata</translation>
     </message>
     <message>
-        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" ucacoin address</source>
-        <translation>Il resto del valore risultante dagli ingressi meno il valore delle uscite va all'indirizzo ucacoin "cambio"</translation>
+        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" UCACoin address</source>
+        <translation>Il resto del valore risultante dagli ingressi meno il valore delle uscite va all'indirizzo UCACoin "cambio"</translation>
+    </message>
+    <message>
+        <source>SAVE</source>
+        <translation>SALVA</translation>
+    </message>
+    <message>
+        <source>RESET</source>
+        <translation>RESET</translation>
+    </message>
+    <message>
+        <source>Invalid address</source>
+        <translation>Indirizzo non valido</translation>
+    </message>
+    <message>
+        <source>Cannot use cold staking addresses for change</source>
+        <translation>Impossibile usare indirizzi cold staking per cambi</translation>
     </message>
 </context>
 <context>
@@ -3299,44 +3193,32 @@ Indirizzo: %4
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>Transaction Details</source>
-        <translation>Dettagli della transazione</translation>
-    </message>
-    <message>
-        <source>Customize the transaction fee at your to your liking, depending on the fee value your transaction will be included or not in the blockchain.</source>
-        <translation>Personalizza la commissione di transazione a tuo piacimento; a seconda del valore della commissione, la transazione verrà inclusa o meno nella blockchain.</translation>
-    </message>
-    <message>
-        <source>Recomended</source>
+        <source>Recommended</source>
         <translation>Raccomandato</translation>
+    </message>
+    <message>
+        <source>UCA/kilobyte</source>
+        <translation>UCA/kilobyte</translation>
     </message>
     <message>
         <source>0.00 KB</source>
         <translation>0.00 KB</translation>
     </message>
     <message>
-        <source>Custom</source>
-        <translation>Personalizzato</translation>
+        <source>Customize the transaction fee, depending on the fee value your transaction might be included faster in the blockchain</source>
+        <translation>Personalizza la fee di transazione; a seconda del valore della fee, la tua transazione potrebbe essere inclusa più o meno velocemente nella blockchain</translation>
     </message>
     <message>
-        <source>Per kilobyte</source>
-        <translation>Per kilobyte</translation>
+        <source>Custom</source>
+        <translation>Personalizzato</translation>
     </message>
     <message>
         <source>CANCEL</source>
         <translation>CANCELLA</translation>
     </message>
     <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
         <source>Customize Fee</source>
         <translation>Tariffa personalizzata</translation>
-    </message>
-    <message>
-        <source>Customize the transaction fee, depending on the fee value your transaction will be included or not in the blockchain.</source>
-        <translation>Personalizza la commissione di transazione; a seconda del valore della commissione, la transazione verrà inclusa o meno nella blockchain.</translation>
     </message>
     <message>
         <source>Normal</source>
@@ -3354,6 +3236,14 @@ Indirizzo: %4
         <source>SAVE</source>
         <translation>SALVA</translation>
     </message>
+    <message>
+        <source>Fee too high. Must be below: %1</source>
+        <translation>Fee troppo alta. Deve essere inferiore a: %1</translation>
+    </message>
+    <message>
+        <source>Fee too low. Must be at least: %1</source>
+        <translation>Fee troppo bassa. Deve essere almeno: %1</translation>
+    </message>
 </context>
 <context>
     <name>SendMultiRow</name>
@@ -3362,67 +3252,35 @@ Indirizzo: %4
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
+        <source>Enter address</source>
+        <translation>Inserire indirizzo</translation>
     </message>
     <message>
-        <source>Add address</source>
-        <translation>Aggiungi indirizzo</translation>
+        <source>Address label (optional)</source>
+        <translation>Etichetta indirzzo (opzionale)</translation>
     </message>
     <message>
-        <source>Add description</source>
-        <translation>Aggiungi descrizione</translation>
+        <source>Enter label</source>
+        <translation>Inserisci etichetta</translation>
     </message>
 </context>
 <context>
     <name>SendWidget</name>
     <message>
-        <source>Send</source>
-        <translation>Invia</translation>
-    </message>
-    <message>
-        <source>Select coin type to spend</source>
-        <translation>Seleziona il tipo di valuta da spendere</translation>
-    </message>
-    <message>
-        <source>Enter a ucacoin address or contact label</source>
-        <translation>Inserisci un indirizzo ucacoin o etichetta</translation>
-    </message>
-    <message>
-        <source>Amount</source>
-        <translation>Ammontare</translation>
-    </message>
-    <message>
-        <source>Customize fee</source>
-        <translation>Tariffa personalizzata</translation>
-    </message>
-    <message>
-        <source>Clear all</source>
-        <translation>Cancella tutto</translation>
-    </message>
-    <message>
-        <source>Add recipient</source>
-        <translation>Aggiungi destinatario</translation>
-    </message>
-    <message>
-        <source>Reset to default</source>
-        <translation>Ripristina valori predefiniti.</translation>
-    </message>
-    <message>
-        <source>Total to send</source>
-        <translation>Totale da mandare</translation>
-    </message>
-    <message>
-        <source>Send UCA</source>
-        <translation>Invia UCA</translation>
-    </message>
-    <message>
         <source>Total remaining from the selected UTXO</source>
         <translation>Totale rimanente dall'UTXO selezionato</translation>
     </message>
     <message>
-        <source>Total remaining</source>
-        <translation>Totale rimanente</translation>
+        <source>Warning!</source>
+        <translation>Avvertimento!</translation>
+    </message>
+    <message>
+        <source>The change address doesn't belong to this wallet.
+
+Do you want to continue?</source>
+        <translation>Il cambio indirizzo non appartiene a questo wallet.
+
+Vuoi continuare?</translation>
     </message>
     <message>
         <source>Customize Fee</source>
@@ -3435,6 +3293,10 @@ Indirizzo: %4
     <message>
         <source>Invalid entry, previous entries must be valid before add a new one</source>
         <translation>Voce non valida, le voci precedenti devono essere valide prima di aggiungerne una nuova</translation>
+    </message>
+    <message>
+        <source>Possibly spend coins delegated for cold-staking (currently available: %1</source>
+        <translation> Coin spendibili attualmente delegate per il cold-staking (disponibile: %1</translation>
     </message>
     <message>
         <source>Invalid entry</source>
@@ -3465,24 +3327,8 @@ Questa valuta non sarà più in cold-stake.</translation>
         <translation>Transazione inviata</translation>
     </message>
     <message>
-        <source>Sending %1 to address %2
-</source>
-        <translation>Inviando %1 all'indirizzo %2
-</translation>
-    </message>
-    <message>
-        <source>Sending %1 to addresses:
-%2</source>
-        <translation>Inviando %1 agli indirizzi:
-%2</translation>
-    </message>
-    <message>
         <source>Address label update failed for address: %1</source>
         <translation>Aggiornamento dell'etichetta dell'indirizzo non riuscito per l'indirizzo: %1</translation>
-    </message>
-    <message>
-        <source>Invalid change address</source>
-        <translation>Indirizzo di cambio non valido</translation>
     </message>
     <message>
         <source>Invalid URI</source>
@@ -3497,8 +3343,36 @@ Questa valuta non sarà più in cold-stake.</translation>
         <translation>Tariffa personalizzata %1</translation>
     </message>
     <message>
-        <source>You don't have any UCA to select.</source>
-        <translation>Non hai alcun UCA da selezionare.</translation>
+        <source>Coin Control</source>
+        <translation>Controllo Valuta</translation>
+    </message>
+    <message>
+        <source>Select the source of the coins</source>
+        <translation>Selezionare l'origine delle coin</translation>
+    </message>
+    <message>
+        <source>Change Address</source>
+        <translation>Cambia Indirizzo</translation>
+    </message>
+    <message>
+        <source>Customize the change address</source>
+        <translation>Personalizzare la modica indirizzo</translation>
+    </message>
+    <message>
+        <source>Open URI</source>
+        <translation>Apri URI</translation>
+    </message>
+    <message>
+        <source>Parse a payment request</source>
+        <translation>Esamina una richiesta di pagamento</translation>
+    </message>
+    <message>
+        <source>Unlocked remaining</source>
+        <translation>Sbloccato rimanente</translation>
+    </message>
+    <message>
+        <source>You don't have any %1 to select.</source>
+        <translation>Non hai alcun %1 da selezionare.</translation>
     </message>
     <message>
         <source>No contacts available, you can go to the contacts screen and add some there!</source>
@@ -3544,44 +3418,28 @@ Questa valuta non sarà più in cold-stake.</translation>
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
-    </message>
-    <message>
-        <source>Backup Wallet </source>
-        <translation>Backup portafoglio</translation>
-    </message>
-    <message>
         <source>Change Wallet Passphrase</source>
         <translation>Cambia frase d'accesso al wallet</translation>
-    </message>
-    <message>
-        <source>Keep your wallet safe doing regular backups, store your backup file externally.
-This option creates a wallet.dat file that can be used to recover your whole balance (transactions and addresses) from another device.</source>
-        <translation>Mantieni il tuo portafoglio sicuro eseguendo backup regolari, archivia il tuo file di backup esternamente.
-Questa opzione crea un file wallet.dat che può essere utilizzato per recuperare l'intero saldo (transazioni e indirizzi) da un altro dispositivo.</translation>
-    </message>
-    <message>
-        <source>This will decrypt the whole wallet data and encrypt it back with the new passphrase.
-Remember to write it down and store it safely, otherwise you might lose access to your funds.</source>
-        <translation>Questo decifrerà tutti i dati del portafoglio e li crittograferà nuovamente con la nuova passphrase.
-Ricordati di scriverlo e conservarlo in modo sicuro, altrimenti potresti perdere l'accesso ai tuoi fondi.</translation>
     </message>
     <message>
         <source>Where</source>
         <translation>Dove</translation>
     </message>
     <message>
-        <source>Set a folder location</source>
-        <translation>Imposta un percorso per la cartella</translation>
+        <source>Keep your wallet safe by doing regular backups and storing your backup file externally.
+This option creates a wallet.dat file that can be used to recover your whole balance (transactions and addresses) on another device</source>
+        <translation>Mantieni il tuo portafoglio sicuro eseguendo backup regolari, archivia il tuo file di backup esternamente.
+Questa opzione crea un file wallet.dat che può essere utilizzato per recuperare l'intero saldo (transazioni e indirizzi) su un altro dispositivo.</translation>
     </message>
     <message>
-        <source>Backup</source>
-        <translation>Backup</translation>
+        <source>Select folder...</source>
+        <translation>Seleziona cartella...</translation>
+    </message>
+    <message>
+        <source>This will decrypt the whole wallet data and encrypt it back with the new passphrase.
+Remember to write it down and store it safely, otherwise you might lose access to your funds</source>
+        <translation>Questo decripterà tutti i dati del wallet e li crittograferà nuovamente con la nuova passphrase.
+Ricordati di scriverla e conservarla in modo sicuro, altrimenti potresti perdere l'accesso ai tuoi fondi.</translation>
     </message>
     <message>
         <source>Change Passphrase</source>
@@ -3615,28 +3473,18 @@ Ricordati di scriverlo e conservarlo in modo sicuro, altrimenti potresti perdere
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
-    </message>
-    <message>
-        <source>Decrypt Address Result</source>
-        <translation>Decrittografare il risultato dell'indirizzo</translation>
-    </message>
-    <message>
         <source>Import Address</source>
         <translation>Importa indirizzo</translation>
     </message>
     <message>
-        <source>Clear</source>
-        <translation>Cancella</translation>
-    </message>
-    <message>
         <source>BIP38 Tool</source>
         <translation>Strumenti BIP38</translation>
+    </message>
+    <message>
+        <source>Encrypt your UCACoin addresses (key pair actually) using BIP38 encryption.
+Using this mechanism you can share your keys without middle-man risk, only need to store your passphrase safely</source>
+        <translation>Cifra gli indirizzi UCACoin (la coppia di chiavi) con la crittografia BIP38.
+Usando questo meccanismo è possibile condividere le chiavi senza rischi dell'intermediario, basta solo memorizzare la password in modo sicuro</translation>
     </message>
     <message>
         <source>Encrypt</source>
@@ -3659,10 +3507,6 @@ Ricordati di scriverlo e conservarlo in modo sicuro, altrimenti potresti perdere
         <translation>Frase d'accesso</translation>
     </message>
     <message>
-        <source>Enter a passphrase </source>
-        <translation>Inserire frase d'accesso</translation>
-    </message>
-    <message>
         <source>Decrypted address result</source>
         <translation>Risultato dell'indirizzo decrittografato</translation>
     </message>
@@ -3675,16 +3519,16 @@ Ricordati di scriverlo e conservarlo in modo sicuro, altrimenti potresti perdere
         <translation>DECRITTOGRAFA LA CHIAVE</translation>
     </message>
     <message>
-        <source>Enter a ucacoin address</source>
-        <translation>Inserisci un indirizzo ucacoin</translation>
+        <source>UCACoin address</source>
+        <translation>Indirizzi UCACoin</translation>
     </message>
     <message>
-        <source>Add address</source>
-        <translation>Aggiungi indirizzo</translation>
+        <source>Enter address</source>
+        <translation>Inserire indirizzo</translation>
     </message>
     <message>
-        <source>Write a message</source>
-        <translation>Scrivi un messaggio</translation>
+        <source>Enter passphrase</source>
+        <translation>Inserire parola d'ordine</translation>
     </message>
     <message>
         <source>Encrypted Key</source>
@@ -3697,6 +3541,10 @@ Ricordati di scriverlo e conservarlo in modo sicuro, altrimenti potresti perdere
     <message>
         <source>CLEAR ALL</source>
         <translation>CANCELLA TUTTO</translation>
+    </message>
+    <message>
+        <source>Enter a passphrase</source>
+        <translation>Inserire passphrase</translation>
     </message>
     <message>
         <source>CLEAR</source>
@@ -3767,8 +3615,8 @@ Ricordati di scriverlo e conservarlo in modo sicuro, altrimenti potresti perdere
         <translation>Errore nell'inserimento della chiave nel portafoglio</translation>
     </message>
     <message>
-        <source>Successfully added ucaate key to the wallet</source>
-        <translation>Chiave privata inserita correttamente nel portafoglio</translation>
+        <source>Successfully added private key to the wallet</source>
+        <translation>Chiave privata correttamente aggiunta al wuallet</translation>
     </message>
 </context>
 <context>
@@ -3776,10 +3624,6 @@ Ricordati di scriverlo e conservarlo in modo sicuro, altrimenti potresti perdere
     <message>
         <source>Form</source>
         <translation>Modulo</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
     </message>
     <message>
         <source>Console</source>
@@ -3790,12 +3634,16 @@ Ricordati di scriverlo e conservarlo in modo sicuro, altrimenti potresti perdere
         <translation>Console input</translation>
     </message>
     <message>
-        <source>Command Line Options </source>
+        <source>Open Debug File</source>
+        <translation>Apri file di debug</translation>
+    </message>
+    <message>
+        <source>Command Line Options</source>
         <translation>Opzioni linea di comando</translation>
     </message>
     <message>
-        <source>Open Debug File</source>
-        <translation>Apri file di debug</translation>
+        <source>Clear history</source>
+        <translation>Cancella cronologia</translation>
     </message>
     <message>
         <source>Cannot open debug file.
@@ -3804,8 +3652,8 @@ Verify that you have installed a predetermined text editor.</source>
 Verifica di aver installato un editor di testo predeterminato.</translation>
     </message>
     <message>
-        <source>Welcome to the ucacoin RPC console.</source>
-        <translation>Benvenuti nella console RPC di ucacoin.</translation>
+        <source>Welcome to the UCACoin RPC console.</source>
+        <translation>Benvenuti nella console RPC di UCACoin.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and %1 to clear screen.</source>
@@ -3827,12 +3675,8 @@ Verifica di aver installato un editor di testo predeterminato.</translation>
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
+        <source>Hide stake charts in the dashboard</source>
+        <translation>Nascondi i grafici dello staking nella dashboard</translation>
     </message>
     <message>
         <source>Reset to default</source>
@@ -3884,79 +3728,159 @@ Verifica di aver installato un editor di testo predeterminato.</translation>
     </message>
 </context>
 <context>
+    <name>SettingsExportCSV</name>
+    <message>
+        <source>Form</source>
+        <translation>Modulo</translation>
+    </message>
+    <message>
+        <source>Export Accounting</source>
+        <translation>Esportazione Contabilità</translation>
+    </message>
+    <message>
+        <source>Export your wallet's accounting data to a csv file.</source>
+        <translation>Esporta la contabilità del tuo wallet in un file csv.</translation>
+    </message>
+    <message>
+        <source>Where</source>
+        <translation>Dove</translation>
+    </message>
+    <message>
+        <source>Select folder...</source>
+        <translation>Seleziona cartella...</translation>
+    </message>
+    <message>
+        <source>Export Address Book</source>
+        <translation>Esporta Elenco Indirizzi</translation>
+    </message>
+    <message>
+        <source>Export CSV</source>
+        <translation>Esporta CSV</translation>
+    </message>
+    <message>
+        <source>Export Address List</source>
+        <translation>Esporta elenco indirizzi</translation>
+    </message>
+    <message>
+        <source>UCACoin_tx_csv_export(*.csv)</source>
+        <translation>UCACoin_tx_csv_export(*.csv)</translation>
+    </message>
+    <message>
+        <source>UCACoin_addresses_csv_export(*.csv)</source>
+        <translation>UCACoin_addresses_csv_export(*.csv)</translation>
+    </message>
+    <message>
+        <source>Please select a folder to export the csv file first.</source>
+        <translation>Selezionare prima una cartella per esportare il file csv.</translation>
+    </message>
+    <message>
+        <source>Confirmed</source>
+        <translation>Confermata</translation>
+    </message>
+    <message>
+        <source>Watch-only</source>
+        <translation>Watch-only</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Data</translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation>Tipo</translation>
+    </message>
+    <message>
+        <source>Label</source>
+        <translation>Etichetta</translation>
+    </message>
+    <message>
+        <source>Address</source>
+        <translation>Indirizzo</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Exporting Successful
+The transaction history was successfully saved to %1.</source>
+        <translation>Esportazione riuscita
+La cronologia delle transazioni è stata salvata con successo a %1.</translation>
+    </message>
+    <message>
+        <source>Exporting Failed
+There was an error trying to save the transaction history to %1.</source>
+        <translation>Esportazione fallita
+Si è verificato un errore nel tentativo di salvare lo storico delle transazioni a %1.</translation>
+    </message>
+    <message>
+        <source>No available addresses to export under the selected filter</source>
+        <translation>Nessun indirizzo disponibile per l'esportazione con il filtro selezionato</translation>
+    </message>
+    <message>
+        <source>Exporting Successful
+The address book was successfully saved to %1.</source>
+        <translation>Esportazione riuscita
+L'elenco indirizzi è stato salvato con successo a %1.</translation>
+    </message>
+    <message>
+        <source>Exporting Failed
+There was an error trying to save the address list to %1. Please try again.</source>
+        <translation>Esportazione fallita
+Si è verificato un errore nel tentativo di salvare l'elenco degli indirizzi in %1. Riprovare.</translation>
+    </message>
+</context>
+<context>
     <name>SettingsFaqWidget</name>
     <message>
         <source>Form</source>
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
-    </message>
-    <message>
-        <source>1) What is ucacoin?</source>
-        <translation>1) Che cos'è ucacoin?</translation>
+        <source>1) What is UCACoin?</source>
+        <translation>1) Che cos'è UCACoin?</translation>
     </message>
     <message>
         <source>2) Why are my UCA unspendable?</source>
         <translation>2) Perché i miei UCA non sono spendibili?</translation>
     </message>
     <message>
-        <source>6) How do I receive UCA?</source>
-        <translation>6) Come ottenere UCA?</translation>
-    </message>
-    <message>
-        <source>7) How do I stake UCA?</source>
-        <translation>7) Come posso fare lo stake di UCA?</translation>
-    </message>
-    <message>
-        <source>8) Where I should go if I need support?</source>
-        <translation>8) Dove dovrei andare se ho bisogno di supporto?</translation>
-    </message>
-    <message>
-        <source>9) What is a Master Node?</source>
-        <translation>9) Cos'è un Masternode?</translation>
-    </message>
-    <message>
-        <source>10) What is a Master Node Controller?</source>
-        <translation>10) Cos'è un Masternode controller?</translation>
+        <source>https://UCACoin.org/</source>
+        <translation>https://UCACoin.org/</translation>
     </message>
     <message>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <source>What is ucacoin?</source>
-        <translation>Che cos'è ucacoin?</translation>
+        <source>What is UCACoin?</source>
+        <translation>Che cos'è UCACoin?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           ucacoin is a form of digital online money using blockchain technology
+                           UCACoin is a form of digital online money using blockchain technology
                            that can be easily transferred globally, instantly, and with near
-                           zero fees.  ucacoin incorporates market leading security &amp;
-                           privacy and is also the PoS (Proof of Stake) Cryptocurrency.
-                           
+                           zero fees.  UCACoin incorporates market leading security &amp;
+                           privacy and is also the first PoS (Proof of Stake) Cryptocurrency
+                           to implement ZeroCoin(zUCA) and Zerocoin staking.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           ucacoin utilizes a Proof of Stake (PoS) consensus system algorithm,
-                           allowing all owners of ucacoin to participate in earning block rewards
+                           UCACoin utilizes a Proof of Stake (PoS) consensus system algorithm,
+                           allowing all owners of UCACoin to participate in earning block rewards
                            while securing the network with full node wallets, as well as to
                            run Masternodes to create and vote on proposals.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-ucacoin è una forma di denaro online digitale che utilizza la tecnologia blockchain
+UCACoin è una forma di denaro online digitale che utilizza la tecnologia blockchain
 che può essere facilmente trasferito a livello globale, istantaneamente e con quasi
-zero costi. ucacoin incorpora le tecniche di sicurezza privacy più avanzate del mercato
-ed è anche la prima criptovaluta PoS (Proof of Stake).
+zero costi. UCACoin incorpora le tecniche di sicurezza e privacy più avanzate del mercato
+ed è anche la prima criptovaluta PoS (Proof of Stake)
+ad implementare lo staking di ZeroCoin (zUCA) e Zerocoin.
 &lt;/p&gt;&lt;p align="justify"&gt;
-ucacoin utilizza un algoritmo del sistema di consenso Proof of Stake (PoS),
-consentendo a tutti i proprietari di ucacoin di partecipare alle ricompense dei blocchi
+UCACoin utilizza un algoritmo del sistema di consenso Proof of Stake (PoS),
+consentendo a tutti i proprietari di UCACoin di partecipare alle ricompense dei blocchi
 proteggendo la rete con portafogli full node, oltre a
 eseguire Masternode per creare e votare proposte.
 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -3973,135 +3897,89 @@ eseguire Masternode per creare e votare proposte.
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           Newly received ucacoin requires 6 confirmations on the network
+                           Newly received UCACoin requires 6 confirmations on the network
                            to become eligible for spending which can take ~6 minutes.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           Your ucacoin wallet also needs to be completely synchronized
+                           Your UCACoin wallet also needs to be completely synchronized
                            to see and spend balances on the network.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           ucacoin appeni ricevuti richiedono 6 conferme sulla rete
+                           UCACoin appeni ricevuti richiedono 6 conferme sulla rete
  per poter essere spendibili, cioè può richiedere ~6 minuti.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           Anche il tuo portafoglio ucacoin deve essere completamente sincronizzato
+                           Anche il tuo portafoglio UCACoin deve essere completamente sincronizzato
 per vedere e spendere i saldi sulla rete.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </translation>
     </message>
     <message>
-        <source>6</source>
-        <translation>6</translation>
-    </message>
-    <message>
-        <source>How do I receive UCA?</source>
-        <translation>Come ottenere UCA?</translation>
-    </message>
-    <message>
-        <source>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           UCA can be spent and sent to any ucacoin address. The receiver will
-                           receive standard ucacoin.
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           If you want more UCA you will need to mint your balance.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </source>
-        <translation>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           UCA può essere speso e inviato a qualsiasi indirizzo ucacoin. Il ricevente
-otterrà ucacoin standard ma l'origine dei ucacoin è anonimizzata dal protocollo UCA.
-&lt;/p&gt;&lt;p align="justify"&gt;
-Se desideri più UCA.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </translation>
-    </message>
-    <message>
-        <source>7</source>
-        <translation>7</translation>
+        <source>3</source>
+        <translation>3</translation>
     </message>
     <message>
         <source>How do I stake UCA?</source>
         <translation>Come posso fare lo stake di UCA?</translation>
     </message>
     <message>
-        <source>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           To Stake ucacoin:
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           &lt;ol&gt;&lt;li&gt;
-                           Make sure your wallet is completely synchronized and you are using the latest release.
-                           &lt;li&gt;
-                           You must have a balance of ucacoin with a minimum of 101 confirmations.
-                           &lt;li&gt;
-                           Your wallet must stay online and be unlocked for anonymization and staking purposes.
-                           &lt;li&gt;
-                           Once all those steps are followed staking should be enabled.
-                           &lt;li&gt;
-                           You can see the status of staking in the wallet by mousing over the package icon in the row on the top left of the wallet interface. There package will be lit up and will state "Staking Enabled" to indicate it is staking.  Using the command line interface (ucacoin-cli); the command &lt;i&gt;getstakingstatus&lt;/i&gt; will confirm that staking is active.
-                           &lt;/li&gt;&lt;/ol&gt;
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </source>
-        <translation>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           Per fare lo Stake di ucacoin:
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           &lt;ol&gt;&lt;li&gt;
-                           Assicurati che il tuo portafoglio sia completamente sincronizzato e stai utilizzando l'ultima versione.
-                           &lt;li&gt;
-                           Devi avere un saldo di ucacoin con un minimo di 101 conferme.
-                           &lt;li&gt;
-                           Il tuo portafoglio deve rimanere online ed essere sbloccato per scopi di anonimizzazione e staking.
-                           &lt;li&gt;
-                           Una volta seguiti tutti questi passaggi, è necessario abilitare lo staking.
-                           &lt;li&gt;
-                           Puoi vedere lo stato dello staking nel portafoglio spostando il mouse sull'icona del pacchetto nella riga in alto a sinistra dell'interfaccia del portafoglio. Il pacchetto verrà illuminato e indicherà "Staking Enabled" per indicare che sta effettuando lo staking. Utilizzando l'interfaccia della riga di comando (ucacoin-cli); il comando&lt;i&gt;getstakingstatus&lt;/i&gt; confermerà che lo staking é attivo.
-                           &lt;/li&gt;&lt;/ol&gt;
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;ol style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"&gt;&lt;li align="justify" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Make sure your wallet is completely synchronized and you are using the latest release. &lt;/li&gt;&lt;li align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;You must have a balance of UCACoin with a minimum of 600 confirmations. &lt;/li&gt;&lt;li align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Your wallet must stay online and be unlocked for staking purposes. &lt;/li&gt;&lt;li align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Once all those steps are followed staking should be enabled. &lt;/li&gt;&lt;li align="justify" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;You can see the status of staking in the wallet by mousing over the package icon in the row on the top left of the wallet interface. There package will be lit up and will state &amp;quot;Staking Enabled&amp;quot; to indicate it is staking. Using the command line interface (ucacoin-cli); the command &lt;span style=" font-style:italic;"&gt;getstakingstatus&lt;/span&gt; will confirm that staking is active. &lt;/li&gt;&lt;/ol&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;ol style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"&gt;&lt;li align="justify" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Assicurati che il tuo wallet sia completamente sincronizzato e che tu stia usando l'ultima versione. 56Il bilancio dei tuoi UCACoin deve avere almeno 600 conferme. Per lo stacking il tuo wallet deve rimanere online e deve essere sbloccato. &lt;/li&gt;&lt;li align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Una volta portati a termine questi step, siete pronti per avviare lo stacking. &lt;/li&gt;&lt;li align="justify" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Potete vedere lo stato dello staking nel wallet, passando il mouse sull'icona del pacchetto nella riga in alto a sinistra dell'interfaccia del portafoglio. Il pacchetto sarà illuminato e indicherà &amp;quot;Staking Enabled&amp;quot; per indicare che lo staking è attivo. Usando nella riga di comando dell'interfaccia (ucacoin-cli); il comando &lt;span style=" font-style:italic;"&gt;getstakingstatus&lt;/span&gt; avrai conferma che lo staking è attivo. &lt;/li&gt;&lt;/ol&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>8</source>
-        <translation>8</translation>
+        <source>4</source>
+        <translation>4</translation>
     </message>
     <message>
-        <source>Where I should go if I need support?</source>
+        <source>5</source>
+        <translation>5</translation>
+    </message>
+    <message>
+        <source>6</source>
+        <translation>6</translation>
+    </message>
+    <message>
+        <source>Where should I go if I need support?</source>
         <translation>Dove dovrei andare se ho bisogno di supporto?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
                            We have support channels in most of our official chat groups, for example
-                           &lt;a style='color: #b088ff' href='https://Discord.ucacoin.com'&gt;
+                           &lt;a style='color: #b89236' href='https://discord.UCACoin.org'&gt;
                            #support in our Discord&lt;/a&gt;.
-                           If you prefer to submit a ticket, One can be
-                           &lt;a style='color: #b088ff' href='https://ucacoin.FreshDesk.com'&gt;
+                           If you prefer to submit a ticket, You can do so at
+                           &lt;a style='color: #b89236' href='https://UCACoin.freshdesk.com'&gt;
                            our Freshdesk support site&lt;/a&gt;.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
                            Abbiamo canali di supporto nella maggior parte dei nostri gruppi di chat ufficiali, ad esempio
-                           &lt;a style='color: #b088ff' href='https://Discord.ucacoin.com'&gt;
+                           &lt;a style='color: #b89236' href='https://Discord.UCACoin.com'&gt;
                            #support nel nostro Discord&lt;/a&gt;.
                            Se preferisci aprire un ticket, puoi farlo su
-                           &lt;a style='color: #b088ff' href='https://ucacoin.FreshDesk.com'&gt;
+                           &lt;a style='color: #b89236' href='https://UCACoin.FreshDesk.com'&gt;
                            il nostro sito di supporto Freshdesk&lt;/a&gt;.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </translation>
     </message>
     <message>
-        <source>9</source>
-        <translation>9</translation>
+        <source>What is a Masternode?</source>
+        <translation>Cos'è un Masternode?</translation>
     </message>
     <message>
-        <source>What is a Master Node?</source>
-        <translation>Cos'è un Masternode?</translation>
+        <source>What is a Masternode Controller?</source>
+        <translation>Cos'è un Masternode controller?</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;A Masternode Controller wallet is where the 10,000 UCA collateral can reside during a Controller-Remote masternode setup. It is a wallet that can activate the remote masternode wallet(s) and allows you to keep your collateral coins offline while the remote masternode remains online. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;Un Masternode Controller wallet è dove i 10.000 UCA collaterali possono risiedere durante l'impostazione del Masternode Controller remoto. È un portafoglio che può attivare uno o più portafogli masternode remoti e ti consente di mantenere offline le tue valute collaterali mentre il masternode remoto rimane online.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           A masternode is a computer running a full node ucacoin core wallet with a
+                           A masternode is a computer running a full node UCAcoin wallet with a
                            requirement of 10,000 UCA secured collateral to provide extra services
                            to the network and in return, receive a portion of the block reward
                            regularly.  These services include:
@@ -4124,10 +4002,10 @@ Se desideri più UCA.
                            Masternode Perks:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;Participate in ucacoin Governance&lt;/li&gt;
+                           &lt;li&gt;Participate in UCACoin Governance&lt;/li&gt;
                            &lt;li&gt;Earn Masternode Rewards&lt;/li&gt;
                            &lt;li&gt;Commodity option for future sale&lt;/li&gt;
-                           &lt;li&gt;Help secure the ucacoin network&lt;/li&gt;
+                           &lt;li&gt;Help secure the UCACoin network&lt;/li&gt;
                            &lt;/ul&gt;
                            &lt;/p&gt;&lt;p align="justify"&gt;
 
@@ -4143,7 +4021,7 @@ Se desideri più UCA.
                          </source>
         <translation>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           Un masternode è un computer che esegue un portafoglio core ucacoin a nodo completo
+                           Un masternode è un computer che esegue un portafoglio core UCACoin a nodo completo
 con un requisito di 10.000 UCA a garanzia per fornire servizi extra
 alla rete e, in cambio, riceve una parte del premio del blocco
 regolarmente. Questi servizi includono:
@@ -4166,10 +4044,10 @@ regolarmente. Questi servizi includono:
                            Vantaggi del Masternode:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;Partecipare alla Governance di ucacoin &lt;/li&gt;
+                           &lt;li&gt;Partecipare alla Governance di UCACoin &lt;/li&gt;
                            &lt;li&gt;Guadagnare i premi del Masternode&lt;/li&gt;
                            &lt;li&gt;Opzione di una commodity per vendita futura&lt;/li&gt;
-                           &lt;li&gt;Aiuta a proteggere la rete ucacoin&lt;/li&gt;
+                           &lt;li&gt;Aiuta a proteggere la rete UCACoin&lt;/li&gt;
                            &lt;/ul&gt;
                            &lt;/p&gt;&lt;p align="justify"&gt;
 
@@ -4185,20 +4063,24 @@ regolarmente. Questi servizi includono:
                          </translation>
     </message>
     <message>
-        <source>10</source>
-        <translation>10</translation>
-    </message>
-    <message>
-        <source>What is a Master Node Controller?</source>
-        <translation>Cos'è un Masternode controller?</translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;A Masternode Controller wallet is where the 10,000 UCA collateral can reside during a Controller-Remote masternode setup. It is a wallet that can activate the remote masternode wallet/s and allows you to keep your collateral coins offline while the remote masternode remains online. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;Un portafoglio Masternode Controller è dove i 10.000 UCA collaterali possono risiedere durante l'impostazione del Masternode Controller remoto. È un portafoglio che può attivare uno o più portafogli masternode remoti e ti consente di mantenere offline le tue valute collaterali mentre il masternode remoto rimane online.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <source>Frequently Asked Questions</source>
         <translation>Domande frequenti</translation>
+    </message>
+    <message>
+        <source>3) How do I stake UCA?</source>
+        <translation>3) Come faccio lo staking di UCA?</translation>
+    </message>
+    <message>
+        <source>4) Where I should go if I need support?</source>
+        <translation>4) Dove dovrei andare se ho bisogno di supporto?</translation>
+    </message>
+    <message>
+        <source>5) What is a Masternode?</source>
+        <translation>5) Cos'è un Masternode?</translation>
+    </message>
+    <message>
+        <source>6) What is a Masternode Controller?</source>
+        <translation>Cos'è un Masternode controller?</translation>
     </message>
     <message>
         <source>You can read more here</source>
@@ -4216,10 +4098,6 @@ regolarmente. Questi servizi includono:
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
         <source>Network Monitor</source>
         <translation>Monitor rete</translation>
     </message>
@@ -4232,24 +4110,48 @@ regolarmente. Questi servizi includono:
         <translation>Generale</translation>
     </message>
     <message>
-        <source>Client Version: </source>
+        <source>Client Version:</source>
         <translation>Versione del client:</translation>
+    </message>
+    <message>
+        <source>BerkeleyDB version:</source>
+        <translation>Versione BerkeleyDB:</translation>
+    </message>
+    <message>
+        <source>Datadir:</source>
+        <translation>Datadir:</translation>
+    </message>
+    <message>
+        <source>Startup time:</source>
+        <translation>Tempo di avvio:</translation>
+    </message>
+    <message>
+        <source>Connections:</source>
+        <translation>Connessioni:</translation>
+    </message>
+    <message>
+        <source>Number of Masternodes:</source>
+        <translation>Numero dei Masternode:</translation>
+    </message>
+    <message>
+        <source>Current number of blocks:</source>
+        <translation>Numero attuale dei blocchi:</translation>
+    </message>
+    <message>
+        <source>Last block time:</source>
+        <translation>Tempo ultimo blocco:</translation>
+    </message>
+    <message>
+        <source>Last block hash:</source>
+        <translation>Hash dell'ultimo blocco:</translation>
+    </message>
+    <message>
+        <source>Current number of transactions:</source>
+        <translation>Numero attuale delle transazioni:</translation>
     </message>
     <message>
         <source>User Agent:</source>
         <translation>User Agent:</translation>
-    </message>
-    <message>
-        <source>Using BerkeleyDB version:</source>
-        <translation>Utilizza versione BerkeleyDB:</translation>
-    </message>
-    <message>
-        <source>Datadir: </source>
-        <translation>Datadir: </translation>
-    </message>
-    <message>
-        <source>Startup Time:  </source>
-        <translation>Tempo di avvio:</translation>
     </message>
     <message>
         <source>Network</source>
@@ -4260,28 +4162,12 @@ regolarmente. Questi servizi includono:
         <translation>Nome:</translation>
     </message>
     <message>
-        <source>Number Connections:</source>
-        <translation>Numero delle connessioni:</translation>
-    </message>
-    <message>
         <source>Blockchain</source>
         <translation>Blockchain</translation>
     </message>
     <message>
-        <source>Current Number of Blocks:</source>
-        <translation>Numero attuale dei blocchi:</translation>
-    </message>
-    <message>
-        <source>Last Block Time:</source>
-        <translation>Ultimo blocco:</translation>
-    </message>
-    <message>
         <source>Memory Pool</source>
         <translation>Pool di memoria</translation>
-    </message>
-    <message>
-        <source>Current Number of Transactions:</source>
-        <translation>Numero attuale delle transazioni:</translation>
     </message>
     <message>
         <source>Main</source>
@@ -4323,20 +4209,12 @@ regolarmente. Questi servizi includono:
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
         <source>Window</source>
         <translation>Finestra</translation>
     </message>
     <message>
         <source>Customize the application window options</source>
         <translation>Personalizza le opzioni di visualizzazione dell'applicazione</translation>
-    </message>
-    <message>
-        <source>CheckBox</source>
-        <translation>CheckBox</translation>
     </message>
     <message>
         <source>Reset to default</source>
@@ -4355,6 +4233,10 @@ regolarmente. Questi servizi includono:
         <translation>Principale</translation>
     </message>
     <message>
+        <source>Customize the main application options</source>
+        <translation>Personalizza le principali opzioni dell'applicazione</translation>
+    </message>
+    <message>
         <source>Size of database cache</source>
         <translation>Dimensione della cache del database</translation>
     </message>
@@ -4363,8 +4245,8 @@ regolarmente. Questi servizi includono:
         <translation>Numero di script e processi di verifica</translation>
     </message>
     <message>
-        <source>Start ucacoin on system login</source>
-        <translation>Avvia ucacoin all'accesso al sistema</translation>
+        <source>Start UCACoin on system login</source>
+        <translation>Avvia UCACoin all'accesso al sistema</translation>
     </message>
     <message>
         <source>Minimize to the tray instead of the taskbar</source>
@@ -4420,12 +4302,12 @@ Sei sicuro?
         <translation>Nuovo destinatario per multisend</translation>
     </message>
     <message>
-        <source>Label (optional)</source>
-        <translation>Etichetta (opzionale)</translation>
+        <source>Address Label (optional)</source>
+        <translation>Etichetta Indirizzo (opzionale)</translation>
     </message>
     <message>
-        <source>Enter a label to add this address in your address book</source>
-        <translation>Inserisci un'etichetta per questo indirizzo da aggiungere alla tua rubrica</translation>
+        <source>Enter label to be saved with this address</source>
+        <translation>Inserisci un'etichetta da salvare con l'indirizzo</translation>
     </message>
     <message>
         <source>Percentage</source>
@@ -4443,16 +4325,16 @@ Sei sicuro?
         <translation>Etichetta</translation>
     </message>
     <message>
-        <source>No active Master Node yet</source>
-        <translation>Ancora nessun MasterNode attivo</translation>
+        <source>N/A</source>
+        <translation>N/D</translation>
     </message>
     <message>
         <source>CheckBox</source>
         <translation>CheckBox</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other ucacoin addresses after it matures.</source>
-        <translation>MultiSend ti consente di inviare automaticamente fino al 100% dei tuoi stake o ricompense masternode a un elenco di altri indirizzi ucacoin dopo la loro maturazione.</translation>
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other UCACoin addresses after it matures.</source>
+        <translation>MultiSend ti consente di inviare automaticamente fino al 100% dei tuoi stake o ricompense masternode a un elenco di altri indirizzi UCACoin dopo la loro maturazione.</translation>
     </message>
     <message>
         <source>Active</source>
@@ -4483,12 +4365,20 @@ Sei sicuro?
         <translation>CANCELLA TUTTO</translation>
     </message>
     <message>
+        <source>Cannot perform operation, wallet locked</source>
+        <translation>Impossibile completare l'operazione, portafoglio bloccato</translation>
+    </message>
+    <message>
         <source>Clear succeed</source>
         <translation>Cancellazione riuscita</translation>
     </message>
     <message>
         <source>Clear all failed, could not locate address in wallet file</source>
         <translation>Cancella tutto non riuscito, impossibile trovare l'indirizzo nel file wallet</translation>
+    </message>
+    <message>
+        <source>Cannot add multisend recipient, wallet locked</source>
+        <translation>Impossibile aggiungere destinatario multisend, portafoglio bloccato</translation>
     </message>
     <message>
         <source>The entered address: %1 is invalid.
@@ -4546,28 +4436,8 @@ Seleziona una o entrambe le caselle di controllo per inviare gli stake e/o i pre
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation>Cancella</translation>
-    </message>
-    <message>
         <source>Sign/Verify Message</source>
         <translation>Firma/Verifica messaggio</translation>
-    </message>
-    <message>
-        <source>Enter a ucacoin address or contact label</source>
-        <translation>Inserisci un indirizzo ucacoin o etichetta</translation>
-    </message>
-    <message>
-        <source>Add address</source>
-        <translation>Aggiungi indirizzo</translation>
     </message>
     <message>
         <source>Sign</source>
@@ -4578,6 +4448,10 @@ Seleziona una o entrambe le caselle di controllo per inviare gli stake e/o i pre
         <translation>Verifica</translation>
     </message>
     <message>
+        <source>Write message here...</source>
+        <translation>Scrivi un messaggio qui...</translation>
+    </message>
+    <message>
         <source>Select mode</source>
         <translation>Seleziona modalità</translation>
     </message>
@@ -4586,8 +4460,12 @@ Seleziona una o entrambe le caselle di controllo per inviare gli stake e/o i pre
         <translation>Messaggio</translation>
     </message>
     <message>
-        <source>Write a message</source>
-        <translation>Scrivi un messaggio</translation>
+        <source>UCACoin address or contact label</source>
+        <translation>Indirizzo UCACoin o etichetta</translation>
+    </message>
+    <message>
+        <source>Enter address</source>
+        <translation>Inserire indirizzo</translation>
     </message>
     <message>
         <source>Signature</source>
@@ -4673,28 +4551,12 @@ Seleziona una o entrambe le caselle di controllo per inviare gli stake e/o i pre
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
-        <source>CheckBox</source>
-        <translation>CheckBox</translation>
-    </message>
-    <message>
-        <source>RadioButton</source>
-        <translation>Pulsante di opzione</translation>
-    </message>
-    <message>
         <source>Reset to default</source>
         <translation>Ripristina valori predefiniti.</translation>
     </message>
     <message>
         <source>Discard changes</source>
         <translation>Non salvare le modifiche</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -4705,7 +4567,7 @@ Seleziona una o entrambe le caselle di controllo per inviare gli stake e/o i pre
         <translation>Personalizza le opzioni interne del portafoglio</translation>
     </message>
     <message>
-        <source>Stake split threshold:</source>
+        <source>Stake split threshold</source>
         <translation>Soglia di divisione dello stake</translation>
     </message>
     <message>
@@ -4721,16 +4583,24 @@ Seleziona una o entrambe le caselle di controllo per inviare gli stake e/o i pre
         <translation>Personalizza le opzioni di rete del nodo</translation>
     </message>
     <message>
-        <source>Proxy IP:</source>
-        <translation>Proxy IP:</translation>
+        <source>Connect through SOCKS5 proxy (default proxy)</source>
+        <translation>Connetti tramite proxy SOCKS5 (proxy predefinito)</translation>
+    </message>
+    <message>
+        <source>Proxy IP</source>
+        <translation>IP Proxy</translation>
+    </message>
+    <message>
+        <source>Port</source>
+        <translation>Porta</translation>
+    </message>
+    <message>
+        <source>Enter port</source>
+        <translation>Inserisci porta</translation>
     </message>
     <message>
         <source>Enter proxy IP</source>
         <translation>Inserire proxy IP</translation>
-    </message>
-    <message>
-        <source>Port:</source>
-        <translation>Porta:</translation>
     </message>
     <message>
         <source>Map port using UPnP</source>
@@ -4739,10 +4609,6 @@ Seleziona una o entrambe le caselle di controllo per inviare gli stake e/o i pre
     <message>
         <source>Allow incoming connections</source>
         <translation>Consenti connessioni in entrata</translation>
-    </message>
-    <message>
-        <source>Connect through SOCKS5 proxy (default proxy):</source>
-        <translation>Connetti tramite proxy SOCKS5 (proxy predefinito):</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -4760,64 +4626,48 @@ Seleziona una o entrambe le caselle di controllo per inviare gli stake e/o i pre
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
-    </message>
-    <message>
         <source>Wallet Repair</source>
         <translation>Ripara Wallet</translation>
-    </message>
-    <message>
-        <source>The buttons below will restart the wallet with command-line options to repair this wallet, fix issues with corrupt blockchain files or missing/obsolete transactions.</source>
-        <translation>I pulsanti seguenti riavvieranno il portafoglio con le opzioni della riga di comando per riparare il portafoglio, risolvere problemi con file blockhain corrotti o transazioni mancanti / obsolete.</translation>
-    </message>
-    <message>
-        <source>Attempt to recover private keys from a corrupt wallet.dat.</source>
-        <translation>Tentativo di recuperare chiavi private da un wallet.dat corrotto.</translation>
-    </message>
-    <message>
-        <source>Rescan the blockchain for missing wallet transactions.</source>
-        <translation>Riesegui la scansione della blockchain per cercare le transazioni mancanti.</translation>
-    </message>
-    <message>
-        <source>Recover transactions from blockchain (keep-meta-data, e.g. account owner).</source>
-        <translation>Recupera le transazioni dalla blockchain (conserva i metadati, ad esempio il proprietario dell'account).</translation>
-    </message>
-    <message>
-        <source>Recover transactions from blockchain (drop meta-data).</source>
-        <translation>Recupera le transazioni dalla blockchain (cancella i metadati).</translation>
     </message>
     <message>
         <source>Upgrade wallet to latest format on startup. (Note: this is NOT an update of the wallet itself)</source>
         <translation>Aggiorna il portafoglio all'ultimo formato all'avvio. (Nota: questo NON è un aggiornamento del portafoglio stesso!)</translation>
     </message>
     <message>
-        <source>Rebuild blockchain index from current blk000???.dat files.</source>
-        <translation>Ricostruisce l'indice della blockchain dai file blk000??.dat corrente.</translation>
-    </message>
-    <message>
-        <source>Deletes all local blockchain folders so the wallet synchronizes from scratch.</source>
-        <translation>Elimina tutte le cartelle blockchain locali in modo che il portafoglio si sincronizzi da zero.</translation>
+        <source>The buttons below will restart the wallet with command-line options to repair this wallet, fix issues with corrupt blockchain files or missing/obsolete transactions</source>
+        <translation>I pulsanti seguenti riavvieranno il portafoglio con le opzioni della riga di comando per riparare il portafoglio, risolvere problemi con file blockhain corrotti o transazioni mancanti / obsolete.</translation>
     </message>
     <message>
         <source>Salvage wallet</source>
         <translation>Portafoglio di salvataggio</translation>
     </message>
     <message>
+        <source>Attempt to recover private keys from a corrupt wallet.dat</source>
+        <translation>Tentativo di recuperare chiavi private da un wallet.dat corrotto.</translation>
+    </message>
+    <message>
         <source>Rescan blockchain file</source>
         <translation>Ripeti la scansione dei file blockchain</translation>
+    </message>
+    <message>
+        <source>Rescan the blockchain for missing wallet transactions</source>
+        <translation>Riesegui la scansione della blockchain per cercare le transazioni mancanti del wallet.</translation>
     </message>
     <message>
         <source>Recover transactions 1</source>
         <translation>Recupera transazioni 1</translation>
     </message>
     <message>
+        <source>Recover transactions from blockchain (keep-meta-data, e.g. account owner)</source>
+        <translation>Recupera le transazioni dalla blockchain (conserva i metadati, ad esempio il proprietario dell'account).</translation>
+    </message>
+    <message>
         <source>Recover transactions 2</source>
         <translation>Recupera transazioni 2</translation>
+    </message>
+    <message>
+        <source>Recover transactions from blockchain (drop meta-data)</source>
+        <translation>Recupera le transazioni dalla blockchain (tralascia i metadati).</translation>
     </message>
     <message>
         <source>Upgrade wallet format</source>
@@ -4828,8 +4678,16 @@ Seleziona una o entrambe le caselle di controllo per inviare gli stake e/o i pre
         <translation>Ricostruisci indice</translation>
     </message>
     <message>
-        <source>Delete local blockchain </source>
-        <translation>Elimina le cartelle Blockchain locali</translation>
+        <source>Rebuild blockchain index from current blk000???.dat files</source>
+        <translation>Ricostruisce l'indice della blockchain dai file blk000??.dat.</translation>
+    </message>
+    <message>
+        <source>Delete local blockchain</source>
+        <translation>Elimina blockchain locale</translation>
+    </message>
+    <message>
+        <source>Deletes all local blockchain folders so the wallet synchronizes from scratch</source>
+        <translation>Elimina tutte le cartelle blockchain locali in modo che il portafoglio si sincronizzi da zero.</translation>
     </message>
     <message>
         <source>This will delete your local blockchain folders and the wallet will synchronize the complete Blockchain from scratch.&lt;br /&gt;&lt;br /&gt;</source>
@@ -4859,10 +4717,6 @@ Seleziona una o entrambe le caselle di controllo per inviare gli stake e/o i pre
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
         <source>Wallet Data</source>
         <translation>Wallet Data</translation>
     </message>
@@ -4873,6 +4727,10 @@ Seleziona una o entrambe le caselle di controllo per inviare gli stake e/o i pre
     <message>
         <source>Multisend</source>
         <translation>MultiSend</translation>
+    </message>
+    <message>
+        <source>Export Accounting</source>
+        <translation>Esportazione Contabilità</translation>
     </message>
     <message>
         <source>Tools</source>
@@ -4923,8 +4781,8 @@ Seleziona una o entrambe le caselle di controllo per inviare gli stake e/o i pre
         <translation>FAQ</translation>
     </message>
     <message>
-        <source>About ucacoin</source>
-        <translation>Informazioni su ucacoin</translation>
+        <source>About UCACoin</source>
+        <translation>Informazioni su UCACoin</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -4941,6 +4799,10 @@ Seleziona una o entrambe le caselle di controllo per inviare gli stake e/o i pre
     <message>
         <source>Client will be shutdown, do you want to proceed?</source>
         <translation>Il client verrà arrestato, vuoi procedere?</translation>
+    </message>
+    <message>
+        <source>Stake Split too low, it shall be either &gt;= %1 or equal to 0 (to disable stake splitting)</source>
+        <translation>Stake Split troppo basso, deve essere &gt;= %1 o uguale a 0 (per disabilitare lo stake splitting)</translation>
     </message>
     <message>
         <source>Restart required</source>
@@ -4990,8 +4852,8 @@ Sei sicuro?
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>ucacoin Core is shutting down...</source>
-        <translation>ucacoin Core si sta spegnendo...</translation>
+        <source>UCACoin is shutting down...</source>
+        <translation>UCACoin si sta spegnendo...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -5020,32 +4882,12 @@ Sei sicuro?
         <translation>Caricamento...</translation>
     </message>
     <message>
-        <source>ucacoin Core</source>
-        <translation>ucacoin Core</translation>
+        <source>UCACoin</source>
+        <translation>UCACoin</translation>
     </message>
 </context>
 <context>
     <name>SplashScreen</name>
-    <message>
-        <source>ucacoin Core</source>
-        <translation>ucacoin Core</translation>
-    </message>
-    <message>
-        <source>Version %1</source>
-        <translation>Versione %1</translation>
-    </message>
-    <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Gli sviluppatori di Bitcoin Core</translation>
-    </message>
-    <message>
-        <source>The Dash Core developers</source>
-        <translation>Gli sviluppatori di Dash Core</translation>
-    </message>
-    <message>
-        <source>The ucacoin Core developers</source>
-        <translation>Gli sviluppatori di ucacoin Core</translation>
-    </message>
     <message>
         <source>[testnet]</source>
         <translation>[testnet]</translation>
@@ -5081,10 +4923,6 @@ Sei sicuro?
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>480.0685 UCA</source>
-        <translation>480.0685 UCA</translation>
-    </message>
-    <message>
         <source>Available</source>
         <translation>Disponibile</translation>
     </message>
@@ -5093,16 +4931,8 @@ Sei sicuro?
         <translation>In attesa</translation>
     </message>
     <message>
-        <source>6.943 UCA</source>
-        <translation>6.943 UCA</translation>
-    </message>
-    <message>
         <source>Immature</source>
         <translation>Immaturo</translation>
-    </message>
-    <message>
-        <source>10 UCA</source>
-        <translation>10 UCA</translation>
     </message>
     <message>
         <source>Wallet Unlocked for staking</source>
@@ -5129,20 +4959,20 @@ Sei sicuro?
         <translation><numerusform>%n connessioni attive</numerusform><numerusform>%n connessioni attive</numerusform></translation>
     </message>
     <message>
-        <source>Synchronized</source>
-        <translation>Sincronizzato</translation>
+        <source>Synchronized - Block: %1</source>
+        <translation>Sincronizzato - Blocco: %1</translation>
     </message>
     <message numerus="yes">
         <source>%n hour(s)</source>
-        <translation><numerusform>%n ora</numerusform><numerusform>%n ore</numerusform></translation>
+        <translation><numerusform>%n ore</numerusform><numerusform>%n ore</numerusform></translation>
     </message>
     <message numerus="yes">
         <source>%n day(s)</source>
-        <translation><numerusform>%n giorno</numerusform><numerusform>%n giorni</numerusform></translation>
+        <translation><numerusform>%n giorni</numerusform><numerusform>%n giorni</numerusform></translation>
     </message>
     <message numerus="yes">
         <source>%n week(s)</source>
-        <translation><numerusform>%n settimana</numerusform><numerusform>%n settimane</numerusform></translation>
+        <translation><numerusform>%n settimane</numerusform><numerusform>%n settimane</numerusform></translation>
     </message>
     <message>
         <source>%1 and %2</source>
@@ -5150,7 +4980,139 @@ Sei sicuro?
     </message>
     <message numerus="yes">
         <source>%n year(s)</source>
-        <translation><numerusform>%n anno</numerusform><numerusform>%n anni</numerusform></translation>
+        <translation><numerusform>%n anni</numerusform><numerusform>%n anni</numerusform></translation>
+    </message>
+    <message>
+        <source>Wallet Upgrade</source>
+        <translation>Upgrade Wallet </translation>
+    </message>
+    <message>
+        <source>Upgrading to HD wallet will improve
+the wallet's reliability and security.
+
+
+NOTE: after the upgrade, a new
+backup will be created.
+</source>
+        <translation>L'Upgrade al wallet HD migliorerà
+l'affidabilità e la sicurezza del portafoglio.
+
+
+NOTA: dopo l'aggiornamento,
+sarà creato un nuovo un backup.
+</translation>
+    </message>
+    <message>
+        <source>Upgrade Wallet</source>
+        <translation>Upgrade Wallet</translation>
+    </message>
+    <message>
+        <source>Wallet unlock cancelled</source>
+        <translation>Sblocco portafoglio è stato annullato.</translation>
+    </message>
+    <message>
+        <source>Tor Active: %1</source>
+        <translation>Tor Attivo: %1</translation>
+    </message>
+    <message>
+        <source>Tor Disabled</source>
+        <translation>Tor Disabilitato</translation>
+    </message>
+    <message>
+        <source>FAQ</source>
+        <translation>FAQ</translation>
+    </message>
+    <message>
+        <source>Upgrade to HD Wallet</source>
+        <translation>Upgrade a HD Wallet</translation>
+    </message>
+    <message>
+        <source>No Connection</source>
+        <translation>Connessione Assente</translation>
+    </message>
+    <message>
+        <source>Staking Disabled</source>
+        <translation>Staking Disabilitato</translation>
+    </message>
+    <message>
+        <source>Cold Staking Disabled</source>
+        <translation>Cold Staking Disabilito</translation>
+    </message>
+    <message>
+        <source> %54 Synchronizing..</source>
+        <translation>Sincronizzazione.. %54 </translation>
+    </message>
+    <message>
+        <source>Light Theme</source>
+        <translation>Tema Luminoso</translation>
+    </message>
+    <message>
+        <source>Dark Theme</source>
+        <translation>Tema Scuro</translation>
+    </message>
+    <message>
+        <source>Wallet Locked </source>
+        <translation>Portafoglio Bloccato</translation>
+    </message>
+    <message>
+        <source>Wallet Locked</source>
+        <translation>Portafoglio bloccato</translation>
+    </message>
+    <message>
+        <source>Wallet Unlocked</source>
+        <translation>Portafoglio Sbloccato</translation>
+    </message>
+    <message>
+        <source>Wallet Unencrypted</source>
+        <translation>Portafoglio non crittografato</translation>
+    </message>
+    <message>
+        <source>Available (Locked included)</source>
+        <translation>Disponibile (Incluso blocco)</translation>
+    </message>
+    <message>
+        <source>The wallet has been successfully upgraded to HD.</source>
+        <translation>Il portafoglio è stato aggiornato con successo alla versione HD.</translation>
+    </message>
+    <message>
+        <source>It is advised to make a backup.</source>
+        <translation>Si consiglia di fare un backup.</translation>
+    </message>
+    <message>
+        <source>Do you wish to backup now?</source>
+        <translation>Vuoi fare il backup ora?</translation>
+    </message>
+    <message>
+        <source>Backup Wallet</source>
+        <translation>Backup portafoglio</translation>
+    </message>
+    <message>
+        <source>Wallet Data (*.dat)</source>
+        <translation>Wallet Data (*.dat)</translation>
+    </message>
+    <message>
+        <source>Backup created</source>
+        <translation>Backup creato</translation>
+    </message>
+    <message>
+        <source>Backup creation failed</source>
+        <translation>Creazione del backup non riuscita</translation>
+    </message>
+    <message>
+        <source>no file selected</source>
+        <translation>nessun file selezionato</translation>
+    </message>
+    <message>
+        <source>Wallet upgraded successfully, but no backup created.</source>
+        <translation>Wallet aggiornato con successo, ma backup non creato.</translation>
+    </message>
+    <message>
+        <source>WARNING: remember to make a copy of your wallet.dat file!</source>
+        <translation>ATTENZIONE: ricordati di fare una copia del tuo file wallet.dat!</translation>
+    </message>
+    <message>
+        <source>Upgrade Wallet Error</source>
+        <translation>Errore Upgrade Wallet</translation>
     </message>
 </context>
 <context>
@@ -5164,7 +5126,7 @@ Sei sicuro?
     <name>TransactionDesc</name>
     <message numerus="yes">
         <source>Open for %n more block(s)</source>
-        <translation><numerusform>Aperto per altro %n blocco</numerusform><numerusform>Aperto per altri %n blocchi</numerusform></translation>
+        <translation><numerusform>Aperto per altri %n blocchi</numerusform><numerusform>Aperto per %n ulteriori blocchi.</numerusform></translation>
     </message>
     <message>
         <source>Open until %1</source>
@@ -5228,7 +5190,7 @@ Sei sicuro?
     </message>
     <message numerus="yes">
         <source>, broadcast through %n node(s)</source>
-        <translation><numerusform>, trasmesso attraverso %n nodo</numerusform><numerusform>, trasmesso attraverso %n nodi</numerusform></translation>
+        <translation><numerusform>, trasmesso attraverso %n nodi</numerusform><numerusform>, trasmesso attraverso %n nodi</numerusform></translation>
     </message>
     <message>
         <source>Date</source>
@@ -5272,7 +5234,7 @@ Sei sicuro?
     </message>
     <message numerus="yes">
         <source>matures in %n more block(s)</source>
-        <translation><numerusform>matura in %n blocco</numerusform><numerusform>matura in altri %n blocchi</numerusform></translation>
+        <translation><numerusform>matura in altri %n blocchi</numerusform><numerusform>matura in altri %n blocchi</numerusform></translation>
     </message>
     <message>
         <source>not accepted</source>
@@ -5359,7 +5321,7 @@ Sei sicuro?
     </message>
     <message numerus="yes">
         <source>Open for %n more block(s)</source>
-        <translation><numerusform>Aperto per %n blocco</numerusform><numerusform>Aperto per altri %n blocchi</numerusform></translation>
+        <translation><numerusform>Aperto per altri %n blocchi</numerusform><numerusform>Aperto per altri %n blocchi</numerusform></translation>
     </message>
     <message>
         <source>Open until %1</source>
@@ -5406,40 +5368,24 @@ Sei sicuro?
         <translation>Ricevuto da</translation>
     </message>
     <message>
-        <source>Received via Obfuscation</source>
-        <translation>Ricevuto tramite offuscamento</translation>
+        <source>%1 Stake</source>
+        <translation>%1 Stake</translation>
     </message>
     <message>
-        <source>UCA Stake</source>
-        <translation>UCA Stake</translation>
+        <source>z%1 Stake</source>
+        <translation>z%1 Stake</translation>
     </message>
     <message>
-        <source>UCA Cold Stake</source>
-        <translation>UCA Cold Stake</translation>
+        <source>%1 Cold Stake</source>
+        <translation>%1 Cold Stake</translation>
     </message>
     <message>
-        <source>UCA Stake in behalf of</source>
-        <translation>UCA Stake per conto di</translation>
+        <source>%1 Stake on behalf of</source>
+        <translation>%1 Stake per conto di</translation>
     </message>
     <message>
         <source>Stake delegation</source>
         <translation>Delega allo stake</translation>
-    </message>
-    <message>
-        <source>Obfuscation Denominate</source>
-        <translation>Denominazione Offuscamento</translation>
-    </message>
-    <message>
-        <source>Obfuscation Collateral Payment</source>
-        <translation>Offuscamento del pagamento collaterale</translation>
-    </message>
-    <message>
-        <source>Obfuscation Make Collateral Inputs</source>
-        <translation>L'offuscamento produce input collaterali</translation>
-    </message>
-    <message>
-        <source>Obfuscation Create Denominations</source>
-        <translation>L'offuscamento crea denominazioni</translation>
     </message>
     <message>
         <source>Sent to</source>
@@ -5454,12 +5400,32 @@ Sei sicuro?
         <translation>Pagamento a te stesso</translation>
     </message>
     <message>
+        <source>Stake delegation spent by</source>
+        <translation>Delega Stake spesa da</translation>
+    </message>
+    <message>
         <source>Mined</source>
         <translation>Minato</translation>
     </message>
     <message>
-        <source>Obfuscated</source>
-        <translation>Offuscato</translation>
+        <source>Converted %1 to z%1</source>
+        <translation>Convertito %1 a z%1</translation>
+    </message>
+    <message>
+        <source>Spent z%1</source>
+        <translation>Speso z%1</translation>
+    </message>
+    <message>
+        <source>Received %1 from z%1</source>
+        <translation>Ricevuto %1 da z%1</translation>
+    </message>
+    <message>
+        <source>Minted Change as z%1 from z%1 Spend</source>
+        <translation>Forgiatura cambiata in z%1 da z%1 Spesi</translation>
+    </message>
+    <message>
+        <source>Converted z%1 to %1</source>
+        <translation>Convertito %1 a z%1</translation>
     </message>
     <message>
         <source>watch-only</source>
@@ -5513,36 +5479,8 @@ Sei sicuro?
         <translation>Dettagli della transazione</translation>
     </message>
     <message>
-        <source>ID:</source>
-        <translation>ID:</translation>
-    </message>
-    <message>
-        <source>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</source>
-        <translation>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</translation>
-    </message>
-    <message>
-        <source>Sending to: </source>
-        <translation>Inviando a:</translation>
-    </message>
-    <message>
-        <source>GMeCEsjP732YA4uvBKRbp1mwvg5PGhK2C5 </source>
-        <translation>GMeCEsjP732YA4uvBKRbp1mwvg5PGhK2C5 </translation>
-    </message>
-    <message>
         <source>Total amount</source>
         <translation>Importo totale</translation>
-    </message>
-    <message>
-        <source>2 UCA</source>
-        <translation>2 UCA</translation>
-    </message>
-    <message>
-        <source>Coin inputs:</source>
-        <translation>Coin inputs:</translation>
-    </message>
-    <message>
-        <source>1 Inputs</source>
-        <translation>1 Input</translation>
     </message>
     <message>
         <source>Previous Transaction</source>
@@ -5553,52 +5491,52 @@ Sei sicuro?
         <translation>Indice di uscita</translation>
     </message>
     <message>
-        <source>Fee:</source>
-        <translation>Commissione:</translation>
-    </message>
-    <message>
-        <source>0.0001 UCA</source>
-        <translation>0.0001 UCA</translation>
-    </message>
-    <message>
-        <source>Change address:</source>
-        <translation>Modifica indirizzo:</translation>
-    </message>
-    <message>
-        <source>GMeCEsjP732Y...vBKRbp1mwvg5PGhK2C5 </source>
-        <translation>GMeCEsjP732Y...vBKRbp1mwvg5PGhK2C5 </translation>
-    </message>
-    <message>
-        <source>Confirmations:</source>
-        <translation>Conferme:</translation>
-    </message>
-    <message>
-        <source>12</source>
-        <translation>12</translation>
-    </message>
-    <message>
-        <source>Size:</source>
-        <translation>Dimensione:</translation>
-    </message>
-    <message>
-        <source>2 kB</source>
-        <translation>2 kB</translation>
-    </message>
-    <message>
-        <source>Date:</source>
-        <translation>Data:</translation>
+        <source>D7VFR83SQbie…BhjcWJtcfip5krte2Z </source>
+        <translation>D7VFR83SQbie…BhjcWJtcfip5krte2Z </translation>
     </message>
     <message>
         <source>May 25, 2017</source>
         <translation>25 Maggio, 2017</translation>
     </message>
     <message>
-        <source>Status:</source>
-        <translation>Stato:</translation>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Sending to</source>
+        <translation>Inviando a:</translation>
+    </message>
+    <message>
+        <source>Coin inputs</source>
+        <translation>Input Coin</translation>
+    </message>
+    <message>
+        <source>Fee</source>
+        <translation>Fee</translation>
+    </message>
+    <message>
+        <source>Size</source>
+        <translation>Dimensione</translation>
+    </message>
+    <message>
+        <source>Change address</source>
+        <translation>Cambia Indirizzo</translation>
     </message>
     <message>
         <source>Spendable</source>
         <translation>Spendibile</translation>
+    </message>
+    <message>
+        <source>Confirmations</source>
+        <translation>Conferme</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Stato</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Data</translation>
     </message>
     <message>
         <source>TextLabel</source>
@@ -5625,6 +5563,10 @@ Sei sicuro?
         <translation>ID copiato</translation>
     </message>
     <message>
+        <source>Delegating to</source>
+        <translation>Delegando a</translation>
+    </message>
+    <message>
         <source>Unknown</source>
         <translation>Sconosciuto</translation>
     </message>
@@ -5635,18 +5577,6 @@ Sei sicuro?
         <source>Form</source>
         <translation>Modulo</translation>
     </message>
-    <message>
-        <source>Received from Bob</source>
-        <translation>Ricevuto da Bob</translation>
-    </message>
-    <message>
-        <source>18/05/18</source>
-        <translation>18/05/18</translation>
-    </message>
-    <message>
-        <source>+0.000585 UCA</source>
-        <translation>+0.000585 UCA</translation>
-    </message>
 </context>
 <context>
     <name>WalletModel</name>
@@ -5655,43 +5585,24 @@ Sei sicuro?
         <translation>Invia Valuta</translation>
     </message>
     <message>
-        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 UCA.</source>
-        <translation>SwiftX non supporta ancora l'invio di valori così elevati. Le transazioni sono attualmente limitate a %1 UCA.</translation>
-    </message>
-</context>
-<context>
-    <name>WalletPasswordDialog</name>
-    <message>
-        <source>Dialog</source>
-        <translation>Finestra di dialogo</translation>
+        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 %2.</source>
+        <translation>SwiftX non supporta ancora l'invio di valori così elevati. Le transazioni sono attualmente limitate a %1 %2.</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
+        <source>Transaction creation failed!
+%1</source>
+        <translation>Creazione della transazione non riuscita!
+%1</translation>
     </message>
     <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
-    </message>
-    <message>
-        <source>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</source>
-        <translation>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>CANCELLA</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
+        <source>The size of the transaction is too big.
+Select fewer inputs with coin control.</source>
+        <translation>Le dimensioni della transazione è troppo grande.
+Selezionare meno ingressi con controllo coin.</translation>
     </message>
 </context>
 <context>
     <name>WelcomeContentWidget</name>
-    <message>
-        <source>Dialog</source>
-        <translation>Finestra di dialogo</translation>
-    </message>
     <message>
         <source>1</source>
         <translation>1</translation>
@@ -5717,6 +5628,10 @@ Sei sicuro?
         <translation>Benvenuto</translation>
     </message>
     <message>
+        <source>Privacy</source>
+        <translation>Privacy</translation>
+    </message>
+    <message>
         <source>Masternodes</source>
         <translation>Masternodes</translation>
     </message>
@@ -5726,25 +5641,25 @@ Sei sicuro?
     </message>
     <message>
         <source>Welcome to
-ucacoin Core Wallet</source>
+UCACoin Wallet</source>
         <translation>Benvenuto in
-Portafoglio ucacoin Core.</translation>
+Portafoglio UCACoin.</translation>
     </message>
     <message>
-        <source>ucacoin is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
-        <translation>ucacoin è la tecnologia basata su blockchain Proof of Stake più innovativa al mondo. Sviluppato da un team di sviluppatori e crittografi di grande esperienza.</translation>
+        <source>UCACoin is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
+        <translation>UCACoin è la tecnologia basata su blockchain Proof of Stake più innovativa al mondo. Sviluppato da un team di sviluppatori e crittografi di grande esperienza.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - ucacoin believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Come dice il nostro manifesto: la privacy è un diritto umano di base non negoziabile; garantisce agli utenti la libertà di condividere i propri dati quando e con chi vuole - ucacoin crede nell'auto sovranità.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - UCACoin believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Come dice il nostro manifesto: la privacy è un diritto umano di base non negoziabile; garantisce agli utenti la libertà di condividere i propri dati quando e con chi vuole - UCACoin crede nell'auto sovranità.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>The masternode network is ucacoin's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
-        <translation>La rete masternode è la rete di secondo livello di ucacoin sopra alla blockchain che consente al nostro DAO di fornire governance decentralizzata e tesoreria.</translation>
+        <source>The masternode network is UCACoin's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
+        <translation>La rete masternode è la rete di secondo livello di UCACoin sopra alla blockchain che consente al nostro DAO di fornire governance decentralizzata e tesoreria.</translation>
     </message>
     <message>
-        <source>How ucacoin respects your privacy?</source>
-        <translation>In che modo ucacoin rispetta la tua privacy?</translation>
+        <source>How UCACoin respects your privacy?</source>
+        <translation>In che modo UCACoin rispetta la tua privacy?</translation>
     </message>
     <message>
         <source>What is a Masternode?</source>
@@ -5778,8 +5693,8 @@ Portafoglio ucacoin Core.</translation>
         <translation>Associa l'indirizzo indicato per ascoltare le connessioni JSON-RPC. Usa la notazione [host]:porta per IPv6. Questa opzione può essere specificata più volte (impostazione predefinita: associa a tutte le interfacce)</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. ucacoin Core is probably already running.</source>
-        <translation>Impossibile allocare la directory di dati %s. Probabilmente ucacoin Core è già in esecuzione.</translation>
+        <source>Cannot obtain a lock on data directory %s. UCACoin is probably already running.</source>
+        <translation>Impossibile allocare la directory di dati %s. Probabilmente UCACoin è già in esecuzione.</translation>
     </message>
     <message>
         <source>Change automatic finalized budget voting behavior. mode=auto: Vote for only exact finalized budget match to my generated budget. (string, default: auto)</source>
@@ -5798,16 +5713,16 @@ Portafoglio ucacoin Core.</translation>
         <translation>Elimina tutte le transazioni del portafoglio e recupera solo quelle parti della blockchain tramite -rescan all'avvio</translation>
     </message>
     <message>
+        <source>Delete all zerocoin spends and mints that have been recorded to the blockchain database and reindex them (0-1, default: %u)</source>
+        <translation>Elimina tutte le spese e forgiature zerocoin che sono state registrate nella blockchain e le reindicizza (0-1, impostazione predefinita: %u)</translation>
+    </message>
+    <message>
         <source>Distributed under the MIT software license, see the accompanying file COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</source>
         <translation>Distribuito sotto la licenza del software MIT, consultare il file di accompagnamento COPYING o &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</translation>
     </message>
     <message>
         <source>Enable cold staking functionality (0-1, default: %u). Disabled if staking=0</source>
         <translation>Abilita la funzionalità di cold staking (0-1, default: %u). Disabilitato se staking=0</translation>
-    </message>
-    <message>
-        <source>Enable or disable staking functionality for UCA inputs (0-1, default: %u)</source>
-        <translation>Abilita o disabilita la funzionalità di cold staking per gli input UCA (0-1, default: %u)</translation>
     </message>
     <message>
         <source>Enable spork administration functionality with the appropriate private key.</source>
@@ -5830,6 +5745,10 @@ Portafoglio ucacoin Core.</translation>
         <translation>Errore: trovati argomenti non supportati. L'impostazione della versione di SOCKS non è più possibile, sono supportati solo i proxy SOCKS5.</translation>
     </message>
     <message>
+        <source>Exclude debugging information for a category. Can be used in conjunction with -debug=1 to output debug logs for all categories except one or more specified categories.</source>
+        <translation>Escludere le informazioni di debug per una categoria. Può essere usato insieme con -debug=1 per produrre i log di debug per tutte le categorie tranne una o più categorie specificate.</translation>
+    </message>
+    <message>
         <source>Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)</source>
         <translation>Esegui comando quando viene ricevuto un avviso rilevante o viene visualizzato un fork molto lungo (%s in cmd viene sostituito dal messaggio)</translation>
     </message>
@@ -5840,14 +5759,6 @@ Portafoglio ucacoin Core.</translation>
     <message>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
         <translation>Esegui comando quando cambia il blocco migliore (%s in cmd è sostituito dall'hash del blocco)</translation>
-    </message>
-    <message>
-        <source>Fees (in UCA/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Le commissioni (in UCA/Kb) inferiori a questa sono considerate zero per l'inoltro (impostazione predefinita: %s)</translation>
-    </message>
-    <message>
-        <source>Fees (in UCA/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Le commissioni (in UCA/Kb) inferiori a questa sono considerate zero per la creazione della transazione (impostazione predefinita: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -5868,10 +5779,6 @@ Portafoglio ucacoin Core.</translation>
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s' (must be at least the minrelay fee of %s to prevent stuck transactions)</source>
         <translation>Importo non valido per -maxtxfee=&lt;amount&gt;: '%s' (deve essere almeno la commissione minima di %s per evitare transazioni bloccate)</translation>
-    </message>
-    <message>
-        <source>Keep the specified amount available for spending at all times (default: 0)</source>
-        <translation>Mantieni sempre disponibile l'importo specificato da spendere (impostazione predefinita: 0)</translation>
     </message>
     <message>
         <source>Log transaction priority and fee per kB when mining blocks (default: %u)</source>
@@ -5902,16 +5809,8 @@ Portafoglio ucacoin Core.</translation>
         <translation>Numero di secondi per impedire la riconnessione dei peer che si comportano male (impostazione predefinita: %u)</translation>
     </message>
     <message>
-        <source>Obfuscation uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
-        <translation>L'offuscamento utilizza importi esatti per inviare fondi, potrebbe essere necessario anonimizzare altre valute.</translation>
-    </message>
-    <message>
         <source>Output debugging information (default: %u, supplying &lt;category&gt; is optional)</source>
         <translation>Informazioni sul debug dell'output (impostazione predefinita: %u, fornitura &lt;category&gt; è opzionale)</translation>
-    </message>
-    <message>
-        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
-        <translation>Richiesta di indirizzi peer tramite la ricerca DNS, se gli indirizzi sono pochi (impostazione predefinita: 1 unless -connect)</translation>
     </message>
     <message>
         <source>Randomize credentials for every proxy connection. This enables Tor stream isolation (default: %u)</source>
@@ -5928,10 +5827,6 @@ Portafoglio ucacoin Core.</translation>
     <message>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: %d)</source>
         <translation>Imposta la dimensione massima delle transazioni ad alta priorità / a basso costo in byte (impostazione predefinita: %d)</translation>
-    </message>
-    <message>
-        <source>Set the number of included blocks to precompute per cycle. (minimum: %d) (maximum: %d) (default: %d)</source>
-        <translation>Imposta il numero di blocchi inclusi da pre-calcolare per ciclo. (minimo: %d) (massimo: %d) (valore predefinito: %d)</translation>
     </message>
     <message>
         <source>Set the number of script verification threads (%u to %d, 0 = auto, &lt;0 = leave that many cores free, default: %d)</source>
@@ -5962,20 +5857,8 @@ Portafoglio ucacoin Core.</translation>
         <translation>La lunghezza totale della stringa della versione di rete (%i) supera la lunghezza massima (%i). Ridurre il numero o la dimensione degli uacomments.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. ucacoin Core is probably already running.</source>
-        <translation>Impossibile associare %s su questo computer. Probabilmente ucacoin Core è già in esecuzione.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough Obfuscation denominated funds for this transaction.</source>
-        <translation>Impossibile individuare abbastanza fondi denominati di offuscamento per questa transazione.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 UCA.</source>
-        <translation>Impossibile individuare fondi non denominati di offuscamento sufficienti per questa transazione non uguali a 10000 UCA.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 UCA.</source>
-        <translation>Impossibile individuare fondi per questa transazione non uguali a 10000 UCA.</translation>
+        <source>Unable to bind to %s on this computer. UCACoin is probably already running.</source>
+        <translation>Impossibile associare %s su questo computer. Probabilmente UCACoin è già in esecuzione.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -5990,12 +5873,8 @@ Portafoglio ucacoin Core.</translation>
         <translation>Attenzione: -paytxfee è impostato molto alto! Questa è la commissione di transazione che dovrai pagare se invii una transazione.</translation>
     </message>
     <message>
-        <source>Warning: Peers are being disconnected due time differences. Please check that your computer's date and time are correct! If your clock is wrong ucacoin Core will not work properly.</source>
-        <translation>Avvertenza: i peer vengono disconnessi a causa di differenze temporali. Verifica che la data e l'ora del tuo computer siano corrette! Se l'orologio è sbagliato, ucacoin Core non funzionerà correttamente.</translation>
-    </message>
-    <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong ucacoin Core will not work properly.</source>
-        <translation>Avvertenza: verificare che la data e l'ora del computer siano corrette! Se l'orologio è sbagliato, ucacoin Core non funzionerà correttamente.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong UCACoin will not work properly.</source>
+        <translation>Avvertenza: verificare che la data e l'ora del computer siano corrette! Se l'orologio è sbagliato, UCACoin non funzionerà correttamente.</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -6026,10 +5905,6 @@ Portafoglio ucacoin Core.</translation>
         <translation>È necessario specificare una chiave masternodepriv nella configurazione. Consultare la documentazione per assistenza.</translation>
     </message>
     <message>
-        <source>(51472 could be used only on mainnet)</source>
-        <translation>(51472 potrebbe essere utilizzato solo su mainnet)</translation>
-    </message>
-    <message>
         <source>(default: %s)</source>
         <translation>(default: %s)</translation>
     </message>
@@ -6038,16 +5913,8 @@ Portafoglio ucacoin Core.</translation>
         <translation>(default: 1)</translation>
     </message>
     <message>
-        <source>(must be 51472 for mainnet)</source>
-        <translation>(deve essere 51472 per mainnet)</translation>
-    </message>
-    <message>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Accetta i comandi della riga di comando e JSON-RPC</translation>
-    </message>
-    <message>
-        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
-        <translation>Accetta connessioni dall'esterno (default: 1 se nessun -proxy o -connect)</translation>
     </message>
     <message>
         <source>Accept public REST requests (default: %u)</source>
@@ -6056,10 +5923,6 @@ Portafoglio ucacoin Core.</translation>
     <message>
         <source>Add a node to connect to and attempt to keep the connection open</source>
         <translation>Aggiungere un nodo a cui connettersi e tentare di mantenere aperta la connessione</translation>
-    </message>
-    <message>
-        <source>Adding Wrapped Serials supply...</source>
-        <translation>Aggiunta la fornitura dei Wrapped Serials...</translation>
     </message>
     <message>
         <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
@@ -6090,26 +5953,6 @@ Portafoglio ucacoin Core.</translation>
         <translation>Impossibile eseguire il downgrade del portafoglio</translation>
     </message>
     <message>
-        <source>Cannot resolve -bind address: '%s'</source>
-        <translation>Impossibile risolvere l'indirizzo -bind: '%s'</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -externalip address: '%s'</source>
-        <translation>Impossibile risolvere l'indirizzo -externalip: '%s'</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -whitebind address: '%s'</source>
-        <translation>Impossibile risolvere l'indirizzo -whitebind: '%s'</translation>
-    </message>
-    <message>
-        <source>CoinSpend: failed check</source>
-        <translation>CoinSpend: controllo fallito</translation>
-    </message>
-    <message>
-        <source>Connect only to the specified node(s)</source>
-        <translation>Connetti solo ai nodi specificati</translation>
-    </message>
-    <message>
         <source>Connect through SOCKS5 proxy</source>
         <translation>Connetti tramite proxy SOCKS5</translation>
     </message>
@@ -6130,8 +5973,8 @@ Portafoglio ucacoin Core.</translation>
         <translation>Copyright (C) 2014-%i Gli sviluppatori di Dash Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The ucacoin Core Developers</source>
-        <translation>Copyright (C) 2015-%i Gli sviluppatori di ucacoin Core</translation>
+        <source>Copyright (C) 2015-%i The ucacoin developers</source>
+        <translation>Copyright (C) 2015-%i Gli sviluppatori di UCACoin</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -6206,8 +6049,8 @@ Portafoglio ucacoin Core.</translation>
         <translation>Errore durante il caricamento di wallet.dat: portafoglio corrotto </translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of ucacoin Core</source>
-        <translation>Errore durante il caricamento di wallet.dat: il portafoglio richiede una versione più recente di ucacoin Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of UCACoin</source>
+        <translation>Errore durante il caricamento di wallet.dat: il portafoglio richiede una versione più recente di UCACoin</translation>
     </message>
     <message>
         <source>Error opening block database</source>
@@ -6218,8 +6061,16 @@ Portafoglio ucacoin Core.</translation>
         <translation>Errore durante la lettura dal database, arresto.</translation>
     </message>
     <message>
+        <source>Error writing zerocoinDB to disk</source>
+        <translation>Errore durante la scrittura di zerocoinDB sul disco</translation>
+    </message>
+    <message>
         <source>Error</source>
         <translation>Errore</translation>
+    </message>
+    <message>
+        <source>Error: </source>
+        <translation>Errore:</translation>
     </message>
     <message>
         <source>Error: A fatal internal error occured, see debug.log for details</source>
@@ -6244,14 +6095,6 @@ Portafoglio ucacoin Core.</translation>
     <message>
         <source>Failed to parse host:port string</source>
         <translation>Analisi dell'host non riuscita: stringa della porta</translation>
-    </message>
-    <message>
-        <source>Failed to read block</source>
-        <translation>Lettura del blocco non riuscita</translation>
-    </message>
-    <message>
-        <source>Fee (in UCA/kB) to add to transactions you send (default: %s)</source>
-        <translation>Commissione (in UCA/kB) da aggiungere alle transazioni inviate (impostazione predefinita: %s)</translation>
     </message>
     <message>
         <source>Force safe mode (default: %u)</source>
@@ -6290,8 +6133,8 @@ Portafoglio ucacoin Core.</translation>
         <translation>Informazioni</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. ucacoin Core is shutting down.</source>
-        <translation>Verifica dell'integrità dell'inizializzazione non riuscita. ucacoin Core si sta spegnendo.</translation>
+        <source>Initialization sanity check failed. UCACoin is shutting down.</source>
+        <translation>Verifica dell'integrità dell'inizializzazione non riuscita. UCACoin si sta spegnendo.</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
@@ -6306,28 +6149,8 @@ Portafoglio ucacoin Core.</translation>
         <translation>Invalid -proxy address or hostname: '%s'</translation>
     </message>
     <message>
-        <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Importo invalido per -maxtxfee=&lt;amount&gt;: '%s'</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -minrelaytxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Invalid amount for -minrelaytxfee=&lt;amount&gt;: '%s'</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -mintxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Importo invalido per -mintxfee=&lt;amount&gt;: '%s'</translation>
-    </message>
-    <message>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s' (must be at least %s)</source>
         <translation>Invalid amount for -paytxfee=&lt;amount&gt;: '%s' (deve essere almeno %s)</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Invalid amount for -paytxfee=&lt;amount&gt;: '%s'</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
-        <translation>Invalid amount for -reservebalance=&lt;amount&gt;</translation>
     </message>
     <message>
         <source>Invalid amount</source>
@@ -6342,12 +6165,16 @@ Portafoglio ucacoin Core.</translation>
         <translation>Invalid netmask specificata in -whitelist: '%s'</translation>
     </message>
     <message>
-        <source>Invalid port detected in masternode.conf</source>
-        <translation>Invalid port detected in masternode.conf</translation>
-    </message>
-    <message>
         <source>Recalculating UCA supply...</source>
         <translation>Ricalcolo della supply UCA...</translation>
+    </message>
+    <message>
+        <source>Reindexing zerocoin database...</source>
+        <translation>Reindicizzazione del database zerocoin...</translation>
+    </message>
+    <message>
+        <source>Reindexing zerocoin failed</source>
+        <translation>Errore nella reindicizzazione del database zerocoin</translation>
     </message>
     <message>
         <source>Selected coins value is less than payment target</source>
@@ -6362,26 +6189,28 @@ Portafoglio ucacoin Core.</translation>
         <translation>Questa è una build di test pre-release - utilizzare a proprio rischio - non utilizzare per staking o applicazioni commerciali!</translation>
     </message>
     <message>
+        <source> mints deleted
+</source>
+        <translation> forgiature cancellate
+</translation>
+    </message>
+    <message>
+        <source> mints updated, </source>
+        <translation>forgiature aggiornate,</translation>
+    </message>
+    <message>
         <source> unconfirmed transactions removed
 </source>
         <translation> transazioni non confermate rimosse
 </translation>
     </message>
     <message>
-        <source>Disable all ucacoin specific functionality (Masternodes, SwiftX, Budgeting) (0-1, default: %u)</source>
-        <translation>Disabilita tutte le funzionalità specifiche di ucacoin (Masternodes, SwiftX, Budgeting) (0-1, default: %u)</translation>
+        <source>Disable all UCACoin specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
+        <translation>Disabilita tutte le funzionalità specifiche di UCACoin (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</translation>
     </message>
     <message>
         <source>Enable SwiftX, show confirmations for locked transactions (bool, default: %s)</source>
         <translation>Abilita SwiftX, mostra le conferme per le transazioni bloccate (valore bool, predefinito: %s)</translation>
-    </message>
-    <message>
-        <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Errore: la transazione è stata rifiutata! Ciò potrebbe accadere se alcune delle coin nel tuo portafoglio fossero già state spese, come se tu avessi usato una copia di wallet.dat e le coin fossero state spese nella copia ma non contrassegnate come spese qui.</translation>
-    </message>
-    <message>
-        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation>Errore: questa transazione richiede una commissione di transazione di almeno %s a causa della sua quantità, complessità o utilizzo dei fondi ricevuti di recente!</translation>
     </message>
     <message>
         <source>Error: Unsupported argument -checklevel found. Checklevel must be level 4.</source>
@@ -6456,20 +6285,32 @@ Portafoglio ucacoin Core.</translation>
         <translation>Errore: Nessun utxo valido!</translation>
     </message>
     <message>
+        <source>Failed to find Zerocoins in wallet.dat</source>
+        <translation>Impossibile trovare Zerocoins in wallet.dat</translation>
+    </message>
+    <message>
         <source>Failed to parse public spend</source>
         <translation>Analisi della spesa pubblica non riuscita</translation>
+    </message>
+    <message>
+        <source>Failed to select a zerocoin</source>
+        <translation>Impossibile selezionare uno zerocoin</translation>
+    </message>
+    <message>
+        <source>Failed to wipe zerocoinDB</source>
+        <translation>Impossibile cancellare zerocoinDB</translation>
     </message>
     <message>
         <source>Failed to write coin serial number into wallet</source>
         <translation>Impossibile scrivere il numero seriale della coin nel portafoglio</translation>
     </message>
     <message>
-        <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
-        <translation>Conserva al massimo &lt;n&gt; transazioni non collegabili in memoria (impostazione predefinita: %u)</translation>
+        <source>Invalid amount for -%s=&lt;amount&gt;: '%s'</source>
+        <translation>Importo non valido per -%s=&lt;amount&gt;: '%s'</translation>
     </message>
     <message>
-        <source>Limit size of signature cache to &lt;n&gt; entries (default: %u)</source>
-        <translation>Limita la dimensione della cache delle firme a &lt;n&gt; voci (default: %u)</translation>
+        <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
+        <translation>Conserva al massimo &lt;n&gt; transazioni non collegabili in memoria (impostazione predefinita: %u)</translation>
     </message>
     <message>
         <source>Line: %d</source>
@@ -6486,6 +6327,10 @@ Portafoglio ucacoin Core.</translation>
     <message>
         <source>Loading addresses...</source>
         <translation>Caricamento indirizzi...</translation>
+    </message>
+    <message>
+        <source>Loading banlist...</source>
+        <translation>Caricamento banlist...</translation>
     </message>
     <message>
         <source>Loading block index...</source>
@@ -6508,10 +6353,6 @@ Portafoglio ucacoin Core.</translation>
         <translation>Caricamento sporks...</translation>
     </message>
     <message>
-        <source>Loading wallet... (%3.2f %%)</source>
-        <translation>Caricamento portafoglio... (%3.2f %%)</translation>
-    </message>
-    <message>
         <source>Loading wallet...</source>
         <translation>Caricamento portafoglio...</translation>
     </message>
@@ -6528,6 +6369,10 @@ Portafoglio ucacoin Core.</translation>
         <translation>Lookup(): Invalid -proxy address or hostname: '%s'</translation>
     </message>
     <message>
+        <source>MNs synchronization pending...</source>
+        <translation>Sincronizzazione MN in attesa...</translation>
+    </message>
+    <message>
         <source>Maintain at most &lt;n&gt; connections to peers (default: %u)</source>
         <translation>Conserva al massimo &lt;n&gt; connessioni ai peers (impostazione predefinita: %u)</translation>
     </message>
@@ -6542,6 +6387,10 @@ Portafoglio ucacoin Core.</translation>
     <message>
         <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: %u)</source>
         <translation>Buffer di spedizione massimo per connessione, &lt;n&gt;*1000 bytes (default: %u)</translation>
+    </message>
+    <message>
+        <source>Mint did not make it into blockchain</source>
+        <translation>La forgiatura non è riuscita nella blockchain</translation>
     </message>
     <message>
         <source>Need to specify a port with -whitebind: '%s'</source>
@@ -6564,6 +6413,10 @@ Portafoglio ucacoin Core.</translation>
         <translation>Numero di backup di posizione personalizzati da conservare (impostazione predefinita: %d)</translation>
     </message>
     <message>
+        <source>On first run, create a legacy wallet instead of a HD wallet</source>
+        <translation>Alla prima esecuzione, creare un portafoglio legacy invece di un portafoglio HD</translation>
+    </message>
+    <message>
         <source>Only accept block chain matching built-in checkpoints (default: %u)</source>
         <translation>Accetta solo checkpoint integrati corrispondenti alla catena di blocchi (impostazione predefinita: %u)</translation>
     </message>
@@ -6580,12 +6433,20 @@ Portafoglio ucacoin Core.</translation>
         <translation>Password per connessioni JSON-RPC</translation>
     </message>
     <message>
-        <source>Use block spam filter (default: %u)</source>
-        <translation>Usa il filtro antispam di blocco (default: %u)</translation>
+        <source>Peers are being disconnected due time differences.</source>
+        <translation>I peers vengono scollegati a causa delle differenze di orario.</translation>
     </message>
     <message>
-        <source>could not get lock on cs_spendcache</source>
-        <translation>impossibile ottenere il blocco su cs_spendcache</translation>
+        <source>Unable to find transaction containing mint %s</source>
+        <translation>Impossibile trovare la transazione contenente forgiatura %s</translation>
+    </message>
+    <message>
+        <source>Unable to find transaction containing mint, txHash: %s</source>
+        <translation>Impossibile trovare la transazione contenente forgiatura, txHash %s</translation>
+    </message>
+    <message>
+        <source>Use block spam filter (default: %u)</source>
+        <translation>Usa il filtro antispam di blocco (default: %u)</translation>
     </message>
     <message>
         <source>isValid(): Invalid -proxy address or hostname: '%s'</source>
@@ -6596,8 +6457,150 @@ Portafoglio ucacoin Core.</translation>
         <translation>Preparazione per la risincronizzazione...</translation>
     </message>
     <message>
+        <source>Accept connections from outside (default: 1 if no -proxy or -connect/-noconnect)</source>
+        <translation>Accetta connessioni dall'esterno (default: 1 se no -proxy o -connect/-noconnect)</translation>
+    </message>
+    <message>
+        <source>Connect only to the specified node(s); -noconnect or -connect=0 alone to disable automatic connections</source>
+        <translation>Connetti solo al nodo/i specificato/i; -noconnect o -connect=0 da solo per disabilitare le connessioni automatiche</translation>
+    </message>
+    <message>
+        <source>Do not accept transactions if any ancestor would have &lt;n&gt; or more in-mempool descendants (default: %u)</source>
+        <translation>Non accettare transazioni se un antenato avrebbe &lt;n&gt; o più discendenti in-mempool (default: %u)</translation>
+    </message>
+    <message>
+        <source>Do not accept transactions if any ancestor would have more than &lt;n&gt; kilobytes of in-mempool descendants (default: %u).</source>
+        <translation>Non accettare transazioni se un antenato avrebbe più di &lt;n&gt; kilobyte di discendenti in-mempool (default: %u).</translation>
+    </message>
+    <message>
+        <source>Do not accept transactions if number of in-mempool ancestors is &lt;n&gt; or more (default: %u)</source>
+        <translation>Non accettare transazioni se il numero di antenati in-mempool è &lt;n&gt; o superiore (default: %u)</translation>
+    </message>
+    <message>
+        <source>Do not accept transactions whose size with all in-mempool ancestors exceeds &lt;n&gt; kilobytes (default: %u)</source>
+        <translation>Non accettare transazioni la cui dimensione con tutti gli antenati in-mempool superi &lt;n&gt; kilobyte (default: %u)</translation>
+    </message>
+    <message>
+        <source>Do not keep transactions in the mempool longer than &lt;n&gt; hours (default: %u)</source>
+        <translation>Non tenere le transazioni nel mempool per più di &lt;n&gt; ore (default: %u)</translation>
+    </message>
+    <message>
+        <source>Fees (in %s/Kb) smaller than this are considered zero fee for relaying, mining and transaction creation (default: %s)</source>
+        <translation>Fee (in %s/Kb) inferiori a questa sono considerate pari a zero per la ritrasmissione, il mining e la creazione di transazioni  (default: %s)</translation>
+    </message>
+    <message>
+        <source>Fees (in %s/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Le commissioni (in %s/Kb) inferiori a questa sono considerate zero per la creazione della transazione (default: %s)</translation>
+    </message>
+    <message>
+        <source>Minimum positive amount (in UCA) allowed by GUI and RPC for the stake split threshold (default: %s)</source>
+        <translation>Importo positivo minimo (in UCA) consentito da GUI e RPC per la soglia di ripartizione della partecipazione (default: %s)</translation>
+    </message>
+    <message>
+        <source>Please check that your computer's date and time are correct! If your clock is wrong UCACoin will not work properly.</source>
+        <translation>Verificare che la data e l'ora del computer siano corrette! Se l'orologio sincronizzato, UCACoin non funzionerà correttamente.</translation>
+    </message>
+    <message>
+        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect/-noconnect)</source>
+        <translation>Richiesta di indirizzi peer tramite la ricerca DNS, se gli indirizzi sono pochi (default: 1 unless -connect/-noconnect)</translation>
+    </message>
+    <message>
+        <source>Specify location of debug log file: this can be an absolute path or a path relative to the data directory (default: %s)</source>
+        <translation>Specificare la posizione del log file di debug: può essere un percorso assoluto o un percorso relativo alla directory dei dati (default: %s)</translation>
+    </message>
+    <message>
+        <source>WARNING: The transaction has been signed and recorded, so the wallet will try to re-send it. Use 'abandontransaction' to cancel it. (txid: %s)</source>
+        <translation>ATTENZIONE: La transazione è stata firmata e registrata, quindi il portafoglio cercherà di reinviarla. Utilizzare "abandontransaction" per annullarla. (txid: %s)</translation>
+    </message>
+    <message>
+        <source>(must be %d for %s-net)</source>
+        <translation>(deve essere %d per %s-net)</translation>
+    </message>
+    <message>
+        <source>Active Masternode not initialized.</source>
+        <translation>Masternode Attivo non inizializzato.</translation>
+    </message>
+    <message>
+        <source>Allows deprecated RPC method(s) to be used</source>
+        <translation>Consenti l'utilizzo di metodi RPC deprecati</translation>
+    </message>
+    <message>
+        <source>Can't generate a change-address key. Please call keypoolrefill first.</source>
+        <translation>Non è possibile generare una chiave di cambio indirizzo. Si prega di chiamare prima keypoolrefill.</translation>
+    </message>
+    <message>
+        <source>Cannot resolve -%s address: '%s'</source>
+        <translation>Impossibile risolvere  -%s indirizzo: '%s'</translation>
+    </message>
+    <message>
+        <source>Cannot upgrade to HD wallet (already running HD support). Version: %d</source>
+        <translation>Impossibile effettuare l'aggiornamento al wallet HD (supporto HD già in funzione). Versione: %d</translation>
+    </message>
+    <message>
+        <source>Change index out of range</source>
+        <translation>Indice di variazione fuori range</translation>
+    </message>
+    <message>
+        <source>Error: -listen must be true if -masternode is set.</source>
+        <translation>Errore: -listen deve essere vero se -masternode è impostato.</translation>
+    </message>
+    <message>
+        <source>Error: -maxmempool must be at least %d MB</source>
+        <translation>Errore: -maxmempool deve essere almeno %d MB</translation>
+    </message>
+    <message>
+        <source>Error: Invalid port %d for running a masternode.</source>
+        <translation>Errore: Porta non valida %d per l'esecuzione di un masternode.</translation>
+    </message>
+    <message>
+        <source>Failed to accept tx in the memory pool (reason: %s)
+</source>
+        <translation>Impossibile accettare tx nel memory pool (reason: %s)
+</translation>
+    </message>
+    <message>
+        <source>Fee (in %s/kB) to add to transactions you send (default: %s)</source>
+        <translation>Fee (in %s/kB) per aggiungere alle transazioni che invii (default: %s)</translation>
+    </message>
+    <message>
+        <source>Invalid -masternodeaddr address: %s</source>
+        <translation>Indirizzo -masternodeaddr non valido: %s</translation>
+    </message>
+    <message>
+        <source>Invalid -masternodeaddr port %d, only %d is supported on %s-net.</source>
+        <translation>Porta -masternodeaddr non valida %d, solo %d è supportata su %s-net.</translation>
+    </message>
+    <message>
+        <source>Invalid port %d detected in masternode.conf</source>
+        <translation>Porta non valida %d rilevato in masternode.conf</translation>
+    </message>
+    <message>
+        <source>Invalid status error.</source>
+        <translation>Errore di stato non valido.</translation>
+    </message>
+    <message>
+        <source>Keep the transaction memory pool below &lt;n&gt; megabytes (default: %u)</source>
+        <translation>Mantenere il memory pool delle transazioni al di sotto &lt;n&gt; megabyte (default: %u)</translation>
+    </message>
+    <message>
+        <source>Keypool ran out, please call keypoolrefill first, or unlock the wallet.</source>
+        <translation>Keypool si è esaurito, si prega di chiamare keypoolrefill prima, o sbloccare il portafoglio.</translation>
+    </message>
+    <message>
+        <source>Limit size of signature cache to &lt;n&gt; MiB (default: %u)</source>
+        <translation>Limita la dimensione della cache delle firma a &lt;n&gt; MiB (default: %u)</translation>
+    </message>
+    <message>
+        <source>Masternodes are required to run on port %d for %s-net</source>
+        <translation>I masternode devono funzionare sulla porta %d per %s-net</translation>
+    </message>
+    <message>
         <source>Need destination or change address because change is not exact</source>
         <translation>Hai bisogno di una destinazione o cambia indirizzo perché il cambio non è esatto</translation>
+    </message>
+    <message>
+        <source>No error</source>
+        <translation>Nessun errore</translation>
     </message>
     <message>
         <source>Prepend debug output with timestamp (default: %u)</source>
@@ -6606,6 +6609,10 @@ Portafoglio ucacoin Core.</translation>
     <message>
         <source>Print version and exit</source>
         <translation>Stampa versione e esci</translation>
+    </message>
+    <message>
+        <source>Pubcoin not found in mint tx</source>
+        <translation>Pubcoin not trovato nella tx di forgiatura</translation>
     </message>
     <message>
         <source>RPC server options:</source>
@@ -6624,8 +6631,8 @@ Portafoglio ucacoin Core.</translation>
         <translation>Ricostruisce l'indice della blockchain dai file blk000??.dat corrente.</translation>
     </message>
     <message>
-        <source>Receive and display P2P network alerts (default: %u)</source>
-        <translation>Ricevi e visualizza avvisi di rete P2P (default: %u)</translation>
+        <source>Reindex the %s and z%s money supply statistics</source>
+        <translation>Reinindicizzare le statistiche sulla massa monetaria %s e z%s</translation>
     </message>
     <message>
         <source>Relay and mine data carrier transactions (default: %u)</source>
@@ -6644,6 +6651,14 @@ Portafoglio ucacoin Core.</translation>
         <translation>Scansiona nuovamente...</translation>
     </message>
     <message>
+        <source>ResetMintZerocoin finished: </source>
+        <translation>ResetMintZerocoin terminato: </translation>
+    </message>
+    <message>
+        <source>ResetSpentZerocoin finished: </source>
+        <translation>ResetSpentZerocoin terminato: </translation>
+    </message>
+    <message>
         <source>Run a thread to flush wallet periodically (default: %u)</source>
         <translation>Esegui un thread per scaricare periodicamente il portafoglio (default: %u)</translation>
     </message>
@@ -6654,10 +6669,6 @@ Portafoglio ucacoin Core.</translation>
     <message>
         <source>Send transactions as zero-fee transactions if possible (default: %u)</source>
         <translation>Invia transazioni come transazioni a costo zero, se possibile (default: %u)</translation>
-    </message>
-    <message>
-        <source>Session timed out.</source>
-        <translation>La sessione è scaduta.</translation>
     </message>
     <message>
         <source>Set database cache size in megabytes (%d to %d, default: %d)</source>
@@ -6702,10 +6713,6 @@ Portafoglio ucacoin Core.</translation>
     <message>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
         <translation>Riduci il file debug.log all'avvio del client (impostazione predefinita: 1 se non -debug)</translation>
-    </message>
-    <message>
-        <source>Signing timed out.</source>
-        <translation>Firma scaduta.</translation>
     </message>
     <message>
         <source>Signing transaction failed</source>
@@ -6764,10 +6771,6 @@ Portafoglio ucacoin Core.</translation>
         <translation>Sincronizzazione finita</translation>
     </message>
     <message>
-        <source>Synchronization pending...</source>
-        <translation>Sincronizzazione in attesa...</translation>
-    </message>
-    <message>
         <source>Synchronizing budgets...</source>
         <translation>Sincronizzazione budgets...</translation>
     </message>
@@ -6784,12 +6787,12 @@ Portafoglio ucacoin Core.</translation>
         <translation>Sincronizzazione sporks...</translation>
     </message>
     <message>
-        <source>The coin spend has been used</source>
-        <translation>La coin spend è stata utilizzata</translation>
+        <source>Syncing zUCA wallet...</source>
+        <translation>Sincronizzazione del portafoglio zUCA...</translation>
     </message>
     <message>
-        <source>The transaction did not verify</source>
-        <translation>La transazione non è stata verificata</translation>
+        <source>The threshold value cannot be less than %s</source>
+        <translation>Il valore di soglia non può essere inferiore a %s</translation>
     </message>
     <message>
         <source>This help message</source>
@@ -6802,6 +6805,14 @@ Portafoglio ucacoin Core.</translation>
     <message>
         <source>This is intended for regression testing tools and app development.</source>
         <translation>Questo è destinato agli strumenti di test di regressione e allo sviluppo di app.</translation>
+    </message>
+    <message>
+        <source>This is not a masternode. 'local' option disabled.</source>
+        <translation>Questo non è un masternode. opzione "locale" disattivata.</translation>
+    </message>
+    <message>
+        <source>This is not a masternode.</source>
+        <translation>Questo non è un masternode.</translation>
     </message>
     <message>
         <source>Threshold for disconnecting misbehaving peers (default: %u)</source>
@@ -6824,12 +6835,20 @@ Portafoglio ucacoin Core.</translation>
         <translation>Transazione creata</translation>
     </message>
     <message>
+        <source>Transaction Mint Started</source>
+        <translation>Transazione di forgiatura iniziata</translation>
+    </message>
+    <message>
         <source>Transaction amount too small</source>
         <translation>Transazione troppo piccola</translation>
     </message>
     <message>
         <source>Transaction amounts must be positive</source>
         <translation>Gli importi delle transazioni devono essere positivi</translation>
+    </message>
+    <message>
+        <source>Transaction canceled.</source>
+        <translation>Transazione cancellata.</translation>
     </message>
     <message>
         <source>Transaction too large for fee policy</source>
@@ -6852,6 +6871,10 @@ Portafoglio ucacoin Core.</translation>
         <translation>Impossibile generare la chiave iniziale</translation>
     </message>
     <message>
+        <source>Unable to generate keys</source>
+        <translation>Impossibile generare le chiavi</translation>
+    </message>
+    <message>
         <source>Unable to sign spork message, wrong key?</source>
         <translation>Impossibile firmare il messaggio spork, chiave errata?</translation>
     </message>
@@ -6862,6 +6885,10 @@ Portafoglio ucacoin Core.</translation>
     <message>
         <source>Unknown network specified in -onlynet: '%s'</source>
         <translation>Rete sconosciuta specificata in -onlynet: '%s'</translation>
+    </message>
+    <message>
+        <source>Unsupported logging category %s=%s.</source>
+        <translation>Categoria di accesso non supportata %s=%s.</translation>
     </message>
     <message>
         <source>Upgrade wallet to latest format</source>
@@ -6892,6 +6919,10 @@ Portafoglio ucacoin Core.</translation>
         <translation>Nome utente per connessioni JSON-RPC</translation>
     </message>
     <message>
+        <source>Value is below the smallest available denomination (= 1) of zUCA</source>
+        <translation>Il valore è inferiore alla denominazione più piccola disponibile (=1) di zUCA</translation>
+    </message>
+    <message>
         <source>Verifying blocks...</source>
         <translation>Verifica dei blocchi...</translation>
     </message>
@@ -6904,8 +6935,8 @@ Portafoglio ucacoin Core.</translation>
         <translation>Il portafoglio %s risiede al di fuori della directory di dati %s</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart ucacoin Core to complete</source>
-        <translation>Il portafoglio doveva essere riscritto: riavviare ucacoin Core per completare</translation>
+        <source>Wallet needed to be rewritten: restart UCACoin to complete</source>
+        <translation>Il portafoglio doveva essere riscritto: riavviare UCACoin per completare</translation>
     </message>
     <message>
         <source>Wallet options:</source>
@@ -6932,6 +6963,10 @@ Portafoglio ucacoin Core.</translation>
         <translation>Avvertenza: argomento non supportato -debugnet ignorato, utilizzare -debug=net.</translation>
     </message>
     <message>
+        <source>You don't have enough Zerocoins in your wallet</source>
+        <translation>Non hai abbastanza Zerocoin nel tuo portafoglio</translation>
+    </message>
+    <message>
         <source>You need to rebuild the database using -reindex to change -txindex</source>
         <translation>È necessario ricostruire il database utilizzando -reindex per modificare -txindex</translation>
     </message>
@@ -6942,6 +6977,14 @@ Portafoglio ucacoin Core.</translation>
     <message>
         <source>ZeroMQ notification options:</source>
         <translation>Opzioni di notifica ZeroMQ:</translation>
+    </message>
+    <message>
+        <source>Zerocoin minting available only on regtest</source>
+        <translation>Coniatura di Zerocoin disponibile solo su regtest</translation>
+    </message>
+    <message>
+        <source>Zerocoin options:</source>
+        <translation>Opzioni Zerocoin:</translation>
     </message>
     <message>
         <source>on startup</source>
@@ -6963,12 +7006,40 @@ Portafoglio ucacoin Core.</translation>
         <translation>Invia</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Etichetta</translation>
+        <source>Send public coins (UCA)</source>
+        <translation>Inviare monete pubbliche (UCA)</translation>
     </message>
     <message>
-        <source>PushButton</source>
-        <translation>Premi il bottone</translation>
+        <source>UCACoin address or contact label</source>
+        <translation>Indirizzo UCACoin o etichetta contatto</translation>
+    </message>
+    <message>
+        <source>Amount</source>
+        <translation>Ammontare</translation>
+    </message>
+    <message>
+        <source>Customize fee</source>
+        <translation>Tariffa personalizzata</translation>
+    </message>
+    <message>
+        <source>Clear all</source>
+        <translation>Cancella tutto</translation>
+    </message>
+    <message>
+        <source>Add recipient</source>
+        <translation>Aggiungi destinatario</translation>
+    </message>
+    <message>
+        <source>Total to send</source>
+        <translation>Totale da mandare</translation>
+    </message>
+    <message>
+        <source>Reset to default</source>
+        <translation>Ripristina valori predefiniti.</translation>
+    </message>
+    <message>
+        <source>Include delegated</source>
+        <translation>Includi delgato</translation>
     </message>
 </context>
 </TS>

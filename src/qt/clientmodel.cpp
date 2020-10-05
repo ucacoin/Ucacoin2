@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2015-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -45,13 +45,13 @@ ClientModel::ClientModel(OptionsModel* optionsModel, QObject* parent) : QObject(
     peerTableModel = new PeerTableModel(this);
     banTableModel = new BanTableModel(this);
     pollTimer = new QTimer(this);
-    connect(pollTimer, SIGNAL(timeout()), this, SLOT(updateTimer()));
+    connect(pollTimer, &QTimer::timeout, this, &ClientModel::updateTimer);
     pollTimer->start(MODEL_UPDATE_DELAY);
 
     pollMnTimer = new QTimer(this);
-    connect(pollMnTimer, SIGNAL(timeout()), this, SLOT(updateMnTimer()));
+    connect(pollMnTimer, &QTimer::timeout, this, &ClientModel::updateMnTimer);
     // no need to update as frequent as data for balances/txes/blocks
-    pollMnTimer->start(MODEL_UPDATE_DELAY * 4);
+    pollMnTimer->start(MODEL_UPDATE_DELAY * 40);
 
     subscribeToCoreSignals();
 }
@@ -86,11 +86,11 @@ QString ClientModel::getMasternodeCountString() const
 
 int ClientModel::getNumBlocks()
 {
-	if (!cacheTip) {
-		cacheTip = WITH_LOCK(cs_main, return chainActive.Tip(););
-	}
+    if (!cacheTip) {
+        cacheTip = WITH_LOCK(cs_main, return chainActive.Tip(););
+    }
 
-	return cacheTip ? cacheTip->nHeight : 0;
+    return cacheTip ? cacheTip->nHeight : 0;
 }
 
 int ClientModel::getNumBlocksAtStartup()
@@ -163,7 +163,7 @@ void ClientModel::updateAlert()
 
 bool ClientModel::inInitialBlockDownload() const
 {
-    return IsInitialBlockDownload();
+    return cachedInitialSync;
 }
 
 enum BlockSource ClientModel::getBlockSource() const
@@ -248,6 +248,7 @@ static void BlockTipChanged(ClientModel *clientmodel, bool initialSync, const CB
         clientmodel->setCacheTip(pIndex);
         clientmodel->setCacheImporting(fImporting);
         clientmodel->setCacheReindexing(fReindex);
+        clientmodel->setCacheInitialSync(initialSync);
         Q_EMIT clientmodel->numBlocksChanged(pIndex->nHeight);
         nLastBlockTipUpdateNotification = now;
     }
@@ -309,9 +310,9 @@ bool ClientModel::getTorInfo(std::string& ip_port) const
             LOCK(cs_mapLocalHost);
             for (const std::pair<const CNetAddr, LocalServiceInfo>& item : mapLocalHost) {
                 if (item.first.IsTor()) {
-                     CService addrOnion = CService(item.first.ToString(), item.second.nPort);
-                     ip_port = addrOnion.ToStringIPPort();
-                     return true;
+                    CService addrOnion(LookupNumeric(item.first.ToString().c_str(), item.second.nPort));
+                    ip_port = addrOnion.ToStringIPPort();
+                    return true;
                 }
             }
         }

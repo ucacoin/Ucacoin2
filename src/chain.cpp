@@ -1,11 +1,12 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
-// Copyright (c) 2016-2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2016-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "chain.h"
+#include "legacy/stakemodifier.h"  // for ComputeNextStakeModifier
 
 
 /**
@@ -129,8 +130,8 @@ int64_t CBlockIndex::MinPastBlockTime() const
 
     // on the transition from Time Protocol v1 to v2
     // pindexPrev->nTime might be in the future (up to the allowed drift)
-    // so we allow the nBlockTimeProtocolV2 to be at most (180-14) seconds earlier than previous block
-    if (nHeight + 1 == consensus.height_start_TimeProtoV2)
+    // so we allow the nBlockTimeProtocolV2 (UCACoin v4.0) to be at most (180-14) seconds earlier than previous block
+    if (nHeight + 1 == consensus.vUpgrades[Consensus::UPGRADE_V4_0].nActivationHeight)
         return GetBlockTime() - consensus.FutureBlockTimeDrift(nHeight) + consensus.FutureBlockTimeDrift(nHeight + 1);
 
     // Time Protocol v2: pindexPrev->nTime
@@ -155,7 +156,7 @@ int64_t CBlockIndex::GetMedianTimePast() const
 
 unsigned int CBlockIndex::GetStakeEntropyBit() const
 {
-    unsigned int nEntropyBit = ((GetBlockHash().Get64()) & 1);
+    unsigned int nEntropyBit = ((GetBlockHash().GetCheapHash()) & 1);
     if (GetBoolArg("-printstakemodifier", false))
         LogPrintf("GetStakeEntropyBit: nHeight=%u hashBlock=%s nEntropyBit=%u\n", nHeight, GetBlockHash().ToString().c_str(), nEntropyBit);
 
@@ -170,7 +171,7 @@ bool CBlockIndex::SetStakeEntropyBit(unsigned int nEntropyBit)
     return true;
 }
 
-// Sets V1 stake modifier
+// Sets V1 stake modifier (uint64_t)
 void CBlockIndex::SetStakeModifier(const uint64_t nStakeModifier, bool fGeneratedStakeModifier)
 {
     vStakeModifier.clear();
@@ -182,17 +183,44 @@ void CBlockIndex::SetStakeModifier(const uint64_t nStakeModifier, bool fGenerate
 
 }
 
-// Sets V2 stake modifier
+// Generates and sets new V1 stake modifier
+void CBlockIndex::SetNewStakeModifier()
+{
+    // compute stake entropy bit for stake modifier
+    if (!SetStakeEntropyBit(GetStakeEntropyBit()))
+        LogPrintf("%s : SetStakeEntropyBit() failed\n", __func__);
+    uint64_t nStakeModifier = 0;
+    bool fGeneratedStakeModifier = false;
+    if (!ComputeNextStakeModifier(pprev, nStakeModifier, fGeneratedStakeModifier))
+        LogPrintf("%s : ComputeNextStakeModifier() failed \n",  __func__);
+    return SetStakeModifier(nStakeModifier, fGeneratedStakeModifier);
+}
+
+// Sets V2 stake modifiers (uint256)
 void CBlockIndex::SetStakeModifier(const uint256& nStakeModifier)
 {
     vStakeModifier.clear();
     vStakeModifier.insert(vStakeModifier.begin(), nStakeModifier.begin(), nStakeModifier.end());
 }
 
+// Generates and sets new V2 stake modifier
+void CBlockIndex::SetNewStakeModifier(const uint256& prevoutId)
+{
+    // Shouldn't be called on V1 modifier's blocks (or before setting pprev)
+    if (!Params().GetConsensus().NetworkUpgradeActive(nHeight, Consensus::UPGRADE_V3_4)) return;
+    if (!pprev) throw std::runtime_error(strprintf("%s : ERROR: null pprev", __func__));
+
+    // Generate Hash(prevoutId | prevModifier) - switch with genesis modifier (0) on upgrade block
+    CHashWriter ss(SER_GETHASH, 0);
+    ss << prevoutId;
+    ss << pprev->GetStakeModifierV2();
+    SetStakeModifier(ss.GetHash());
+}
+
 // Returns V1 stake modifier (uint64_t)
 uint64_t CBlockIndex::GetStakeModifierV1() const
 {
-    if (vStakeModifier.empty() || Params().GetConsensus().IsStakeModifierV2(nHeight))
+    if (vStakeModifier.empty() || Params().GetConsensus().NetworkUpgradeActive(nHeight, Consensus::UPGRADE_V3_4))
         return 0;
     uint64_t nStakeModifier;
     std::memcpy(&nStakeModifier, vStakeModifier.data(), vStakeModifier.size());
@@ -202,8 +230,8 @@ uint64_t CBlockIndex::GetStakeModifierV1() const
 // Returns V2 stake modifier (uint256)
 uint256 CBlockIndex::GetStakeModifierV2() const
 {
-    if (vStakeModifier.empty() || !Params().GetConsensus().IsStakeModifierV2(nHeight))
-        return uint256(0);
+    if (vStakeModifier.empty() || !Params().GetConsensus().NetworkUpgradeActive(nHeight, Consensus::UPGRADE_V3_4))
+        return UINT256_ZERO;
     uint256 nStakeModifier;
     std::memcpy(nStakeModifier.begin(), vStakeModifier.data(), vStakeModifier.size());
     return nStakeModifier;

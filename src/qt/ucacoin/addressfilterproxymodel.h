@@ -1,10 +1,10 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ucacoin_CORE_NEW_GUI_ADDRESSFILTERPROXYMODEL_H
-#define ucacoin_CORE_NEW_GUI_ADDRESSFILTERPROXYMODEL_H
+#ifndef UCACoin_CORE_NEW_GUI_ADDRESSFILTERPROXYMODEL_H
+#define UCACoin_CORE_NEW_GUI_ADDRESSFILTERPROXYMODEL_H
 
 #include <QSortFilterProxyModel>
 #include "addresstablemodel.h"
@@ -45,4 +45,4 @@ private:
 };
 
 
-#endif //ucacoin_CORE_NEW_GUI_ADDRESSFILTERPROXYMODEL_H
+#endif //UCACoin_CORE_NEW_GUI_ADDRESSFILTERPROXYMODEL_H

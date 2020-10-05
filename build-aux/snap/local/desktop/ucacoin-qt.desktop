@@ -2,14 +2,14 @@
 
 [Desktop Entry]
 Encoding=UTF-8
-Name=ucacoin Core
-Comment=ucacoin Core QT main network
-GenericName=ucacoin Digital Currency QT client main network
+Name=UCACoin
+Comment=UCACoin QT main network
+GenericName=UCACoin Digital Currency QT client main network
 Exec=ucacoin-core.qt %u
 Terminal=false
 Type=Application
 Icon=${SNAP}/share/pixmaps/ucacoin.png
 MimeType=x-scheme-handler/ucacoin;
 Categories=X-Office;X-Finance;
-Keywords=internet;ucacoin;uca;core;wallet;qt;main;snap;launchpad;crypto;digital;currency;coin;token;
+Keywords=internet;ucacoin;zuca;uca;core;wallet;qt;main;snap;launchpad;crypto;digital;currency;coin;token;zerocoin;
 Version=1.0

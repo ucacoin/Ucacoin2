@@ -1,5 +1,5 @@
-// Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -25,7 +25,7 @@
 #include <QSpacerItem>
 #include <atomic>
 
-class ucacoinGUI;
+class UCACoinGUI;
 class WalletModel;
 class CSDelegationHolder;
 
@@ -42,7 +42,7 @@ class ColdStakingWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit ColdStakingWidget(ucacoinGUI* parent);
+    explicit ColdStakingWidget(UCACoinGUI* parent);
     ~ColdStakingWidget();
 
     void loadWalletModel() override;
@@ -73,7 +73,10 @@ private Q_SLOTS:
     void clearAll();
     void onLabelClicked();
     void onMyStakingAddressesClicked();
+    void onOwnerAddressChanged();
     void onDelegationsRefreshed();
+    void onSortChanged(int idx);
+    void onSortOrderChanged(int idx);
 
 private:
     Ui::ColdStakingWidget *ui = nullptr;
@@ -107,6 +110,9 @@ private:
     QModelIndex index;
     QModelIndex addressIndex;
 
+    // Cached sort type and order
+    AddressTableModel::ColumnIndex sortType = AddressTableModel::Label;
+    Qt::SortOrder sortOrder = Qt::AscendingOrder;
 
     int nDisplayUnit;
 
@@ -116,6 +122,8 @@ private:
     bool refreshDelegations();
     void onLabelClicked(QString dialogTitle, const QModelIndex &index, const bool& isMyColdStakingAddresses);
     void updateStakingTotalLabel();
+    void sortAddresses();
+    void setCoinControlPayAmounts();
 };
 
 #endif // COLDSTAKINGWIDGET_H

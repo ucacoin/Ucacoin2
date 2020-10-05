@@ -1,5 +1,5 @@
-// Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -29,7 +29,7 @@ class SettingsConsoleWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit SettingsConsoleWidget(ucacoinGUI* _window, QWidget *parent = nullptr);
+    explicit SettingsConsoleWidget(UCACoinGUI* _window, QWidget *parent = nullptr);
     ~SettingsConsoleWidget();
 
     void loadClientModel() override;
@@ -44,8 +44,9 @@ public:
     };
 
 public Q_SLOTS:
-    void clear();
-    void message(int category, const QString& message, bool html = false);
+    void clear(bool clearHistory = true);
+    void message(int category, const QString &msg) { message(category, msg, false); }
+    void message(int category, const QString &message, bool html);
     /** Go forward or back in history */
     void browseHistory(int offset);
     /** Scroll console view to end */

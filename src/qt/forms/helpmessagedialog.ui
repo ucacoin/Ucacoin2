@@ -22,7 +22,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string notr="true">ucacoin Core - Command-line options</string>
+   <string notr="true">UCACoin - Command-line options</string>
   </property>
   <property name="styleSheet">
    <string notr="true">#HelpMessageDialog {
@@ -95,9 +95,9 @@
           <height>100</height>
          </size>
         </property>
-                <property name="pixmap">
-                  <pixmap>://about</pixmap>
-                </property>
+        <property name="pixmap">
+         <pixmap>:/images/about</pixmap>
+        </property>
        </widget>
       </item>
       <item>
@@ -126,12 +126,6 @@ background-color:#FFFFFF;
         </item>
         <item>
          <widget class="QScrollArea" name="scrollArea">
-                    <property name="minimumSize">
-                      <size>
-                        <width>0</width>
-                        <height>0</height>
-                      </size>
-                    </property>
           <property name="styleSheet">
            <string notr="true">#scrollArea {
 background-color:#FFFFFF;
@@ -148,7 +142,7 @@ background-color:#FFFFFF;
             <rect>
              <x>0</x>
              <y>0</y>
-                          <width>561</width>
+             <width>564</width>
              <height>263</height>
             </rect>
            </property>
@@ -193,10 +187,33 @@ background-color:#FFFFFF;
           </widget>
          </widget>
         </item>
-              </layout>
-            </item>
-            <item>
-              <layout class="QHBoxLayout" name="horizontalLayout">
+        <item alignment="Qt::AlignVCenter">
+         <widget class="QWidget" name="widget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>50</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>60</height>
+           </size>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item>
             <spacer name="horizontalSpacer">
              <property name="orientation">
@@ -224,6 +241,9 @@ background-color:#FFFFFF;
             </widget>
            </item>
           </layout>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </widget>

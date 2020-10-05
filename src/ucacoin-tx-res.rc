@@ -16,8 +16,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "ucacoin"
-            VALUE "FileDescription",    "ucacoin-tx (CLI ucacoin transaction editor utility)"
+            VALUE "CompanyName",        "UCACoin"
+            VALUE "FileDescription",    "ucacoin-tx (CLI UCACoin transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "ucacoin-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR

@@ -1,13 +1,13 @@
-ucacoin Core
+UCACoin
 =============
 
 Setup
 ---------------------
-[ucacoin Core](http://ucacoin.org/wallet) is the original ucacoin client and it builds the backbone of the network. However, it downloads and stores the entire history of ucacoin transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[UCACoin](http://ucacoin.org/wallet) is the original UCACoin client and it builds the backbone of the network. However, it downloads and stores the entire history of UCACoin transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
-The following are some helpful notes on how to run ucacoin Core on your native platform.
+The following are some helpful notes on how to run UCACoin on your native platform.
 
 ### Unix
 
@@ -22,18 +22,18 @@ Unpack the files into a directory, and then run ucacoin-qt.exe.
 
 ### macOS
 
-Drag ucacoin-Qt to your applications folder, and then run ucacoin-Qt.
+Drag UCACoin-Qt to your applications folder, and then run UCACoin-Qt.
 
 ### Need Help?
 
-* See the documentation at the [ucacoin Wiki](https://github.com/ucacoin-Project/ucacoin/wiki)
+* See the documentation at the [UCACoin Wiki](https://github.com/UCACoin-Project/UCACoin/wiki)
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [ucacoin Forum](http://forum.ucacoin.org/).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [UCACoin Forum](http://forum.ucacoin.org/).
 * Join our Discord server [Discord Server](https://discord.ucacoin.org)
 
 Building
 ---------------------
-The following are developer notes on how to build ucacoin Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build UCACoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [macOS Build Notes](build-osx.md)
@@ -43,7 +43,7 @@ The following are developer notes on how to build ucacoin Core on your native pl
 
 Development
 ---------------------
-The ucacoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The UCACoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
@@ -56,8 +56,8 @@ The ucacoin repo's [root README](/README.md) contains relevant information on th
 - [Dnsseed Policy](dnsseed-policy.md)
 
 ### Resources
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [ucacoin](http://forum.ucacoin.org/) forum.
-* Join the [ucacoin Discord](https://discord.ucacoin.org).
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [UCACoin](http://forum.ucacoin.org/) forum.
+* Join the [UCACoin Discord](https://discord.ucacoin.org).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

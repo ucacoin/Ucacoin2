@@ -1,10 +1,10 @@
-// Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ucacoin_CORE_NEW_GUI_ucacoinGUI_H
-#define ucacoin_CORE_NEW_GUI_ucacoinGUI_H
+#ifndef UCACoin_CORE_NEW_GUI_UCACoinGUI_H
+#define UCACoin_CORE_NEW_GUI_UCACoinGUI_H
 
 #if defined(HAVE_CONFIG_H)
 #include "config/ucacoin-config.h"
@@ -35,18 +35,18 @@ class WalletModel;
 
 
 /**
-  ucacoin GUI main class. This class represents the main window of the ucacoin UI. It communicates with both the client and
+  UCACoin GUI main class. This class represents the main window of the UCACoin UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
 */
-class ucacoinGUI : public QMainWindow
+class UCACoinGUI : public QMainWindow
 {
     Q_OBJECT
 
 public:
     static const QString DEFAULT_WALLET;
 
-    explicit ucacoinGUI(const NetworkStyle* networkStyle, QWidget* parent = 0);
-    ~ucacoinGUI();
+    explicit UCACoinGUI(const NetworkStyle* networkStyle, QWidget* parent = 0);
+    ~UCACoinGUI();
 
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
@@ -69,6 +69,8 @@ public Q_SLOTS:
     void goToMasterNodes();
     void goToColdStaking();
     void goToSettings();
+    void goToSettingsInfo();
+    void openNetworkMonitor();
 
     void connectActions();
 
@@ -160,6 +162,10 @@ private:
     /** Disconnect core signals from GUI client */
     void unsubscribeFromCoreSignals();
 
+public Q_SLOTS:
+    /** called by a timer to check if fRequestShutdown has been set **/
+    void detectShutdown();
+
 private Q_SLOTS:
     /** Show window if hidden, unminimize when minimized, rise when obscured or show if hidden and fToggleHidden is true */
     void showNormalIfMinimized(bool fToggleHidden = false);
@@ -167,12 +173,12 @@ private Q_SLOTS:
     /** Simply calls showNormalIfMinimized(true) for use in SLOT() macro */
     void toggleHidden();
 
-    /** called by a timer to check if fRequestShutdown has been set **/
-    void detectShutdown();
-
 #ifndef Q_OS_MAC
     /** Handle tray icon clicked */
     void trayIconActivated(QSystemTrayIcon::ActivationReason reason);
+#else
+    /** Handle macOS Dock icon clicked */
+     void macosDockIconActivated();
 #endif
 
 Q_SIGNALS:
@@ -184,4 +190,4 @@ Q_SIGNALS:
 };
 
 
-#endif //ucacoin_CORE_NEW_GUI_ucacoinGUI_H
+#endif //UCACoin_CORE_NEW_GUI_UCACoinGUI_H

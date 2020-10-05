@@ -1,6 +1,6 @@
 // Copyright (c) 2014 The Bitcoin developers
-// Copyright (c) 2017-2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2017-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,7 +12,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between ucacoin-cli and ucacoind)
- * of a given instance of the ucacoin system.
+ * of a given instance of the UcaCoin system.
  */
 class CBaseChainParams
 {

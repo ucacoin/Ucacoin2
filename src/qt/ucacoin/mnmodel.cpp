@@ -1,11 +1,14 @@
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "qt/ucacoin/mnmodel.h"
+
+#include "activemasternode.h"
 #include "masternode-sync.h"
 #include "masternodeman.h"
-#include "activemasternode.h"
+#include "net.h"        // for validateMasternodeIP
 #include "sync.h"
 #include "uint256.h"
 #include "wallet/wallet.h"
@@ -174,7 +177,19 @@ bool MNModel::isMNActive(QString mnAlias)
     return activeState == CMasternode::MASTERNODE_PRE_ENABLED || activeState == CMasternode::MASTERNODE_ENABLED;
 }
 
+bool MNModel::isMNCollateralMature(QString mnAlias)
+{
+    QMap<QString, std::pair<QString, CMasternode*>>::const_iterator it = nodes.find(mnAlias);
+    if (it != nodes.end()) return collateralTxAccepted.value(it.value().second->vin.prevout.hash.GetHex());
+    throw std::runtime_error(std::string("Masternode alias not found"));
+}
+
 bool MNModel::isMNsNetworkSynced()
 {
     return masternodeSync.IsSynced();
+}
+
+bool MNModel::validateMNIP(const QString& addrStr)
+{
+    return validateMasternodeIP(addrStr.toStdString());
 }

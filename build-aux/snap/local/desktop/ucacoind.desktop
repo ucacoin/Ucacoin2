@@ -2,14 +2,14 @@
 
 [Desktop Entry]
 Encoding=UTF-8
-Name=ucacoin Core Daemon SNAP
+Name=UCACoin Daemon SNAP
 Comment=main
-GenericName=ucacoin Digital Currency Daemon Client main network
+GenericName=UCACoin Digital Currency Daemon Client main network
 Exec=ucacoin-core.daemon %u
 Terminal=true
 Type=Application
 Icon=${SNAP}/share/pixmaps/ucacoin.png
 MimeType=x-scheme-handler/uca;
 Categories=X-Office;X-Finance;
-Keywords=internet;ucacoin;core;wallet;daemon;main;snap;launchpad;crypto;digital;currency;coin;token;
+Keywords=internet;ucacoin;zuca;core;wallet;daemon;main;snap;launchpad;crypto;digital;currency;coin;token;zerocoin;
 Version=1.0

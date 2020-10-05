@@ -1,5 +1,5 @@
-// Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,6 +9,7 @@
 #include <QWidget>
 #include "qt/ucacoin/pwidget.h"
 #include "qt/ucacoin/settings/settingsbackupwallet.h"
+#include "qt/ucacoin/settings/settingsexportcsv.h"
 #include "qt/ucacoin/settings/settingsbittoolwidget.h"
 #include "qt/ucacoin/settings/settingssignmessagewidgets.h"
 #include "qt/ucacoin/settings/settingswalletrepairwidget.h"
@@ -19,7 +20,7 @@
 #include "qt/ucacoin/settings/settingsinformationwidget.h"
 #include "qt/ucacoin/settings/settingsconsolewidget.h"
 
-class ucacoinGUI;
+class UCACoinGUI;
 
 QT_BEGIN_NAMESPACE
 class QDataWidgetMapper;
@@ -34,13 +35,15 @@ class SettingsWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit SettingsWidget(ucacoinGUI* parent);
+    explicit SettingsWidget(UCACoinGUI* parent);
     ~SettingsWidget();
 
     void loadClientModel() override;
     void loadWalletModel() override;
     void setMapper();
     void showDebugConsole();
+    void showInformation();
+    void openNetworkMonitor();
 
 Q_SIGNALS:
     /** Get restart command-line parameters and handle restart */
@@ -56,6 +59,7 @@ private Q_SLOTS:
     void onConfigurationClicked();
     void onBipToolClicked();
     void onMultisendClicked();
+    void onExportCSVClicked();
 
     // Options
     void onOptionsClicked();
@@ -74,13 +78,15 @@ private Q_SLOTS:
     // Help
     void onHelpClicked();
     void onAboutClicked();
-
     void onResetAction();
     void onSaveOptionsClicked();
+
 private:
     Ui::SettingsWidget *ui;
+    int navAreaBaseHeight{0};
 
     SettingsBackupWallet *settingsBackupWallet;
+    SettingsExportCSV *settingsExportCsvWidget;
     SettingsBitToolWidget *settingsBitToolWidget;
     SettingsSignMessageWidgets *settingsSingMessageWidgets;
     SettingsWalletRepairWidget *settingsWalletRepairWidget;
@@ -94,9 +100,12 @@ private:
     QDataWidgetMapper* mapper;
 
     QList<QPushButton*> options;
+    // Map of: menu button -> sub menu items
+    QMap <QPushButton*, QWidget*> menus;
 
     void selectOption(QPushButton* option);
-    bool openStandardDialog(QString title = "", QString body = "", QString okBtn = "OK", QString cancelBtn = "");
+    bool openStandardDialog(const QString& title = "", const QString& body = "", const QString& okBtn = "OK", const QString& cancelBtn = "");
+    void selectMenu(QPushButton* btn);
 };
 
 #endif // SETTINGSWIDGET_H

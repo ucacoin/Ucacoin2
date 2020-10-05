@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ucacoin_KEY_IO_H
-#define ucacoin_KEY_IO_H
+#ifndef UCACoin_KEY_IO_H
+#define UCACoin_KEY_IO_H
 
 #include "chainparams.h"
 #include "key.h"
@@ -25,4 +25,4 @@ namespace KeyIO {
 
 }
 
-#endif //ucacoin_KEY_IO_H
+#endif //UCACoin_KEY_IO_H

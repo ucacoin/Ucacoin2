@@ -84,9 +84,9 @@ OpenRC).
 ### macOS
 
 Binary:              `/usr/local/bin/ucacoind`
-Configuration file:  `~/Library/Application Support/ucacoin/ucacoin.conf`
-Data directory:      `~/Library/Application Support/ucacoin`
-Lock file:           `~/Library/Application Support/ucacoin/.lock`
+Configuration file:  `~/Library/Application Support/UCACoin/ucacoin.conf`
+Data directory:      `~/Library/Application Support/UCACoin`
+Lock file:           `~/Library/Application Support/UCACoin/.lock`
 
 Installing Service Configuration
 -----------------------------------
@@ -124,7 +124,7 @@ use old versions of Upstart and do not supply the start-stop-daemon utility.
 Copy ucacoind.init to /etc/init.d/ucacoind. Test by running `service ucacoind start`.
 
 Using this script, you can adjust the path and flags to the ucacoind program by
-setting the ucacoinD and FLAGS environment variables in the file
+setting the UCACoinD and FLAGS environment variables in the file
 /etc/sysconfig/ucacoind. You can also use the DAEMONOPTS environment variable here.
 
 ### macOS

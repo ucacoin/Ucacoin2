@@ -1,4 +1,5 @@
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -18,16 +19,17 @@
 #include "qt/ucacoin/defaultdialog.h"
 #include "qt/ucacoin/settings/settingsfaqwidget.h"
 
-#include <QDesktopWidget>
-#include <QHBoxLayout>
-#include <QVBoxLayout>
+#include "init.h"
+#include "util.h"
+
 #include <QApplication>
 #include <QColor>
-#include <QShortcut>
+#include <QHBoxLayout>
 #include <QKeySequence>
+#include <QScreen>
+#include <QShortcut>
 #include <QWindowStateChangeEvent>
 
-#include "util.h"
 
 #define BASE_WINDOW_WIDTH 1200
 #define BASE_WINDOW_HEIGHT 740
@@ -35,9 +37,9 @@
 #define BASE_WINDOW_MIN_WIDTH 1100
 
 
-const QString ucacoinGUI::DEFAULT_WALLET = "~Default";
+const QString UCACoinGUI::DEFAULT_WALLET = "~Default";
 
-ucacoinGUI::ucacoinGUI(const NetworkStyle* networkStyle, QWidget* parent) :
+UCACoinGUI::UCACoinGUI(const NetworkStyle* networkStyle, QWidget* parent) :
         QMainWindow(parent),
         clientModel(0){
 
@@ -47,7 +49,7 @@ ucacoinGUI::ucacoinGUI(const NetworkStyle* networkStyle, QWidget* parent) :
 
 
     // Adapt screen size
-    QRect rec = QApplication::desktop()->screenGeometry();
+    QRect rec = QGuiApplication::primaryScreen()->geometry();
     int adaptedHeight = (rec.height() < BASE_WINDOW_HEIGHT) ?  BASE_WINDOW_MIN_HEIGHT : BASE_WINDOW_HEIGHT;
     int adaptedWidth = (rec.width() < BASE_WINDOW_WIDTH) ?  BASE_WINDOW_MIN_WIDTH : BASE_WINDOW_WIDTH;
     GUIUtil::restoreWindowGeometry(
@@ -65,23 +67,18 @@ ucacoinGUI::ucacoinGUI(const NetworkStyle* networkStyle, QWidget* parent) :
 
     QString windowTitle = QString::fromStdString(GetArg("-windowtitle", ""));
     if (windowTitle.isEmpty()) {
-        windowTitle = tr("ucacoin Core") + " - ";
+        windowTitle = tr("UCACoin") + " - ";
         windowTitle += ((enableWallet) ? tr("Wallet") : tr("Node"));
     }
     windowTitle += " " + networkStyle->getTitleAddText();
     setWindowTitle(windowTitle);
 
-#ifndef Q_OS_MAC
     QApplication::setWindowIcon(networkStyle->getAppIcon());
     setWindowIcon(networkStyle->getAppIcon());
-#else
-    MacDockIconHandler::instance()->setIcon(networkStyle->getAppIcon());
-#endif
 
 #ifdef ENABLE_WALLET
     // Create wallet frame
-    if(enableWallet){
-
+    if (enableWallet) {
         QFrame* centralWidget = new QFrame(this);
         this->setMinimumWidth(BASE_WINDOW_MIN_WIDTH);
         this->setMinimumHeight(BASE_WINDOW_MIN_HEIGHT);
@@ -169,7 +166,8 @@ ucacoinGUI::ucacoinGUI(const NetworkStyle* networkStyle, QWidget* parent) :
 
 }
 
-void ucacoinGUI::createActions(const NetworkStyle* networkStyle){
+void UCACoinGUI::createActions(const NetworkStyle* networkStyle)
+{
     toggleHideAction = new QAction(networkStyle->getAppIcon(), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
 
@@ -178,14 +176,15 @@ void ucacoinGUI::createActions(const NetworkStyle* networkStyle){
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
 
-    connect(toggleHideAction, SIGNAL(triggered()), this, SLOT(toggleHidden()));
-    connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
+    connect(toggleHideAction, &QAction::triggered, this, &UCACoinGUI::toggleHidden);
+    connect(quitAction, &QAction::triggered, qApp, &QApplication::quit);
 }
 
 /**
  * Here add every event connection
  */
-void ucacoinGUI::connectActions() {
+void UCACoinGUI::connectActions()
+{
     QShortcut *consoleShort = new QShortcut(this);
     consoleShort->setKey(QKeySequence(SHORT_KEY + Qt::Key_C));
     connect(consoleShort, &QShortcut::activated, [this](){
@@ -193,25 +192,26 @@ void ucacoinGUI::connectActions() {
         settingsWidget->showDebugConsole();
         goToSettings();
     });
-    connect(topBar, &TopBar::showHide, this, &ucacoinGUI::showHide);
-    connect(topBar, &TopBar::themeChanged, this, &ucacoinGUI::changeTheme);
+    connect(topBar, &TopBar::showHide, this, &UCACoinGUI::showHide);
+    connect(topBar, &TopBar::themeChanged, this, &UCACoinGUI::changeTheme);
     connect(topBar, &TopBar::onShowHideColdStakingChanged, navMenu, &NavMenuWidget::onShowHideColdStakingChanged);
-    connect(settingsWidget, &SettingsWidget::showHide, this, &ucacoinGUI::showHide);
-    connect(sendWidget, &SendWidget::showHide, this, &ucacoinGUI::showHide);
-    connect(receiveWidget, &ReceiveWidget::showHide, this, &ucacoinGUI::showHide);
-    connect(addressesWidget, &AddressesWidget::showHide, this, &ucacoinGUI::showHide);
-    connect(masterNodesWidget, &MasterNodesWidget::showHide, this, &ucacoinGUI::showHide);
-    connect(masterNodesWidget, &MasterNodesWidget::execDialog, this, &ucacoinGUI::execDialog);
-    connect(coldStakingWidget, &ColdStakingWidget::showHide, this, &ucacoinGUI::showHide);
-    connect(coldStakingWidget, &ColdStakingWidget::execDialog, this, &ucacoinGUI::execDialog);
-    connect(settingsWidget, &SettingsWidget::execDialog, this, &ucacoinGUI::execDialog);
+    connect(settingsWidget, &SettingsWidget::showHide, this, &UCACoinGUI::showHide);
+    connect(sendWidget, &SendWidget::showHide, this, &UCACoinGUI::showHide);
+    connect(receiveWidget, &ReceiveWidget::showHide, this, &UCACoinGUI::showHide);
+    connect(addressesWidget, &AddressesWidget::showHide, this, &UCACoinGUI::showHide);
+    connect(masterNodesWidget, &MasterNodesWidget::showHide, this, &UCACoinGUI::showHide);
+    connect(masterNodesWidget, &MasterNodesWidget::execDialog, this, &UCACoinGUI::execDialog);
+    connect(coldStakingWidget, &ColdStakingWidget::showHide, this, &UCACoinGUI::showHide);
+    connect(coldStakingWidget, &ColdStakingWidget::execDialog, this, &UCACoinGUI::execDialog);
+    connect(settingsWidget, &SettingsWidget::execDialog, this, &UCACoinGUI::execDialog);
 }
 
 
-void ucacoinGUI::createTrayIcon(const NetworkStyle* networkStyle) {
+void UCACoinGUI::createTrayIcon(const NetworkStyle* networkStyle)
+{
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
-    QString toolTip = tr("ucacoin Core client") + " " + networkStyle->getTitleAddText();
+    QString toolTip = tr("UCACoin client") + " " + networkStyle->getTitleAddText();
     trayIcon->setToolTip(toolTip);
     trayIcon->setIcon(networkStyle->getAppIcon());
     trayIcon->hide();
@@ -219,8 +219,8 @@ void ucacoinGUI::createTrayIcon(const NetworkStyle* networkStyle) {
     notificator = new Notificator(QApplication::applicationName(), trayIcon, this);
 }
 
-//
-ucacoinGUI::~ucacoinGUI() {
+UCACoinGUI::~UCACoinGUI()
+{
     // Unsubscribe from notifications from core
     unsubscribeFromCoreSignals();
 
@@ -234,16 +234,17 @@ ucacoinGUI::~ucacoinGUI() {
 
 
 /** Get restart command-line parameters and request restart */
-void ucacoinGUI::handleRestart(QStringList args){
+void UCACoinGUI::handleRestart(QStringList args)
+{
     if (!ShutdownRequested())
         Q_EMIT requestedRestart(args);
 }
 
 
-void ucacoinGUI::setClientModel(ClientModel* clientModel) {
+void UCACoinGUI::setClientModel(ClientModel* clientModel)
+{
     this->clientModel = clientModel;
-    if(this->clientModel) {
-
+    if (this->clientModel) {
         // Create system tray menu (or setup the dock menu) that late to prevent users from calling actions,
         // while the client has not yet fully loaded
         createTrayIconMenu();
@@ -254,9 +255,9 @@ void ucacoinGUI::setClientModel(ClientModel* clientModel) {
         settingsWidget->setClientModel(clientModel);
 
         // Receive and report messages from client model
-        connect(clientModel, SIGNAL(message(QString, QString, unsigned int)), this, SLOT(message(QString, QString, unsigned int)));
-        connect(topBar, SIGNAL(walletSynced(bool)), dashboard, SLOT(walletSynced(bool)));
-        connect(topBar, SIGNAL(walletSynced(bool)), coldStakingWidget, SLOT(walletSynced(bool)));
+        connect(clientModel, &ClientModel::message, this, &UCACoinGUI::message);
+        connect(topBar, &TopBar::walletSynced, dashboard, &DashboardWidget::walletSynced);
+        connect(topBar, &TopBar::walletSynced, coldStakingWidget, &ColdStakingWidget::walletSynced);
 
         // Get restart command-line parameters and handle restart
         connect(settingsWidget, &SettingsWidget::handleRestart, [this](QStringList arg){handleRestart(arg);});
@@ -278,45 +279,53 @@ void ucacoinGUI::setClientModel(ClientModel* clientModel) {
     }
 }
 
-void ucacoinGUI::createTrayIconMenu() {
+void UCACoinGUI::createTrayIconMenu()
+{
 #ifndef Q_OS_MAC
-    // return if trayIcon is unset (only on non-Mac OSes)
+    // return if trayIcon is unset (only on non-macOSes)
     if (!trayIcon)
         return;
 
     trayIconMenu = new QMenu(this);
     trayIcon->setContextMenu(trayIconMenu);
 
-    connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
-            this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
+    connect(trayIcon, &QSystemTrayIcon::activated, this, &UCACoinGUI::trayIconActivated);
 #else
-    // Note: On Mac, the dock icon is used to provide the tray's functionality.
+    // Note: On macOS, the Dock icon is used to provide the tray's functionality.
     MacDockIconHandler* dockIconHandler = MacDockIconHandler::instance();
-    dockIconHandler->setMainWindow((QMainWindow*)this);
-    trayIconMenu = dockIconHandler->dockMenu();
+    connect(dockIconHandler, &MacDockIconHandler::dockIconClicked, this, &UCACoinGUI::macosDockIconActivated);
+
+    trayIconMenu = new QMenu(this);
+    trayIconMenu->setAsDockMenu();
 #endif
 
-    // Configuration of the tray icon (or dock icon) icon menu
+    // Configuration of the tray icon (or Dock icon) icon menu
     trayIconMenu->addAction(toggleHideAction);
     trayIconMenu->addSeparator();
 
-#ifndef Q_OS_MAC // This is built-in on Mac
+#ifndef Q_OS_MAC // This is built-in on macOS
     trayIconMenu->addSeparator();
     trayIconMenu->addAction(quitAction);
 #endif
 }
 
 #ifndef Q_OS_MAC
-void ucacoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
+void UCACoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 {
     if (reason == QSystemTrayIcon::Trigger) {
         // Click on system tray icon triggers show/hide of the main window
         toggleHidden();
     }
 }
+#else
+void UCACoinGUI::macosDockIconActivated()
+ {
+     show();
+     activateWindow();
+ }
 #endif
 
-void ucacoinGUI::changeEvent(QEvent* e)
+void UCACoinGUI::changeEvent(QEvent* e)
 {
     QMainWindow::changeEvent(e);
 #ifndef Q_OS_MAC // Ignored on Mac
@@ -324,7 +333,7 @@ void ucacoinGUI::changeEvent(QEvent* e)
         if (clientModel && clientModel->getOptionsModel() && clientModel->getOptionsModel()->getMinimizeToTray()) {
             QWindowStateChangeEvent* wsevt = static_cast<QWindowStateChangeEvent*>(e);
             if (!(wsevt->oldState() & Qt::WindowMinimized) && isMinimized()) {
-                QTimer::singleShot(0, this, SLOT(hide()));
+                QTimer::singleShot(0, this, &UCACoinGUI::hide);
                 e->ignore();
             }
         }
@@ -332,7 +341,7 @@ void ucacoinGUI::changeEvent(QEvent* e)
 #endif
 }
 
-void ucacoinGUI::closeEvent(QCloseEvent* event)
+void UCACoinGUI::closeEvent(QCloseEvent* event)
 {
 #ifndef Q_OS_MAC // Ignored on Mac
     if (clientModel && clientModel->getOptionsModel()) {
@@ -345,16 +354,18 @@ void ucacoinGUI::closeEvent(QCloseEvent* event)
 }
 
 
-void ucacoinGUI::messageInfo(const QString& text){
-    if(!this->snackBar) this->snackBar = new SnackBar(this, this);
+void UCACoinGUI::messageInfo(const QString& text)
+{
+    if (!this->snackBar) this->snackBar = new SnackBar(this, this);
     this->snackBar->setText(text);
     this->snackBar->resize(this->width(), snackBar->height());
     openDialog(this->snackBar, this);
 }
 
 
-void ucacoinGUI::message(const QString& title, const QString& message, unsigned int style, bool* ret) {
-    QString strTitle =  tr("ucacoin Core"); // default title
+void UCACoinGUI::message(const QString& title, const QString& message, unsigned int style, bool* ret)
+{
+    QString strTitle =  tr("UCACoin"); // default title
     // Default to information icon
     int nNotifyIcon = Notificator::Information;
 
@@ -392,26 +403,27 @@ void ucacoinGUI::message(const QString& title, const QString& message, unsigned 
         // Check for buttons, use OK as default, if none was supplied
         int r = 0;
         showNormalIfMinimized();
-        if(style & CClientUIInterface::BTN_MASK){
+        if (style & CClientUIInterface::BTN_MASK) {
             r = openStandardDialog(
                     (title.isEmpty() ? strTitle : title), message, "OK", "CANCEL"
                 );
-        }else{
+        } else {
             r = openStandardDialog((title.isEmpty() ? strTitle : title), message, "OK");
         }
         if (ret != NULL)
             *ret = r;
-    } else if(style & CClientUIInterface::MSG_INFORMATION_SNACK){
+    } else if (style & CClientUIInterface::MSG_INFORMATION_SNACK) {
         messageInfo(message);
-    }else {
-        // Append title to "ucacoin - "
+    } else {
+        // Append title to "UCACoin - "
         if (!msgType.isEmpty())
             strTitle += " - " + msgType;
         notificator->notify((Notificator::Class) nNotifyIcon, strTitle, message);
     }
 }
 
-bool ucacoinGUI::openStandardDialog(QString title, QString body, QString okBtn, QString cancelBtn){
+bool UCACoinGUI::openStandardDialog(QString title, QString body, QString okBtn, QString cancelBtn)
+{
     DefaultDialog *dialog;
     if (isVisible()) {
         showHide(true);
@@ -422,7 +434,7 @@ bool ucacoinGUI::openStandardDialog(QString title, QString body, QString okBtn, 
     } else {
         dialog = new DefaultDialog();
         dialog->setText(title, body, okBtn);
-        dialog->setWindowTitle(tr("ucacoin Core"));
+        dialog->setWindowTitle(tr("UCACoin"));
         dialog->adjustSize();
         dialog->raise();
         dialog->exec();
@@ -433,28 +445,24 @@ bool ucacoinGUI::openStandardDialog(QString title, QString body, QString okBtn, 
 }
 
 
-void ucacoinGUI::showNormalIfMinimized(bool fToggleHidden) {
+void UCACoinGUI::showNormalIfMinimized(bool fToggleHidden)
+{
     if (!clientModel)
         return;
-    // activateWindow() (sometimes) helps with keyboard focus on Windows
-    if (isHidden()) {
-        show();
-        activateWindow();
-    } else if (isMinimized()) {
-        showNormal();
-        activateWindow();
-    } else if (GUIUtil::isObscured(this)) {
-        raise();
-        activateWindow();
-    } else if (fToggleHidden)
+    if (!isHidden() && !isMinimized() && !GUIUtil::isObscured(this) && fToggleHidden) {
         hide();
+    } else {
+        GUIUtil::bringToFront(this);
+    }
 }
 
-void ucacoinGUI::toggleHidden() {
+void UCACoinGUI::toggleHidden()
+{
     showNormalIfMinimized(true);
 }
 
-void ucacoinGUI::detectShutdown() {
+void UCACoinGUI::detectShutdown()
+{
     if (ShutdownRequested()) {
         if (rpcConsole)
             rpcConsole->hide();
@@ -462,45 +470,65 @@ void ucacoinGUI::detectShutdown() {
     }
 }
 
-void ucacoinGUI::goToDashboard(){
-    if(stackedContainer->currentWidget() != dashboard){
+void UCACoinGUI::goToDashboard()
+{
+    if (stackedContainer->currentWidget() != dashboard) {
         stackedContainer->setCurrentWidget(dashboard);
         topBar->showBottom();
     }
 }
 
-void ucacoinGUI::goToSend(){
+void UCACoinGUI::goToSend()
+{
     showTop(sendWidget);
 }
 
-void ucacoinGUI::goToAddresses(){
+void UCACoinGUI::goToAddresses()
+{
     showTop(addressesWidget);
 }
 
-void ucacoinGUI::goToMasterNodes(){
+void UCACoinGUI::goToMasterNodes()
+{
     showTop(masterNodesWidget);
 }
 
-void ucacoinGUI::goToColdStaking(){
+void UCACoinGUI::goToColdStaking()
+{
     showTop(coldStakingWidget);
 }
 
-void ucacoinGUI::goToSettings(){
+void UCACoinGUI::goToSettings(){
     showTop(settingsWidget);
 }
 
-void ucacoinGUI::goToReceive(){
+void UCACoinGUI::goToSettingsInfo()
+{
+    navMenu->selectSettings();
+    settingsWidget->showInformation();
+    goToSettings();
+}
+
+void UCACoinGUI::goToReceive()
+{
     showTop(receiveWidget);
 }
 
-void ucacoinGUI::showTop(QWidget* view){
-    if(stackedContainer->currentWidget() != view){
+void UCACoinGUI::openNetworkMonitor()
+{
+    settingsWidget->openNetworkMonitor();
+}
+
+void UCACoinGUI::showTop(QWidget* view)
+{
+    if (stackedContainer->currentWidget() != view) {
         stackedContainer->setCurrentWidget(view);
         topBar->showTop();
     }
 }
 
-void ucacoinGUI::changeTheme(bool isLightTheme){
+void UCACoinGUI::changeTheme(bool isLightTheme)
+{
 
     QString css = GUIUtil::loadStyleSheet();
     this->setStyleSheet(css);
@@ -512,7 +540,8 @@ void ucacoinGUI::changeTheme(bool isLightTheme){
     updateStyle(this);
 }
 
-void ucacoinGUI::resizeEvent(QResizeEvent* event){
+void UCACoinGUI::resizeEvent(QResizeEvent* event)
+{
     // Parent..
     QMainWindow::resizeEvent(event);
     // background
@@ -521,19 +550,21 @@ void ucacoinGUI::resizeEvent(QResizeEvent* event){
     Q_EMIT windowResizeEvent(event);
 }
 
-bool ucacoinGUI::execDialog(QDialog *dialog, int xDiv, int yDiv){
+bool UCACoinGUI::execDialog(QDialog *dialog, int xDiv, int yDiv)
+{
     return openDialogWithOpaqueBackgroundY(dialog, this);
 }
 
-void ucacoinGUI::showHide(bool show){
-    if(!op) op = new QLabel(this);
-    if(!show){
+void UCACoinGUI::showHide(bool show)
+{
+    if (!op) op = new QLabel(this);
+    if (!show) {
         op->setVisible(false);
         opEnabled = false;
-    }else{
+    } else {
         QColor bg("#000000");
         bg.setAlpha(200);
-        if(!isLightTheme()){
+        if (!isLightTheme()) {
             bg = QColor("#00000000");
             bg.setAlpha(150);
         }
@@ -552,11 +583,13 @@ void ucacoinGUI::showHide(bool show){
     }
 }
 
-int ucacoinGUI::getNavWidth(){
+int UCACoinGUI::getNavWidth()
+{
     return this->navMenu->width();
 }
 
-void ucacoinGUI::openFAQ(int section){
+void UCACoinGUI::openFAQ(int section)
+{
     showHide(true);
     SettingsFaqWidget* dialog = new SettingsFaqWidget(this);
     if (section > 0) dialog->setSection(section);
@@ -566,10 +599,10 @@ void ucacoinGUI::openFAQ(int section){
 
 
 #ifdef ENABLE_WALLET
-bool ucacoinGUI::addWallet(const QString& name, WalletModel* walletModel)
+bool UCACoinGUI::addWallet(const QString& name, WalletModel* walletModel)
 {
     // Single wallet supported for now..
-    if(!stackedContainer || !clientModel || !walletModel)
+    if (!stackedContainer || !clientModel || !walletModel)
         return false;
 
     // set the model for every view
@@ -584,32 +617,36 @@ bool ucacoinGUI::addWallet(const QString& name, WalletModel* walletModel)
     settingsWidget->setWalletModel(walletModel);
 
     // Connect actions..
-    connect(masterNodesWidget, &MasterNodesWidget::message, this, &ucacoinGUI::message);
-    connect(coldStakingWidget, &MasterNodesWidget::message, this, &ucacoinGUI::message);
-    connect(topBar, &TopBar::message, this, &ucacoinGUI::message);
-    connect(sendWidget, &SendWidget::message,this, &ucacoinGUI::message);
-    connect(receiveWidget, &ReceiveWidget::message,this, &ucacoinGUI::message);
-    connect(addressesWidget, &AddressesWidget::message,this, &ucacoinGUI::message);
-    connect(settingsWidget, &SettingsWidget::message, this, &ucacoinGUI::message);
+    connect(walletModel, &WalletModel::message, this, &UCACoinGUI::message);
+    connect(masterNodesWidget, &MasterNodesWidget::message, this, &UCACoinGUI::message);
+    connect(coldStakingWidget, &ColdStakingWidget::message, this, &UCACoinGUI::message);
+    connect(topBar, &TopBar::message, this, &UCACoinGUI::message);
+    connect(sendWidget, &SendWidget::message,this, &UCACoinGUI::message);
+    connect(receiveWidget, &ReceiveWidget::message,this, &UCACoinGUI::message);
+    connect(addressesWidget, &AddressesWidget::message,this, &UCACoinGUI::message);
+    connect(settingsWidget, &SettingsWidget::message, this, &UCACoinGUI::message);
 
     // Pass through transaction notifications
-    connect(dashboard, SIGNAL(incomingTransaction(QString, int, CAmount, QString, QString)), this, SLOT(incomingTransaction(QString, int, CAmount, QString, QString)));
+    connect(dashboard, &DashboardWidget::incomingTransaction, this, &UCACoinGUI::incomingTransaction);
 
     return true;
 }
 
-bool ucacoinGUI::setCurrentWallet(const QString& name) {
+bool UCACoinGUI::setCurrentWallet(const QString& name)
+{
     // Single wallet supported.
     return true;
 }
 
-void ucacoinGUI::removeAllWallets() {
+void UCACoinGUI::removeAllWallets()
+{
     // Single wallet supported.
 }
 
-void ucacoinGUI::incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address) {
+void UCACoinGUI::incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address)
+{
     // Only send notifications when not disabled
-    if(!bdisableSystemnotifications){
+    if (!bdisableSystemnotifications) {
         // On new transaction, make an info balloon
         message((amount) < 0 ? (pwalletMain->fMultiSendNotify == true ? tr("Sent MultiSend transaction") : tr("Sent transaction")) : tr("Incoming transaction"),
             tr("Date: %1\n"
@@ -629,7 +666,7 @@ void ucacoinGUI::incomingTransaction(const QString& date, int unit, const CAmoun
 #endif // ENABLE_WALLET
 
 
-static bool ThreadSafeMessageBox(ucacoinGUI* gui, const std::string& message, const std::string& caption, unsigned int style)
+static bool ThreadSafeMessageBox(UCACoinGUI* gui, const std::string& message, const std::string& caption, unsigned int style)
 {
     bool modal = (style & CClientUIInterface::MODAL);
     // The SECURE flag has no effect in the Qt GUI.
@@ -648,13 +685,13 @@ static bool ThreadSafeMessageBox(ucacoinGUI* gui, const std::string& message, co
 }
 
 
-void ucacoinGUI::subscribeToCoreSignals()
+void UCACoinGUI::subscribeToCoreSignals()
 {
     // Connect signals to client
     uiInterface.ThreadSafeMessageBox.connect(boost::bind(ThreadSafeMessageBox, this, _1, _2, _3));
 }
 
-void ucacoinGUI::unsubscribeFromCoreSignals()
+void UCACoinGUI::unsubscribeFromCoreSignals()
 {
     // Disconnect signals from client
     uiInterface.ThreadSafeMessageBox.disconnect(boost::bind(ThreadSafeMessageBox, this, _1, _2, _3));

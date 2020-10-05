@@ -1,4 +1,5 @@
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,7 +9,7 @@
 #include <QWidget>
 #include "qt/ucacoin/pwidget.h"
 
-class ucacoinGUI;
+class UCACoinGUI;
 
 namespace Ui {
 class NavMenuWidget;
@@ -19,7 +20,7 @@ class NavMenuWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit NavMenuWidget(ucacoinGUI* mainWindow, QWidget *parent = nullptr);
+    explicit NavMenuWidget(UCACoinGUI* mainWindow, QWidget *parent = nullptr);
     ~NavMenuWidget();
 
     void loadWalletModel() override;

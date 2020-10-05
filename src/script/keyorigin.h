@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ucacoin_SCRIPT_KEYORIGIN_H
-#define ucacoin_SCRIPT_KEYORIGIN_H
+#ifndef UCACoin_SCRIPT_KEYORIGIN_H
+#define UCACoin_SCRIPT_KEYORIGIN_H
 
 #include <serialize.h>
 #include <vector>
@@ -20,7 +20,7 @@ struct KeyOriginInfo
 
     ADD_SERIALIZE_METHODS;
     template <typename Stream, typename Operation>
-    inline void SerializationOp(Stream& s, Operation ser_action, int nType, int nVersion)
+    inline void SerializationOp(Stream& s, Operation ser_action)
     {
         READWRITE(FLATDATA(fingerprint));
         READWRITE(path);
@@ -52,4 +52,4 @@ struct KeyOriginInfo
     }
 };
 
-#endif // ucacoin_SCRIPT_KEYORIGIN_H
+#endif // UCACoin_SCRIPT_KEYORIGIN_H

@@ -1,5 +1,5 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,7 +10,7 @@
 #include <QWidget>
 #include <QModelIndex>
 
-class ucacoinGUI;
+class UCACoinGUI;
 class WalletModel;
 
 namespace Ui {
@@ -26,7 +26,7 @@ class TooltipMenu : public PWidget
     Q_OBJECT
 
 public:
-    explicit TooltipMenu(ucacoinGUI* _window, QWidget *parent = nullptr);
+    explicit TooltipMenu(UCACoinGUI* _window, QWidget *parent = nullptr);
     ~TooltipMenu() override;
 
     void setIndex(const QModelIndex &index);

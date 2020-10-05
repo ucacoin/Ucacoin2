@@ -6,10 +6,6 @@
         <translation>Diyalog</translation>
     </message>
     <message>
-        <source>My Address</source>
-        <translation>Adresim</translation>
-    </message>
-    <message>
         <source>Address</source>
         <translation>Adres</translation>
     </message>
@@ -22,8 +18,8 @@
         <translation>İPTAL</translation>
     </message>
     <message>
-        <source>OK</source>
-        <translation>TAMAM</translation>
+        <source>SAVE</source>
+        <translation>KAYDET</translation>
     </message>
 </context>
 <context>
@@ -33,16 +29,8 @@
         <translation>Diyalog</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
         <source>CANCEL</source>
         <translation>İPTAL</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>TAMAM</translation>
     </message>
     <message>
         <source>Edit Contact</source>
@@ -51,10 +39,6 @@
     <message>
         <source>Set a label for the selected address</source>
         <translation>Seçili adres için etiket belirleyin</translation>
-    </message>
-    <message>
-        <source>Enter a name for the address (e.g Exchange)</source>
-        <translation>Adres için isim girin (örn. Borsa)</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -130,12 +114,12 @@
         <translation>Alıcı Adres</translation>
     </message>
     <message>
-        <source>These are your ucacoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Bunlar ödemeleri göndermek için olan ucacoin adreslerinizdir.Coinleri göndermeden önce her zaman gönderilen miktarı ve adresi kontrol edin</translation>
+        <source>These are your UCACoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Bunlar ödemeleri göndermek için olan UCACoin adreslerinizdir.Coinleri göndermeden önce her zaman gönderilen miktarı ve adresi kontrol edin</translation>
     </message>
     <message>
-        <source>These are your ucacoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Bunlar ödemeleri almak için olan ucacoin adreslerinizdirHer işlem için yeni bir adres kullanmanız önerilir.</translation>
+        <source>These are your UCACoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Bunlar ödemeleri almak için olan UCACoin adreslerinizdirHer işlem için yeni bir adres kullanmanız önerilir.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -196,6 +180,10 @@
         <translation>Tarih</translation>
     </message>
     <message>
+        <source>Type</source>
+        <translation>Yaz</translation>
+    </message>
+    <message>
         <source>(no label)</source>
         <translation>(etiket yok)</translation>
     </message>
@@ -207,28 +195,12 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>Send</source>
-        <translation>Gönder</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>No active Master Node yet</source>
-        <translation>Henüz aktif Masternode bulunmuyor</translation>
-    </message>
-    <message>
         <source>Contact name</source>
         <translation>Kişi İsmi</translation>
     </message>
     <message>
         <source>Enter address</source>
         <translation>Adres girin</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>TAMAM</translation>
     </message>
     <message>
         <source>Contacts</source>
@@ -241,14 +213,6 @@
     <message>
         <source>No contacts yet</source>
         <translation>Girilmiş bağlantı yok</translation>
-    </message>
-    <message>
-        <source>e.g. John Doe</source>
-        <translation>örn. Ad Soyad</translation>
-    </message>
-    <message>
-        <source>Enter a ucacoin address</source>
-        <translation>Bir ucacoin adresi girin</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -368,6 +332,14 @@ Stake için kaldırın</translation>
         <translation>cüzdan şifrelemesini onayla</translation>
     </message>
     <message>
+        <source>WARNING</source>
+        <translation>UYARI</translation>
+    </message>
+    <message>
+        <source>If you encrypt your wallet and lose your passphrase, you will</source>
+        <translation>Cüzdanınızı şifreler ve şifreyi kaybederseniz</translation>
+    </message>
+    <message>
         <source>ENCRYPT</source>
         <translation>ŞİFRELE</translation>
     </message>
@@ -376,16 +348,12 @@ Stake için kaldırın</translation>
         <translation>İPTAL</translation>
     </message>
     <message>
-        <source>ucacoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your UCAs from being stolen by malware infecting your computer.</source>
-        <translation>ucacoin şifreleme işlemini tamamlamak için şimdi kapanacaktır. Cüzdanınızı şifrelemenin, UCA'lerinizi bilgisayarınıza bulaşan kötücül yazılımlar tarafından çalınmasına tamamen engelleyemediğini unutmayın</translation>
+        <source>UCACoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your UCAs from being stolen by malware infecting your computer.</source>
+        <translation>UCACoin şifreleme işlemini tamamlamak için şimdi kapanacaktır. Cüzdanınızı şifrelemenin, UCA'lerinizi bilgisayarınıza bulaşan kötücül yazılımlar tarafından çalınmasına tamamen engelleyemediğini unutmayın</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Cüzdanınızı şifrelemek istediğinizden emin misiniz?</translation>
-    </message>
-    <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR UCA&lt;/b&gt;!</source>
-        <translation>Dikkat! Eğer cüzdanınızı şifrelerseniz ve şifrenizi unutursanız &lt;b&gt;Tüm Pıvlerinizi kaybedersiniz&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -427,10 +395,6 @@ Stake için kaldırın</translation>
         <source>Wallet passphrase was successfully changed.</source>
         <translation>Cüzdan parolası başarıyla değiştirildi.</translation>
     </message>
-    <message>
-        <source>Warning: The Caps Lock key is on!</source>
-        <translation>Uyarı: Caps Lock tuşu açık!</translation>
-    </message>
 </context>
 <context>
     <name>BanTableModel</name>
@@ -441,38 +405,6 @@ Stake için kaldırın</translation>
     <message>
         <source>Banned Until</source>
         <translation>Yasaklılık Bitiş Tarihi</translation>
-    </message>
-</context>
-<context>
-    <name>BlockExplorer</name>
-    <message>
-        <source>Blockchain Explorer</source>
-        <translation>Blok zinciri tarayıcı</translation>
-    </message>
-    <message>
-        <source>Back</source>
-        <translation>Geri</translation>
-    </message>
-    <message>
-        <source>Forward</source>
-        <translation>Ileri</translation>
-    </message>
-    <message>
-        <source>Address / Block / Transaction</source>
-        <translation>Adres/Blok/İşlem</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Ara</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ucacoin.conf).</source>
-        <translation>Tüm işlemler gösterilmez. Tüm işlemleri görmek için yapılandırma dosyasında txindex = 1 ayarlamanız gerekir (ucacoin.conf).
-</translation>
     </message>
 </context>
 <context>
@@ -508,10 +440,6 @@ Stake için kaldırın</translation>
         <source>Total: %1 (IPv4: %2 / IPv6: %3 / Tor: %4 / Unknown: %5)</source>
         <translation>Total: %1 (IPv4: %2 / IPv6: %3 / Tor: %4 / Bilinmeyen: %5)</translation>
     </message>
-    <message>
-        <source>Network Alert</source>
-        <translation>Ağ Uyarısı</translation>
-    </message>
 </context>
 <context>
     <name>CoinControlDialog</name>
@@ -530,6 +458,10 @@ Stake için kaldırın</translation>
     <message>
         <source>Coin Selection</source>
         <translation>Koin Seçimi</translation>
+    </message>
+    <message>
+        <source>Select UCA Outputs to Spend</source>
+        <translation>Harcama için UCA Çıktılarını Seçin</translation>
     </message>
     <message>
         <source>Dust:</source>
@@ -554,14 +486,6 @@ Stake için kaldırın</translation>
     <message>
         <source>Amount</source>
         <translation>Miktar</translation>
-    </message>
-    <message>
-        <source>Transaction Details</source>
-        <translation>İşlem Detayları</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
     </message>
     <message>
         <source>0.00 UCA</source>
@@ -601,7 +525,7 @@ Stake için kaldırın</translation>
     </message>
     <message>
         <source>Confirmations</source>
-        <translation>Doğrulamalar</translation>
+        <translation>Onaylar</translation>
     </message>
     <message>
         <source>Confirmed</source>
@@ -632,40 +556,36 @@ Stake için kaldırın</translation>
         <translation>Harcanmamış tutarın kilidini aç</translation>
     </message>
     <message>
-        <source>Copy quantity</source>
-        <translation>Miktarı kopyala</translation>
-    </message>
-    <message>
-        <source>Copy fee</source>
-        <translation>Ücreti kopyala</translation>
-    </message>
-    <message>
-        <source>Copy after fee</source>
-        <translation>Ücret sonrasını kopyala</translation>
-    </message>
-    <message>
-        <source>Copy bytes</source>
-        <translation>bytes kopyala</translation>
-    </message>
-    <message>
-        <source>Copy priority</source>
-        <translation>öncelik kopyala</translation>
-    </message>
-    <message>
-        <source>Copy dust</source>
-        <translation>dust kopyala</translation>
-    </message>
-    <message>
-        <source>Copy change</source>
-        <translation>fark kopyala</translation>
-    </message>
-    <message>
         <source>Unselect all</source>
         <translation>Tüm seçimleri kaldır</translation>
     </message>
     <message>
         <source>Please switch to "List mode" to use this function.</source>
         <translation>Bu fonksiyonu kullanmak için "Liste moduna" geçin.</translation>
+    </message>
+    <message>
+        <source>Quantity Copied</source>
+        <translation>Tutar Kopyalandı</translation>
+    </message>
+    <message>
+        <source>Amount Copied</source>
+        <translation>Miktar Kopyalandı</translation>
+    </message>
+    <message>
+        <source>Fee Copied</source>
+        <translation>İşlem ücreti Kopyalandı</translation>
+    </message>
+    <message>
+        <source>After Fee Copied</source>
+        <translation>İşlem Ücretinden Kalan Kopyalandı</translation>
+    </message>
+    <message>
+        <source>Bytes Copied</source>
+        <translation>Baytlar Kopyalandı</translation>
+    </message>
+    <message>
+        <source>Change Copied</source>
+        <translation>Değişiklik Kopyalandı</translation>
     </message>
     <message>
         <source>highest</source>
@@ -685,7 +605,7 @@ Stake için kaldırın</translation>
     </message>
     <message>
         <source>medium</source>
-        <translation>orta</translation>
+        <translation>Orta</translation>
     </message>
     <message>
         <source>low-medium</source>
@@ -716,6 +636,14 @@ Stake için kaldırın</translation>
         <translation>evet</translation>
     </message>
     <message>
+        <source>delegated to %1 for cold staking</source>
+        <translation>soğuk stakin  için %1'e devredildi</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Tümünü Seç</translation>
+    </message>
+    <message>
         <source>no</source>
         <translation>hayır</translation>
     </message>
@@ -744,10 +672,6 @@ Stake için kaldırın</translation>
         <translation>Herhangi bir alıcı %1 'den küçük bir miktar alırsa, bu etiket kırmızıya döner.</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 uuca per input.</source>
-        <translation>Her giriş için +/- %1 uuca farkedebilir.</translation>
-    </message>
-    <message>
         <source>(no label)</source>
         <translation>(etiket yok)</translation>
     </message>
@@ -761,125 +685,18 @@ Stake için kaldırın</translation>
     </message>
 </context>
 <context>
-    <name>CoinControlUcaWidget</name>
-    <message>
-        <source>Dialog</source>
-        <translation>Diyalog</translation>
-    </message>
-    <message>
-        <source>Transaction Details</source>
-        <translation>İşlem Detayları</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
-    </message>
-    <message>
-        <source>UCA:</source>
-        <translation>UCA:</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>Quantity:</source>
-        <translation>Miktar</translation>
-    </message>
-    <message>
-        <source>Fee:</source>
-        <translation>Ücret:</translation>
-    </message>
-    <message>
-        <source>Amount</source>
-        <translation>Miktar</translation>
-    </message>
-    <message>
-        <source>Label</source>
-        <translation>Etiket</translation>
-    </message>
-    <message>
-        <source>Address</source>
-        <translation>Adres</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation>Yaz</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation>Tarih</translation>
-    </message>
-    <message>
-        <source>Confirmations</source>
-        <translation>Onaylar</translation>
-    </message>
-    <message>
-        <source>CheckBox</source>
-        <translation>CheckBox</translation>
-    </message>
-    <message>
-        <source>Bytes:</source>
-        <translation>Bytes:</translation>
-    </message>
-    <message>
-        <source>Dust:</source>
-        <translation>Dust</translation>
-    </message>
-    <message>
-        <source>Change:</source>
-        <translation>Fark:</translation>
-    </message>
-    <message>
-        <source>After Fee: </source>
-        <translation>Ücret sonrası:</translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>İPTAL</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-</context>
-<context>
     <name>ColdStakingWidget</name>
     <message>
         <source>Form</source>
         <translation>Form</translation>
     </message>
     <message>
-        <source>Title</source>
-        <translation>Başlık</translation>
+        <source>Owner address (optional, if empty a new address will be created)</source>
+        <translation>Sahibinin adresi (isteğe bağlı, boş ise yeni bir adres oluşturulur)</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
-    </message>
-    <message>
-        <source>Owner Address (optional, if empty a new address will be created)</source>
-        <translation>Sahip Adresi (opsiyonel, boş bırakılırsa yeni adres yaratılır)</translation>
-    </message>
-    <message>
-        <source>List of delegated balance by address</source>
-        <translation>Delege edilmiş tutarların adrese göre listesi </translation>
-    </message>
-    <message>
-        <source>Total</source>
-        <translation>Toplam</translation>
-    </message>
-    <message>
-        <source>Unconfirmed balance will not be shown</source>
-        <translation>Onaylanmanış bakiye gösterilmez</translation>
-    </message>
-    <message>
-        <source>No balance delegated</source>
-        <translation>Delege edilmiş tutar bulunmuyor</translation>
+        <source>Total Staking:</source>
+        <translation>Toplam Staking:</translation>
     </message>
     <message>
         <source>Cold Staking</source>
@@ -894,30 +711,12 @@ Stake için kaldırın</translation>
         <translation>Delegasyon</translation>
     </message>
     <message>
-        <source>You can delegate your UCAs and let a hot node (24/7 online node)
-stake in your behalf, keeping the keys in a secure place offline.</source>
-        <translation>UCA'lerinizi offline olarak güvenli bir yerde anahtarlarınızı saklarken
-(24/7 online düğüm) olan bir sıcak düğüm ile adınıza stakeletebilirsiniz.</translation>
-    </message>
-    <message>
-        <source>Add owner address</source>
-        <translation>Sahip adresi ekle</translation>
-    </message>
-    <message>
-        <source>Delegate or Accept UCA delegation</source>
-        <translation>Delege et veya UCA delegasyonu kabul et</translation>
-    </message>
-    <message>
         <source>Delegate</source>
         <translation>Delege et</translation>
     </message>
     <message>
         <source>Clear All</source>
         <translation>Hepsini temizle</translation>
-    </message>
-    <message>
-        <source>Add the staking address</source>
-        <translation>Stakeleme adresi ekle</translation>
     </message>
     <message>
         <source>Delegated balance history</source>
@@ -936,6 +735,16 @@ stake in your behalf, keeping the keys in a secure place offline.</source>
         <translation>Delegasyonların yüklenmesinde hata:%1</translation>
     </message>
     <message>
+        <source>You can delegate your UCAs, letting a hot node (24/7 online node)
+stake on your behalf, while you keep the keys securely offline.</source>
+        <translation>Sıcak bir düğüme izin vererek UCA'lerinizi devredebilirsiniz (7/24 çevrimiçi düğüm)
+anahtarları çevrimdışı bir şekilde güvenli tutarken, kendi adınıza stake yapın.</translation>
+    </message>
+    <message>
+        <source>Enter owner address</source>
+        <translation>Varlıkların sahibinin adresini girin</translation>
+    </message>
+    <message>
         <source>No contacts available, you can go to the contacts screen and add some there!</source>
         <translation>Uygun adres bulunmuyor, AL ekranına giderek adres ekleyebilirsin.</translation>
     </message>
@@ -944,12 +753,12 @@ stake in your behalf, keeping the keys in a secure place offline.</source>
         <translation>Soğuk Stakeleme ağ üzerinde etkin değil</translation>
     </message>
     <message>
-        <source>Invalid entry</source>
-        <translation>Geçersiz giriş</translation>
+        <source>Coin Control</source>
+        <translation>Koin kontrolü</translation>
     </message>
     <message>
-        <source>Invalid entry, minimum delegable amount is 10 UCA</source>
-        <translation>Geçersiz giriş, delege edilebilir minimum tutar 10 UCA</translation>
+        <source>Invalid entry</source>
+        <translation>Geçersiz giriş</translation>
     </message>
     <message>
         <source>Owner address invalid</source>
@@ -986,10 +795,6 @@ Devam etmek istiyor musunuz?</translation>
     <message>
         <source>Coins delegated</source>
         <translation>Koinler delege edildi</translation>
-    </message>
-    <message>
-        <source>You don't have any UCA to select.</source>
-        <translation>Seçebileceğiniz UCA'iniz bulunmuyor</translation>
     </message>
     <message>
         <source>URI copied to clipboard</source>
@@ -1072,14 +877,6 @@ kopyala</translation>
         <source>Form</source>
         <translation>Form</translation>
     </message>
-    <message>
-        <source>Bob Allen</source>
-        <translation>Bob Allen</translation>
-    </message>
-    <message>
-        <source>DN6i46dytMPVhV1JMGZFuQBh7BZZ6nNLox</source>
-        <translation>DN6i46dytMPVhV1JMGZFuQBh7BZZ6nNLox</translation>
-    </message>
 </context>
 <context>
     <name>DashboardWidget</name>
@@ -1092,36 +889,12 @@ kopyala</translation>
         <translation>İşlemler</translation>
     </message>
     <message>
-        <source>You can see here the history of your account</source>
-        <translation>Burada hesabınızın geçmişini görebilirsiniz.</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Uyarı</translation>
-    </message>
-    <message>
-        <source>No transactions</source>
-        <translation>İşlem bulunmuyor</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
-    </message>
-    <message>
         <source>Staking Rewards</source>
         <translation>Stake ödülleri</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
         <source>Staking statistics</source>
         <translation>Stake İstatistikleri</translation>
-    </message>
-    <message>
-        <source>UCA</source>
-        <translation>UCA</translation>
     </message>
     <message>
         <source>Sort by</source>
@@ -1144,52 +917,8 @@ kopyala</translation>
         <translation>Filtrele</translation>
     </message>
     <message>
-        <source>LabelText</source>
-        <translation>LabelText</translation>
-    </message>
-    <message>
-        <source>You can view your account's history</source>
-        <translation>Hesap geçmişinizde görebilirsiniz</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation>Tümü</translation>
-    </message>
-    <message>
-        <source>Received</source>
-        <translation>Alındı</translation>
-    </message>
-    <message>
-        <source>Sent</source>
-        <translation>Gönderildi</translation>
-    </message>
-    <message>
-        <source>Mined</source>
-        <translation>Mined </translation>
-    </message>
-    <message>
-        <source>MN reward</source>
-        <translation>MN Ödülü</translation>
-    </message>
-    <message>
-        <source>To yourself</source>
-        <translation>Kendine</translation>
-    </message>
-    <message>
-        <source>Cold stakes</source>
-        <translation>Soğuk Stakeler</translation>
-    </message>
-    <message>
-        <source>Hot stakes</source>
-        <translation>Sıcak Stakeler</translation>
-    </message>
-    <message>
-        <source>Delegated</source>
-        <translation>Delege edilmiş</translation>
-    </message>
-    <message>
-        <source>Delegations</source>
-        <translation>Delegasyonlar</translation>
+        <source>Amount of UCA and zUCA staked.</source>
+        <translation>Stake edilmiş UCA ve zUCA miktarı</translation>
     </message>
     <message>
         <source>Please wait until the wallet is fully synced to see your correct balance</source>
@@ -1237,83 +966,12 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
         <translation>Form</translation>
     </message>
     <message>
-        <source>Transaction Details</source>
-        <translation>İşlem Detayları</translation>
-    </message>
-    <message>
-        <source>Text Label</source>
-        <translation>Etiket Yazısı</translation>
+        <source>OK</source>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <source>CANCEL</source>
         <translation>İPTAL</translation>
-    </message>
-    <message>
-        <source>SAVE</source>
-        <translation>KAYDET</translation>
-    </message>
-</context>
-<context>
-    <name>DenomGenerationDialog</name>
-    <message>
-        <source>Form</source>
-        <translation>Form</translation>
-    </message>
-    <message>
-        <source>Transaction Details</source>
-        <translation>İşlem Detayları</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
-    </message>
-    <message>
-        <source>This will unlock your wallet fully, so that anyone with access to it can spend until the wallet is closed or locked again.</source>
-        <translation>Bu cüzdanınızın kilidini kaldıracaktır, dolayısıyla erişimi olan herkes cüzdan kapatılana kadar veya tekrar kilitlenene kadar harcama yapabilir.</translation>
-    </message>
-    <message>
-        <source>5000</source>
-        <translation>5000</translation>
-    </message>
-    <message>
-        <source>100</source>
-        <translation>100</translation>
-    </message>
-    <message>
-        <source>10</source>
-        <translation>10</translation>
-    </message>
-    <message>
-        <source>1000</source>
-        <translation>1000</translation>
-    </message>
-    <message>
-        <source>50</source>
-        <translation>50</translation>
-    </message>
-    <message>
-        <source>500</source>
-        <translation>500</translation>
-    </message>
-    <message>
-        <source>5</source>
-        <translation>5</translation>
-    </message>
-    <message>
-        <source>1</source>
-        <translation>1</translation>
-    </message>
-    <message>
-        <source>Select All</source>
-        <translation>Tümünü Seç</translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>İPTAL</translation>
-    </message>
-    <message>
-        <source>SAVE</source>
-        <translation>KAYDET</translation>
     </message>
 </context>
 <context>
@@ -1355,8 +1013,8 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
         <translation>Gönderen adresini düzenle</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid ucacoin address.</source>
-        <translation>Girilen "%1" adresi geçerli bir ucacoin adresi değil.</translation>
+        <source>The entered address "%1" is not a valid UCACoin address.</source>
+        <translation>Girilen "%1" adresi geçerli bir UCACoin adresi değil.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1402,65 +1060,22 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
     </message>
 </context>
 <context>
-    <name>GovernancePage</name>
-    <message>
-        <source>Form</source>
-        <translation>Form</translation>
-    </message>
-    <message>
-        <source>GOVERNANCE</source>
-        <translation>YÖNETİM</translation>
-    </message>
-    <message>
-        <source>Update Proposals</source>
-        <translation>Teklifleri Güncelle</translation>
-    </message>
-    <message>
-        <source>Next super block:</source>
-        <translation>Sıradaki süper blok</translation>
-    </message>
-    <message>
-        <source>0</source>
-        <translation>0</translation>
-    </message>
-    <message>
-        <source>Blocks to next super block:</source>
-        <translation>Sıradaki süper bloğa kadarki blok sayısı:</translation>
-    </message>
-    <message>
-        <source>Days to budget payout (estimate):</source>
-        <translation>Bütçe ödemesine kalan gün (tahmini):</translation>
-    </message>
-    <message>
-        <source>Allotted budget:</source>
-        <translation>Ayrılmış Bütçe:</translation>
-    </message>
-    <message>
-        <source>Budget left:</source>
-        <translation>Kalan Bütçe:</translation>
-    </message>
-    <message>
-        <source>Masternodes count:</source>
-        <translation>Masternode Sayısı:</translation>
-    </message>
-</context>
-<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
         <translation>versiyon</translation>
     </message>
     <message>
-        <source>ucacoin Core</source>
-        <translation>ucacoin CORE</translation>
+        <source>UCACoin</source>
+        <translation>UCACoin</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About ucacoin Core</source>
-        <translation>ucacoin Core Hakkında </translation>
+        <source>About UCACoin</source>
+        <translation>UCACoin Hakkında </translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1510,16 +1125,16 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
         <translation>Hoşgeldiniz</translation>
     </message>
     <message>
-        <source>Welcome to ucacoin Core.</source>
-        <translation>ucacoin Core'a hoşgeldiniz.</translation>
+        <source>Welcome to UCACoin.</source>
+        <translation>UCACoin'a hoşgeldiniz.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where ucacoin Core will store its data.</source>
-        <translation>Program ilk başlatıldığında ucacoin Core'un verilerini nerede saklayacağını seçebilirsiniz.</translation>
+        <source>As this is the first time the program is launched, you can choose where UCACoin will store its data.</source>
+        <translation>Program ilk başlatıldığında UCACoin'un verilerini nerede saklayacağını seçebilirsiniz.</translation>
     </message>
     <message>
-        <source>ucacoin Core will download and store a copy of the ucacoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>ucacoin Core, ucacoin blok zincirinin bir kopyasını indirecek ve depolayacaktır. Bu dizinde en az %1GB veri saklanacak ve zamanla büyüyecektir. Ayrıca cüzdanınız da bu dizinde saklanır.</translation>
+        <source>UCACoin will download and store a copy of the UCACoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>UCACoin, UCACoin blok zincirinin bir kopyasını indirecek ve depolayacaktır. Bu dizinde en az %1GB veri saklanacak ve zamanla büyüyecektir. Ayrıca cüzdanınız da bu dizinde saklanır.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1538,8 +1153,8 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
         <translation>TAMAM</translation>
     </message>
     <message>
-        <source>ucacoin Core</source>
-        <translation>ucacoin Core</translation>
+        <source>UCACoin</source>
+        <translation>UCACoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1547,7 +1162,7 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
     </message>
     <message>
         <source>Error</source>
-        <translation>hata</translation>
+        <translation>Hata</translation>
     </message>
     <message>
         <source>%1 GB of free space available</source>
@@ -1602,19 +1217,7 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
         <source>Form</source>
         <translation>Form</translation>
     </message>
-    <message>
-        <source>user_masternode</source>
-        <translation>kullanıcı_masternode</translation>
-    </message>
-    <message>
-        <source>Address: 88.26.164.88:51474</source>
-        <translation>Adres: 88.26.164.88:51474</translation>
-    </message>
-    <message>
-        <source>Jan. 19, 2019</source>
-        <translation>Ocak. 12,2019</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>MasterNodeWizardDialog</name>
     <message>
@@ -1646,28 +1249,12 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
         <translation>Adres</translation>
     </message>
     <message>
-        <source>Create New Master Node Controller</source>
-        <translation>Yeni bir Masternode Kontrolörü Yarat</translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a ucacoin Masternode you must dedicate 10.000 UCA (the unit of ucacoin) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Yeni bir Masternode yaratmak için ağa 10.000 UCA (ucacoin birimi) ayırmanız gerekmektedir (buna rağmen koinler hala size aittir ve sahipliğini kororsunuz). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;İstediğiniz zaman devre dışı bırakabilir ve koinlerinizin kilidini kaldırabilirsiniz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <source>Make sure you have this amount of coins.</source>
         <translation>Bu miktarda koininizin olduğundan emin olunuz.</translation>
     </message>
     <message>
-        <source>Set Master Node’s Name</source>
-        <translation>Masternode'unuzun Adını Belirleyin</translation>
-    </message>
-    <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 UCA will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;10.000 UCA'lik bir transfer &lt;/p&gt;&lt;p&gt;yeni ve boş bir adrese yapılacaktır.&lt;/p&gt;&lt;p&gt;Adres Masternode'unuz ismi ile etiketlenecektir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>Set Master Node’s IP and port</source>
-        <translation>MasterNode'unuzun IP ve Portunu giriniz</translation>
     </message>
     <message>
         <source>Address of the node that must always be online running the actual master node.</source>
@@ -1676,22 +1263,6 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
     <message>
         <source>Enter IP address</source>
         <translation>IP adresini girin</translation>
-    </message>
-    <message>
-        <source>Enter Port</source>
-        <translation>Port'u girin</translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>İPTAL</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-    <message>
-        <source>e.g user_masternode</source>
-        <translation>örn. kullanıcı_masternode</translation>
     </message>
     <message>
         <source>NEXT</source>
@@ -1710,14 +1281,6 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
         <translation>IP ve Port boş olamaz</translation>
     </message>
     <message>
-        <source>Invalid port number</source>
-        <translation>Geçersiz port numarası</translation>
-    </message>
-    <message>
-        <source>Prepare master node failed..</source>
-        <translation>Masternode hazırlığı başarısız..</translation>
-    </message>
-    <message>
         <source>Invalid masternode.conf file</source>
         <translation>Geçersiz masternode.conf dosyası</translation>
     </message>
@@ -1726,56 +1289,8 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
         <translation> masternode.conf dosyası çözümleme hatası</translation>
     </message>
     <message>
-        <source>Invalid collaterall output index</source>
-        <translation>Geçersiz teminat çıktı endeksi</translation>
-    </message>
-    <message>
-        <source>Master node created!</source>
-        <translation>Masternode yaratıldı!</translation>
-    </message>
-    <message>
         <source>masternode.conf file doesn't exists</source>
         <translation> masternode.conf dosyası bulunamadı</translation>
-    </message>
-    <message>
-        <source>The recipient address is not valid, please recheck.</source>
-        <translation>Alıcı adresi geçerli değil, lütfen tekrar kontrol edin.</translation>
-    </message>
-    <message>
-        <source>The amount to pay must be larger than 0.</source>
-        <translation>Ödenecek tutar 0'dan büyük olmalıdır.</translation>
-    </message>
-    <message>
-        <source>The amount exceeds your balance.</source>
-        <translation>Miktar, bakiyenizi aşıyor.</translation>
-    </message>
-    <message>
-        <source>The total exceeds your balance when the %1 transaction fee is included.</source>
-        <translation>Toplam, %1 işlem ücreti dahil edildiğinde bakiyenizi aşıyor.</translation>
-    </message>
-    <message>
-        <source>Duplicate address found, can only send to each address once per send operation.</source>
-        <translation>Yinelenen adres bulundu, her gönderme işleminde aynı adres birden fazla girilemez.</translation>
-    </message>
-    <message>
-        <source>Transaction creation failed!</source>
-        <translation>İşlem oluşturulamadı!</translation>
-    </message>
-    <message>
-        <source>The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>İşlem reddedildi! Bu, cüzdanındaki koinlerin bir kısmının harcanması durumunda olabilir; mesela, wallet.dat dosyasının bir kopyasını kullandıysanız ve koinlerinizi harcamış fakat cüzdana harcanmış olarak işaretlenmemişse ortaya çıkabilir.</translation>
-    </message>
-    <message>
-        <source>Error: The wallet was unlocked only to anonymize coins.</source>
-        <translation>Hata: Cüzdan sadece paraları anonimleştirmek için açıldı.</translation>
-    </message>
-    <message>
-        <source>A fee %1 times higher than %2 per kB is considered an insanely high fee.</source>
-        <translation>Bir ücret, kB başına %2'nin %1 katından daha yüksektir, delicesine yüksek bir ücret olarak kabul edilir.</translation>
-    </message>
-    <message>
-        <source>Error: The wallet was unlocked only to anonymize coins. Unlock canceled.</source>
-        <translation>Hata: Cüzdan sadece paraları anonimleştirmek için açıldı. Kilidini açma işlemi iptal edildi.</translation>
     </message>
 </context>
 <context>
@@ -1783,18 +1298,6 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
     <message>
         <source>Form</source>
         <translation>Form</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>No active Master Node yet</source>
-        <translation>Henüz aktif Masternode bulunmuyor</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
     </message>
     <message>
         <source>Masternodes</source>
@@ -1836,14 +1339,12 @@ and vote on the treasury system receiving a periodic reward.</source>
 </translation>
     </message>
     <message>
-        <source>Cannot start masternode, the collateral transaction has not been accepted by the network.
-Please wait few more minutes.</source>
-        <translation>Masternode başlatılamadı, teminat transferi henüz ağ tarafından kabul edilmedi
-Lütfen birkaç dakika bekleyiniz.</translation>
-    </message>
-    <message>
         <source>Remote Masternode Data</source>
         <translation>Uzak Masternode Bilgisi</translation>
+    </message>
+    <message>
+        <source>What is a Masternode?</source>
+        <translation>Masternode nedir?</translation>
     </message>
     <message>
         <source>You are just about to export the required data to run a Masternode
@@ -1862,10 +1363,6 @@ Bilgiyi uzak sunucunuzdaki ucacoin.conf dosyasına yapıştırmanız ve
  başlatmanız gerekecektir, ondan sonra bu kontrol cüzdanını kullanan
 Masternodu başlatın (Listeden Masternodu seçip "başlat" tuşuna basın).
 </translation>
-    </message>
-    <message>
-        <source>Masternode exported!, check your clipboard</source>
-        <translation>Masternode bilgisi dışarı alındı! Panoyu kontrol edin</translation>
     </message>
     <message>
         <source>Delete Masternode</source>
@@ -1894,10 +1391,6 @@ Emin misiniz?</translation>
         <translation> masternode.conf dosyası bulunamadı</translation>
     </message>
     <message>
-        <source>Not enough balance to create a masternode, 10,000 UCA required.</source>
-        <translation>Masternode yaratmak için yetersiz bakiye, 10,000 UCA gerekmektedir.</translation>
-    </message>
-    <message>
         <source>Error creating masternode</source>
         <translation>Masternode yaratma hatası</translation>
     </message>
@@ -1909,24 +1402,12 @@ Emin misiniz?</translation>
         <translation>Form</translation>
     </message>
     <message>
-        <source>Master Node Information</source>
-        <translation>Masternode Bilgisi</translation>
-    </message>
-    <message>
         <source>Public Key:</source>
         <translation>Public Key:</translation>
     </message>
     <message>
-        <source>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</source>
-        <translation>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</translation>
-    </message>
-    <message>
         <source>Address: </source>
         <translation>Adres</translation>
-    </message>
-    <message>
-        <source>127.0.0.2:43223</source>
-        <translation>127.0.0.2:43223</translation>
     </message>
     <message>
         <source>Collaterall tx id:</source>
@@ -1938,38 +1419,18 @@ Emin misiniz?</translation>
     </message>
     <message>
         <source>1 Inputs</source>
-        <translation>1 çıktı</translation>
+        <translation>1 girdi</translation>
     </message>
     <message>
         <source>Status:</source>
         <translation>Durum:</translation>
     </message>
-    <message>
-        <source>MISSING</source>
-        <translation>EKSİK</translation>
-    </message>
-    <message>
-        <source>Export data to run the Master Node on a remote server</source>
-        <translation>Uzak sunucuda Masternode çalıştırmak için bilgiyi dışarı aktar</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>MyAddressRow</name>
     <message>
         <source>Form</source>
         <translation>Form</translation>
-    </message>
-    <message>
-        <source>Savings</source>
-        <translation>Birikimler</translation>
-    </message>
-    <message>
-        <source>Jan. 19, 2019</source>
-        <translation>Ocak. 12,2019</translation>
-    </message>
-    <message>
-        <source>DN6i46dytMPVhV1JMGZFuQBh7BZZ6nNLox</source>
-        <translation>DN6i46dytMPVhV1JMGZFuQBh7BZZ6nNLox</translation>
     </message>
 </context>
 <context>
@@ -2036,10 +1497,6 @@ Emin misiniz?</translation>
         <source>Form</source>
         <translation>Form</translation>
     </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -2076,8 +1533,8 @@ Emin misiniz?</translation>
         <translation>Doğrulanmamış değişikliğin harcamasını devre dışı bırakırsanız, bir işlemdeki değişiklik&lt;br/&gt;Bu işlem en az bir onay alıncaya kadar kullanılamaz.&lt;br/&gt;Bu aynı zamanda bakiyenizin nasıl hesaplandığını etkiler.</translation>
     </message>
     <message>
-        <source>Automatically open the ucacoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Yönelticideki ucacoin istemci bağlantı noktasını otomatik olarak açın. Bu, yalnızca yönlendiriciniz UPnP'yi destekliyorsa ve etkinleştirilmişse çalışır.</translation>
+        <source>Automatically open the UCACoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Yönelticideki UCACoin istemci bağlantı noktasını otomatik olarak açın. Bu, yalnızca yönlendiriciniz UPnP'yi destekliyorsa ve etkinleştirilmişse çalışır.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -2096,12 +1553,12 @@ Emin misiniz?</translation>
         <translation>Uzman</translation>
     </message>
     <message>
-        <source>Automatically start ucacoin after logging in to the system.</source>
-        <translation>Sisteme giriş yaptıktan sonra otomatik olarak ucacoin'i başlatın.</translation>
+        <source>Automatically start UCACoin after logging in to the system.</source>
+        <translation>Sisteme giriş yaptıktan sonra otomatik olarak UCACoin'i başlatın.</translation>
     </message>
     <message>
-        <source>&amp;Start ucacoin on system login</source>
-        <translation>&amp; Sistem oturum açma işleminde ucacoin'i başlat</translation>
+        <source>&amp;Start UCACoin on system login</source>
+        <translation>&amp; Sistem oturum açma işleminde UCACoin'i başlat</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -2128,8 +1585,8 @@ Emin misiniz?</translation>
         <translation>&amp;Ağ</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting ucacoin.</source>
-        <translation>Kullanıcı arabirimi dili burada ayarlanabilir. Bu ayar, ucacoin yeniden başlatıldıktan sonra geçerli olur.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting UCACoin.</source>
+        <translation>Kullanıcı arabirimi dili burada ayarlanabilir. Bu ayar, UCACoin yeniden başlatıldıktan sonra geçerli olur.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
@@ -2142,12 +1599,44 @@ https://www.transifex.com/ucacoin-project/ucacoin-project-translations</translat
         <translation>Map port using &amp;UPnP</translation>
     </message>
     <message>
+        <source>Enable automatic minting of UCA units to zUCA</source>
+        <translation>UCA birimlerinin zUCA'e otomatik basımını ektinleştir</translation>
+    </message>
+    <message>
+        <source>Enable zUCA Automint</source>
+        <translation>zUCA Otomatik basımı etkinleştir</translation>
+    </message>
+    <message>
+        <source>Enable automatic zUCA minting from specific addresses</source>
+        <translation>Belirli bir adresten otomatik zUCA minting yapılmasını etkinleştir</translation>
+    </message>
+    <message>
+        <source>Enable Automint Addresses</source>
+        <translation>Automint adreslerini etkinleştir</translation>
+    </message>
+    <message>
+        <source>Percentage of incoming UCA which get automatically converted to zUCA via Zerocoin Protocol (min: 10%)</source>
+        <translation>Zerocoin Protokolü üzerinden otomatik olarak zUCA'ye dönüştürülen gelen UCA yüzdesi (dakika: 10%)</translation>
+    </message>
+    <message>
+        <source>Percentage of autominted zUCA</source>
+        <translation>Otomatikleştirilmiş zUCA yüzdesi</translation>
+    </message>
+    <message>
+        <source>Wait with automatic conversion to Zerocoin until enough UCA for this denomination is available</source>
+        <translation>Bu bölen için yeterli UCA bulunana kadar Zerocoin'e otomatik dönüştürmede kalın</translation>
+    </message>
+    <message>
+        <source>Preferred Automint zUCA Denomination</source>
+        <translation>Tercih edilen Automint zUCA Nominal değeri</translation>
+    </message>
+    <message>
         <source>Stake split threshold:</source>
         <translation>Stake bölme eşiği</translation>
     </message>
     <message>
-        <source>Connect to the ucacoin network through a SOCKS5 proxy.</source>
-        <translation>Bir SOCKS5 proxy vasıtasıyla ucacoin ağına bağlanın.</translation>
+        <source>Connect to the UCACoin network through a SOCKS5 proxy.</source>
+        <translation>Bir SOCKS5 proxy vasıtasıyla UCACoin ağına bağlanın.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -2291,10 +1780,10 @@ https://www.transifex.com/ucacoin-project/ucacoin-project-translations</translat
     </message>
 </context>
 <context>
-    <name>ucacoinGUI</name>
+    <name>UCACoinGUI</name>
     <message>
-        <source>ucacoin Core</source>
-        <translation>ucacoin CORE</translation>
+        <source>UCACoin</source>
+        <translation>UCACoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2321,8 +1810,8 @@ https://www.transifex.com/ucacoin-project/ucacoin-project-translations</translat
         <translation>Uygulamayı sonlandır</translation>
     </message>
     <message>
-        <source>ucacoin Core client</source>
-        <translation>ucacoin Core istemci</translation>
+        <source>UCACoin client</source>
+        <translation>UCACoin istemci</translation>
     </message>
     <message>
         <source>Error</source>
@@ -2364,17 +1853,6 @@ Tip: %3
 Adres: %4
 </translation>
     </message>
-    <message>
-        <source>A fatal error occurred. ucacoin can no longer continue safely and will quit.</source>
-        <translation>Onarılamaz bir hata oluştu. ucacoin güvenli bir şekilde çalışamaz, kapanacaktır.</translation>
-    </message>
-</context>
-<context>
-    <name>PWidget</name>
-    <message>
-        <source>Wallet locked, you need to unlock it to perform this action</source>
-        <translation>Cüzdan kilitli, bu işlemi yapabilmek için cüzdanın kilidini açmalısınız.</translation>
-    </message>
 </context>
 <context>
     <name>PaymentServer</name>
@@ -2400,11 +1878,11 @@ Adres: %4
     </message>
     <message>
         <source>Cannot start ucacoin: click-to-pay handler</source>
-        <translation>ucacoin başlatılamıyor: tıkla ve ödeme işleyicisi</translation>
+        <translation>UcaCoin başlatılamıyor: tıkla ve ödeme işleyicisi</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid ucacoin address or malformed URI parameters.</source>
-        <translation>URI ayrıştırılamaz! Bunun nedeni, geçersiz bir ucacoin adresi veya hatalı biçimlendirilmiş URI parametrelerinden kaynaklanabilir.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid UCACoin address or malformed URI parameters.</source>
+        <translation>URI ayrıştırılamaz! Bunun nedeni, geçersiz bir UCACoin adresi veya hatalı biçimlendirilmiş URI parametrelerinden kaynaklanabilir.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2483,82 +1961,10 @@ Adres: %4
     </message>
 </context>
 <context>
-    <name>ProposalFrame</name>
-    <message>
-        <source>Open proposal page in browser</source>
-        <translation>Teklif sayfasını tarayıcıda açın</translation>
-    </message>
-    <message>
-        <source> remaining payment(s).</source>
-        <translation>kalan ödeme(ler).</translation>
-    </message>
-    <message>
-        <source>Yes:</source>
-        <translation>Evet:</translation>
-    </message>
-    <message>
-        <source>Abstain:</source>
-        <translation>Çekimser:</translation>
-    </message>
-    <message>
-        <source>No:</source>
-        <translation>Hayır:</translation>
-    </message>
-    <message>
-        <source>A proposal URL can be used for phishing, scams and computer viruses. Open this link only if you trust the following URL.
-</source>
-        <translation>Bir teklif URL'si şifre avcılığı, dolandırıcılık, bilgisayar virüsü amaçlarıyla kullanılabilir. Linki sadece URL'ye güveniyorsanız açın.</translation>
-    </message>
-    <message>
-        <source>Open link</source>
-        <translation>Link'i aç</translation>
-    </message>
-    <message>
-        <source>Copy link</source>
-        <translation>Link'i kopyala</translation>
-    </message>
-    <message>
-        <source>Wallet Locked</source>
-        <translation>Cüzdan Kilitlendi</translation>
-    </message>
-    <message>
-        <source>You must unlock your wallet to vote.</source>
-        <translation>Oy verebilmek için cüzdanın kilitini açmalısınız.</translation>
-    </message>
-    <message>
-        <source>Do you want to vote %1 on</source>
-        <translation>%1 olarak onaylamak istiyor musunuz?</translation>
-    </message>
-    <message>
-        <source>using all your masternodes?</source>
-        <translation>tüm Masternode'larınızı kullanarak?</translation>
-    </message>
-    <message>
-        <source>Proposal Hash:</source>
-        <translation>Teklif Hash:</translation>
-    </message>
-    <message>
-        <source>Proposal URL:</source>
-        <translation>Teklif URL:</translation>
-    </message>
-    <message>
-        <source>Confirm Vote</source>
-        <translation>Oyu Onayla</translation>
-    </message>
-    <message>
-        <source>Vote Results</source>
-        <translation>Oy Sonuçları</translation>
-    </message>
-</context>
-<context>
     <name>QObject</name>
     <message>
         <source>Amount</source>
         <translation>Miktar</translation>
-    </message>
-    <message>
-        <source>Enter a ucacoin address (e.g. %1)</source>
-        <translation>Gir bir ucacoin addres (e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2585,10 +1991,6 @@ Adres: %4
         <translation>BLOOM</translation>
     </message>
     <message>
-        <source>ZK_BLOOM</source>
-        <translation>ZK_BLOOM</translation>
-    </message>
-    <message>
         <source>UNKNOWN</source>
         <translation>BİLİNMEYEN</translation>
     </message>
@@ -2605,8 +2007,12 @@ Adres: %4
         <translation>%1 ms</translation>
     </message>
     <message>
-        <source>ucacoin Core</source>
-        <translation>ucacoin CORE</translation>
+        <source>A fatal error occurred. UCACoin can no longer continue safely and will quit.</source>
+        <translation>Onarılamaz bir hata oluştu. UCACoin güvenli bir şekilde çalışamaz, kapanacaktır.</translation>
+    </message>
+    <message>
+        <source>UCACoin</source>
+        <translation>UCACoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" does not exist.</source>
@@ -2625,10 +2031,66 @@ Adres: %4
         <translation>Masternode konfigürasyon dosyası okuma hatası: %1</translation>
     </message>
     <message>
-        <source>ucacoin Core didn't yet exit safely...</source>
-        <translation>ucacoin Core henüz güvenle kapanmadı..</translation>
+        <source>UCACoin didn't yet exit safely...</source>
+        <translation>UCACoin henüz güvenle kapanmadı..</translation>
     </message>
-</context>
+    <message>
+        <source>Cold Staking</source>
+        <translation>Soğuk Stakleme</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Bilinmeyen</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Tümü</translation>
+    </message>
+    <message>
+        <source>Contacts</source>
+        <translation>Kişiler</translation>
+    </message>
+    <message>
+        <source>Received</source>
+        <translation>Alındı</translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation>Gönderildi</translation>
+    </message>
+    <message>
+        <source>Mined</source>
+        <translation>Mined </translation>
+    </message>
+    <message>
+        <source>Minted</source>
+        <translation>Mint edildi </translation>
+    </message>
+    <message>
+        <source>MN reward</source>
+        <translation>MN Ödülü</translation>
+    </message>
+    <message>
+        <source>To yourself</source>
+        <translation>Kendine</translation>
+    </message>
+    <message>
+        <source>Cold stakes</source>
+        <translation>Soğuk Stakeler</translation>
+    </message>
+    <message>
+        <source>Hot stakes</source>
+        <translation>Sıcak Stakeler</translation>
+    </message>
+    <message>
+        <source>Delegated</source>
+        <translation>Delege edilmiş</translation>
+    </message>
+    <message>
+        <source>Delegations</source>
+        <translation>Delegasyonlar</translation>
+    </message>
+    </context>
 <context>
     <name>RPCConsole</name>
     <message>
@@ -2645,7 +2107,7 @@ Adres: %4
     </message>
     <message>
         <source>Name</source>
-        <translation>isim</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <source>Client name</source>
@@ -2700,8 +2162,8 @@ Adres: %4
         <translation>Block chain</translation>
     </message>
     <message>
-        <source>Open the ucacoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Geçerli veri dizininden ucacoin hata ayıklama günlük dosyasını açın. Bu, büyük günlük dosyaları için birkaç saniye sürebilir.</translation>
+        <source>Open the UCACoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Geçerli veri dizininden UCACoin hata ayıklama günlük dosyasını açın. Bu, büyük günlük dosyaları için birkaç saniye sürebilir.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -2741,7 +2203,7 @@ Adres: %4
     </message>
     <message>
         <source>Sent</source>
-        <translation>Gitti</translation>
+        <translation>Gönderildi</translation>
     </message>
     <message>
         <source>&amp;Peers</source>
@@ -2844,6 +2306,10 @@ Adres: %4
         <translation>Özel Yedekleme Yolu:</translation>
     </message>
     <message>
+        <source>Custom zUCA Backup Path:</source>
+        <translation>Özel zUCA Yedekleme Yolu:</translation>
+    </message>
+    <message>
         <source>Custom Backups Threshold:</source>
         <translation>Belirli Yedek Eşiği: </translation>
     </message>
@@ -2920,8 +2386,8 @@ Adres: %4
         <translation>Dışa:</translation>
     </message>
     <message>
-        <source>Welcome to the ucacoin RPC console.</source>
-        <translation>ucacoin RPC konsola hoşgeldiniz</translation>
+        <source>Welcome to the UCACoin RPC console.</source>
+        <translation>UCACoin RPC konsola hoşgeldiniz</translation>
     </message>
     <message>
         <source>&amp;Disconnect Node</source>
@@ -3039,24 +2505,12 @@ Adres: %4
         <translation>Diyalog</translation>
     </message>
     <message>
-        <source>Transaction Details</source>
-        <translation>İşlem Detayları</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
-    </message>
-    <message>
-        <source>GMeCEsjP732YA4uvBKRbp1mwvg5PGhK2C5 </source>
-        <translation>GMeCEsjP732YA4uvBKRbp1mwvg5PGhK2C5 </translation>
+        <source>My Address</source>
+        <translation>Adresim</translation>
     </message>
     <message>
         <source>CANCEL</source>
         <translation>İPTAL</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>TAMAM</translation>
     </message>
 </context>
 <context>
@@ -3064,10 +2518,6 @@ Adres: %4
     <message>
         <source>Form</source>
         <translation>Form</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
     </message>
     <message>
         <source>No address</source>
@@ -3090,14 +2540,6 @@ Adres: %4
         <translation>Al</translation>
     </message>
     <message>
-        <source>Scan the QR code or copy the address to receive UCA.</source>
-        <translation>ucacoin almak için QR kodunu okutun veya adresi kopyalayın</translation>
-    </message>
-    <message>
-        <source>No address </source>
-        <translation>Adres bulunmuyor</translation>
-    </message>
-    <message>
         <source>No available address, try unlocking the wallet</source>
         <translation>Adres bulunmuyor, cüzdan kilidini açarak deneyin</translation>
     </message>
@@ -3106,8 +2548,8 @@ Adres: %4
         <translation>Adres oluşturma hatası</translation>
     </message>
     <message>
-        <source>Change Label</source>
-        <translation>Etiketi Değiştirin</translation>
+        <source>Edit Label</source>
+        <translation>Etiketi Düzenle</translation>
     </message>
     <message>
         <source>Edit Address Label</source>
@@ -3180,24 +2622,12 @@ Adres: %4
         <translation>Diyalog</translation>
     </message>
     <message>
-        <source>New Request Payment</source>
-        <translation>Yeni Ödeme Talebi</translation>
-    </message>
-    <message>
-        <source>Lorem ipsum dolor sit amet, consectur cling elit, sed do </source>
-        <translation>Lorem ipsum dolor sit amet, consectur cling elit, sed do </translation>
-    </message>
-    <message>
         <source>Amount</source>
         <translation>Miktar</translation>
     </message>
     <message>
         <source>UCA</source>
         <translation>UCA</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
     </message>
     <message>
         <source>GMeCEsjP732YA4uvBKRbp1mwvg5PGhK2C5 </source>
@@ -3216,28 +2646,12 @@ Adres: %4
         <translation>İPTAL</translation>
     </message>
     <message>
-        <source>REQUEST</source>
-        <translation>TALEP ET</translation>
-    </message>
-    <message>
-        <source>Instead of only sharing a ucacoin address, you can create a Payment Request message which bundles up more information than is contained in just a ucacoin address.</source>
-        <translation>ucacoin adresi paylaşmak yerine, ucacoin adresinden daha fazla bilgi içeren bir Ödeme Talebi oluşturabilirsin.</translation>
-    </message>
-    <message>
         <source>Label</source>
         <translation>Etiket</translation>
     </message>
     <message>
-        <source>Enter a label to be saved within the address</source>
-        <translation>Adresin içine kaydedilecek bir etiket belirle</translation>
-    </message>
-    <message>
         <source>Description (optional)</source>
         <translation>Açıklama (opsiyonel)</translation>
-    </message>
-    <message>
-        <source>Add description </source>
-        <translation>Açıklama ekle</translation>
     </message>
     <message>
         <source>Error</source>
@@ -3255,7 +2669,11 @@ Adres: %4
         <source>New Cold Staking Address</source>
         <translation>Yeni Stakeleme Adresi</translation>
     </message>
-</context>
+    <message>
+        <source>Invalid amount</source>
+        <translation>Geçersiz miktar</translation>
+    </message>
+    </context>
 <context>
     <name>SendChangeAddressDialog</name>
     <message>
@@ -3263,34 +2681,26 @@ Adres: %4
         <translation>Diyalog</translation>
     </message>
     <message>
-        <source>Transaction Details</source>
-        <translation>İşlem Detayları</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
-    </message>
-    <message>
-        <source>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</source>
-        <translation>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</translation>
-    </message>
-    <message>
         <source>CANCEL</source>
         <translation>İPTAL</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>TAMAM</translation>
     </message>
     <message>
         <source>Custom Change Address</source>
         <translation>Özel fark adresi</translation>
     </message>
     <message>
-        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" ucacoin address</source>
+        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" UCACoin address</source>
         <translation>Giriş ve çıkış değerleri arasındaki kalan tutar "fark" UCA adresine gider</translation>
     </message>
-</context>
+    <message>
+        <source>SAVE</source>
+        <translation>KAYDET</translation>
+    </message>
+    <message>
+        <source>Invalid address</source>
+        <translation>Geçersiz adres</translation>
+    </message>
+    </context>
 <context>
     <name>SendCustomFeeDialog</name>
     <message>
@@ -3298,16 +2708,8 @@ Adres: %4
         <translation>Form</translation>
     </message>
     <message>
-        <source>Transaction Details</source>
-        <translation>İşlem Detayları</translation>
-    </message>
-    <message>
-        <source>Customize the transaction fee at your to your liking, depending on the fee value your transaction will be included or not in the blockchain.</source>
-        <translation>İsteğiniz gibi transfer masrafını değiştirebilirsiniz, belirlediğiniz değere göre blockchaine yazılır veya yazılmaz. </translation>
-    </message>
-    <message>
-        <source>Recomended</source>
-        <translation>Tavsiye edilir</translation>
+        <source>Recommended</source>
+        <translation>önerilen</translation>
     </message>
     <message>
         <source>0.00 KB</source>
@@ -3318,24 +2720,12 @@ Adres: %4
         <translation>Özel</translation>
     </message>
     <message>
-        <source>Per kilobyte</source>
-        <translation>Kilobyte başına</translation>
-    </message>
-    <message>
         <source>CANCEL</source>
         <translation>İPTAL</translation>
     </message>
     <message>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-    <message>
         <source>Customize Fee</source>
         <translation>Masrafı değiştir</translation>
-    </message>
-    <message>
-        <source>Customize the transaction fee, depending on the fee value your transaction will be included or not in the blockchain.</source>
-        <translation>İsteğiniz gibi transfer masrafını değiştirebilirsiniz, belirlediğiniz değere göre blockchaine yazılır veya yazılmaz. </translation>
     </message>
     <message>
         <source>Normal</source>
@@ -3353,7 +2743,7 @@ Adres: %4
         <source>SAVE</source>
         <translation>KAYDET</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>SendMultiRow</name>
     <message>
@@ -3361,67 +2751,15 @@ Adres: %4
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
+        <source>Enter address</source>
+        <translation>Adres girin</translation>
     </message>
-    <message>
-        <source>Add address</source>
-        <translation>Adres ekle</translation>
-    </message>
-    <message>
-        <source>Add description</source>
-        <translation>Açıklama ekle</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>SendWidget</name>
     <message>
-        <source>Send</source>
-        <translation>Gönder</translation>
-    </message>
-    <message>
-        <source>Select coin type to spend</source>
-        <translation>Harcayacağınız koin tipini seçin</translation>
-    </message>
-    <message>
-        <source>Enter a ucacoin address or contact label</source>
-        <translation>Bir ucacoin adresi veya bağlantı etiketi girin</translation>
-    </message>
-    <message>
-        <source>Amount</source>
-        <translation>Miktar</translation>
-    </message>
-    <message>
-        <source>Customize fee</source>
-        <translation>Masrafı değiştir</translation>
-    </message>
-    <message>
-        <source>Clear all</source>
-        <translation>Hepsini temizle</translation>
-    </message>
-    <message>
-        <source>Add recipient</source>
-        <translation>Alıcı Ekle</translation>
-    </message>
-    <message>
-        <source>Reset to default</source>
-        <translation>Varsayılana konumlandır</translation>
-    </message>
-    <message>
-        <source>Total to send</source>
-        <translation>Gönderilecek toplam</translation>
-    </message>
-    <message>
-        <source>Send UCA</source>
-        <translation>UCA Gönder</translation>
-    </message>
-    <message>
         <source>Total remaining from the selected UTXO</source>
         <translation>Seçili UTXO'dan kalan toplam</translation>
-    </message>
-    <message>
-        <source>Total remaining</source>
-        <translation>Toplam kalan</translation>
     </message>
     <message>
         <source>Customize Fee</source>
@@ -3464,34 +2802,8 @@ Bu koinler artık soğuk stakelenmeyecektir.</translation>
         <translation>Ödeme gönderildi</translation>
     </message>
     <message>
-        <source>Sending %1 to address %2
-</source>
-        <translation>%1 adresinden %2 adresine gönderiliyor
-</translation>
-    </message>
-    <message>
-        <source>Sending %1 to addresses:
-%2</source>
-        <translation>%1 adresinden
-%2 adreslerine gönderiliyor</translation>
-    </message>
-    <message>
-        <source>Too much inputs (</source>
-        <translation>Çok fazla girdi (</translation>
-    </message>
-    <message>
-        <source>) needed.
-Maximum allowed: </source>
-        <translation>) gerekli.
-Maksimum bırakılan: </translation>
-    </message>
-    <message>
         <source>Address label update failed for address: %1</source>
         <translation>%1 adresi için adres etiketi güncellemesi başarısız oldu</translation>
-    </message>
-    <message>
-        <source>Invalid change address</source>
-        <translation>Geçersiz fark adresi</translation>
     </message>
     <message>
         <source>Invalid URI</source>
@@ -3506,8 +2818,12 @@ Maksimum bırakılan: </translation>
         <translation>Belirlenmiş masraf %1</translation>
     </message>
     <message>
-        <source>You don't have any UCA to select.</source>
-        <translation>Seçebileceğiniz UCA'iniz bulunmuyor</translation>
+        <source>Coin Control</source>
+        <translation>Koin kontrolü</translation>
+    </message>
+    <message>
+        <source>Open URI</source>
+        <translation>Open URI</translation>
     </message>
     <message>
         <source>No contacts available, you can go to the contacts screen and add some there!</source>
@@ -3553,44 +2869,12 @@ Maksimum bırakılan: </translation>
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
-    </message>
-    <message>
-        <source>Backup Wallet </source>
-        <translation>Cüzdanı Yedekle</translation>
-    </message>
-    <message>
         <source>Change Wallet Passphrase</source>
         <translation>Cüzdan Parolasını Değiştir</translation>
     </message>
     <message>
-        <source>Keep your wallet safe doing regular backups, store your backup file externally.
-This option creates a wallet.dat file that can be used to recover your whole balance (transactions and addresses) from another device.</source>
-        <translation>Düzenli yedekler alarak cüzdanınızı güvende tutun, yedeklerinizi dışarıda saklayın.
-Bu opsiyon tüm bakiyenizi (işlemleri ve adresleri) kurtarmak için kullanacağınız yeni bir wallet.dat dosyası yaratır .</translation>
-    </message>
-    <message>
-        <source>This will decrypt the whole wallet data and encrypt it back with the new passphrase.
-Remember to write it down and store it safely, otherwise you might lose access to your funds.</source>
-        <translation>Bu işlem tüm bilginin şifresini çözecek ve yeni parola ile şifreleyecektir.
-Paranıza erişiminizi kaybetmemek için yazmayı ve güvenli bir yerde saklamayı unutmayın.</translation>
-    </message>
-    <message>
         <source>Where</source>
         <translation>Yer</translation>
-    </message>
-    <message>
-        <source>Set a folder location</source>
-        <translation>Bir dosya klasör yeri belirleyin</translation>
-    </message>
-    <message>
-        <source>Backup</source>
-        <translation>Yedek</translation>
     </message>
     <message>
         <source>Change Passphrase</source>
@@ -3624,24 +2908,8 @@ Paranıza erişiminizi kaybetmemek için yazmayı ve güvenli bir yerde saklamay
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
-    </message>
-    <message>
-        <source>Decrypt Address Result</source>
-        <translation>Adres Şifre Çözüm Sonucu</translation>
-    </message>
-    <message>
         <source>Import Address</source>
         <translation>Adres içe aktar</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation>temizle</translation>
     </message>
     <message>
         <source>BIP38 Tool</source>
@@ -3668,10 +2936,6 @@ Paranıza erişiminizi kaybetmemek için yazmayı ve güvenli bir yerde saklamay
         <translation>Parola</translation>
     </message>
     <message>
-        <source>Enter a passphrase </source>
-        <translation>Bir Parola gir</translation>
-    </message>
-    <message>
         <source>Decrypted address result</source>
         <translation>Adres Şifre Çözüm Sonucu</translation>
     </message>
@@ -3684,16 +2948,12 @@ Paranıza erişiminizi kaybetmemek için yazmayı ve güvenli bir yerde saklamay
         <translation>ŞİFRE ÇÖZME ANAHTARI</translation>
     </message>
     <message>
-        <source>Enter a ucacoin address</source>
-        <translation>Bir ucacoin adresi girin</translation>
+        <source>Enter address</source>
+        <translation>Adres girin</translation>
     </message>
     <message>
-        <source>Add address</source>
-        <translation>Adres ekle</translation>
-    </message>
-    <message>
-        <source>Write a message</source>
-        <translation>Bir mesaj yaz</translation>
+        <source>Enter passphrase</source>
+        <translation>Şifre sözcüğünüzü girin</translation>
     </message>
     <message>
         <source>Encrypted Key</source>
@@ -3775,20 +3035,12 @@ Paranıza erişiminizi kaybetmemek için yazmayı ve güvenli bir yerde saklamay
         <source>Error adding key to the wallet</source>
         <translation>Cüzdana anahtar ekleme hatası</translation>
     </message>
-    <message>
-        <source>Successfully added ucaate key to the wallet</source>
-        <translation>Özel cüzdana anahtar başarıyla eklendi</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>SettingsConsoleWidget</name>
     <message>
         <source>Form</source>
         <translation>Form</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
     </message>
     <message>
         <source>Console</source>
@@ -3797,10 +3049,6 @@ Paranıza erişiminizi kaybetmemek için yazmayı ve güvenli bir yerde saklamay
     <message>
         <source>Console input</source>
         <translation>Konsol Girişi</translation>
-    </message>
-    <message>
-        <source>Command Line Options </source>
-        <translation>Komut Satırı Seçenekleri</translation>
     </message>
     <message>
         <source>Open Debug File</source>
@@ -3813,8 +3061,8 @@ Verify that you have installed a predetermined text editor.</source>
 Önceden belirlenmiş bir text editleme programınız olup olmadığını kontrol ediniz.</translation>
     </message>
     <message>
-        <source>Welcome to the ucacoin RPC console.</source>
-        <translation>ucacoin RPC konsola hoşgeldiniz</translation>
+        <source>Welcome to the UCACoin RPC console.</source>
+        <translation>UCACoin RPC konsola hoşgeldiniz</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and %1 to clear screen.</source>
@@ -3834,14 +3082,6 @@ Verify that you have installed a predetermined text editor.</source>
     <message>
         <source>Form</source>
         <translation>Form</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
     </message>
     <message>
         <source>Reset to default</source>
@@ -3885,7 +3125,7 @@ Verify that you have installed a predetermined text editor.</source>
     </message>
     <message>
         <source>default</source>
-        <translation>halihazırda</translation>
+        <translation>varsayılan</translation>
     </message>
     <message>
         <source>Options reset succeed</source>
@@ -3893,79 +3133,95 @@ Verify that you have installed a predetermined text editor.</source>
     </message>
 </context>
 <context>
+    <name>SettingsExportCSV</name>
+    <message>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <source>Where</source>
+        <translation>Yer</translation>
+    </message>
+    <message>
+        <source>Export Address List</source>
+        <translation>Adres listesini çıkart</translation>
+    </message>
+    <message>
+        <source>Confirmed</source>
+        <translation>Doğrulandı</translation>
+    </message>
+    <message>
+        <source>Watch-only</source>
+        <translation>Sadece izle</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Tarih</translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation>Yaz</translation>
+    </message>
+    <message>
+        <source>Label</source>
+        <translation>Etiket</translation>
+    </message>
+    <message>
+        <source>Address</source>
+        <translation>Adres</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>Kimlik</translation>
+    </message>
+    </context>
+<context>
     <name>SettingsFaqWidget</name>
     <message>
         <source>Form</source>
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
-    </message>
-    <message>
-        <source>1) What is ucacoin?</source>
-        <translation>1)ucacoin nedir?</translation>
+        <source>1) What is UCACoin?</source>
+        <translation>1)UCACoin nedir?</translation>
     </message>
     <message>
         <source>2) Why are my UCA unspendable?</source>
         <translation>2) UCA'lerim neden harcanabilir değil?</translation>
     </message>
     <message>
-        <source>6) How do I receive UCA?</source>
-        <translation>6) Nasıl UCA alabilirim?</translation>
-    </message>
-    <message>
-        <source>7) How do I stake UCA?</source>
-        <translation>7) Nasıl UCA staking yapabilirim?</translation>
-    </message>
-    <message>
-        <source>8) Where I should go if I need support?</source>
-        <translation>8) Yardıma ihtiyacım olduğunda nereye gitmeliyim?</translation>
-    </message>
-    <message>
-        <source>9) What is a Master Node?</source>
-        <translation>9) Masternode nedir?</translation>
-    </message>
-    <message>
-        <source>10) What is a Master Node Controller?</source>
-        <translation>10) Masternode kontrolörü nedir?</translation>
-    </message>
-    <message>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <source>What is ucacoin?</source>
-        <translation>ucacoin Nedir?</translation>
+        <source>What is UCACoin?</source>
+        <translation>UCACoin Nedir?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           ucacoin is a form of digital online money using blockchain technology
+                           UCACoin is a form of digital online money using blockchain technology
                            that can be easily transferred globally, instantly, and with near
-                           zero fees.  ucacoin incorporates market leading security &amp;
-                           privacy and is also the PoS (Proof of Stake) Cryptocurrency.
-                           
+                           zero fees.  UCACoin incorporates market leading security &amp;
+                           privacy and is also the first PoS (Proof of Stake) Cryptocurrency
+                           to implement ZeroCoin(zUCA) and Zerocoin staking.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           ucacoin utilizes a Proof of Stake (PoS) consensus system algorithm,
-                           allowing all owners of ucacoin to participate in earning block rewards
+                           UCACoin utilizes a Proof of Stake (PoS) consensus system algorithm,
+                           allowing all owners of UCACoin to participate in earning block rewards
                            while securing the network with full node wallets, as well as to
                            run Masternodes to create and vote on proposals.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           ucacoin blockchain teknolojisini kullanan bir dijital online para birimidir
+                           UCACoin blockchain teknolojisini kullanan bir dijital online para birimidir
                            global olarak anında ve sıfıra yakın ücretlerle transfer edilebilir
-                           ucacoin sektördeki en ileri güvenlik ve gizliliğe sahip olmakla birliktei
-                          uygulayan PoS (Proof of Stake) Kriptoparadır.
+                           UCACoin sektördeki en ileri güvenlik ve gizliliğe sahip olmakla birlikte
+                          Zerocoin (zUCA) ve Zerocoin staking özelliklerini
+                          uygulayan ilk PoS (Proof of Stake) Kriptoparadır.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           ucacoin bir  Proof of Stake (PoS) konsensüs algoritma sistemi kullanmaktadır,
-bu sayede ucacoin sahipleri blok ödülü kazanımına katılabilmektedir
+                           UCACoin bir  Proof of Stake (PoS) konsensüs algoritma sistemi kullanmaktadır,
+bu sayede UCACoin sahipleri blok ödülü kazanımına katılabilmektedir
                            ağı diğer tam düğüm sahibi cüzdanlarla birlikte güvenli hale getirirler
                            ayrıca Masternode oluşturarak tekliflere oy verirler.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -3982,136 +3238,47 @@ bu sayede ucacoin sahipleri blok ödülü kazanımına katılabilmektedir
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           Newly received ucacoin requires 6 confirmations on the network
+                           Newly received UCACoin requires 6 confirmations on the network
                            to become eligible for spending which can take ~6 minutes.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           Your ucacoin wallet also needs to be completely synchronized
+                           Your UCACoin wallet also needs to be completely synchronized
                            to see and spend balances on the network.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           Yeni alınmış ucacoin'lerin harcanabilr hale gelmesi için ağdan 6 onay
+                           Yeni alınmış UCACoin'lerin harcanabilr hale gelmesi için ağdan 6 onay
                            alması gerekmektedir, bu işlem yaklaşık olarak 6 dakika sürer.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           ucacoin cüzdanınızın ağdaki bakiyesini görebilmesi ve harcayabilmesi
+                           UCACoin cüzdanınızın ağdaki bakiyesini görebilmesi ve harcayabilmesi
                            için tamamen senkronize olması gerekmektedir.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </translation>
+    </message>
+    <message>
+        <source>3</source>
+        <translation>3</translation>
+    </message>
+    <message>
+        <source>4</source>
+        <translation>4</translation>
+    </message>
+    <message>
+        <source>5</source>
+        <translation>5</translation>
     </message>
     <message>
         <source>6</source>
         <translation>6</translation>
     </message>
     <message>
-        <source>How do I receive UCA?</source>
-        <translation>Nasıl UCA alabilirim?</translation>
-    </message>
-    <message>
-        <source>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           UCA can be spent and sent to any ucacoin address. The receiver will
-                           receive standard ucacoin.
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           If you want more UCA you will need to mint your balance.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </source>
-        <translation>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           UCA herhangi bir ucacoin adresine gönderilerek harcanabilir.
-                           Alıcı standart ucacoin alacaktır fakat ucacoin kaynağı
-UCA Protokolü ile anonimleştirilmiş olacaktır.
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           Daha fazla UCA istiyorsanız, mintlemeniz gerekecektir.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </translation>
-    </message>
-    <message>
-        <source>7</source>
-        <translation>7</translation>
-    </message>
-    <message>
-        <source>How do I stake UCA?</source>
-        <translation>Nasıl UCA staking yapabilirim?</translation>
-    </message>
-    <message>
-        <source>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           To Stake ucacoin:
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           &lt;ol&gt;&lt;li&gt;
-                           Make sure your wallet is completely synchronized and you are using the latest release.
-                           &lt;li&gt;
-                           You must have a balance of ucacoin with a minimum of 101 confirmations.
-                           &lt;li&gt;
-                           Your wallet must stay online and be unlocked for anonymization and staking purposes.
-                           &lt;li&gt;
-                           Once all those steps are followed staking should be enabled.
-                           &lt;li&gt;
-                           You can see the status of staking in the wallet by mousing over the package icon in the row on the top left of the wallet interface. There package will be lit up and will state "Staking Enabled" to indicate it is staking.  Using the command line interface (ucacoin-cli); the command &lt;i&gt;getstakingstatus&lt;/i&gt; will confirm that staking is active.
-                           &lt;/li&gt;&lt;/ol&gt;
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </source>
-        <translation>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           ucacoin Staking yapabilmek için:
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           &lt;ol&gt;&lt;li&gt;
-                           Cüzdanınızı tamamen senkronize olduğundan ve son versiyonu kullandığınızdan emin olun.
-                           &lt;li&gt;
-                           En az 101 onay almış bir ucacoin bakiyeniz olmaldır.
-                           &lt;li&gt;
-                           Cüzdanınız online olmalı, stake ve anonimleştirme işlemleri için kilidini açılmış olmalıdır.
-                           &lt;li&gt;
-                           Bu adımlar tamamlanmışsa staking çalışıyor olmalıdır.
-                           &lt;li&gt;
-                           Staking durumunu kontrol etmek için fare imlecini cüzdanın sol üst kısmındaki paket ikonu üzerinde tuttuğunuzda görebilirsiniz. Yaptığını göstermek için paket ikonunun ışığı yanacak ve "Staking aktif" yazacaktır. Komut satırı arayüzünden (ucacoin-cli);  &lt;i&gt;getstakingstatus&lt;/i&gt; komutunu çalıştırarak staking'in etkin olduğunu onaylayabilirsiniz.
-                           &lt;/li&gt;&lt;/ol&gt;
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </translation>
-    </message>
-    <message>
-        <source>8</source>
-        <translation>8</translation>
-    </message>
-    <message>
-        <source>Where I should go if I need support?</source>
-        <translation>Yardıma ihtiyacım olduğunda nereye gitmeliyim?</translation>
-    </message>
-    <message>
-        <source>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           We have support channels in most of our official chat groups, for example
-                           &lt;a style='color: #b088ff' href='https://Discord.ucacoin.com'&gt;
-                           #support in our Discord&lt;/a&gt;.
-                           If you prefer to submit a ticket, One can be
-                           &lt;a style='color: #b088ff' href='https://ucacoin.FreshDesk.com'&gt;
-                           our Freshdesk support site&lt;/a&gt;.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </source>
-        <translation>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           Resmi chat gruplarımızın çoğunun içinde destek kanalları bulunmaktadır, örneğin
-                           &lt;a style='color: #b088ff' href='https://Discord.ucacoin.com'&gt;
-                           Discord içinnde #support &lt;/a&gt;.
-                           Bir destek talebi açmak isterseniz,bunu
-                           &lt;a style='color: #b088ff' href='https://ucacoin.FreshDesk.com'&gt;
-                           Freshdesk destek sitesinden yapabilirsiniz&lt;/a&gt;.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </translation>
-    </message>
-    <message>
-        <source>9</source>
-        <translation>9</translation>
-    </message>
-    <message>
-        <source>What is a Master Node?</source>
+        <source>What is a Masternode?</source>
         <translation>Masternode nedir?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           A masternode is a computer running a full node ucacoin core wallet with a
+                           A masternode is a computer running a full node UCAcoin wallet with a
                            requirement of 10,000 UCA secured collateral to provide extra services
                            to the network and in return, receive a portion of the block reward
                            regularly.  These services include:
@@ -4134,10 +3301,10 @@ UCA Protokolü ile anonimleştirilmiş olacaktır.
                            Masternode Perks:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;Participate in ucacoin Governance&lt;/li&gt;
+                           &lt;li&gt;Participate in UCACoin Governance&lt;/li&gt;
                            &lt;li&gt;Earn Masternode Rewards&lt;/li&gt;
                            &lt;li&gt;Commodity option for future sale&lt;/li&gt;
-                           &lt;li&gt;Help secure the ucacoin network&lt;/li&gt;
+                           &lt;li&gt;Help secure the UCACoin network&lt;/li&gt;
                            &lt;/ul&gt;
                            &lt;/p&gt;&lt;p align="justify"&gt;
 
@@ -4153,7 +3320,7 @@ UCA Protokolü ile anonimleştirilmiş olacaktır.
                          </source>
         <translation>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           Tam düğüm ucacoin core cüzdanını çalıştıran, gereken 10,000 UCA
+                           Tam düğüm UCAcoin cüzdanını çalıştıran, gereken 10,000 UCA
                            teminat bakiyesini barındırarak ağa ekstra hizmetler sunan ve
                            karşılığında da her blok ödülünden düzenli olarak pay alan bir
                            bilgisayardır.Bu hizmetler aşağıdaki gibidir:
@@ -4176,10 +3343,10 @@ işletim maliyetleri sonrası pasif bir gelir sunar.
                            Masternode Avantajları:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;ucacoin yönetimine katılın&lt;/li&gt;
+                           &lt;li&gt;UCACoin yönetimine katılın&lt;/li&gt;
                            &lt;li&gt;Masternode Ödülleri kazanın&lt;/li&gt;
                            &lt;li&gt;İlerde satabileceğiniz bir varlık opsiyonu&lt;/li&gt;
-                           &lt;li&gt;ucacoin ağını güvenliğine destek olun&lt;/li&gt;
+                           &lt;li&gt;UCACoin ağını güvenliğine destek olun&lt;/li&gt;
                            &lt;/ul&gt;
                            &lt;/p&gt;&lt;p align="justify"&gt;
 
@@ -4193,18 +3360,6 @@ işletim maliyetleri sonrası pasif bir gelir sunar.
                            &lt;/ul&gt;
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </translation>
-    </message>
-    <message>
-        <source>10</source>
-        <translation>10</translation>
-    </message>
-    <message>
-        <source>What is a Master Node Controller?</source>
-        <translation>Masternode Kontrolörü nedir?</translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;A Masternode Controller wallet is where the 10,000 UCA collateral can reside during a Controller-Remote masternode setup. It is a wallet that can activate the remote masternode wallet/s and allows you to keep your collateral coins offline while the remote masternode remains online. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;Masternode Kontrol cüzdanı Masternode Uzaktan-Kontrol kurulumu yapırken içinde 10,000 UCA teminatını bulundurur. Bu cüzdan uzak masternode cüzdan/larını etkinleştirebilir, ayrıca masternodlarınız online iken teminatınızı bağlantı dışında tutmanıza imkan sağlar. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Frequently Asked Questions</source>
@@ -4226,40 +3381,20 @@ işletim maliyetleri sonrası pasif bir gelir sunar.
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
         <source>Network Monitor</source>
         <translation>Ağ Gözlemcisi</translation>
     </message>
     <message>
         <source>Information</source>
-        <translation>bilgi</translation>
+        <translation>Bilgi</translation>
     </message>
     <message>
         <source>General</source>
         <translation>Genel</translation>
     </message>
     <message>
-        <source>Client Version: </source>
-        <translation>Uygulama versionu</translation>
-    </message>
-    <message>
         <source>User Agent:</source>
         <translation>Kullanıcı Aracısı:</translation>
-    </message>
-    <message>
-        <source>Using BerkeleyDB version:</source>
-        <translation>BerkeleyDB version</translation>
-    </message>
-    <message>
-        <source>Datadir: </source>
-        <translation>Bilgi Dizini:</translation>
-    </message>
-    <message>
-        <source>Startup Time:  </source>
-        <translation>Başlatma zamanı</translation>
     </message>
     <message>
         <source>Network</source>
@@ -4270,28 +3405,12 @@ işletim maliyetleri sonrası pasif bir gelir sunar.
         <translation>İsim</translation>
     </message>
     <message>
-        <source>Number Connections:</source>
-        <translation>Bağlantı Sayısı:</translation>
-    </message>
-    <message>
         <source>Blockchain</source>
         <translation>Blockchain</translation>
     </message>
     <message>
-        <source>Current Number of Blocks:</source>
-        <translation>Mevcut Blok Sayısı</translation>
-    </message>
-    <message>
-        <source>Last Block Time:</source>
-        <translation>Son Blok Zamanı</translation>
-    </message>
-    <message>
         <source>Memory Pool</source>
         <translation>Hafıza Havuzu</translation>
-    </message>
-    <message>
-        <source>Current Number of Transactions:</source>
-        <translation>Mevcut İşlem Sayısı:</translation>
     </message>
     <message>
         <source>Main</source>
@@ -4333,20 +3452,12 @@ işletim maliyetleri sonrası pasif bir gelir sunar.
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
         <source>Window</source>
         <translation>Pencere</translation>
     </message>
     <message>
         <source>Customize the application window options</source>
         <translation>Uygulama Penceresi seçeneklerini değiştir</translation>
-    </message>
-    <message>
-        <source>CheckBox</source>
-        <translation>CheckBox</translation>
     </message>
     <message>
         <source>Reset to default</source>
@@ -4373,8 +3484,8 @@ işletim maliyetleri sonrası pasif bir gelir sunar.
         <translation>Komut onay parça sayısı</translation>
     </message>
     <message>
-        <source>Start ucacoin on system login</source>
-        <translation>Sistem açılışında ucacoin'i başlat</translation>
+        <source>Start UCACoin on system login</source>
+        <translation>Sistem açılışında UCACoin'i başlat</translation>
     </message>
     <message>
         <source>Minimize to the tray instead of the taskbar</source>
@@ -4430,14 +3541,6 @@ Emin misiniz?
         <translation>ÇokluGönder için yeni alıcı</translation>
     </message>
     <message>
-        <source>Label (optional)</source>
-        <translation>Etiket (Opsiyonel)</translation>
-    </message>
-    <message>
-        <source>Enter a label to add this address in your address book</source>
-        <translation>Adres defterinize kaydetmek için bir etiket girin</translation>
-    </message>
-    <message>
         <source>Percentage</source>
         <translation>Yüzde</translation>
     </message>
@@ -4453,20 +3556,20 @@ Emin misiniz?
         <translation>TextLabel</translation>
     </message>
     <message>
-        <source>No active Master Node yet</source>
-        <translation>Henüz aktif Masternode bulunmuyor</translation>
+        <source>N/A</source>
+        <translation>N/A</translation>
     </message>
     <message>
         <source>CheckBox</source>
         <translation>CheckBox</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other ucacoin addresses after it matures.</source>
-        <translation>ÇokluGönder olgunlaşmış masternode ve staking ödüllerinizin 100% 'üne kadarını diğer ucacoin adreslerine otomatik olarak göndermenizi sağlar. </translation>
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other UCACoin addresses after it matures.</source>
+        <translation>ÇokluGönder olgunlaşmış masternode ve staking ödüllerinizin 100% 'üne kadarını diğer UCACoin adreslerine otomatik olarak göndermenizi sağlar. </translation>
     </message>
     <message>
         <source>Active</source>
-        <translation>aktif</translation>
+        <translation>Aktif</translation>
     </message>
     <message>
         <source>Disable</source>
@@ -4503,7 +3606,7 @@ Emin misiniz?
     <message>
         <source>The entered address: %1 is invalid.
 Please check the address and try again.</source>
-        <translation>Girili adres: %1 geçersiz.
+        <translation>Girilmiş adres: %1 geçersiz.
 Lütfen adresi kontrol ediniz ve tekrar deneyiniz.</translation>
     </message>
     <message>
@@ -4556,28 +3659,8 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation>temizle</translation>
-    </message>
-    <message>
         <source>Sign/Verify Message</source>
         <translation>Mesaj İmza/Onay</translation>
-    </message>
-    <message>
-        <source>Enter a ucacoin address or contact label</source>
-        <translation>Bir ucacoin adresi veya bağlantı etiketi girin</translation>
-    </message>
-    <message>
-        <source>Add address</source>
-        <translation>Adres ekle</translation>
     </message>
     <message>
         <source>Sign</source>
@@ -4596,8 +3679,8 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Mesaj</translation>
     </message>
     <message>
-        <source>Write a message</source>
-        <translation>Bir mesaj yaz</translation>
+        <source>Enter address</source>
+        <translation>Adres girin</translation>
     </message>
     <message>
         <source>Signature</source>
@@ -4683,18 +3766,6 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>CheckBox</source>
-        <translation>CheckBox</translation>
-    </message>
-    <message>
-        <source>RadioButton</source>
-        <translation>RadioButton</translation>
-    </message>
-    <message>
         <source>Reset to default</source>
         <translation>Varsayılana konumlandır</translation>
     </message>
@@ -4703,20 +3774,12 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Değişikliklerden vazgeç</translation>
     </message>
     <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
-    </message>
-    <message>
         <source>Wallet</source>
-        <translation>cüzdan</translation>
+        <translation>Cüzdan</translation>
     </message>
     <message>
         <source>Customize the internal wallet options</source>
         <translation>Cüzdan içi opsiyonları özelleştir</translation>
-    </message>
-    <message>
-        <source>Stake split threshold:</source>
-        <translation>Stake bölme eşiği</translation>
     </message>
     <message>
         <source>Spend unconfirmed change</source>
@@ -4731,16 +3794,8 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Düğüm ağ opsiyonlarını özelleştir</translation>
     </message>
     <message>
-        <source>Proxy IP:</source>
-        <translation>Proksi IP:</translation>
-    </message>
-    <message>
         <source>Enter proxy IP</source>
         <translation>Proksi IP'sini gir</translation>
-    </message>
-    <message>
-        <source>Port:</source>
-        <translation>Port:</translation>
     </message>
     <message>
         <source>Map port using UPnP</source>
@@ -4749,10 +3804,6 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     <message>
         <source>Allow incoming connections</source>
         <translation>Gelen bağlantılara izin ver</translation>
-    </message>
-    <message>
-        <source>Connect through SOCKS5 proxy (default proxy):</source>
-        <translation>SOCKS5 proksisi üzerinden bağlan (varsayılan proksi)</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -4770,52 +3821,20 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
-    </message>
-    <message>
         <source>Wallet Repair</source>
         <translation>Cüzdan Onarımı</translation>
-    </message>
-    <message>
-        <source>The buttons below will restart the wallet with command-line options to repair this wallet, fix issues with corrupt blockchain files or missing/obsolete transactions.</source>
-        <translation>Aşağıdaki düğmeleri kullanarak cüzdanı tekrar başlattığınızda cüzdan onarımı, bozuk blockchain dosyaları veya eksik/süresi geçmiş işlemlerden kaynaklı hataları düzeltmek için komut satırı opsiyonlarıyla açılacaktır.</translation>
-    </message>
-    <message>
-        <source>Attempt to recover private keys from a corrupt wallet.dat.</source>
-        <translation>Bozuk bir wallet.dat'tan özel anahtarları kurtarmayı deneyin.</translation>
-    </message>
-    <message>
-        <source>Rescan the blockchain for missing wallet transactions.</source>
-        <translation>Eksik cüzdan transferleri için blockchaini tekrar tara.</translation>
-    </message>
-    <message>
-        <source>Recover transactions from blockchain (keep-meta-data, e.g. account owner).</source>
-        <translation>Blockchainden işlemleri kurtarın (meta verileri koru, örn. hesap sahibi)</translation>
-    </message>
-    <message>
-        <source>Recover transactions from blockchain (drop meta-data).</source>
-        <translation>İşlemleri blok zincirden kurtarın (meta verileri bırakın).</translation>
     </message>
     <message>
         <source>Upgrade wallet to latest format on startup. (Note: this is NOT an update of the wallet itself)</source>
         <translation>Cüzdanı başlangıçta en yeni formata yükseltin. (Not: Bu, cüzdanın kendisinin güncellemesi değildir!)</translation>
     </message>
     <message>
-        <source>Rebuild blockchain index from current blk000???.dat files.</source>
-        <translation>Blok zinciri dizinini mevcut blk000 ?? dat dosyalarından yeniden oluştur.</translation>
-    </message>
-    <message>
-        <source>Deletes all local blockchain folders so the wallet synchronizes from scratch.</source>
-        <translation>Cüzdan sıfırdan eşleştirmek için tüm yerel blok zincir klasörlerini siler.</translation>
-    </message>
-    <message>
         <source>Salvage wallet</source>
         <translation>Kurtarma cüzdanı</translation>
+    </message>
+    <message>
+        <source>Attempt to recover private keys from a corrupt wallet.dat</source>
+        <translation>Bozuk wallet.dat dosyasından gizli anahtarları kurtar</translation>
     </message>
     <message>
         <source>Rescan blockchain file</source>
@@ -4838,16 +3857,12 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Dizini yeniden oluştur</translation>
     </message>
     <message>
-        <source>Delete local blockchain </source>
-        <translation>Yerel Blockchain'i sil</translation>
-    </message>
-    <message>
         <source>This will delete your local blockchain folders and the wallet will synchronize the complete Blockchain from scratch.&lt;br /&gt;&lt;br /&gt;</source>
         <translation>Bu, yerel blok zincir klasörlerini silecek ve cüzdan tüm Blockchain'i sıfırdan senkronize edecektir..&lt;br /&gt;&lt;br /&gt;</translation>
     </message>
     <message>
         <source>This needs quite some time and downloads a lot of data.&lt;br /&gt;&lt;br /&gt;</source>
-        <translation>Bu biraz zaman nalacak ve birçok veri indirecektir.&lt;br /&gt;&lt;br /&gt;</translation>
+        <translation>Bu biraz zaman alacak ve birçok veri indirecektir.&lt;br /&gt;&lt;br /&gt;</translation>
     </message>
     <message>
         <source>Your transactions and funds will be visible again after the download has completed.&lt;br /&gt;&lt;br /&gt;</source>
@@ -4869,16 +3884,12 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
         <source>Wallet Data</source>
         <translation>Cüzdan Bilgisi</translation>
     </message>
     <message>
         <source>Wallet</source>
-        <translation>cüzdan</translation>
+        <translation>Cüzdan</translation>
     </message>
     <message>
         <source>Multisend</source>
@@ -4914,7 +3925,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     </message>
     <message>
         <source>Information</source>
-        <translation>bilgi</translation>
+        <translation>Bilgi</translation>
     </message>
     <message>
         <source>Console</source>
@@ -4933,8 +3944,8 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>SSS</translation>
     </message>
     <message>
-        <source>About ucacoin</source>
-        <translation>ucacoin Hakkında</translation>
+        <source>About UCACoin</source>
+        <translation>UCACoin Hakkında</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -4946,7 +3957,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     </message>
     <message>
         <source>Client restart required to activate changes.</source>
-        <translation>Değişiklikleri etkinleştirmek için istemci yeniden başlatılması gerekiyor.</translation>
+        <translation>Değişiklikleri etkinleştirmek için programın yeniden başlatılması gerekiyor.</translation>
     </message>
     <message>
         <source>Client will be shutdown, do you want to proceed?</source>
@@ -5000,8 +4011,8 @@ Emin misiniz?
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>ucacoin Core is shutting down...</source>
-        <translation>ucacoin Core kapanıyor ...</translation>
+        <source>UCACoin is shutting down...</source>
+        <translation>UCACoin kapanıyor ...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -5030,32 +4041,12 @@ Emin misiniz?
         <translation>Yükleniyor...</translation>
     </message>
     <message>
-        <source>ucacoin Core</source>
-        <translation>ucacoin Core</translation>
+        <source>UCACoin</source>
+        <translation>UCACoin</translation>
     </message>
 </context>
 <context>
     <name>SplashScreen</name>
-    <message>
-        <source>ucacoin Core</source>
-        <translation>ucacoin CORE</translation>
-    </message>
-    <message>
-        <source>Version %1</source>
-        <translation>Version %1</translation>
-    </message>
-    <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>The Bitcoin Core developers</translation>
-    </message>
-    <message>
-        <source>The Dash Core developers</source>
-        <translation>The Dash Core developers</translation>
-    </message>
-    <message>
-        <source>The ucacoin Core developers</source>
-        <translation>The ucacoin Core developers</translation>
-    </message>
     <message>
         <source>[testnet]</source>
         <translation>[testnet]</translation>
@@ -5091,10 +4082,6 @@ Emin misiniz?
         <translation>Form</translation>
     </message>
     <message>
-        <source>480.0685 UCA</source>
-        <translation>480.0685 UCA</translation>
-    </message>
-    <message>
         <source>Available</source>
         <translation>Uygun</translation>
     </message>
@@ -5103,16 +4090,8 @@ Emin misiniz?
         <translation>Beklemede</translation>
     </message>
     <message>
-        <source>6.943 UCA</source>
-        <translation>6.943 UCA</translation>
-    </message>
-    <message>
         <source>Immature</source>
         <translation>Olgunlaşmamış</translation>
-    </message>
-    <message>
-        <source>10 UCA</source>
-        <translation>10 UCA</translation>
     </message>
     <message>
         <source>Wallet Unlocked for staking</source>
@@ -5134,35 +4113,35 @@ Emin misiniz?
         <source>Staking not active</source>
         <translation>Stake kapalı</translation>
     </message>
-    <message numerus="yes">
-        <source>%n active connection(s)</source>
-        <translation><numerusform>%n aktif bağlantı(lar) mevcut ucacoin ağına</numerusform><numerusform>%n aktif bağlantı(lar)</numerusform></translation>
-    </message>
-    <message>
-        <source>Synchronized</source>
-        <translation>Senkron</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n hour(s)</source>
-        <translation><numerusform>%n saat</numerusform><numerusform>%n saat</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n day(s)</source>
-        <translation><numerusform>%n gün</numerusform><numerusform>%n gün</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n week(s)</source>
-        <translation><numerusform>%n hafta</numerusform><numerusform>%n hafta</numerusform></translation>
-    </message>
     <message>
         <source>%1 and %2</source>
         <translation>%1 ve %2</translation>
     </message>
-    <message numerus="yes">
-        <source>%n year(s)</source>
-        <translation><numerusform>%n yıl</numerusform><numerusform>%n yıl</numerusform></translation>
+    <message>
+        <source>FAQ</source>
+        <translation>SSS</translation>
     </message>
-</context>
+    <message>
+        <source>Wallet Locked</source>
+        <translation>Cüzdan Kilitlendi</translation>
+    </message>
+    <message>
+        <source>Backup Wallet</source>
+        <translation>Cüzdanı Yedekle</translation>
+    </message>
+    <message>
+        <source>Wallet Data (*.dat)</source>
+        <translation>Wallet Data (*.dat)</translation>
+    </message>
+    <message>
+        <source>Backup created</source>
+        <translation>Yedek oluşturuldu</translation>
+    </message>
+    <message>
+        <source>Backup creation failed</source>
+        <translation>Yedek oluşturma başarısız</translation>
+    </message>
+    </context>
 <context>
     <name>TrafficGraphWidget</name>
     <message>
@@ -5172,10 +4151,6 @@ Emin misiniz?
 </context>
 <context>
     <name>TransactionDesc</name>
-    <message numerus="yes">
-        <source>Open for %n more block(s)</source>
-        <translation><numerusform>%n blok daha için açık tut</numerusform><numerusform>%n blok daha için açık tut</numerusform></translation>
-    </message>
     <message>
         <source>Open until %1</source>
         <translation>Açık %1 e dek</translation>
@@ -5236,10 +4211,6 @@ Emin misiniz?
         <source>, has not been successfully broadcast yet</source>
         <translation>, henüz başarıyla yayınlanmamış</translation>
     </message>
-    <message numerus="yes">
-        <source>, broadcast through %n node(s)</source>
-        <translation><numerusform>, %n düğüm üzerinden yayın</numerusform><numerusform>, %n düğüm üzerinden yayın</numerusform></translation>
-    </message>
     <message>
         <source>Date</source>
         <translation>Tarih</translation>
@@ -5279,10 +4250,6 @@ Emin misiniz?
     <message>
         <source>Credit</source>
         <translation>Kredi</translation>
-    </message>
-    <message numerus="yes">
-        <source>matures in %n more block(s)</source>
-        <translation><numerusform>%n blok sonra olgunlaşacak</numerusform><numerusform>%n blok sonra olgunlaşacak</numerusform></translation>
     </message>
     <message>
         <source>not accepted</source>
@@ -5361,15 +4328,11 @@ Emin misiniz?
     </message>
     <message>
         <source>Type</source>
-        <translation>yaz</translation>
+        <translation>Yaz</translation>
     </message>
     <message>
         <source>Address</source>
-        <translation>adres</translation>
-    </message>
-    <message numerus="yes">
-        <source>Open for %n more block(s)</source>
-        <translation><numerusform>%n blok daha için açık </numerusform><numerusform>%n blok daha için açık </numerusform></translation>
+        <translation>Adres</translation>
     </message>
     <message>
         <source>Open until %1</source>
@@ -5416,40 +4379,8 @@ Emin misiniz?
         <translation>Tarafından alındı</translation>
     </message>
     <message>
-        <source>Received via Obfuscation</source>
-        <translation>Şaşırtma yoluyla Alınan</translation>
-    </message>
-    <message>
-        <source>UCA Stake</source>
-        <translation>UCA Stake</translation>
-    </message>
-    <message>
-        <source>UCA Cold Stake</source>
-        <translation>UCA Soğuk Stake</translation>
-    </message>
-    <message>
-        <source>UCA Stake in behalf of</source>
-        <translation>Yerine UCA stake </translation>
-    </message>
-    <message>
         <source>Stake delegation</source>
         <translation>Stake delegasyonu</translation>
-    </message>
-    <message>
-        <source>Obfuscation Denominate</source>
-        <translation>Şaşırtmaca denominate</translation>
-    </message>
-    <message>
-        <source>Obfuscation Collateral Payment</source>
-        <translation>Soruna Katılma Teminat Ödemesi</translation>
-    </message>
-    <message>
-        <source>Obfuscation Make Collateral Inputs</source>
-        <translation>Şaşırtma yan girdiler yapar</translation>
-    </message>
-    <message>
-        <source>Obfuscation Create Denominations</source>
-        <translation>Obfuscation Oluşturma Adları</translation>
     </message>
     <message>
         <source>Sent to</source>
@@ -5466,10 +4397,6 @@ Emin misiniz?
     <message>
         <source>Mined</source>
         <translation>Mined </translation>
-    </message>
-    <message>
-        <source>Obfuscated</source>
-        <translation>Şaşırtıldı </translation>
     </message>
     <message>
         <source>watch-only</source>
@@ -5523,36 +4450,8 @@ Emin misiniz?
         <translation>İşlem Detayları</translation>
     </message>
     <message>
-        <source>ID:</source>
-        <translation>ID:</translation>
-    </message>
-    <message>
-        <source>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</source>
-        <translation>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</translation>
-    </message>
-    <message>
-        <source>Sending to: </source>
-        <translation>Gönderiliyor: </translation>
-    </message>
-    <message>
-        <source>GMeCEsjP732YA4uvBKRbp1mwvg5PGhK2C5 </source>
-        <translation>GMeCEsjP732YA4uvBKRbp1mwvg5PGhK2C5 </translation>
-    </message>
-    <message>
         <source>Total amount</source>
         <translation>Toplam Tutar:</translation>
-    </message>
-    <message>
-        <source>2 UCA</source>
-        <translation>2 UCA</translation>
-    </message>
-    <message>
-        <source>Coin inputs:</source>
-        <translation>Koin girdileri:</translation>
-    </message>
-    <message>
-        <source>1 Inputs</source>
-        <translation>1 girdi</translation>
     </message>
     <message>
         <source>Previous Transaction</source>
@@ -5563,52 +4462,32 @@ Emin misiniz?
         <translation>Çıktı Endeksi</translation>
     </message>
     <message>
-        <source>Fee:</source>
-        <translation>Ücret:</translation>
-    </message>
-    <message>
-        <source>0.0001 UCA</source>
-        <translation>0.0001 UCA</translation>
-    </message>
-    <message>
-        <source>Change address:</source>
-        <translation>Değişim Adresi</translation>
-    </message>
-    <message>
-        <source>GMeCEsjP732Y...vBKRbp1mwvg5PGhK2C5 </source>
-        <translation>GMeCEsjP732Y...vBKRbp1mwvg5PGhK2C5 </translation>
-    </message>
-    <message>
-        <source>Confirmations:</source>
-        <translation>Onaylar:</translation>
-    </message>
-    <message>
-        <source>12</source>
-        <translation>12</translation>
-    </message>
-    <message>
-        <source>Size:</source>
-        <translation>Büyüklük:</translation>
-    </message>
-    <message>
-        <source>2 kB</source>
-        <translation>2 kB</translation>
-    </message>
-    <message>
-        <source>Date:</source>
-        <translation>Tarih:</translation>
+        <source>D7VFR83SQbie…BhjcWJtcfip5krte2Z </source>
+        <translation>D7VFR83SQbie…BhjcWJtcfip5krte2Z </translation>
     </message>
     <message>
         <source>May 25, 2017</source>
         <translation>May 25, 2017</translation>
     </message>
     <message>
-        <source>Status:</source>
-        <translation>Durum:</translation>
+        <source>ID</source>
+        <translation>Kimlik</translation>
     </message>
     <message>
         <source>Spendable</source>
         <translation>Harcanabilir</translation>
+    </message>
+    <message>
+        <source>Confirmations</source>
+        <translation>Onaylar</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Durum</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Tarih</translation>
     </message>
     <message>
         <source>TextLabel</source>
@@ -5645,18 +4524,6 @@ Emin misiniz?
         <source>Form</source>
         <translation>Form</translation>
     </message>
-    <message>
-        <source>Received from Bob</source>
-        <translation>Bob'tan geldi</translation>
-    </message>
-    <message>
-        <source>18/05/18</source>
-        <translation>18/05/18</translation>
-    </message>
-    <message>
-        <source>+0.000585 UCA</source>
-        <translation>+0.000585 UCA</translation>
-    </message>
 </context>
 <context>
     <name>WalletModel</name>
@@ -5664,44 +4531,9 @@ Emin misiniz?
         <source>Send Coins</source>
         <translation>Koinleri göder</translation>
     </message>
-    <message>
-        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 UCA.</source>
-        <translation>SwiftX yüksek değerler göndermeyi desteklemiyor. İşlemler şu anda %1 UCA ile sınırlıdır.</translation>
-    </message>
-</context>
-<context>
-    <name>WalletPasswordDialog</name>
-    <message>
-        <source>Dialog</source>
-        <translation>Diyalog</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
-    </message>
-    <message>
-        <source>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</source>
-        <translation>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>İPTAL</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>WelcomeContentWidget</name>
-    <message>
-        <source>Dialog</source>
-        <translation>Diyalog</translation>
-    </message>
     <message>
         <source>1</source>
         <translation>1</translation>
@@ -5727,6 +4559,10 @@ Emin misiniz?
         <translation>Hoşgeldiniz</translation>
     </message>
     <message>
+        <source>Privacy</source>
+        <translation>Gizlilik</translation>
+    </message>
+    <message>
         <source>Masternodes</source>
         <translation>Masternode'lar</translation>
     </message>
@@ -5736,25 +4572,25 @@ Emin misiniz?
     </message>
     <message>
         <source>Welcome to
-ucacoin Core Wallet</source>
-        <translation>ucacoin Core Cüzdanı'na
+UCACoin Wallet</source>
+        <translation>UCACoin Cüzdanı'na
 Hoşgeldiniz</translation>
     </message>
     <message>
-        <source>ucacoin is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
-        <translation>ucacoin Proof of Stake tabanlı dünyadaki en yenilikçi blockchain teknolojisidir. Yüksek tecrübeye sahip yazılımcılar ve kriptograflardan oluşan bir ekip tarafından geliştirilmiştir.</translation>
+        <source>UCACoin is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
+        <translation>UCACoin Proof of Stake tabanlı dünyadaki en yenilikçi blockchain teknolojisidir. Yüksek tecrübeye sahip yazılımcılar ve kriptograflardan oluşan bir ekip tarafından geliştirilmiştir.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - ucacoin believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Manifestomuzda yazdığı gibi: Gizlilik, pazarlık yapılamayacak temel bir insan hakkıdır; kullanıcılarına istedikleri zaman ve istedikleri kişiyle verilerini paylaşma özgürlüğü verir - ucacoin özerkliğe inanır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - UCACoin believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Manifestomuzda yazdığı gibi: Gizlilik, pazarlık yapılamayacak temel bir insan hakkıdır; kullanıcılarına istedikleri zaman ve istedikleri kişiyle verilerini paylaşma özgürlüğü verir - UCACoin özerkliğe inanır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>The masternode network is ucacoin's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
-        <translation>Masternode ağı dağıtık yönetim ve hazine yönetimini sağlayan ucacoin blockchaini üzerindeki ikinci katmandır.</translation>
+        <source>The masternode network is UCACoin's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
+        <translation>Masternode ağı dağıtık yönetim ve hazine yönetimini sağlayan UCACoin blockchaini üzerindeki ikinci katmandır.</translation>
     </message>
     <message>
-        <source>How ucacoin respects your privacy?</source>
-        <translation>ucacoin gizliliğinize nasıl saygı duyar?</translation>
+        <source>How UCACoin respects your privacy?</source>
+        <translation>UCACoin gizliliğinize nasıl saygı duyar?</translation>
     </message>
     <message>
         <source>What is a Masternode?</source>
@@ -5788,8 +4624,8 @@ Hoşgeldiniz</translation>
         <translation>JSON-RPC bağlantılarını dinlemek için verilen adrese bağlanın. IPv6 için [host]: port gösterimini kullanın. Bu seçenek birden çok kez belirtilebilir (varsayılan: tüm arabirimlere bağlanır)</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. ucacoin Core is probably already running.</source>
-        <translation>Veri dizini %s üzerinde bir kilit elde edemiyor. ucacoin Core muhtemelen zaten çalışıyor.</translation>
+        <source>Cannot obtain a lock on data directory %s. UCACoin is probably already running.</source>
+        <translation>Veri dizini %s üzerinde bir kilit elde edemiyor. UCACoin muhtemelen zaten çalışıyor.</translation>
     </message>
     <message>
         <source>Change automatic finalized budget voting behavior. mode=auto: Vote for only exact finalized budget match to my generated budget. (string, default: auto)</source>
@@ -5808,16 +4644,16 @@ Hoşgeldiniz</translation>
         <translation>Tüm cüzdan işlemlerini sil ve sadece -rescan on startup komutuyla ilgili kısmımları sadece kurtar</translation>
     </message>
     <message>
+        <source>Delete all zerocoin spends and mints that have been recorded to the blockchain database and reindex them (0-1, default: %u)</source>
+        <translation>Blockchain'e kaydedilmiş tüm zerocoin ve mintleri sil ve tekrar endeksle (0-1, varsayılan: %u)</translation>
+    </message>
+    <message>
         <source>Distributed under the MIT software license, see the accompanying file COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</source>
         <translation>MIT yazılım lisansı altında dağıtılmıştır, eşlik eden KOPYALAMA dosyasına bakın veya &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</translation>
     </message>
     <message>
         <source>Enable cold staking functionality (0-1, default: %u). Disabled if staking=0</source>
         <translation>Soğuk stakeleme fonksiyonunu etkinleştirin (0-1, varsayılan: %u). Staking=0 ise etkin değildir</translation>
-    </message>
-    <message>
-        <source>Enable or disable staking functionality for UCA inputs (0-1, default: %u)</source>
-        <translation>UCA girişleri için stake fonksiyonunu aç veya kapat (0-1, varsayılan: %u)</translation>
     </message>
     <message>
         <source>Enable spork administration functionality with the appropriate private key.</source>
@@ -5852,14 +4688,6 @@ Hoşgeldiniz</translation>
         <translation>En iyi blok değiştirildiğinde komutu yürütün (cmd'deki %s yerine blok karması verilir)</translation>
     </message>
     <message>
-        <source>Fees (in UCA/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Bundan daha küçük ücretler (UCA / Kb cinsinden), aktarma için sıfır ücret olarak kabul edilir (varsayılan: %s)</translation>
-    </message>
-    <message>
-        <source>Fees (in UCA/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Bundan daha küçük ücretler (UCA / Kb cinsinden), işlem yaratmada sıfır ücret olarak kabul edilir (varsayılan: %s)</translation>
-    </message>
-    <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
         <translation>Bellek havuzundan disk günlüğüne her veritabanı aktivitesini temizle&lt;n&gt; megabytes (default: %u)</translation>
     </message>
@@ -5878,10 +4706,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s' (must be at least the minrelay fee of %s to prevent stuck transactions)</source>
         <translation>Yetersiz miktar için -maxtxfee=&lt;amount&gt;: '%s' (sıkışmış işlemleri önlemek için en az %s'lik minrelay ücreti olmalıdır)</translation>
-    </message>
-    <message>
-        <source>Keep the specified amount available for spending at all times (default: 0)</source>
-        <translation>Belirlenen tutarı her zaman harcamaya hazır durumda tut. (varsayılan:0)</translation>
     </message>
     <message>
         <source>Log transaction priority and fee per kB when mining blocks (default: %u)</source>
@@ -5912,16 +4736,8 @@ Hoşgeldiniz</translation>
         <translation>Uyumsuz davranan eşleri tekrar bağlanmaktan saniye cinsinden uzak tutma süresi (varsayılan: %u)</translation>
     </message>
     <message>
-        <source>Obfuscation uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
-        <translation>Gizleme özelliği gönderilecek tutarın kesin bölümlemelerini kullanır, sadece daha fazla koin anonimleştirmeniz gerekiyor.</translation>
-    </message>
-    <message>
         <source>Output debugging information (default: %u, supplying &lt;category&gt; is optional)</source>
         <translation>Hata ayıklama bilgisini dışarı aktar (varsayılan: %u, sağlamak&lt;category&gt;  opsiyoneldir)</translation>
-    </message>
-    <message>
-        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
-        <translation>Adresler azsa eş adreslerini DNS lookup yoluyla ara (varsayılan: 1 unless -connect)</translation>
     </message>
     <message>
         <source>Randomize credentials for every proxy connection. This enables Tor stream isolation (default: %u)</source>
@@ -5938,10 +4754,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: %d)</source>
         <translation>Yüksek öncelik/düşük maliyet işlemlerin maksimum blok büyüklüğünü belirle (varsayılan: %d)</translation>
-    </message>
-    <message>
-        <source>Set the number of included blocks to precompute per cycle. (minimum: %d) (maximum: %d) (default: %d)</source>
-        <translation>Her döngüde eklenen blokların ön işlemeye alınacak sayısını belirle. (minimum: %d) (maksimum: %d) (varsayılan: %d)</translation>
     </message>
     <message>
         <source>Set the number of script verification threads (%u to %d, 0 = auto, &lt;0 = leave that many cores free, default: %d)</source>
@@ -5972,20 +4784,8 @@ Hoşgeldiniz</translation>
         <translation>Ağ versiyon dizisi toplam uzunluğu(%i) maksimum uzunluğu aşıyor(%i). Yorumların büyüklüğünü veya sayısını azaltın.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. ucacoin Core is probably already running.</source>
-        <translation>Bu bilgisayarda %s 'e bağlanılamıyor. ucacoin Core muhtemelen zaten çalışıyor.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough Obfuscation denominated funds for this transaction.</source>
-        <translation>Bu işlem için gereken yeterli bölünmüş gizleme fonu bulunamadı.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 UCA.</source>
-        <translation>10000 UCA'e eşit olmayan bu işlem için gereken yeterli bölünmemiş gizleme fonu bulunamadı.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 UCA.</source>
-        <translation>10000 UCA'e eşit olmayan bu işlem için yeterli bakiye tespit edilemedi</translation>
+        <source>Unable to bind to %s on this computer. UCACoin is probably already running.</source>
+        <translation>Bu bilgisayarda %s 'e bağlanılamıyor. UCACoin muhtemelen zaten çalışıyor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -6000,12 +4800,8 @@ Hoşgeldiniz</translation>
         <translation>Uyarı: paytxfee değeri çok yüksek ayarlanmış! Bu para gönderirken ödeyeceğiniz transfer ücretidir.</translation>
     </message>
     <message>
-        <source>Warning: Peers are being disconnected due time differences. Please check that your computer's date and time are correct! If your clock is wrong ucacoin Core will not work properly.</source>
-        <translation>Uyarı: Zaman farkı sebebiyle eşlerin bağlantısı koptı. Bilgisayarınızın tarih ve saat ayarlarının doğruluğunu kontrol edin! Saatiniz yanlış ise ucacoin Core düzgün çalışmayacaktır. </translation>
-    </message>
-    <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong ucacoin Core will not work properly.</source>
-        <translation>Uyarı: Bilgisayarınızın tarih ve saat ayarlarının doğruluğunu kontrol edin! Saatiniz yanlış ise ucacoin Core düzgün çalışmayacaktır. </translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong UCACoin will not work properly.</source>
+        <translation>Uyarı: Bilgisayarınızın tarih ve saat ayarlarının doğruluğunu kontrol edin! Saatiniz yanlış ise UCACoin düzgün çalışmayacaktır. </translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -6036,10 +4832,6 @@ Hoşgeldiniz</translation>
         <translation>Konfigürasyonda bir masternodeprivkey belirlemelisiniz.  Lütfen dokümantasyona bakınız.</translation>
     </message>
     <message>
-        <source>(51472 could be used only on mainnet)</source>
-        <translation>(51472 sadece mainnet üzerinde kullanılabilir)</translation>
-    </message>
-    <message>
         <source>(default: %s)</source>
         <translation>(default: %s)</translation>
     </message>
@@ -6048,16 +4840,8 @@ Hoşgeldiniz</translation>
         <translation>(default: 1)</translation>
     </message>
     <message>
-        <source>(must be 51472 for mainnet)</source>
-        <translation>(mainnet için 51472 olmalıdır)</translation>
-    </message>
-    <message>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>JSON-RPC ve komut satırı komutlarını kabul et</translation>
-    </message>
-    <message>
-        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
-        <translation>Dış bağlantıları kabul et (varsayılan:1 eğer -proxy veya -connect yoksa)</translation>
     </message>
     <message>
         <source>Accept public REST requests (default: %u)</source>
@@ -6066,10 +4850,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Add a node to connect to and attempt to keep the connection open</source>
         <translation>Bağlanmak için bir düğüm ekle ve bağlantıyı açık tut</translation>
-    </message>
-    <message>
-        <source>Adding Wrapped Serials supply...</source>
-        <translation>Paketlenmiş seri temini ekleniyor...</translation>
     </message>
     <message>
         <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
@@ -6100,26 +4880,6 @@ Hoşgeldiniz</translation>
         <translation>Cüzdan alt versiyona düşürülemiyor</translation>
     </message>
     <message>
-        <source>Cannot resolve -bind address: '%s'</source>
-        <translation>Bind adres: '%s' çözümlenemiyor</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -externalip address: '%s'</source>
-        <translation>Dış IP adresi: '%s' çözümlenemiyor</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -whitebind address: '%s'</source>
-        <translation>Whitebind address: '%s' çözümlenemiyor</translation>
-    </message>
-    <message>
-        <source>CoinSpend: failed check</source>
-        <translation>KoinHarcama: kontrol başarısız</translation>
-    </message>
-    <message>
-        <source>Connect only to the specified node(s)</source>
-        <translation>Sadece belirtilmiş düğüm(lere) bağlan</translation>
-    </message>
-    <message>
         <source>Connect through SOCKS5 proxy</source>
         <translation>SOCKS5 proxy üzerinden bağlan</translation>
     </message>
@@ -6140,8 +4900,8 @@ Hoşgeldiniz</translation>
         <translation>Copyright (C) 2014-%i The Dash Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The ucacoin Core Developers</source>
-        <translation>Copyright (C) 2015-%i The ucacoin Core Developers</translation>
+        <source>Copyright (C) 2015-%i The ucacoin developers</source>
+        <translation>Copyright (C) 2015-%i The ucacoin developers</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -6216,8 +4976,8 @@ Hoşgeldiniz</translation>
         <translation>Wallet.dat yüklenirken hata oluştu: Cüzdan dosyası bozuk</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of ucacoin Core</source>
-        <translation>Wallet.dat yüklenirken hata oluştu: Cüzdan daha yeni bir ucacoin Core versiyonuna ihtiyaç duyuyor</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of UCACoin</source>
+        <translation>Wallet.dat yüklenirken hata oluştu: Cüzdan daha yeni bir UCACoin versiyonuna ihtiyaç duyuyor</translation>
     </message>
     <message>
         <source>Error opening block database</source>
@@ -6228,8 +4988,12 @@ Hoşgeldiniz</translation>
         <translation>Veritabanı okunurken hata oluştu, kapatılıyorç</translation>
     </message>
     <message>
+        <source>Error writing zerocoinDB to disk</source>
+        <translation>ZerocoinDB diske yazılırken hata oluştu</translation>
+    </message>
+    <message>
         <source>Error</source>
-        <translation>hata</translation>
+        <translation>Hata</translation>
     </message>
     <message>
         <source>Error: A fatal internal error occured, see debug.log for details</source>
@@ -6254,14 +5018,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Failed to parse host:port string</source>
         <translation>host:port string çözümlenemedi</translation>
-    </message>
-    <message>
-        <source>Failed to read block</source>
-        <translation>Blok okuma hatası</translation>
-    </message>
-    <message>
-        <source>Fee (in UCA/kB) to add to transactions you send (default: %s)</source>
-        <translation>Gönderdiğiniz transfere (UCA/kb cinsinden) bir masraf ekleyin (varsayılan: %s) </translation>
     </message>
     <message>
         <source>Force safe mode (default: %u)</source>
@@ -6297,11 +5053,11 @@ Hoşgeldiniz</translation>
     </message>
     <message>
         <source>Information</source>
-        <translation>bilgi</translation>
+        <translation>Bilgi</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. ucacoin Core is shutting down.</source>
-        <translation>Sağlama kontrolü başlatımı başarısız. ucacoin Core kapatılıyor.</translation>
+        <source>Initialization sanity check failed. UCACoin is shutting down.</source>
+        <translation>Sağlama kontrolü başlatımı başarısız. UCACoin kapatılıyor.</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
@@ -6316,28 +5072,8 @@ Hoşgeldiniz</translation>
         <translation>Geçersiz onion veya hostname: !%s!</translation>
     </message>
     <message>
-        <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Maxtxfee=&lt;amount&gt;: '%s' için geçersiz tutar</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -minrelaytxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Minrelaytxfee=&lt;amount&gt;: '%s' için geçersiz tutar</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -mintxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Mintxfee=&lt;amount&gt;: '%s'  için geçersiz tutar</translation>
-    </message>
-    <message>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s' (must be at least %s)</source>
         <translation>Paytxfee=&lt;amount&gt;: '%s' için geçersiz tutar (en az %s olmalıdır)</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Paytxfee=&lt;amount&gt;: '%s' için geçersiz tutar</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
-        <translation>Reservebalance=&lt;amount&gt; için geçersiz tutar</translation>
     </message>
     <message>
         <source>Invalid amount</source>
@@ -6352,12 +5088,16 @@ Hoşgeldiniz</translation>
         <translation>Whitelist içinde belirtilen geçersiz netmask: '%s'</translation>
     </message>
     <message>
-        <source>Invalid port detected in masternode.conf</source>
-        <translation>masternode.conf dosyasında geçersiz port tespit edildi</translation>
-    </message>
-    <message>
         <source>Recalculating UCA supply...</source>
         <translation>UCA tedariği tekrar hesaplanıyor...</translation>
+    </message>
+    <message>
+        <source>Reindexing zerocoin database...</source>
+        <translation>Zerocoin veritabanı tekrar endeksleniyor...</translation>
+    </message>
+    <message>
+        <source>Reindexing zerocoin failed</source>
+        <translation>Zerocoin tekrar endekslemesi başarısız</translation>
     </message>
     <message>
         <source>Selected coins value is less than payment target</source>
@@ -6372,26 +5112,28 @@ Hoşgeldiniz</translation>
         <translation>Bu ön-sürümdeki bir test programıdır - riski kabullenerek kullanınız - staking ve ticaret uygulamalarında kullanmayın.</translation>
     </message>
     <message>
+        <source> mints deleted
+</source>
+        <translation>mintler silindi
+</translation>
+    </message>
+    <message>
+        <source> mints updated, </source>
+        <translation> mints güncellendi</translation>
+    </message>
+    <message>
         <source> unconfirmed transactions removed
 </source>
         <translation>Doğrulanmamış işlemler kaldırıldı
 </translation>
     </message>
     <message>
-        <source>Disable all ucacoin specific functionality (Masternodes, SwiftX, Budgeting) (0-1, default: %u)</source>
-        <translation>ucacoin spesifik tüm fonksiyonaliteyi devre dışı bırak (Masternodes, SwiftX, Budgeting) (0-1, varsayılan: %u)</translation>
+        <source>Disable all UCACoin specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
+        <translation>UCACoin spesifik tüm fonksiyonaliteyi devre dışı bırak (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, varsayılan: %u)</translation>
     </message>
     <message>
         <source>Enable SwiftX, show confirmations for locked transactions (bool, default: %s)</source>
         <translation>SwiftX'i etkinleştir, kilitli işlemler için doğrulamaları göster (bool, varsayılan: %s)</translation>
-    </message>
-    <message>
-        <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>İşlem reddedildi! Bu, cüzdanındaki koinlerin bir kısmının harcanması durumunda olabilir; mesela, wallet.dat dosyasının bir kopyasını kullandıysanız ve koinlerinizi harcamış fakat cüzdana harcanmış olarak işaretlenmemişse ortaya çıkabilir.</translation>
-    </message>
-    <message>
-        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation>Hata: Bu işlem en az %s kadar bir transfer üzreti gerektirir, sebebi tutar, karmaşıklık veya son alınmış tutar kullanımı olabilir!</translation>
     </message>
     <message>
         <source>Error: Unsupported argument -checklevel found. Checklevel must be level 4.</source>
@@ -6466,16 +5208,28 @@ Hoşgeldiniz</translation>
         <translation>Hata: Geçerli utxo yok!</translation>
     </message>
     <message>
+        <source>Failed to find Zerocoins in wallet.dat</source>
+        <translation>Wallet.dat dosyasından Zerocoin bulunamadı.</translation>
+    </message>
+    <message>
+        <source>Failed to parse public spend</source>
+        <translation>Açık harcama çözümlemesi başarısız</translation>
+    </message>
+    <message>
+        <source>Failed to select a zerocoin</source>
+        <translation>Zerocoin seçimi başarısız</translation>
+    </message>
+    <message>
+        <source>Failed to wipe zerocoinDB</source>
+        <translation>ZerocoinDB silinmesi başarısız</translation>
+    </message>
+    <message>
         <source>Failed to write coin serial number into wallet</source>
         <translation>Cüzdana koin seri numarası yazımı başarısız</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
         <translation>Hafızada en fazla &lt;n&gt; bağlanamaz işlem tut (varsayılan: %u)</translation>
-    </message>
-    <message>
-        <source>Limit size of signature cache to &lt;n&gt; entries (default: %u)</source>
-        <translation>İmza ön bellek büyüklüğü &lt;n&gt; girişle limitle (varsayılan: %u)</translation>
     </message>
     <message>
         <source>Line: %d</source>
@@ -6514,10 +5268,6 @@ Hoşgeldiniz</translation>
         <translation>Sporklar yükleniyor...</translation>
     </message>
     <message>
-        <source>Loading wallet... (%3.2f %%)</source>
-        <translation>Cüzdan yükleniyor... (%3.2f%%)</translation>
-    </message>
-    <message>
         <source>Loading wallet...</source>
         <translation>Cüzdan Yükleniyor...</translation>
     </message>
@@ -6548,6 +5298,10 @@ Hoşgeldiniz</translation>
     <message>
         <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: %u)</source>
         <translation>Bağlantı başına maksimum gönderim ara belleği, &lt;n&gt;*1000 bytes (varsayılan: %u)</translation>
+    </message>
+    <message>
+        <source>Mint did not make it into blockchain</source>
+        <translation>Mint blockchaine yazılamadı</translation>
     </message>
     <message>
         <source>Need to specify a port with -whitebind: '%s'</source>
@@ -6586,12 +5340,16 @@ Hoşgeldiniz</translation>
         <translation>JSON-RPC bağlantıları için şifre</translation>
     </message>
     <message>
-        <source>Use block spam filter (default: %u)</source>
-        <translation>Blok spam filtresini kullan (varsayılan: %u)</translation>
+        <source>Unable to find transaction containing mint %s</source>
+        <translation>İçinde mint %s bulunan işlem bulunamadı </translation>
     </message>
     <message>
-        <source>could not get lock on cs_spendcache</source>
-        <translation>cs_spendcache'e kilitlenilemedi</translation>
+        <source>Unable to find transaction containing mint, txHash: %s</source>
+        <translation>İçinde mint, tcHash %s bulunan işlem bulunamadı</translation>
+    </message>
+    <message>
+        <source>Use block spam filter (default: %u)</source>
+        <translation>Blok spam filtresini kullan (varsayılan: %u)</translation>
     </message>
     <message>
         <source>isValid(): Invalid -proxy address or hostname: '%s'</source>
@@ -6614,6 +5372,10 @@ Hoşgeldiniz</translation>
         <translation>Versiyonu bas ve çık</translation>
     </message>
     <message>
+        <source>Pubcoin not found in mint tx</source>
+        <translation>Mint tx içinde Pubcoin bulunamadı</translation>
+    </message>
+    <message>
         <source>RPC server options:</source>
         <translation>RPC sunucu opsiyonları:</translation>
     </message>
@@ -6628,10 +5390,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Rebuild block chain index from current blk000??.dat files</source>
         <translation>Blok zinciri dizinini mevcut blk000 ?? dat dosyalarından yeniden oluştur.</translation>
-    </message>
-    <message>
-        <source>Receive and display P2P network alerts (default: %u)</source>
-        <translation>P2P ağ uyarılarını al ve göster (varsayılan:%u)</translation>
     </message>
     <message>
         <source>Relay and mine data carrier transactions (default: %u)</source>
@@ -6650,6 +5408,14 @@ Hoşgeldiniz</translation>
         <translation>Yeniden taranıyor...</translation>
     </message>
     <message>
+        <source>ResetMintZerocoin finished: </source>
+        <translation>ResetMintZerocoin tamamlandı: </translation>
+    </message>
+    <message>
+        <source>ResetSpentZerocoin finished: </source>
+        <translation>ResetSpentZerocoin tamamlandı: </translation>
+    </message>
+    <message>
         <source>Run a thread to flush wallet periodically (default: %u)</source>
         <translation>Cüzdanı periyodik olarak düzenlemek için bir işlem çalıştır (varsayılan: %u)</translation>
     </message>
@@ -6660,10 +5426,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Send transactions as zero-fee transactions if possible (default: %u)</source>
         <translation>Mümkünse transferleri sıfır-maliyetli olarak gönder (varsayılan: %u)</translation>
-    </message>
-    <message>
-        <source>Session timed out.</source>
-        <translation>Oturum zaman aşımına uğradı</translation>
     </message>
     <message>
         <source>Set database cache size in megabytes (%d to %d, default: %d)</source>
@@ -6708,10 +5470,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
         <translation>Program başlatılırken debug.log dosyasını sıkıştır. (varsayılan: 1 debug olmadığında)</translation>
-    </message>
-    <message>
-        <source>Signing timed out.</source>
-        <translation>İmzalama zaman aşımına uğradı</translation>
     </message>
     <message>
         <source>Signing transaction failed</source>
@@ -6770,10 +5528,6 @@ Hoşgeldiniz</translation>
         <translation>Eşzamanlama tamamlandı</translation>
     </message>
     <message>
-        <source>Synchronization pending...</source>
-        <translation>Eşzamanlama bekleniyor</translation>
-    </message>
-    <message>
         <source>Synchronizing budgets...</source>
         <translation>Bütçe eşzamanlanıyor..</translation>
     </message>
@@ -6790,12 +5544,8 @@ Hoşgeldiniz</translation>
         <translation>Sporklar eşzamanlanıyor..</translation>
     </message>
     <message>
-        <source>The coin spend has been used</source>
-        <translation>Koin harcaması kullanıldı</translation>
-    </message>
-    <message>
-        <source>The transaction did not verify</source>
-        <translation>Bu ödeme onaylanmadı</translation>
+        <source>Syncing zUCA wallet...</source>
+        <translation>zUCA cüzdanı eşzamanlanıyor..</translation>
     </message>
     <message>
         <source>This help message</source>
@@ -6828,6 +5578,10 @@ Hoşgeldiniz</translation>
     <message>
         <source>Transaction Created</source>
         <translation>Ödeme yaratıldı</translation>
+    </message>
+    <message>
+        <source>Transaction Mint Started</source>
+        <translation>Mint işlemi başlatıldı</translation>
     </message>
     <message>
         <source>Transaction amount too small</source>
@@ -6898,6 +5652,10 @@ Hoşgeldiniz</translation>
         <translation>JSON-RPC bağlantısı için kullanıcı adı</translation>
     </message>
     <message>
+        <source>Value is below the smallest available denomination (= 1) of zUCA</source>
+        <translation>Aşağıdaki değer zUCA'in mümkün olan en küçük bölüm değeridir (=1)</translation>
+    </message>
+    <message>
         <source>Verifying blocks...</source>
         <translation>Bloklar doğrulanıyor...</translation>
     </message>
@@ -6910,8 +5668,8 @@ Hoşgeldiniz</translation>
         <translation>Cüzdan %s bilgi dizini %s dışında bulunuyor</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart ucacoin Core to complete</source>
-        <translation>Cüzdanın tekrar yazılması gerekiyor: tamamlamak için ucacoin Core uygulamasını tekrar başlatın.</translation>
+        <source>Wallet needed to be rewritten: restart UCACoin to complete</source>
+        <translation>Cüzdanın tekrar yazılması gerekiyor: tamamlamak için UCACoin uygulamasını tekrar başlatın.</translation>
     </message>
     <message>
         <source>Wallet options:</source>
@@ -6938,6 +5696,10 @@ Hoşgeldiniz</translation>
         <translation>Hata: Desteklenmeyen argüman -debugnet yok sayıldı, -debug=net kullanın.</translation>
     </message>
     <message>
+        <source>You don't have enough Zerocoins in your wallet</source>
+        <translation>Cüzdanınızda yeterli miktarda Zerocoin bulunmuyor</translation>
+    </message>
+    <message>
         <source>You need to rebuild the database using -reindex to change -txindex</source>
         <translation>Tx endeksini değiştirmek için veritabanını -reindex kullanarak tekrar oluşturmanız gerekmektedir </translation>
     </message>
@@ -6948,6 +5710,10 @@ Hoşgeldiniz</translation>
     <message>
         <source>ZeroMQ notification options:</source>
         <translation>ZeroMQ bildirim seçenekleri:</translation>
+    </message>
+    <message>
+        <source>Zerocoin options:</source>
+        <translation>Zerocoin seçenekleri:</translation>
     </message>
     <message>
         <source>on startup</source>
@@ -6969,12 +5735,28 @@ Hoşgeldiniz</translation>
         <translation>Gönder</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
+        <source>Amount</source>
+        <translation>Miktar</translation>
     </message>
     <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
+        <source>Customize fee</source>
+        <translation>Masrafı değiştir</translation>
     </message>
-</context>
+    <message>
+        <source>Clear all</source>
+        <translation>Hepsini temizle</translation>
+    </message>
+    <message>
+        <source>Add recipient</source>
+        <translation>Alıcı Ekle</translation>
+    </message>
+    <message>
+        <source>Total to send</source>
+        <translation>Gönderilecek toplam</translation>
+    </message>
+    <message>
+        <source>Reset to default</source>
+        <translation>Varsayılana konumlandır</translation>
+    </message>
+    </context>
 </TS>

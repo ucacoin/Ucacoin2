@@ -29,21 +29,21 @@ Build-Depends: debhelper,
  dh-systemd
 Standards-Version: 3.9.2
 Homepage: http://www.ucacoin.org
-Vcs-Git: git://github.com/ucacoin-Project/ucacoin.git
-Vcs-Browser: http://github.com/ucacoin-Project/ucacoin
+Vcs-Git: git://github.com/UCACoin-Project/UCACoin.git
+Vcs-Browser: http://github.com/UCACoin-Project/UCACoin
 
 Package: ucacoind
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- ucacoin is a free open source peer-to-peer electronic cash system that
+ UCACoin is a free, open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
  check for double-spending.
  .
  Full transaction history is stored locally at each client.  This
- requires 10+ GB of space, slowly growing.
+ requires 18.5+ GB of space, slowly growing.
  .
  This package provides the daemon, ucacoind, and the CLI tool
  ucacoin-cli to interact with the daemon.
@@ -52,13 +52,13 @@ Package: ucacoin-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- ucacoin is a free open source peer-to-peer electronic cash system that
+ UCACoin is a free, open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
  check for double-spending.
  .
  Full transaction history is stored locally at each client.  This
- requires 10+ GB of space, slowly growing.
+ requires 18.5+ GB of space, slowly growing.
  .
- This package provides ucacoin-Qt, a GUI for ucacoin based on Qt.
+ This package provides UcaCoin-Qt, a GUI for UCACoin based on Qt.

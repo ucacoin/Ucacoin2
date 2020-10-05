@@ -16,6 +16,7 @@ DEPENDPATH += . \
               src/primitives \
               src/qt \
               src/script \
+              src/test \
               src/univalue \
               src/leveldb/db \
               src/leveldb/issues \
@@ -47,7 +48,6 @@ INCLUDEPATH += . \
                src/compat \
                src/secp256k1/include \
                src/leveldb/helpers/memenv \
-               src/qt/test \
                src/secp256k1/src \
                src/secp256k1/src/java
 
@@ -568,9 +568,6 @@ SOURCES += src/activemasternode.cpp \
            src/leveldb/util/status.cc \
            src/leveldb/util/testharness.cc \
            src/leveldb/util/testutil.cc \
-           src/qt/test/paymentservertests.cpp \
-           src/qt/test/test_main.cpp \
-           src/qt/test/uritests.cpp \
            src/secp256k1/src/bench_inv.c \
            src/secp256k1/src/bench_sign.c \
            src/secp256k1/src/bench_verify.c \

@@ -16,8 +16,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "ucacoin"
-            VALUE "FileDescription",    "ucacoind (OSS daemon/client for ucacoin)"
+            VALUE "CompanyName",        "UCACoin"
+            VALUE "FileDescription",    "ucacoind (OSS daemon/client for UCACoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "ucacoind"
             VALUE "LegalCopyright",     COPYRIGHT_STR

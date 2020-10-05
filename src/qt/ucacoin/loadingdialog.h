@@ -1,5 +1,5 @@
-// Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,6 +12,7 @@
 #include <iostream>
 #include <QTimer>
 #include "qt/ucacoin/prunnable.h"
+#include "qt/walletmodel.h"
 
 namespace Ui {
 class LoadingDialog;
@@ -24,6 +25,7 @@ public:
     ~Worker(){
         runnable = nullptr;
     }
+    virtual void clean() {};
 public Q_SLOTS:
     void process();
 Q_SIGNALS:
@@ -35,6 +37,29 @@ private:
     int type;
 };
 
+/*
+ * Worker that keeps track of the wallet unlock context
+ */
+class WalletWorker : public Worker {
+    Q_OBJECT
+public:
+    WalletWorker(Runnable* runnable, int type, std::unique_ptr<WalletModel::UnlockContext> _pctx):
+        Worker::Worker(runnable, type),
+        pctx(std::move(_pctx))
+    {}
+    void clean() override
+    {
+        if (pctx) pctx.reset();
+    }
+    void setContext(std::unique_ptr<WalletModel::UnlockContext> _pctx)
+    {
+        clean();
+        pctx = std::move(_pctx);
+    }
+private:
+    std::unique_ptr<WalletModel::UnlockContext> pctx{nullptr};
+};
+
 class LoadingDialog : public QDialog
 {
     Q_OBJECT
@@ -43,8 +68,7 @@ public:
     explicit LoadingDialog(QWidget *parent = nullptr);
     ~LoadingDialog();
 
-
-    void execute(Runnable *runnable, int type);
+    void execute(Runnable *runnable, int type, std::unique_ptr<WalletModel::UnlockContext> pctx = nullptr);
 
 public Q_SLOTS:
     void finished();

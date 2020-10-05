@@ -1,7 +1,10 @@
-// Copyright (c) 2020 The ucacoin Core developers
+// Copyright (c) 2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
-#ifndef ucacoin_HDCHAIN_H
-#define ucacoin_HDCHAIN_H
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#ifndef UCACoin_HDCHAIN_H
+#define UCACoin_HDCHAIN_H
 
 #include "key.h"
 
@@ -31,9 +34,9 @@ public:
 
     ADD_SERIALIZE_METHODS;
     template <typename Stream, typename Operation>
-    inline void SerializationOp(Stream& s, Operation ser_action, int nType, int nVersion)
+    inline void SerializationOp(Stream& s, Operation ser_action)
     {
-        READWRITE(this->nVersion);
+        READWRITE(nVersion);
         READWRITE(seed_id);
         // Single account counters.
         READWRITE(nExternalChainCounter);
@@ -61,4 +64,4 @@ public:
     }
 };
 
-#endif // ucacoin_HDCHAIN_H
+#endif // UCACoin_HDCHAIN_H

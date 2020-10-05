@@ -1,5 +1,5 @@
-// Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -15,7 +15,7 @@
 #include <QWidget>
 #include <QPixmap>
 
-class ucacoinGUI;
+class UCACoinGUI;
 class SendCoinsRecipient;
 
 namespace Ui {
@@ -31,7 +31,7 @@ class ReceiveWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit ReceiveWidget(ucacoinGUI* parent);
+    explicit ReceiveWidget(UCACoinGUI* parent);
     ~ReceiveWidget();
 
     void loadWalletModel() override;
@@ -48,6 +48,8 @@ private Q_SLOTS:
     void refreshView(const QModelIndex& tl, const QModelIndex& br);
     void refreshView(QString refreshAddress = QString());
     void handleAddressClicked(const QModelIndex &index);
+    void onSortChanged(int idx);
+    void onSortOrderChanged(int idx);
 private:
     Ui::ReceiveWidget *ui;
 
@@ -62,9 +64,14 @@ private:
     // Cached qr
     QPixmap *qrImage = nullptr;
 
+    // Cached sort type and order
+    AddressTableModel::ColumnIndex sortType = AddressTableModel::Label;
+    Qt::SortOrder sortOrder = Qt::AscendingOrder;
+
     void updateQr(QString address);
     void updateLabel();
     void showAddressGenerationDialog(bool isPaymentRequest);
+    void sortAddresses();
 
     bool isShowingDialog = false;
 

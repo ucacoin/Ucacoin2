@@ -1,10 +1,10 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FURSZY_ucacoin_GUITRANSACTIONSUTILS_H
-#define FURSZY_ucacoin_GUITRANSACTIONSUTILS_H
+#ifndef FURSZY_UCACoin_GUITRANSACTIONSUTILS_H
+#define FURSZY_UCACoin_GUITRANSACTIONSUTILS_H
 
 #include "walletmodel.h"
 #include "qt/ucacoin/pwidget.h"
@@ -35,4 +35,4 @@ namespace GuiTransactionsUtils {
 }
 
 
-#endif //FURSZY_ucacoin_GUITRANSACTIONSUTILS_H
+#endif //FURSZY_UCACoin_GUITRANSACTIONSUTILS_H

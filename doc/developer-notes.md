@@ -22,7 +22,7 @@ Developer Notes
     - [Threads](#threads)
     - [Ignoring IDE/editor files](#ignoring-ideeditor-files)
 - [Development guidelines](#development-guidelines)
-    - [General ucacoin Core](#general-ucacoin-core)
+    - [General UCACoin](#general-ucacoin-core)
     - [Wallet](#wallet)
     - [General C++](#general-c)
     - [C++ data structures](#c-data-structures)
@@ -125,7 +125,7 @@ Refer to [/test/functional/README.md#style-guidelines](/test/functional/README.m
 Coding Style (Doxygen-compatible comments)
 ------------------------------------------
 
-ucacoin Core uses [Doxygen](http://www.doxygen.nl/) to generate its official documentation.
+UCACoin uses [Doxygen](http://www.doxygen.nl/) to generate its official documentation.
 
 Use Doxygen-compatible comment blocks for functions, methods, and fields.
 
@@ -224,7 +224,7 @@ that run in `-regtest` mode.
 
 ### DEBUG_LOCKORDER
 
-ucacoin Core is a multi-threaded application, and deadlocks or other
+UCACoin is a multi-threaded application, and deadlocks or other
 multi-threading bugs can be very difficult to track down. The `--enable-debug`
 configure option adds `-DDEBUG_LOCKORDER` to the compiler flags. This inserts
 run-time checks to keep track of which locks are held, and adds warnings to the
@@ -315,7 +315,7 @@ Ignoring IDE/editor files
 In closed-source environments in which everyone uses the same IDE it is common
 to add temporary files it produces to the project-wide `.gitignore` file.
 
-However, in open source software such as ucacoin Core, where everyone uses
+However, in open source software such as UCACoin, where everyone uses
 their own editors/IDE/tools, it is less common. Only you know what files your
 editor produces and this may change from version to version. The canonical way
 to do this is thus to create your local gitignore. Add this to `~/.gitconfig`:
@@ -345,9 +345,9 @@ Development guidelines
 ============================
 
 A few non-style-related recommendations for developers, as well as points to
-pay attention to for reviewers of ucacoin Core code.
+pay attention to for reviewers of UCACoin code.
 
-General ucacoin Core
+General UCACoin
 ----------------------
 
 - New features should be exposed on RPC first, then can be made available in the GUI
@@ -508,7 +508,7 @@ Strings and formatting
 
 - For `strprintf`, `LogPrint`, `LogPrintf` formatting characters don't need size specifiers
 
-  - *Rationale*: ucacoin Core uses tinyformat, which is type safe. Leave them out to avoid confusion
+  - *Rationale*: UCACoin uses tinyformat, which is type safe. Leave them out to avoid confusion
 
 Variable names
 --------------
@@ -659,7 +659,7 @@ directly upstream without being PRed directly against the project.  They will be
 subtree merge.
 
 Others are external projects without a tight relationship with our project.  Changes to these should also
-be sent upstream but bugfixes may also be prudent to PR against ucacoin Core so that they can be integrated
+be sent upstream but bugfixes may also be prudent to PR against UCACoin so that they can be integrated
 quickly.  Cosmetic changes should be purely taken upstream.
 
 There is a tool in `test/lint/git-subtree-check.sh` to check a subtree directory for consistency with
@@ -689,7 +689,7 @@ you must be aware of.
 
 In most configurations we use the default LevelDB value for `max_open_files`,
 which is 1000 at the time of this writing. If LevelDB actually uses this many
-file descriptors it will cause problems with ucacoin's `select()` loop, because
+file descriptors it will cause problems with UCACoin's `select()` loop, because
 it may cause new sockets to be created where the fd value is >= 1024. For this
 reason, on 64-bit Unix systems we rely on an internal LevelDB optimization that
 uses `mmap()` + `close()` to open table files without actually retaining
@@ -797,7 +797,7 @@ Git and GitHub tips
 
         [remote "upstream-pull"]
                 fetch = +refs/pull/*:refs/remotes/upstream-pull/*
-                url = git@github.com:ucacoin-Project/ucacoin.git
+                url = git@github.com:UCACoin-Project/UCACoin.git
 
   This will add an `upstream-pull` remote to your git repository, which can be fetched using `git fetch --all`
   or `git fetch upstream-pull`. Afterwards, you can use `upstream-pull/NUMBER/head` in arguments to `git show`,

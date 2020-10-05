@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "ucacoin"
-            VALUE "FileDescription",    "ucacoin-cli (OSS RPC client for ucacoin)"
+            VALUE "CompanyName",        "UcaCoin"
+            VALUE "FileDescription",    "UcaCoin-cli (OSS RPC client for UcaCoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "ucacoin-cli"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "ucacoin-cli.exe"
-            VALUE "ProductName",        "ucacoin-cli"
+            VALUE "ProductName",        "UcaCoin-cli"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

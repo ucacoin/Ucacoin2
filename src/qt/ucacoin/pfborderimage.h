@@ -1,10 +1,10 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2019-2020 The ucacoin developers
+// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ucacoin_PFBorderImage_H
-#define ucacoin_PFBorderImage_H
+#ifndef UCACoin_PFBorderImage_H
+#define UCACoin_PFBorderImage_H
 
 #include <QPainter>
 #include <QPixmap>
@@ -53,4 +53,4 @@ protected:
 
 };
 
-#endif //ucacoin_PFBorderImage_H
+#endif //UCACoin_PFBorderImage_H
