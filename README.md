@@ -58,9 +58,9 @@ strip ucacoind ucacoin-cli
 
 Build with
 
-`docker build --build-arg VERSION=3.1 -t ucacoin . `
+`docker build --build-arg VERSION=3.2.0 -t ucacoin . `
 
-Replace 3.1 with the most current version found in https://github.com/ucacoin/Ucacoin2/releases
+Replace 3.2.0 with the most current version found in https://github.com/ucacoin/Ucacoin2/releases
 
 If you have permission issues add your local users userid and groupid as buildargs with
 
@@ -74,4 +74,4 @@ Start with
 
 `docker run -it -v ucacoin-data:/ucacoin ucacoin`
 
-Config can be found in `/var/lib/docker/volumes/ucacoin-data/_data/.ucacoin/ucacoin.conf`
+Config can be found in `/var/lib/docker/volumes/ucacoin-data/_data/.ucacoin/ucacoin.conf` or can be edited inside the container
