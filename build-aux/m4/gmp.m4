@@ -1,4 +1,5 @@
-dnl Copyright (c) 2018 The ucacoin developers
+dnl Copyright (c) 2018 The PIVX developers
+dnl Copyright (c) 2020 The UCACoin developers
 dnl Distributed under the MIT software license, see the accompanying
 dnl file COPYING or http://www.opensource.org/licenses/mit-license.php.
 

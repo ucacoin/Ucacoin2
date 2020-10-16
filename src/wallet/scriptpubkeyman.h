@@ -1,6 +1,6 @@
 // Copyright (c) 2019 The Bitcoin Core developers
 // Copyright (c) 2020 The PIVX developers
-// Copyright (C) 2019-2020 The ucacoin developers
+// Copyright (c) 2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -36,7 +36,7 @@ public:
       * Returns false if already setup or setup fails, true if setup is successful
       * Set force=true to make it re-setup if already setup, used for upgrades
       */
-    bool SetupGeneration(bool force = false);
+    bool SetupGeneration(bool newKeypool = true, bool force = false);
 
     /** Upgrades the wallet to the specified version */
     bool Upgrade(const int& prev_version, std::string& error);

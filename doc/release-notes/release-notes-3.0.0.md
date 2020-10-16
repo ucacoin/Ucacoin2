@@ -57,6 +57,40 @@ Other implementations of the zerocoin protocol only allow for spending of one de
 
 The UCACoin zerocoin implementation is structured in such a way that denominations aren't needed to be known by the average user.
 
+### Fees
+zUca transactions require more computation and disk space than typical UCACoin transactions, and as such require a higher transaction fee in order to prevent network spam. Fees are only charged when minting zUca, each minted denomination is charged a flat rate of 0.01 Bc. zUca spends are not charged a transaction fee unless the change is minted into zUca, see the *Minting Change* section for details on fees for zUca spends with minted change.
+
+### Converting UCA to zUCA (*zUCA Mint*)
+**GUI** - Conversion from UCA to zUCA can be done using the `Privacy Dialog` in the QT wallet. Enter the amount of UCA you would like to convert and click `Mint Zerocoin`.
+
+**RPC** - Conversion from UCA to zUCA can be done using the `mintzerocoin` command.
+
+**Automint** - The UCACoin wallet is set to convert 10% of the wallets available UCA to zUCA automatically. This can be adjusted in the GUI within the Options dialog, which allows the preferred % to be adjusted as well as the ability to set the preferred zUCA denomination that will be minted. Automint is set to be triggered when additional blocks are added to the block chain and is programmed *not* to convert your coins all at once.
+
+Automint can be disabled by adding `enablezeromint=0` to the wallet configuration file. The preferred mint % and denomination can also be set by the configuration file using `zeromintpercentage=<n>` and `preferredDenom=<n>`.
+
+### Converting zUCA to UCA (*zUCA Spend*)
+Redeeming zUCA is done by converting it back to UCA. With the 3.0.0 software release, users are not able to send zUCA to each other directly in an atomic fashion.
+
+**GUI** - Conversion from zUCA to UCA can be done using the `Privacy Dialog` in the QT wallet. Enter a UCACoin address that you would like to Pay To, enter the amount of UCA the receiver should be sent, click `Spend Zerocoin`.
+
+**RPC** - Conversion from zUCA to UCA can be done using the `spendzerocoin` command.
+
+### Advanced Use & Privacy Considerations
+**Security Level** - When spending zUCA, a user is prompted to enter a *Security Level* choosing from 1-100. In an indirect way, the Security Level parameter allows the user to choose how many coins to obfuscate their transaction with.
+
+A Security Level of 1 for example would take all of the minted coins in the blockchain before your mint was added to the blockchain, and would then add any coins that were minted within the next 10 blocks as well. A Security Level of 2 would do the same thing, except add the next 20 blocks worth of mints. A **Security Level of 100 will add the maximum amount of mints** up to the current end of the blockchain.
+
+The higher the Security Level, the more computation and time it will take to spend. Although it takes longer, a level of 100 is recommended for transactions that need maximum anonymity.
+
+
+**Minting Change** - The UCACoin implementation of the zerocoin protocol also allows the spender to choose how to receive their leftover change from a Spend transaction. For maximum anonymity it is recommended that the spender choose to receive the change in zUCA, which prevents situations where change from a zUCA spend that is redeemed in UCA is accidentally mixed with the rest of the users UCA, thus linking transactions back to a UCACoin address.
+
+Since the lowest denomination of zUCA is 1, and a fee is required to mint zUCA, in most situations a high fee will be paid to mint change. The fee is the remainder of the change that cannot be converted back to zUCA. For example this would mean a spending a denomination of 10 that yields change of 6.75 in change, would issue zUCA denominations of 5 and 1 back to the sender with the remaining 0.75 that is unmintable being contributed as a fee.
+
+**zUCA Control**
+Similar to the concept of Coin Control in the QT wallet, zUCA Control allows users to select exactly which zUCA mints they would like to spend. This gives a flexibility to choose which denominations can be picked for a spend that wouldn't otherwise be available.
+
 
 Tor Service Integration Improvements
 ---------------------

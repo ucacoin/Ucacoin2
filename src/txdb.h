@@ -8,16 +8,24 @@
 #ifndef BITCOIN_TXDB_H
 #define BITCOIN_TXDB_H
 
+#include "coins.h"
+#include "chain.h"
 #include "dbwrapper.h"
-#include "main.h"
 
 #include <map>
 #include <string>
 #include <utility>
 #include <vector>
 
-class CCoins;
+#include <boost/function.hpp>
+
+class CCoinsViewDBCursor;
 class uint256;
+
+//! Compensate for extra memory peak (x1.5-x1.9) at flush time.
+static constexpr int DB_PEAK_USAGE_FACTOR = 2;
+//! No need to periodic flush if at least this much space still available.
+static constexpr int MAX_BLOCK_COINSDB_USAGE = 10 * DB_PEAK_USAGE_FACTOR;
 
 //! -dbcache default (MiB)
 static const int64_t nDefaultDbCache = 100;
@@ -26,7 +34,8 @@ static const int64_t nMaxDbCache = sizeof(void*) > 4 ? 16384 : 1024;
 //! min. -dbcache in (MiB)
 static const int64_t nMinDbCache = 4;
 
-struct CDiskTxPos : public CDiskBlockPos {
+struct CDiskTxPos : public CDiskBlockPos
+{
     unsigned int nTxOffset; // after header
 
     ADD_SERIALIZE_METHODS;
@@ -63,11 +72,37 @@ protected:
 public:
     CCoinsViewDB(size_t nCacheSize, bool fMemory = false, bool fWipe = false);
 
-    bool GetCoins(const uint256& txid, CCoins& coins) const;
-    bool HaveCoins(const uint256& txid) const;
-    uint256 GetBestBlock() const;
-    bool BatchWrite(CCoinsMap& mapCoins, const uint256& hashBlock);
-    bool GetStats(CCoinsStats& stats) const;
+    bool GetCoin(const COutPoint& outpoint, Coin& coin) const override;
+    bool HaveCoin(const COutPoint& outpoint) const override;
+    uint256 GetBestBlock() const override;
+    bool BatchWrite(CCoinsMap& mapCoins, const uint256& hashBlock) override;
+    CCoinsViewCursor* Cursor() const override;
+
+    //! Attempt to update from an older database format. Returns whether an error occurred.
+    bool Upgrade();
+    size_t EstimateSize() const override;
+};
+
+/** Specialization of CCoinsViewCursor to iterate over a CCoinsViewDB */
+class CCoinsViewDBCursor: public CCoinsViewCursor
+{
+public:
+    ~CCoinsViewDBCursor() {}
+
+    bool GetKey(COutPoint& key) const;
+    bool GetValue(Coin& coin) const;
+    unsigned int GetValueSize() const;
+
+    bool Valid() const;
+    void Next();
+
+private:
+    CCoinsViewDBCursor(CDBIterator* pcursorIn, const uint256& hashBlockIn):
+        CCoinsViewCursor(hashBlockIn), pcursor(pcursorIn) {}
+    boost::scoped_ptr<CDBIterator> pcursor;
+    std::pair<char, COutPoint> keyTmp;
+
+    friend class CCoinsViewDB;
 };
 
 /** Access to the block database (blocks/index/) */
@@ -93,7 +128,8 @@ public:
     bool ReadFlag(const std::string& name, bool& fValue);
     bool WriteInt(const std::string& name, int nValue);
     bool ReadInt(const std::string& name, int& nValue);
-    bool LoadBlockIndexGuts();
+    bool LoadBlockIndexGuts(boost::function<CBlockIndex*(const uint256&)> insertBlockIndex);
+    bool ReadLegacyBlockIndex(const uint256& blockHash, CLegacyBlockIndex& biRet);
     bool WriteMoneySupply(const int64_t& nSupply);
     bool ReadMoneySupply(int64_t& nSupply) const;
 };

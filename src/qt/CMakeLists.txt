@@ -106,7 +106,6 @@ SET(QT_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/paymentrequestplus.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/paymentserver.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/recentrequeststablemodel.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/transactiondesc.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/transactionfilterproxy.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/transactionrecord.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/transactiontablemodel.cpp
@@ -217,15 +216,16 @@ QT5_ADD_RESOURCES(QRC_RESOURCE ucacoin.qrc)
 QT5_ADD_RESOURCES(QRC_LOCALE_RESOURCE ucacoin_locale.qrc)
 
 add_executable(ucacoin-qt ucacoin.cpp ${QM} ${QRC_RESOURCE} ${QRC_LOCALE_RESOURCE})
-add_dependencies(ucacoin-qt translations_target libunivalue libsecp256k1 leveldb leveldb_sse42 memenv)
+add_dependencies(ucacoin-qt translations_target libunivalue libsecp256k1 libzcashrust leveldb crc32c)
 target_include_directories(ucacoin-qt PUBLIC ${ENDIAN_INCLUDES})
 target_link_libraries(ucacoin-qt
         qt_stuff
         univalue
-        SERVER_A UTIL_A WALLET_A CLI_A COMMON_A BITCOIN_CRYPTO_A
-        leveldb leveldb_sse42 memenv secp256k1
+        SERVER_A UTIL_A WALLET_A CLI_A COMMON_A BITCOIN_CRYPTO_A SAPLING_A
+        leveldb crc32c secp256k1 rustzcash
         ${BerkeleyDB_LIBRARIES} ${OPENSSL_LIBRARIES} ${Boost_LIBRARIES} ${PROTOBUF_LIBRARIES} ${LIBEVENT_LIB}
-        pthread
+        ${sodium_LIBRARY_RELEASE}
+        -ldl pthread
         )
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
     target_link_libraries(ucacoin-qt "-framework Cocoa")

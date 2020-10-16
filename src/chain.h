@@ -4,7 +4,6 @@
 // Copyright (c) 2013-2014 The NovaCoin Developers
 // Copyright (c) 2014-2018 The BlackCoin Developers
 // Copyright (c) 2015-2020 The PIVX developers
-// Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -139,7 +138,7 @@ enum BlockStatus {
 	*/
 	BLOCK_VALID_TRANSACTIONS = 3,
 
-	//! Outputs do not overspend inputs, no double spends, coinbase output ok, immature coinbase spends, BIP30.
+	//! Outputs do not overspend inputs, no double spends, coinbase output ok, immature coinbase spends.
 	//! Implies all parents are also at least CHAIN.
 	BLOCK_VALID_CHAIN = 4,
 
@@ -272,7 +271,8 @@ public:
 /** Used to marshal pointers into hashes for db storage. */
 
 // New serialization introduced with 4.0.99
-static const int DBI_OLD_SER_VERSION = 0000000;   // removes nMoneySupply
+static const int DBI_OLD_SER_VERSION = 900000;
+static const int DBI_SER_VERSION_NO_ZC = 1000000;   // removes mapZerocoinSupply, nMoneySupply
 
 class CDiskBlockIndex : public CBlockIndex
 {
@@ -308,14 +308,59 @@ public:
 		if (nStatus & BLOCK_HAVE_UNDO)
 			READWRITE(VARINT(nUndoPos));
 
-		if (nSerVersion > DBI_OLD_SER_VERSION) {
-			// Serialization with CLIENT_VERSION > 4009900
+		if (nSerVersion >= DBI_SER_VERSION_NO_ZC) {
+			// Serialization with CLIENT_VERSION = 4009902+
+			READWRITE(nFlags);
+			READWRITE(this->nVersion);
+			READWRITE(vStakeModifier);
+			READWRITE(hashPrev);
+			READWRITE(hashMerkleRoot);
+			READWRITE(nTime);
+			READWRITE(nBits);
+			READWRITE(nNonce);
+
+		}
+		else if (nSerVersion > DBI_OLD_SER_VERSION && ser_action.ForRead()) {
+			// Serialization with CLIENT_VERSION = 4009901
 			int64_t nMoneySupply = 0;
 			READWRITE(nMoneySupply);
 			READWRITE(nFlags);
 			READWRITE(this->nVersion);
 			READWRITE(vStakeModifier);
 			READWRITE(hashPrev);
+			READWRITE(hashMerkleRoot);
+			READWRITE(nTime);
+			READWRITE(nBits);
+			READWRITE(nNonce);
+
+		}
+		else if (ser_action.ForRead()) {
+			// Serialization with CLIENT_VERSION = 4009900-
+			int64_t nMint = 0;
+			uint256 hashNext{};
+			int64_t nMoneySupply = 0;
+			READWRITE(nMint);
+			READWRITE(nMoneySupply);
+			READWRITE(nFlags);
+			if (!Params().GetConsensus().NetworkUpgradeActive(nHeight, Consensus::UPGRADE_V3_4)) {
+				uint64_t nStakeModifier = 0;
+				READWRITE(nStakeModifier);
+				this->SetStakeModifier(nStakeModifier, this->GeneratedStakeModifier());
+			}
+			else {
+				uint256 nStakeModifierV2;
+				READWRITE(nStakeModifierV2);
+				this->SetStakeModifier(nStakeModifierV2);
+			}
+			if (IsProofOfStake()) {
+				COutPoint prevoutStake;
+				unsigned int nStakeTime = 0;
+				READWRITE(prevoutStake);
+				READWRITE(nStakeTime);
+			}
+			READWRITE(this->nVersion);
+			READWRITE(hashPrev);
+			READWRITE(hashNext);
 			READWRITE(hashMerkleRoot);
 			READWRITE(nTime);
 			READWRITE(nBits);
@@ -348,62 +393,86 @@ public:
 
 /** Legacy block index - used to retrieve old serializations */
 
-//class CLegacyBlockIndex : public CBlockIndex
-//{
-//public:
-//	int64_t nMint = 0;
-//	uint256 hashNext{};
-//	uint256 hashPrev{};
-//	uint64_t nStakeModifier = 0;
-//	uint256 nStakeModifierV2{};
-//	COutPoint prevoutStake{};
-//	unsigned int nStakeTime = 0;
-//	int64_t nMoneySupply = 0;
-//
-//
-//	ADD_SERIALIZE_METHODS;
-//
-//	template <typename Stream, typename Operation>
-//	inline void SerializationOp(Stream& s, Operation ser_action)
-//	{
-//		int nSerVersion = s.GetVersion();
-//		if (!(s.GetType() & SER_GETHASH))
-//			READWRITE(VARINT(nSerVersion));
-//
-//		if (nSerVersion >= DBI_SER_VERSION_NO_ZC) {
-//			// no extra serialized field
-//			return;
-//		}
-//
-//		if (!ser_action.ForRead()) {
-//			// legacy block index shouldn't be used to write
-//			return;
-//		}
-//
-//		READWRITE(VARINT(nHeight));
-//		READWRITE(VARINT(nStatus));
-//		READWRITE(VARINT(nTx));
-//		if (nStatus & (BLOCK_HAVE_DATA | BLOCK_HAVE_UNDO))
-//			READWRITE(VARINT(nFile));
-//		if (nStatus & BLOCK_HAVE_DATA)
-//			READWRITE(VARINT(nDataPos));
-//		if (nStatus & BLOCK_HAVE_UNDO)
-//			READWRITE(VARINT(nUndoPos));
-//		if (nSerVersion > DBI_OLD_SER_VERSION) {
-//			// Serialization with CLIENT_VERSION > 4009900
-//			int64_t nMoneySupply = 0;
-//			READWRITE(nMoneySupply);
-//			READWRITE(nFlags);
-//			READWRITE(this->nVersion);
-//			READWRITE(vStakeModifier);
-//			READWRITE(hashPrev);
-//			READWRITE(hashMerkleRoot);
-//			READWRITE(nTime);
-//			READWRITE(nBits);
-//			READWRITE(nNonce);
-//		}
-//	}
-//};
+class CLegacyBlockIndex : public CBlockIndex
+{
+public:
+	int64_t nMint = 0;
+	uint256 hashNext{};
+	uint256 hashPrev{};
+	uint64_t nStakeModifier = 0;
+	uint256 nStakeModifierV2{};
+	COutPoint prevoutStake{};
+	unsigned int nStakeTime = 0;
+	int64_t nMoneySupply = 0;
+
+
+	ADD_SERIALIZE_METHODS;
+
+	template <typename Stream, typename Operation>
+	inline void SerializationOp(Stream& s, Operation ser_action)
+	{
+		int nSerVersion = s.GetVersion();
+		if (!(s.GetType() & SER_GETHASH))
+			READWRITE(VARINT(nSerVersion));
+
+		if (nSerVersion >= DBI_SER_VERSION_NO_ZC) {
+			// no extra serialized field
+			return;
+		}
+
+		if (!ser_action.ForRead()) {
+			// legacy block index shouldn't be used to write
+			return;
+		}
+
+		READWRITE(VARINT(nHeight));
+		READWRITE(VARINT(nStatus));
+		READWRITE(VARINT(nTx));
+		if (nStatus & (BLOCK_HAVE_DATA | BLOCK_HAVE_UNDO))
+			READWRITE(VARINT(nFile));
+		if (nStatus & BLOCK_HAVE_DATA)
+			READWRITE(VARINT(nDataPos));
+		if (nStatus & BLOCK_HAVE_UNDO)
+			READWRITE(VARINT(nUndoPos));
+
+		if (nSerVersion > DBI_OLD_SER_VERSION) {
+			// Serialization with CLIENT_VERSION = 4009901
+			READWRITE(nMoneySupply);
+			READWRITE(nFlags);
+			READWRITE(this->nVersion);
+			READWRITE(vStakeModifier);
+			READWRITE(hashPrev);
+			READWRITE(hashMerkleRoot);
+			READWRITE(nTime);
+			READWRITE(nBits);
+			READWRITE(nNonce);
+
+		}
+		else {
+			// Serialization with CLIENT_VERSION = 4009900-
+			READWRITE(nMint);
+			READWRITE(nMoneySupply);
+			READWRITE(nFlags);
+			if (!Params().GetConsensus().NetworkUpgradeActive(nHeight, Consensus::UPGRADE_V3_4)) {
+				READWRITE(nStakeModifier);
+			}
+			else {
+				READWRITE(nStakeModifierV2);
+			}
+			if (IsProofOfStake()) {
+				READWRITE(prevoutStake);
+				READWRITE(nStakeTime);
+			}
+			READWRITE(this->nVersion);
+			READWRITE(hashPrev);
+			READWRITE(hashNext);
+			READWRITE(hashMerkleRoot);
+			READWRITE(nTime);
+			READWRITE(nBits);
+			READWRITE(nNonce);
+		}
+	}
+};
 
 /** An in-memory indexed chain of blocks. */
 class CChain

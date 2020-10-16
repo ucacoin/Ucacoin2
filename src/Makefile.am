@@ -22,6 +22,7 @@ endif
 BITCOIN_CONFIG_INCLUDES=-I$(builddir)/config
 BITCOIN_INCLUDES=-I$(builddir) -I$(builddir)/obj $(BDB_CPPFLAGS) $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) $(CRYPTO_CFLAGS) $(SSL_CFLAGS)
 
+BITCOIN_INCLUDES += -I$(srcdir)/rust/include
 BITCOIN_INCLUDES += -I$(srcdir)/secp256k1/include
 BITCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
 
@@ -32,6 +33,12 @@ LIBBITCOIN_UTIL=libbitcoin_util.a
 LIBBITCOIN_CRYPTO=crypto/libbitcoin_crypto.a
 LIBBITCOINQT=qt/libbitcoinqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
+LIBSAPLING=libsapling.a
+if ENABLE_ONLINE_RUST
+LIBRUSTZCASH=$(top_builddir)/target/release/librustzcash.a
+else
+LIBRUSTZCASH=$(top_builddir)/target/$(RUST_TARGET)/release/librustzcash.a
+endif
 
 if ENABLE_ZMQ
 LIBBITCOIN_ZMQ=libbitcoin_zmq.a
@@ -41,6 +48,48 @@ LIBBITCOINCONSENSUS=libbitcoinconsensus.la
 endif
 if ENABLE_WALLET
 LIBBITCOIN_WALLET=libbitcoin_wallet.a
+endif
+
+RUST_ENV_VARS = RUSTC="$(RUSTC)" TERM=dumb
+RUST_BUILD_OPTS = --release
+
+if ENABLE_ONLINE_RUST
+# Ensure that .cargo/config does not exist
+CARGO_CONFIGURED = $(top_srcdir)/.cargo/.configured-for-online
+$(CARGO_CONFIGURED):
+	$(AM_V_at)rm -f $(top_srcdir)/.cargo/.configured-for-offline $(top_srcdir)/.cargo/config
+	$(AM_V_at)touch $@
+
+else
+# Enable dependency vendoring
+RUST_BUILD_OPTS += --locked --offline
+if HAVE_RUST_TARGET
+RUST_BUILD_OPTS += --target $(RUST_TARGET)
+endif
+
+CARGO_CONFIGURED = $(top_srcdir)/.cargo/.configured-for-offline
+$(CARGO_CONFIGURED): $(top_srcdir)/.cargo/config.offline
+	$(AM_V_at)rm -f $(top_srcdir)/.cargo/.configured-for-online
+	$(AM_V_at)cp $< $(top_srcdir)/.cargo/config
+	$(AM_V_at)echo "directory = \"$(RUST_VENDORED_SOURCES)\"" >> $(top_srcdir)/.cargo/config
+	$(AM_V_at)touch $@
+endif
+
+cargo-build: $(CARGO_CONFIGURED)
+	$(RUST_ENV_VARS) $(CARGO) build $(RUST_BUILD_OPTS) --manifest-path $(top_srcdir)/Cargo.toml
+
+if TARGET_WINDOWS
+LIBRUSTZCASH_WIN=$(top_builddir)/target/$(RUST_TARGET)/release/rustzcash.lib
+
+$(LIBRUSTZCASH_WIN): cargo-build
+
+# This ensures that the Rust library is correctly linked in by libtool.
+# See https://github.com/rust-lang/rust/issues/69904 for the underlying cause.
+$(LIBRUSTZCASH): $(LIBRUSTZCASH_WIN)
+	$(AM_V_at)cp $< $@
+
+else
+$(LIBRUSTZCASH): cargo-build
 endif
 
 $(LIBSECP256K1): $(wildcard secp256k1/src/*.h) $(wildcard secp256k1/src/*.c) $(wildcard secp256k1/include/*)
@@ -55,7 +104,8 @@ EXTRA_LIBRARIES += \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_CLI) \
   $(LIBBITCOIN_WALLET) \
-  $(LIBBITCOIN_ZMQ)
+  $(LIBBITCOIN_ZMQ) \
+  $(LIBSAPLING)
 
 lib_LTLIBRARIES = $(LIBBITCOINCONSENSUS)
 
@@ -72,10 +122,23 @@ if BUILD_BITCOIN_UTILS
   bin_PROGRAMS += ucacoin-cli ucacoin-tx
 endif
 
-.PHONY: FORCE check-symbols check-security
-# ucacoin #
+LIBSAPLING_H = \
+  sapling/sapling.h \
+  bech32.h \
+  sapling/key_io_sapling.h \
+  sapling/util.h \
+  sapling/prf.h \
+  sapling/noteencryption.hpp \
+  sapling/address.hpp \
+  sapling/note.hpp \
+  sapling/zip32.h \
+  sapling/saplingscriptpubkeyman.h
+
+.PHONY: FORCE cargo-build check-symbols check-security
+# UCACoin #
 BITCOIN_CORE_H = \
   activemasternode.h \
+  addrdb.h \
   addrman.h \
   allocators.h \
   arith_uint256.h \
@@ -117,6 +180,7 @@ BITCOIN_CORE_H = \
   httprpc.h \
   httpserver.h \
   init.h \
+  interface/wallet.h \
   legacy/stakemodifier.h \
   kernel.h \
   swifttx.h \
@@ -140,6 +204,7 @@ BITCOIN_CORE_H = \
   net.h \
   netaddress.h \
   netbase.h \
+  netmessagemaker.h \
   noui.h \
   policy/fees.h \
   policy/policy.h \
@@ -167,10 +232,12 @@ BITCOIN_CORE_H = \
   sporkdb.h \
   sporkid.h \
   stakeinput.h \
+  script/ismine.h \
   streams.h \
   support/cleanse.h \
   sync.h \
   threadsafety.h \
+  threadinterrupt.h \
   timedata.h \
   tinyformat.h \
   torcontrol.h \
@@ -179,6 +246,7 @@ BITCOIN_CORE_H = \
   guiinterface.h \
   guiinterfaceutil.h \
   uint256.h \
+  sapling/uint252.h \
   uint512.h \
   blob_uint256.h \
   undo.h \
@@ -195,7 +263,6 @@ BITCOIN_CORE_H = \
   wallet/rpcwallet.h \
   wallet/scriptpubkeyman.h \
   wallet/wallet.h \
-  wallet/wallet_ismine.h \
   wallet/walletdb.h \
   zmq/zmqabstractnotifier.h \
   zmq/zmqconfig.h \
@@ -212,6 +279,7 @@ libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
+  addrdb.cpp \
   addrman.cpp \
   bloom.cpp \
   blocksignature.cpp \
@@ -241,13 +309,15 @@ libbitcoin_server_a_SOURCES = \
   rpc/rawtransaction.cpp \
   rpc/server.cpp \
   script/sigcache.cpp \
+  script/ismine.cpp \
   sporkdb.cpp \
   timedata.cpp \
   torcontrol.cpp \
   txdb.cpp \
   txmempool.cpp \
   validationinterface.cpp \
-  $(BITCOIN_CORE_H)
+  $(BITCOIN_CORE_H) \
+  $(LIBSAPLING_H)
 
 if ENABLE_ZMQ
 libbitcoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
@@ -265,6 +335,7 @@ libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_wallet_a_SOURCES = \
   activemasternode.cpp \
   bip38.cpp \
+  interface/wallet.cpp \
   addressbook.cpp \
   crypter.cpp \
   key_io.cpp \
@@ -284,10 +355,10 @@ libbitcoin_wallet_a_SOURCES = \
   wallet/hdchain.cpp \
   wallet/scriptpubkeyman.cpp \
   wallet/wallet.cpp \
-  wallet/wallet_ismine.cpp \
   wallet/walletdb.cpp \
   stakeinput.cpp \
-  $(BITCOIN_CORE_H)
+  $(BITCOIN_CORE_H) \
+  $(LIBSAPLING_H)
 
 # crypto primitives library
 crypto_libbitcoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(PIC_FLAGS)
@@ -361,7 +432,8 @@ libbitcoin_common_a_SOURCES = \
   script/script_error.cpp \
   spork.cpp \
   sporkdb.cpp \
-  $(BITCOIN_CORE_H)
+  $(BITCOIN_CORE_H) \
+  $(LIBSAPLING_H)
 
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
@@ -382,6 +454,7 @@ libbitcoin_util_a_SOURCES = \
   rpc/protocol.cpp \
   support/cleanse.cpp \
   sync.cpp \
+  threadinterrupt.cpp \
   uint256.cpp \
   blob_uint256.cpp \
   util.cpp \
@@ -389,10 +462,31 @@ libbitcoin_util_a_SOURCES = \
   util/threadnames.cpp \
   utilstrencodings.cpp \
   utiltime.cpp \
-  $(BITCOIN_CORE_H)
+  $(BITCOIN_CORE_H) \
+  $(LIBSAPLING_H)
 
 if GLIBC_BACK_COMPAT
 libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
+AM_LDFLAGS += $(COMPAT_LDFLAGS)
+endif
+
+# sapling protocol primitives #
+libsapling_a_CPPFLAGS = $(AM_CPPFLAGS) $(PIC_FLAGS) $(BITCOIN_INCLUDES)
+libsapling_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libsapling_a_SOURCES = \
+  bech32.cpp \
+  sapling/util.cpp \
+  sapling/key_io_sapling.cpp \
+  sapling/prf.cpp \
+  sapling/noteencryption.cpp \
+  sapling/address.cpp \
+  sapling/note.cpp \
+  sapling/zip32.cpp \
+  sapling/crypter_sapling.cpp \
+  sapling/saplingscriptpubkeyman.cpp
+
+if GLIBC_BACK_COMPAT
+libsapling_a_SOURCES += compat/glibc_compat.cpp
 AM_LDFLAGS += $(COMPAT_LDFLAGS)
 endif
 
@@ -401,7 +495,8 @@ libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
   rpc/client.cpp \
-  $(BITCOIN_CORE_H)
+  $(BITCOIN_CORE_H) \
+  $(LIBSAPLING_H)
 
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
@@ -423,10 +518,13 @@ ucacoind_LDADD = \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_ZMQ) \
   $(LIBBITCOIN_CRYPTO) \
+  $(LIBSAPLING) \
   $(LIBLEVELDB) \
   $(LIBLEVELDB_SSE42) \
   $(LIBMEMENV) \
-  $(LIBSECP256K1)
+  $(LIBSECP256K1) \
+  $(LIBRUSTZCASH) \
+  $(LIBZCASH_LIBS)
 
 ucacoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
@@ -444,7 +542,10 @@ ucacoin_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
-  $(LIBBITCOIN_CRYPTO)
+  $(LIBBITCOIN_CRYPTO) \
+  $(LIBSAPLING) \
+  $(LIBRUSTZCASH) \
+  $(LIBZCASH_LIBS)
 
 ucacoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
@@ -464,7 +565,10 @@ ucacoin_tx_LDADD = \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO) \
-  $(LIBSECP256K1)
+  $(LIBSECP256K1) \
+  $(LIBSAPLING) \
+  $(LIBRUSTZCASH) \
+  $(LIBZCASH_LIBS)
 
 ucacoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
@@ -515,6 +619,7 @@ CLEANFILES += script/*.gcda script/*.gcno
 CLEANFILES += support/*.gcda support/*.gcno
 CLEANFILES += univalue/*.gcda univalue/*.gcno
 CLEANFILES += wallet/*.gcda wallet/*.gcno
+CLEANFILES += wallet/test/*.gcda wallet/test/*.gcno
 CLEANFILES += zmq/*.gcda zmq/*.gcno
 CLEANFILES += obj/build.h
 
@@ -524,7 +629,7 @@ CTAES_DIST += crypto/ctaes/ctaes.h
 CTAES_DIST += crypto/ctaes/README.md
 CTAES_DIST += crypto/ctaes/test.c
 
-EXTRA_DIST = $(CTAES_DIST)
+EXTRA_DIST = $(CTAES_DIST) rust
 
 
 config/ucacoin-config.h: config/stamp-h1
@@ -539,6 +644,8 @@ clean-local:
 	-$(MAKE) -C univalue clean
 	-rm -f leveldb/*/*.gcda leveldb/*/*.gcno leveldb/helpers/memenv/*.gcda leveldb/helpers/memenv/*.gcno
 	-rm -f config.h
+	-rm -rf test/__pycache__
+	-rm -rf ../target
 
 .rc.o:
 	@test -f $(WINDRES)
@@ -562,7 +669,12 @@ endif
 	$(AM_V_GEN) $(PROTOC) --cpp_out=$(@D) --proto_path=$(<D) $<
 
 if EMBEDDED_LEVELDB
+include Makefile.crc32c.include
 include Makefile.leveldb.include
+endif
+
+if ENABLE_TESTS
+include Makefile.test.include
 endif
 
 if ENABLE_BENCH
@@ -571,4 +683,8 @@ endif
 
 if ENABLE_QT
 include Makefile.qt.include
+endif
+
+if ENABLE_QT_TESTS
+include Makefile.qttest.include
 endif

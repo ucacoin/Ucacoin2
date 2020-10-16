@@ -95,7 +95,6 @@ QT_MOC_CPP = \
   qt/moc_recentrequeststablemodel.cpp \
   qt/moc_rpcconsole.cpp \
   qt/moc_trafficgraphwidget.cpp \
-  qt/moc_transactiondesc.cpp \
   qt/moc_transactionfilterproxy.cpp \
   qt/moc_transactiontablemodel.cpp \
   qt/moc_utilitydialog.cpp \
@@ -207,7 +206,6 @@ BITCOIN_QT_H = \
   qt/recentrequeststablemodel.h \
   qt/rpcconsole.h \
   qt/trafficgraphwidget.h \
-  qt/transactiondesc.h \
   qt/transactionfilterproxy.h \
   qt/transactionrecord.h \
   qt/transactiontablemodel.h \
@@ -286,6 +284,7 @@ RES_ICONS = \
   qt/res/icons/bitcoin_regtest.png \
   qt/res/icons/lock_closed.png \
   qt/res/icons/lock_open.png \
+  qt/res/icons/overview.png \
   qt/res/icons/ic-transaction-received.png \
   qt/res/icons/ic-transaction-mint.png \
   qt/res/icons/ic-transaction-sent.png \
@@ -322,16 +321,17 @@ RES_ICONS = \
   qt/ucacoin/res/img/bg-welcome.png \
   qt/ucacoin/res/img/ic-check-staking.png \
   qt/ucacoin/res/img/ic-nav-master.png \
+  qt/ucacoin/res/img/img-dashboard-banner.jpg \
   qt/ucacoin/res/img/btn-radio-active.png \
   qt/ucacoin/res/img/ic-check-sync-off.png \
   qt/ucacoin/res/img/ic-nav-privacy-active.png \
   qt/ucacoin/res/img/img-empty-contacts.png \
   qt/ucacoin/res/img/btn-radio-off.png \
-  qt/ucacoin/res/img/ic-check-sync.png \
   qt/ucacoin/res/img/ic-nav-privacy-hover.png \
   qt/ucacoin/res/img/img-empty-dark-contacts.png \
   qt/ucacoin/res/img/ic-contact-arrow-down.png \
   qt/ucacoin/res/img/ic-contact-arrow-down-white.png \
+  qt/ucacoin/res/img/ic-check-sync.png \
   qt/ucacoin/res/img/ic-check-faq.png \
   qt/ucacoin/res/img/ic-nav-privacy.png \
   qt/ucacoin/res/img/img-empty-dark-error.png \
@@ -397,6 +397,7 @@ RES_ICONS = \
   qt/ucacoin/res/img/ic-connect.png \
   qt/ucacoin/res/img/ic-submenu-lock.png \
   qt/ucacoin/res/img/img-logo-ucacoin@3x.png \
+  qt/ucacoin/res/img/img-logo-ucacoin.png \
   qt/ucacoin/res/img/ic-arrow-right-white.png \
   qt/ucacoin/res/img/ic-arrow-left-white.png \
   qt/ucacoin/res/img/ic-arrow-left.png \
@@ -412,6 +413,7 @@ RES_ICONS = \
   qt/ucacoin/res/img/ic-arrow-white-left.png \
   qt/ucacoin/res/img/ic-exit.png \
   qt/ucacoin/res/img/ic-switch-liliac-on.png \
+  qt/ucacoin/res/img/img-nav-logo.png \
   qt/ucacoin/res/img/ic-arrow-white-right.png \
   qt/ucacoin/res/img/ic-expand.png \
   qt/ucacoin/res/img/ic-switch-off.png \
@@ -521,7 +523,6 @@ BITCOIN_QT_WALLET_CPP = \
   qt/paymentrequestplus.cpp \
   qt/paymentserver.cpp \
   qt/recentrequeststablemodel.cpp \
-  qt/transactiondesc.cpp \
   qt/transactionfilterproxy.cpp \
   qt/transactionrecord.cpp \
   qt/transactiontablemodel.cpp \
@@ -597,9 +598,10 @@ BITCOIN_QT_CPP += $(BITCOIN_QT_WALLET_CPP)
 endif
 
 RES_IMAGES = \
-  qt/res/images/about.png
+  qt/res/images/about.png 
 
 RES_CSS = \
+  qt/res/css/default.css \
   qt/ucacoin/res/css/style_dark.css \
   qt/ucacoin/res/css/style_light.css
 
@@ -651,7 +653,7 @@ endif
 if ENABLE_ZMQ
 qt_ucacoin_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
-qt_ucacoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
+qt_ucacoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBSAPLING) $(LIBRUSTZCASH) $(LIBZCASH_LIBS) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(SVG_LIBS) $(CHARTS_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
   $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 qt_ucacoin_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)

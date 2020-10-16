@@ -52,7 +52,8 @@ public:
     void refreshBanlist()
     {
         banmap_t banMap;
-        CNode::GetBanned(banMap);
+        if(g_connman)
+            g_connman->GetBanned(banMap);
 
         cachedBanlist.clear();
         cachedBanlist.reserve(banMap.size());

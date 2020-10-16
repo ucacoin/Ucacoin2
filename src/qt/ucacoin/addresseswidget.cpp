@@ -1,4 +1,3 @@
-// Copyright (c) 2019-2020 The PIVX developers
 // Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -189,8 +188,8 @@ void AddressesWidget::onStoreContactClicked()
         }
 
         bool isStakingAddress = false;
-        CTxDestination ucacoinAdd = DecodeDestination(address.toUtf8().constData(), isStakingAddress);
-        if (walletModel->isMine(ucacoinAdd)) {
+        CTxDestination ucaAdd = DecodeDestination(address.toUtf8().constData(), isStakingAddress);
+        if (walletModel->isMine(ucaAdd)) {
             setCssEditLine(ui->lineEditAddress, false, true);
             inform(tr("Cannot store your own address as contact"));
             return;
@@ -203,7 +202,7 @@ void AddressesWidget::onStoreContactClicked()
             return;
         }
 
-        if (walletModel->updateAddressBookLabels(ucacoinAdd, label.toUtf8().constData(),
+        if (walletModel->updateAddressBookLabels(ucaAdd, label.toUtf8().constData(),
                 isStakingAddress ? AddressBook::AddressBookPurpose::COLD_STAKING_SEND : AddressBook::AddressBookPurpose::SEND)
                 ) {
             ui->lineEditAddress->setText("");

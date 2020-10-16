@@ -10,7 +10,7 @@
 #include "txdb.h"
 #include "wallet/wallet.h"
 
-bool CUcaCoinStake::InitFromTxIn(const CTxIn& txin)
+bool CBcStake::InitFromTxIn(const CTxIn& txin)
 {
     // Find the previous transaction in database
     uint256 hashBlock;
@@ -32,14 +32,14 @@ bool CUcaCoinStake::InitFromTxIn(const CTxIn& txin)
     return true;
 }
 
-bool CUcaCoinStake::SetPrevout(CTransaction txPrev, unsigned int n)
+bool CBcStake::SetPrevout(CTransaction txPrev, unsigned int n)
 {
     this->txFrom = txPrev;
     this->nPosition = n;
     return true;
 }
 
-bool CUcaCoinStake::GetTxFrom(CTransaction& tx) const
+bool CBcStake::GetTxFrom(CTransaction& tx) const
 {
     if (txFrom.IsNull())
         return false;
@@ -47,7 +47,7 @@ bool CUcaCoinStake::GetTxFrom(CTransaction& tx) const
     return true;
 }
 
-bool CUcaCoinStake::GetTxOutFrom(CTxOut& out) const
+bool CBcStake::GetTxOutFrom(CTxOut& out) const
 {
     if (txFrom.IsNull() || nPosition >= txFrom.vout.size())
         return false;
@@ -55,18 +55,18 @@ bool CUcaCoinStake::GetTxOutFrom(CTxOut& out) const
     return true;
 }
 
-bool CUcaCoinStake::CreateTxIn(CWallet* pwallet, CTxIn& txIn, uint256 hashTxOut)
+bool CBcStake::CreateTxIn(CWallet* pwallet, CTxIn& txIn, uint256 hashTxOut)
 {
     txIn = CTxIn(txFrom.GetHash(), nPosition);
     return true;
 }
 
-CAmount CUcaCoinStake::GetValue() const
+CAmount CBcStake::GetValue() const
 {
     return txFrom.vout[nPosition].nValue;
 }
 
-bool CUcaCoinStake::CreateTxOuts(CWallet* pwallet, std::vector<CTxOut>& vout, CAmount nTotal)
+bool CBcStake::CreateTxOuts(CWallet* pwallet, std::vector<CTxOut>& vout, CAmount nTotal, const bool onlyP2PK)
 {
     std::vector<valtype> vSolutions;
     txnouttype whichType;
@@ -79,19 +79,18 @@ bool CUcaCoinStake::CreateTxOuts(CWallet* pwallet, std::vector<CTxOut>& vout, CA
 
     CScript scriptPubKey;
     CKey key;
-    if (whichType == TX_PUBKEYHASH) {
-        // if P2PKH check that we have the input private key
+    if (whichType == TX_PUBKEYHASH || whichType == TX_COLDSTAKE) {
+        // if P2PKH or P2CS check that we have the input private key
         if (!pwallet->GetKey(CKeyID(uint160(vSolutions[0])), key))
             return error("%s: Unable to get staking private key", __func__);
+    }
 
+    // Consensus check: P2PKH block signatures were not accepted before v5 update.
+    // This can be removed after v5.0 enforcement
+    if (whichType == TX_PUBKEYHASH && onlyP2PK) {
         // convert to P2PK inputs
         scriptPubKey << key.GetPubKey() << OP_CHECKSIG;
-
     } else {
-        // if P2CS, check that we have the coldstaking private key
-        if ( whichType == TX_COLDSTAKE && !pwallet->GetKey(CKeyID(uint160(vSolutions[0])), key) )
-            return error("%s: Unable to get cold staking private key", __func__);
-
         // keep the same script
         scriptPubKey = scriptPubKeyKernel;
     }
@@ -116,7 +115,7 @@ bool CUcaCoinStake::CreateTxOuts(CWallet* pwallet, std::vector<CTxOut>& vout, CA
     return true;
 }
 
-CDataStream CUcaCoinStake::GetUniqueness() const
+CDataStream CBcStake::GetUniqueness() const
 {
     //The unique identifier for a UCA stake is the outpoint
     CDataStream ss(SER_NETWORK, 0);
@@ -125,7 +124,7 @@ CDataStream CUcaCoinStake::GetUniqueness() const
 }
 
 //The block that the UTXO was added to the chain
-CBlockIndex* CUcaCoinStake::GetIndexFrom()
+CBlockIndex* CBcStake::GetIndexFrom()
 {
     if (pindexFrom)
         return pindexFrom;
@@ -146,7 +145,7 @@ CBlockIndex* CUcaCoinStake::GetIndexFrom()
 }
 
 // Verify stake contextual checks
-bool CUcaCoinStake::ContextCheck(int nHeight, uint32_t nTime)
+bool CBcStake::ContextCheck(int nHeight, uint32_t nTime)
 {
     const Consensus::Params& consensus = Params().GetConsensus();
     // Get Stake input block time/height

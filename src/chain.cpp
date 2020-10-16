@@ -230,8 +230,9 @@ uint64_t CBlockIndex::GetStakeModifierV1() const
 // Returns V2 stake modifier (uint256)
 uint256 CBlockIndex::GetStakeModifierV2() const
 {
-    if (vStakeModifier.empty() || !Params().GetConsensus().NetworkUpgradeActive(nHeight, Consensus::UPGRADE_V3_4))
-        return UINT256_ZERO;
+	if (vStakeModifier.empty() || !Params().GetConsensus().NetworkUpgradeActive(nHeight, Consensus::UPGRADE_V3_4)) {
+		return UINT256_ZERO;
+	}
     uint256 nStakeModifier;
     std::memcpy(nStakeModifier.begin(), vStakeModifier.data(), vStakeModifier.size());
     return nStakeModifier;

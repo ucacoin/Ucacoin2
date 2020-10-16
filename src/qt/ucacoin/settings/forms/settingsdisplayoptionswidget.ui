@@ -121,7 +121,7 @@
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalPercentageUca">
+         <layout class="QHBoxLayout" name="horizontalPercentagezUca">
           <item>
            <widget class="QLabel" name="labelTitleUnit">
             <property name="text">
@@ -130,7 +130,7 @@
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacerPercentageUca">
+           <spacer name="horizontalSpacerPercentagezUca">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -161,7 +161,7 @@
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalUca">
+         <layout class="QHBoxLayout" name="horizontalDenomzUca">
           <item>
            <widget class="QLabel" name="labelTitleDigits">
             <property name="text">
@@ -170,7 +170,7 @@
            </widget>
           </item>
           <item>
-           <spacer name="horizontalUca_1">
+           <spacer name="horizontalDenomzUca_1">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>

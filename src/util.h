@@ -34,6 +34,9 @@
 #include <boost/thread/exceptions.hpp>
 #include <boost/thread/condition_variable.hpp> // for boost::thread_interrupted
 
+extern const char * const UCACoin_CONF_FILENAME;
+extern const char * const UCACoin_PID_FILENAME;
+extern const char * const UCACoin_MASTERNODE_CONF_FILENAME;
 extern const char * const DEFAULT_DEBUGLOGFILE;
 
 //UCACoin only features
@@ -76,6 +79,10 @@ bool RenameOver(fs::path src, fs::path dest);
 bool TryCreateDirectory(const fs::path& p);
 fs::path GetDefaultDataDir();
 const fs::path &GetDataDir(bool fNetSpecific = true);
+// Sapling network dir
+const fs::path &ZC_GetParamsDir();
+// Init sapling library
+void initZKSNARKS();
 void ClearDatadirCache();
 fs::path GetConfigFile();
 fs::path GetMasternodeConfigFile();

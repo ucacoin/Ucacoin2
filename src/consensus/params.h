@@ -142,7 +142,6 @@ struct Params {
         return (contextHeight - utxoFromBlockHeight >= nStakeMinDepth);
     }
 
-
     /**
      * Returns true if the given network upgrade is active as of the given block
      * height. Caller must check that the height is >= 0 (and handle unknown

@@ -1,4 +1,3 @@
-// Copyright (c) 2019-2020 The PIVX developers
 // Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -517,25 +516,14 @@ void SettingsConsoleWidget::scrollToEnd()
 void SettingsConsoleWidget::changeTheme(bool isLightTheme, QString &theme)
 {
     // Set default style sheet
-    if (isLightTheme) {
-        ui->messagesWidget->document()->setDefaultStyleSheet(
-                "table { color: #707070;  }"
-                "td.time { color: #808080; padding-top: 3px; } "
-                "td.message { color: #707070;font-family: Courier, Courier New, Lucida Console, monospace; font-size: 12px; } " // Todo: Remove fixed font-size
-                "td.cmd-request { color: #006060; } "
-                "td.cmd-error { color: red; } "
-                ".secwarning { color: red; }"
-                "b { color: #707070; } ");
-    } else {
-        ui->messagesWidget->document()->setDefaultStyleSheet(
-                "table { color: #707070; }"
-                "td.time { color: #808080; padding-top: 3px; } "
-                "td.message { color: #707070;font-family: Courier, Courier New, Lucida Console, monospace; font-size: 12px; } " // Todo: Remove fixed font-size
-                "td.cmd-request { color: #006060; } "
-                "td.cmd-error { color: red; } "
-                ".secwarning { color: red; }"
-                "b { color: #707070; } ");
-    }
+    ui->messagesWidget->document()->setDefaultStyleSheet(
+            "table { color: #707070;  }"
+            "td.time { color: #808080; padding-top: 3px; } "
+            "td.message { color: #707070;font-family: Courier, Courier New, Lucida Console, monospace; font-size: 12px; } " // Todo: Remove fixed font-size
+            "td.cmd-request { color: #006060; } "
+            "td.cmd-error { color: red; } "
+            ".secwarning { color: red; }"
+            "b { color: #707070; } ");
     updateStyle(ui->messagesWidget);
 }
 

@@ -1,4 +1,3 @@
-// Copyright (c) 2019-2020 The PIVX developers
 // Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -213,23 +212,28 @@ void updateStyle(QWidget* widget)
 
 QColor getRowColor(bool isLightTheme, bool isHovered, bool isSelected)
 {
-    if (isLightTheme) {
-        if (isSelected) {
-            return QColor("#25feaf87");
-        } else if (isHovered) {
-            return QColor("#25bababa");
-        } else {
-            return QColor("#ffffff");
-        }
-    } else {
-        if (isSelected) {
-            return QColor("#25feaf87");
-        } else if (isHovered) {
-            return QColor("#25bababa");
-        } else {
-            return QColor("#1a100b");
-        }
-    }
+	if (isLightTheme) {
+		if (isSelected) {
+			return QColor("#50feaf87");
+		}
+		else if (isHovered) {
+			return QColor("#25bababa");
+		}
+		else {
+			return QColor("#ffffff");
+		}
+	}
+	else {
+		if (isSelected) {
+			return QColor("#25feaf87");
+		}
+		else if (isHovered) {
+			return QColor("#25bababa");
+		}
+		else {
+			return QColor("#14100B");
+		}
+	}
 }
 
 void initComboBox(QComboBox* combo, QLineEdit* lineEdit, QString cssClass)

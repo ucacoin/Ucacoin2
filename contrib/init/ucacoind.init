@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#  ucacoind The UCAcoin server.
+#  ucacoind The UCACoin server.
 #
 #
 # chkconfig: 345 80 20

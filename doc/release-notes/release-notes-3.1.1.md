@@ -93,7 +93,7 @@ Secondary improvement area is in ConnectBlock() when multiple zerocoin transacti
 
 ### Resolution of excessive peer banning
 
-It was found that following a forced closure of the UCAcoin wallet (ungraceful), a situation could arise that left partial/incomplete data in the disk cache. This caused the client to fail a basic sanity test and ban any peer which was sending the (complete) data. This, in turn, was causing the wallet to become stuck. This issue has been resolved client side by guarding against this partial/incomplete data in the disk cache.
+It was found that following a forced closure of the UCACoin wallet (ungraceful), a situation could arise that left partial/incomplete data in the disk cache. This caused the client to fail a basic sanity test and ban any peer which was sending the (complete) data. This, in turn, was causing the wallet to become stuck. This issue has been resolved client side by guarding against this partial/incomplete data in the disk cache.
 
 *3.1.1* Change log
 --------------

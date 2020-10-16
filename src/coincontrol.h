@@ -21,7 +21,7 @@ public:
     int nSplitBlock;
     //! If false, allows unselected inputs, but requires all selected inputs be used
     bool fAllowOtherInputs;
-    //! Includes watch only addresses which match the ISMINE_WATCH_SOLVABLE criteria
+    //! Includes watch only addresses which are solvable
     bool fAllowWatchOnly;
     //! Minimum absolute fee (not per kilobyte)
     CAmount nMinimumTotalFee;

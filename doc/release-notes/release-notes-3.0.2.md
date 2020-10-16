@@ -45,13 +45,29 @@ Notable Changes
 
 Auto Wallet Backup
 ---------------------
-In addition to the automatic wallet backup that is done at each start of the client, a new automatic backup function has been added that will, by default, create a backup of the wallet file during each zUCA mint operation (zUCA spends which re-mint their change are also included in this). This functionality is controlled by the `-backupzucacoin` command-line option, which defaults to `1` (enabled, auto-backup).
+In addition to the automatic wallet backup that is done at each start of the client, a new automatic backup function has been added that will, by default, create a backup of the wallet file during each zUCA mint operation (zUCA spends which re-mint their change are also included in this). This functionality is controlled by the `-backupzuca` command-line option, which defaults to `1` (enabled, auto-backup).
 
-Users that wish to prevent this behavior (not recommended) can pass `-backupzucacoin=0` at the command-line when starting the client, or add `backupzucacoin=0` to their `ucacoin.conf` file.
+Users that wish to prevent this behavior (not recommended) can pass `-backupzuca=0` at the command-line when starting the client, or add `backupzuca=0` to their `ucacoin.conf` file.
 
 zUCA Automint Calculations
 ---------------------
 A bug in the automint calculations was made apparent on mainnet when block times exceeded expectations, resulting in zUCA mint transactions that were in an unconfirmed state to still be treated as if they had never been minted. This caused automint to effectively mint more than what was intended.
+
+zUCA Spending Fix
+---------------------
+The size of zUCA spend transactions is knowingly larger than normal transactions, and while this was expected, a much stricter check against the scriptsig size is used for mainnet, causing the transactions to be rejected by the mempool, and thus not being packaged into any blocks.
+
+zUCA Transaction Recovery
+---------------------
+Due to the aforementioned issue with zUCA spending, users may find that their attempted spends are now conflicted and zUCA balances are not represented as expected. "Recovery" of these transactions can be done using the following methods:
+
+1. GUI:
+
+   The Privacy tab has the `Reset` and `Rescan` buttons that can be used to restore these mints/spends from a state of being marked as unavailable.
+
+2. RPC:
+
+   The RPC commands `resetspentzerocoin` and `resetmintzerocoin` are the command-line counterparts to the above, and can be used by users that do not use the GUI wallet.
 
 RPC Changes
 ---------------------
@@ -78,7 +94,7 @@ git merge commit are mentioned.
 
 ### Wallet
 - #271 `5e9a086` [Wallet] Remove unused member wallet in UnlockContext inner class (Jon Spock)
-- #279 `e734010` Add -backupzucacoin startup flag. (presstab)
+- #279 `e734010` Add -backupzuca startup flag. (presstab)
 - #280 `fdc182d` [Wallet] Fix zUca spending errors. (presstab)
 - #282 `310f216` [Wallet] Count pending zUca balance for automint. (presstab)
 - #290 `004d7b6` Include both pending and mature zerocoins for automint calculations (presstab)

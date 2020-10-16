@@ -1,4 +1,3 @@
-// Copyright (c) 2019-2020 The PIVX developers
 // Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -44,9 +43,7 @@ public:
     void unlockWallet();
 
 public Q_SLOTS:
-    void updateBalances(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance,
-                        const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance,
-                        const CAmount& delegatedBalance, const CAmount& coldStakedBalance);
+    void updateBalances(const interfaces::WalletBalances& newBalance);
     void updateDisplayUnit();
 
     void setNumConnections(int count);

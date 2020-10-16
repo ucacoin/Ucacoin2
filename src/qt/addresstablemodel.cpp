@@ -233,7 +233,6 @@ public:
         }
     }
 
-
     int size() { return cachedAddressTable.size(); }
     int sizeSend() { return sendNum; }
     int sizeRecv() { return recvNum; }
@@ -422,7 +421,7 @@ void AddressTableModel::updateEntry(const QString& address,
     const QString& purpose,
     int status)
 {
-    // Update address book model from UCAcoin
+    // Update address book model from UCACoin
     priv->updateEntry(address, label, isMine, purpose, status);
 }
 

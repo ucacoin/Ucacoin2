@@ -311,6 +311,8 @@ rm -f %{buildroot}%{_bindir}/test_*
 
 %check
 make check
+srcdir=src test/ucacoin-util-test.py
+test/functional/test_runner.py --extended
 
 %post libs -p /sbin/ldconfig
 

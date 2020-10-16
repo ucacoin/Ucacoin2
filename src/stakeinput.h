@@ -27,20 +27,20 @@ public:
     virtual bool GetTxFrom(CTransaction& tx) const = 0;
     virtual bool GetTxOutFrom(CTxOut& out) const = 0;
     virtual CAmount GetValue() const = 0;
-    virtual bool CreateTxOuts(CWallet* pwallet, std::vector<CTxOut>& vout, CAmount nTotal) = 0;
+    virtual bool CreateTxOuts(CWallet* pwallet, std::vector<CTxOut>& vout, CAmount nTotal, const bool onlyP2PK) = 0;
     virtual CDataStream GetUniqueness() const = 0;
     virtual bool ContextCheck(int nHeight, uint32_t nTime) = 0;
 };
 
 
-class CUcaCoinStake : public CStakeInput
+class CBcStake : public CStakeInput
 {
 private:
     CTransaction txFrom{CTransaction()};
     unsigned int nPosition{0};
 
 public:
-    CUcaCoinStake() {}
+    CBcStake() {}
 
     bool InitFromTxIn(const CTxIn& txin) override;
     bool SetPrevout(CTransaction txPrev, unsigned int n);
@@ -51,7 +51,7 @@ public:
     CAmount GetValue() const override;
     CDataStream GetUniqueness() const override;
     bool CreateTxIn(CWallet* pwallet, CTxIn& txIn, uint256 hashTxOut = UINT256_ZERO) override;
-    bool CreateTxOuts(CWallet* pwallet, std::vector<CTxOut>& vout, CAmount nTotal) override;
+    bool CreateTxOuts(CWallet* pwallet, std::vector<CTxOut>& vout, CAmount nTotal, const bool onlyP2PK) override;
     bool ContextCheck(int nHeight, uint32_t nTime) override;
 };
 

@@ -4,8 +4,8 @@
 
 set -e
 
-BCUSER="ucacoin"
-BCHOME="/var/lib/ucacoin"
+UCAUSER="ucacoin"
+UCAHOME="/var/lib/ucacoin"
 
 if [ "$1" = "purge" ]; then
 
@@ -17,14 +17,14 @@ if [ "$1" = "purge" ]; then
 
 	echo
 	echo "#"
-	echo "#  The ucacoin user (${BCUSER}) and data dir (${BCHOME})"
+	echo "#  The ucacoin user (${UCAUSER}) and data dir (${UCAHOME})"
 	echo "#  were left intact."
 	echo "#"
-	echo "#  Make sure to check \"${BCHOME}\" for wallets and other"
+	echo "#  Make sure to check \"${UCAHOME}\" for wallets and other"
 	echo "#  important bits."
 	echo "#"
 	echo "#  After backing up all vital data, cleanup can be completed"
-	echo "#  by running: sudo userdel -r ${BCUSER}"
+	echo "#  by running: sudo userdel -r ${UCAUSER}"
 	echo "#"
 	echo
 

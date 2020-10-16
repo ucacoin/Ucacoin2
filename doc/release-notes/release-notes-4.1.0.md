@@ -147,9 +147,9 @@ Functional Changes
 ### zUCA Backup Removed
 
 Automatic zUCA backup has been disabled. Thus, the following configuration options have been removed  (either as entries in the ucacoin.conf file or as startup flags):
-- `autozucacoinbackup`
-- `backupzucacoin`
-- `zucacoinbackuppath`
+- `autozucabackup`
+- `backupzuca`
+- `zucabackuppath`
 
 ### Stake-Split threshold
 
@@ -177,7 +177,7 @@ RPC Changes
 
 - "CoinStake" JSON object in `getblock` output is removed, and replaced with the strings "stakeModifier" and "hashProofOfStake"
 - "obfcompat" JSON field in `getmasternodecount` output is removed as it is/was redundant with the `enabled` field.
-- "moneysupply" and "zucacoinSupply" attributes in `getblock` output are removed.
+- "moneysupply" and "zucaSupply" attributes in `getblock` output are removed.
 - "isPublicSpend" boolean (optional) input parameter is removed from the following commands:
 
   These commands are now able to create only *public* spends (private spends were already enabled only on regtest).
@@ -216,6 +216,7 @@ RPC Changes
 
 The following commands have been removed from the RPC interface:
 - `createrawzerocoinstake`
+- `getmintsinblocks`
 - `reservebalance`
 - `getpoolinfo`
 
@@ -339,7 +340,7 @@ Detailed release notes follow. For convenience in locating the code changes and 
  - #1356 `d6298c5fa0` [Wallet][GUI] Set default stake-split threshold to 500 (random-zebra)
  - #1369 `bb9b762bb1` [Wallet] Fix staking balance calculation (random-zebra)
  - #1373 `5d004d514c` [Wallet] Remove reserve balance (random-zebra)
- - #1382 `df2db0d5c6` [Wallet] Don't initialize zucacoinwallet on first run (Fuzzbawls)
+ - #1382 `df2db0d5c6` [Wallet] Don't initialize zucawallet on first run (Fuzzbawls)
  - #1401 `e1585f7609` [Wallet][Bug] Fix ScriptPubKeyMan::CanGetAddresses (random-zebra)
  - #1411 `3c34c34fd1` [Wallet][Bug] Fix ScriptPubKeyMan::CanGenerateKeys (random-zebra)
  - #1458 `8d8050fa6d` [Wallet][Bug] Fix min depth requirement for stake inputs in AvailableCoins (random-zebra)
@@ -441,7 +442,7 @@ Detailed release notes follow. For convenience in locating the code changes and 
  - #1281 `a293072cdb` [Trivial][Cleanup] Remove extra checks before GetBlocksToMaturity (random-zebra)
  - #1282 `76f29fccf3` [Trivial][Cleanup] Add IsRegTestNet() function in chainparams (random-zebra)
  - #1290 `2ceeb2cca0` [zUCA][Cleanup] Zerocoin Cleanup 1: remove Accumulators values (random-zebra)
- - #1291 `16d7dac5f7` [zUCA][Cleanup] Zerocoin Cleanup 2: remove CZUcaCoinStake class (random-zebra)
+ - #1291 `16d7dac5f7` [zUCA][Cleanup] Zerocoin Cleanup 2: remove CZUcaStake class (random-zebra)
  - #1293 `28e0048b3e` [zUCA][Cleanup] Zerocoin Cleanup 3: remove old ZK proofs (random-zebra)
  - #1314 `185194bd7e` [zUCA][Cleanup] Zerocoin Cleanup 4: further wallet cleaning (random-zebra)
  - #1322 `5bd387e18d` [zUCA][Cleanup] Zerocoin Cleanup 5: further main.cpp cleaning (random-zebra)

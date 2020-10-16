@@ -181,7 +181,7 @@ bool Intro::pickDataDirectory()
     dataDir = settings.value("strDataDir", dataDir).toString();
 
 
-    if (!fs::exists(GUIUtil::qstringToBoostPath(dataDir)) || GetBoolArg("-choosedatadir", false)) {
+    if (!fs::exists(GUIUtil::qstringToBoostPath(dataDir)) || GetBoolArg("-choosedatadir", DEFAULT_CHOOSE_DATADIR)) {
         // If current default data directory does not exist, let the user choose one
         Intro intro;
         intro.setDataDirectory(dataDir);
@@ -225,7 +225,7 @@ void Intro::setStatus(int status, const QString& message, quint64 bytesAvailable
         break;
     case FreespaceChecker::ST_ERROR:
         ui->errorMessage->setText(tr("Error") + ": " + message);
-        ui->errorMessage->setStyleSheet("QLabel { color: #673091 }");
+        ui->errorMessage->setStyleSheet("QLabel { color: #f84444 }");
         break;
     }
     /* Indicate number of bytes available */

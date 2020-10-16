@@ -21,6 +21,8 @@
 #include <utility>
 #include <vector>
 
+static const bool DEFAULT_FLUSHWALLET = true;
+
 class CAccount;
 class CAccountingEntry;
 struct CBlockLocator;
@@ -94,7 +96,7 @@ public:
     }
 };
 
-/** Access to the wallet database (wallet.dat) */
+/** Access to the wallet database */
 class CWalletDB : public CDB
 {
 public:
@@ -155,6 +157,18 @@ public:
     //! write the hdchain model (external/internal chain child index counter)
     bool WriteHDChain(const CHDChain& chain);
 
+    /// Write extended spending key to wallet database, where the key is the incoming viewing key
+    bool WriteSaplingZKey(const libzcash::SaplingIncomingViewingKey &ivk,
+                          const libzcash::SaplingExtendedSpendingKey &key,
+                          const CKeyMetadata  &keyMeta);
+
+    bool WriteSaplingPaymentAddress(const libzcash::SaplingPaymentAddress &addr,
+                                    const libzcash::SaplingIncomingViewingKey &ivk);
+
+    bool WriteCryptedSaplingZKey(const libzcash::SaplingExtendedFullViewingKey &extfvk,
+                                 const std::vector<unsigned char>& vchCryptedSecret,
+                                 const CKeyMetadata &keyMeta);
+
     /// Write destination data key,value tuple to database
     bool WriteDestData(const std::string& address, const std::string& key, const std::string& value);
     /// Erase destination data tuple from wallet database
@@ -169,6 +183,12 @@ public:
     DBErrors ZapWalletTx(CWallet* pwallet, std::vector<CWalletTx>& vWtx);
     static bool Recover(CDBEnv& dbenv, std::string filename, bool fOnlyKeys);
     static bool Recover(CDBEnv& dbenv, std::string filename);
+
+    std::map<uint256, std::vector<std::pair<uint256, uint32_t> > > MapMintPool();
+    bool WriteMintPoolPair(const uint256& hashMasterSeed, const uint256& hashPubcoin, const uint32_t& nCount);
+
+    static void IncrementUpdateCounter();
+    static unsigned int GetUpdateCounter();
 private:
     CWalletDB(const CWalletDB&);
     void operator=(const CWalletDB&);
@@ -180,5 +200,6 @@ void NotifyBacked(const CWallet& wallet, bool fSuccess, std::string strMessage);
 bool BackupWallet(const CWallet& wallet, const fs::path& strDest, bool fEnableCustom = true);
 bool AttemptBackupWallet(const CWallet& wallet, const fs::path& pathSrc, const fs::path& pathDest);
 
+void ThreadFlushWalletDB();
 
 #endif // BITCOIN_WALLETDB_H

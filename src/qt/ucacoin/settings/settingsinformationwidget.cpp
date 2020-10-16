@@ -1,4 +1,3 @@
-// Copyright (c) 2019-2020 The PIVX developers
 // Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -90,7 +89,7 @@ SettingsInformationWidget::SettingsInformationWidget(UCACoinGUI* _window,QWidget
 #ifdef ENABLE_WALLET
     // Wallet data -- remove it with if it's needed
     ui->labelInfoBerkeley->setText(DbEnv::version(0, 0, 0));
-    ui->labelInfoDataDir->setText(QString::fromStdString(GetDataDir().string() + QDir::separator().toLatin1() + GetArg("-wallet", "wallet.dat")));
+    ui->labelInfoDataDir->setText(QString::fromStdString(GetDataDir().string() + QDir::separator().toLatin1() + GetArg("-wallet", DEFAULT_WALLET_DAT)));
 #else
     ui->labelInfoBerkeley->setText(tr("No information"));
 #endif
@@ -159,6 +158,21 @@ void SettingsInformationWidget::openNetworkMonitor()
         rpcConsole->setClientModel(clientModel);
     }
     rpcConsole->showNetwork();
+}
+
+void SettingsInformationWidget::showEvent(QShowEvent *event)
+{
+    QWidget::showEvent(event);
+    if (clientModel) {
+        clientModel->startMasternodesTimer();
+    }
+}
+
+void SettingsInformationWidget::hideEvent(QHideEvent *event) {
+    QWidget::hideEvent(event);
+    if (clientModel) {
+        clientModel->stopMasternodesTimer();
+    }
 }
 
 SettingsInformationWidget::~SettingsInformationWidget()

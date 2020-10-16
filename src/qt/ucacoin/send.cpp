@@ -1,4 +1,3 @@
-// Copyright (c) 2019-2020 The PIVX developers
 // Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -648,8 +647,8 @@ void SendWidget::onContactMultiClicked()
             inform(tr("Invalid address"));
             return;
         }
-        CTxDestination ucacoinAdd = DecodeDestination(address.toStdString());
-        if (walletModel->isMine(ucacoinAdd)) {
+        CTxDestination ucaAdd = DecodeDestination(address.toStdString());
+        if (walletModel->isMine(ucaAdd)) {
             inform(tr("Cannot store your own address as contact"));
             return;
         }
@@ -669,7 +668,7 @@ void SendWidget::onContactMultiClicked()
             if (label == dialog->getLabel()) {
                 return;
             }
-            if (walletModel->updateAddressBookLabels(ucacoinAdd, dialog->getLabel().toStdString(),
+            if (walletModel->updateAddressBookLabels(ucaAdd, dialog->getLabel().toStdString(),
                     AddressBook::AddressBookPurpose::SEND)) {
                 inform(tr("New Contact Stored"));
             } else {

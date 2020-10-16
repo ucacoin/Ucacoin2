@@ -15,7 +15,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"io.ucacoin.UcaCoin-Qt";
+        return @"io.ucacoin.UCACoin-Qt";
     } else {
         return [self __bundleIdentifier];
     }

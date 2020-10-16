@@ -125,7 +125,7 @@ static const CRPCConvertParam vRPCConvertParams[] =
         {"keypoolrefill", 0},
         {"getrawmempool", 0},
         {"estimatefee", 0},
-        {"estimatepriority", 0},
+        {"estimatesmartfee", 0},
         {"prioritisetransaction", 1},
         {"prioritisetransaction", 2},
         {"setban", 2},
@@ -145,13 +145,11 @@ static const CRPCConvertParam vRPCConvertParams[] =
         {"setstakesplitthreshold", 0},
         {"autocombinerewards", 0},
         {"autocombinerewards", 1},
+        {"getmintsvalues", 2},
         {"enableautomintaddress", 0},
         {"getblockindexstats", 0},
         {"getblockindexstats", 1},
         {"getblockindexstats", 2},
-        {"getserials", 0},
-        {"getserials", 1},
-        {"getserials", 2},
         {"getfeeinfo", 0},
     };
 

@@ -456,8 +456,8 @@ https://www.transifex.com/ucacoin-project/ucacoin-project-translations</string>
         </layout>
        </item>
        <item>
-        <widget class="QWidget" name="verticalucacoinDisplayWidget" native="true">
-         <layout class="QVBoxLayout" name="verticalucacoinDisplayLayout">
+        <widget class="QWidget" name="verticalZucaDisplayWidget" native="true">
+         <layout class="QVBoxLayout" name="verticalZucaDisplayLayout">
           <property name="margin">
            <number>0</number>
           </property>

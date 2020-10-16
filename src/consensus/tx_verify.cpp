@@ -45,7 +45,7 @@ unsigned int GetP2SHSigOpCount(const CTransaction& tx, const CCoinsViewCache& in
 
     unsigned int nSigOps = 0;
     for (unsigned int i = 0; i < tx.vin.size(); i++) {
-        const CTxOut& prevout = inputs.GetOutputFor(tx.vin[i]);
+        const CTxOut& prevout = inputs.AccessCoin(tx.vin[i].prevout).out;
         if (prevout.scriptPubKey.IsPayToScriptHash())
             nSigOps += prevout.scriptPubKey.GetSigOpCount(tx.vin[i].scriptSig);
     }
@@ -59,6 +59,12 @@ bool CheckTransaction(const CTransaction& tx, CValidationState& state, bool fCol
         return state.DoS(10, false, REJECT_INVALID, "bad-txns-vin-empty");
     if (tx.vout.empty())
         return state.DoS(10, false, REJECT_INVALID, "bad-txns-vout-empty");
+
+    // Size limits
+    unsigned int nMaxSize = MAX_STANDARD_TX_SIZE;
+
+    //if (::GetSerializeSize(tx, SER_NETWORK, PROTOCOL_VERSION) > nMaxSize)
+    //    return state.DoS(100, false, REJECT_INVALID, "bad-txns-oversize");
 
     // Check for negative or overflow output values
     const Consensus::Params& consensus = Params().GetConsensus();
@@ -82,9 +88,13 @@ bool CheckTransaction(const CTransaction& tx, CValidationState& state, bool fCol
         }
     }
 
-	if (tx.IsCoinBase()) {
+    if (tx.IsCoinBase()) {
         if (tx.vin[0].scriptSig.size() < 2 || tx.vin[0].scriptSig.size() > 150)
             return state.DoS(100, false, REJECT_INVALID, "bad-cb-length");
+    } else {
+        for (const CTxIn& txin : tx.vin)
+            if (txin.prevout.IsNull())
+                return state.DoS(10, false, REJECT_INVALID, "bad-txns-prevout-null");
     }
 
     return true;

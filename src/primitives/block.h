@@ -24,7 +24,7 @@ class CBlockHeader
 {
 public:
     // header
-    static const int32_t CURRENT_VERSION=7;     
+    static const int32_t CURRENT_VERSION=7;
     int32_t nVersion;
     uint256 hashPrevBlock;
     uint256 hashMerkleRoot;
@@ -47,7 +47,6 @@ public:
         READWRITE(nTime);
         READWRITE(nBits);
         READWRITE(nNonce);
-
     }
 
     void SetNull()
@@ -84,7 +83,6 @@ public:
     std::vector<unsigned char> vchBlockSig;
 
     // memory only
-    mutable CScript payee;
     mutable bool fChecked;
 
     CBlock()
@@ -113,7 +111,6 @@ public:
         CBlockHeader::SetNull();
         vtx.clear();
         fChecked = false;
-        payee = CScript();
         vchBlockSig.clear();
     }
 
@@ -137,11 +134,6 @@ public:
     bool IsProofOfWork() const
     {
         return !IsProofOfStake();
-    }
-
-    std::pair<COutPoint, unsigned int> GetProofOfStake() const
-    {
-        return IsProofOfStake()? std::make_pair(vtx[1].vin[0].prevout, nTime) : std::make_pair(COutPoint(), (unsigned int)0);
     }
 
     std::string ToString() const;

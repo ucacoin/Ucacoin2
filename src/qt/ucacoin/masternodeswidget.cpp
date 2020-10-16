@@ -1,4 +1,3 @@
-// Copyright (c) 2019-2020 The PIVX developers
 // Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -379,7 +378,8 @@ void MasterNodesWidget::onDeleteMNClicked()
 
     std::string strConfFile = "masternode.conf";
     std::string strDataDir = GetDataDir().string();
-    if (strConfFile != fs::basename(strConfFile) + fs::extension(strConfFile)) {
+    fs::path conf_file_path(strConfFile);
+    if (strConfFile != conf_file_path.filename().string()) {
         throw std::runtime_error(strprintf(_("masternode.conf %s resides outside data directory %s"), strConfFile, strDataDir));
     }
 
@@ -434,21 +434,18 @@ void MasterNodesWidget::onDeleteMNClicked()
         streamConfig.close();
 
         if (lineNumToRemove != -1) {
-            fs::path pathConfigFile("masternode_temp.conf");
-            if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir() / pathConfigFile;
+            fs::path pathConfigFile = AbsPathForConfigVal(fs::path("masternode_temp.conf"));
             FILE* configFile = fsbridge::fopen(pathConfigFile, "w");
             fwrite(lineCopy.c_str(), std::strlen(lineCopy.c_str()), 1, configFile);
             fclose(configFile);
 
-            fs::path pathOldConfFile("old_masternode.conf");
-            if (!pathOldConfFile.is_complete()) pathOldConfFile = GetDataDir() / pathOldConfFile;
+            fs::path pathOldConfFile = AbsPathForConfigVal(fs::path("old_masternode.conf"));
             if (fs::exists(pathOldConfFile)) {
                 fs::remove(pathOldConfFile);
             }
             rename(pathMasternodeConfigFile, pathOldConfFile);
 
-            fs::path pathNewConfFile("masternode.conf");
-            if (!pathNewConfFile.is_complete()) pathNewConfFile = GetDataDir() / pathNewConfFile;
+            fs::path pathNewConfFile = AbsPathForConfigVal(fs::path("masternode.conf"));
             rename(pathConfigFile, pathNewConfFile);
 
             // Unlock collateral
@@ -479,8 +476,8 @@ void MasterNodesWidget::onCreateMNClicked()
         return;
     }
 
-    if (walletModel->getBalance() <= GetMNCollateral(0) * COIN) {
-        inform(tr("Not enough balance to create a masternode, %1 required.").arg(GetMNCollateral(0)));
+    if (walletModel->getBalance() <= (COIN * GetMNCollateral(0))) {
+        inform(tr("Not enough balance to create a masternode, %1 %1 required.").arg(GetMNCollateral(0)).arg(CURRENCY_UNIT.c_str()));
         return;
     }
     showHideOp(true);

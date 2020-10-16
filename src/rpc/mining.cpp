@@ -158,10 +158,17 @@ UniValue generate(const JSONRPCRequest& request)
     UniValue blockHashes(UniValue::VARR);
     CReserveKey reservekey(pwalletMain);
     unsigned int nExtraNonce = 0;
-    while (nHeight < nHeightEnd && !ShutdownRequested())
-    {
+
+    while (nHeight < nHeightEnd && !ShutdownRequested()) {
+
+        // Get available coins
+        std::vector<COutput> availableCoins;
+        if (fPoS && !pwalletMain->StakeableCoins(&availableCoins)) {
+            throw JSONRPCError(RPC_WALLET_INSUFFICIENT_FUNDS, "No available coins to stake");
+        }
+
         std::unique_ptr<CBlockTemplate> pblocktemplate(fPoS ?
-                                                       CreateNewBlock(CScript(), pwalletMain, fPoS) :
+                                                       CreateNewBlock(CScript(), pwalletMain, true, &availableCoins) :
                                                        CreateNewBlockWithKey(reservekey, pwalletMain));
         if (!pblocktemplate.get()) break;
         CBlock *pblock = &pblocktemplate->block;
@@ -180,7 +187,7 @@ UniValue generate(const JSONRPCRequest& request)
         }
 
         CValidationState state;
-        if (!ProcessNewBlock(state, nullptr, pblock))
+        if (!ProcessNewBlock(state, nullptr, pblock, nullptr, g_connman.get()))
             throw JSONRPCError(RPC_INTERNAL_ERROR, "ProcessNewBlock, block not accepted");
 
         ++nHeight;
@@ -325,8 +332,8 @@ UniValue prioritisetransaction(const JSONRPCRequest& request)
             "1. \"txid\"       (string, required) The transaction id.\n"
             "2. priority delta (numeric, required) The priority to add or subtract.\n"
             "                  The transaction selection algorithm considers the tx as it would have a higher priority.\n"
-            "                  (priority of a transaction is calculated: coinage * value_in_uucacoin / txsize) \n"
-            "3. fee delta      (numeric, required) The fee value (in uucacoin) to add (or subtract, if negative).\n"
+            "                  (priority of a transaction is calculated: coinage * value_in_ubc / txsize) \n"
+            "3. fee delta      (numeric, required) The fee value (in ubc) to add (or subtract, if negative).\n"
             "                  The fee is not actually paid, only the algorithm for selecting transactions into a block\n"
             "                  considers the transaction as it would have paid a higher (or lower) fee.\n"
 
@@ -396,7 +403,7 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
             "             n                        (numeric) transactions before this one (by 1-based index in 'transactions' list) that must be present in the final block if this one is\n"
             "             ,...\n"
             "         ],\n"
-            "         \"fee\": n,                   (numeric) difference in value between transaction inputs and outputs (in uucacoin); for coinbase transactions, this is a negative Number of the total collected block fees (ie, not including the block subsidy); if key is not present, fee is unknown and clients MUST NOT assume there isn't one\n"
+            "         \"fee\": n,                   (numeric) difference in value between transaction inputs and outputs (in ubc); for coinbase transactions, this is a negative Number of the total collected block fees (ie, not including the block subsidy); if key is not present, fee is unknown and clients MUST NOT assume there isn't one\n"
             "         \"sigops\" : n,               (numeric) total number of SigOps, as counted for purposes of block limits; if key is not present, sigop count is unknown and clients MUST NOT assume there aren't any\n"
             "         \"required\" : true|false     (boolean) if provided and true, this transaction must be in the final block\n"
             "      }\n"
@@ -405,7 +412,7 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
             "  \"coinbaseaux\" : {                  (json object) data that should be included in the coinbase's scriptSig content\n"
             "      \"flags\" : \"flags\"            (string) \n"
             "  },\n"
-            "  \"coinbasevalue\" : n,               (numeric) maximum allowable input to coinbase transaction, including the generation award and transaction fees (in uucacoin)\n"
+            "  \"coinbasevalue\" : n,               (numeric) maximum allowable input to coinbase transaction, including the generation award and transaction fees (in ubc)\n"
             "  \"coinbasetxn\" : { ... },           (json object) information for coinbase transaction\n"
             "  \"target\" : \"xxxx\",               (string) The hash target\n"
             "  \"mintime\" : xxx,                   (numeric) The minimum timestamp appropriate for next block time in seconds since epoch (Jan 1 1970 GMT)\n"
@@ -479,7 +486,10 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
     if (strMode != "template")
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid mode");
 
-    if (vNodes.empty())
+    if(!g_connman)
+        throw JSONRPCError(RPC_CLIENT_P2P_DISABLED, "Error: Peer-to-peer functionality missing or disabled");
+
+    if (g_connman->GetNodeCount(CConnman::CONNECTIONS_ALL) == 0)
         throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "UCACoin is not connected!");
 
     if (IsInitialBlockDownload())
@@ -625,18 +635,6 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
     result.push_back(Pair("bits", strprintf("%08x", pblock->nBits)));
     result.push_back(Pair("height", (int64_t)(pindexPrev->nHeight + 1)));
     result.push_back(Pair("votes", aVotes));
-
-
-    if (pblock->payee != CScript()) {
-        CTxDestination address1;
-        ExtractDestination(pblock->payee, address1);
-        result.push_back(Pair("payee", EncodeDestination(address1).c_str()));
-        result.push_back(Pair("payee_amount", (int64_t)pblock->vtx[0].vout[1].nValue));
-    } else {
-        result.push_back(Pair("payee", ""));
-        result.push_back(Pair("payee_amount", ""));
-    }
-
     result.push_back(Pair("enforce_masternode_payments", true));
 
     return result;
@@ -709,7 +707,7 @@ UniValue submitblock(const JSONRPCRequest& request)
     CValidationState state;
     submitblock_StateCatcher sc(block.GetHash());
     RegisterValidationInterface(&sc);
-    bool fAccepted = ProcessNewBlock(state, NULL, &block);
+    bool fAccepted = ProcessNewBlock(state, nullptr, &block, nullptr, g_connman.get());
     UnregisterValidationInterface(&sc);
     if (fBlockPresent) {
         if (fAccepted && !sc.found)
@@ -758,32 +756,38 @@ UniValue estimatefee(const JSONRPCRequest& request)
     return ValueFromAmount(feeRate.GetFeePerK());
 }
 
-UniValue estimatepriority(const JSONRPCRequest& request)
+UniValue estimatesmartfee(const JSONRPCRequest& request)
 {
     if (request.fHelp || request.params.size() != 1)
         throw std::runtime_error(
-            "estimatepriority nblocks\n"
-            "\nEstimates the approximate priority\n"
-            "a zero-fee transaction needs to begin confirmation\n"
-            "within nblocks blocks.\n"
-
-            "\nArguments:\n"
-            "1. nblocks     (numeric)\n"
-
-            "\nResult:\n"
-            "n :    (numeric) estimated priority\n"
-            "\n"
-            "-1.0 is returned if not enough transactions and\n"
-            "blocks have been observed to make an estimate.\n"
-
-            "\nExample:\n" +
-            HelpExampleCli("estimatepriority", "6"));
+                "estimatesmartfee nblocks\n"
+                "\nDEPRECATED. WARNING: This interface is unstable and may disappear or change!\n"
+                "\nEstimates the approximate fee per kilobyte needed for a transaction to begin\n"
+                "confirmation within nblocks blocks if possible and return the number of blocks\n"
+                "for which the estimate is valid.\n"
+                "\nArguments:\n"
+                "1. nblocks     (numeric)\n"
+                "\nResult:\n"
+                "{\n"
+                "  \"feerate\" : x.x,     (numeric) estimate fee-per-kilobyte (in BTC)\n"
+                "  \"blocks\" : n         (numeric) block number where estimate was found\n"
+                "}\n"
+                "\n"
+                "A negative value is returned if not enough transactions and blocks\n"
+                "have been observed to make an estimate for any number of blocks.\n"
+                "However it will not return a value below the mempool reject fee.\n"
+                "\nExample:\n"
+                + HelpExampleCli("estimatesmartfee", "6")
+        );
 
     RPCTypeCheck(request.params, boost::assign::list_of(UniValue::VNUM));
 
     int nBlocks = request.params[0].get_int();
-    if (nBlocks < 1)
-        nBlocks = 1;
 
-    return mempool.estimatePriority(nBlocks);
+    UniValue result(UniValue::VOBJ);
+    int answerFound;
+    CFeeRate feeRate = mempool.estimateSmartFee(nBlocks, &answerFound);
+    result.push_back(Pair("feerate", feeRate == CFeeRate(0) ? -1.0 : ValueFromAmount(feeRate.GetFeePerK())));
+    result.push_back(Pair("blocks", answerFound));
+    return result;
 }

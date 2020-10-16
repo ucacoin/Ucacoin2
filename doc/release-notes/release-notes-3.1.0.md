@@ -115,7 +115,7 @@ Backup to external devices / locations
 
  The UCACoin wallet can now have user selected directories for automatic backups of the wallet data file (wallet.dat). This can be set by adding the following lines to the ucacoin.conf file, found in the UCACoin data directory.
 - backuppath = <directory / full path>
-- zucacoinbackuppath = <directory / full path>
+- zucabackuppath = <directory / full path>
 - custombackupthreshold = <backup limit>
 Note: System write permissions must be appropriate for the location the wallet is being saved to.
 
@@ -127,7 +127,7 @@ Note: System write permissions must be appropriate for the location the wallet i
 ### Details:
 
 * If path is set to directory, the backup will be named `wallet.dat-<year>-<month>-<day>-<hour>-<minute>-<second>`
-* If zUCA backup, auto generated name is `wallet-autozucacoinbackup.dat-<year>-<month>-<day>-<hour>-<minute>-<second>`
+* If zUCA backup, auto generated name is `wallet-autozucabackup.dat-<year>-<month>-<day>-<hour>-<minute>-<second>`
 * If path set to file, backup will be named `<filename>.dat`
 * walletbackupthreshold enables the user to select the maximum count of backup files to be written before overwriting existing backups.
 

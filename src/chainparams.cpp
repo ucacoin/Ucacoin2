@@ -90,20 +90,20 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 	(384512, uint256("0xccc10dc1c8dac0bdf18bca760d1ad4973060efb9acd3619650850b90004c3d8c"))
 	(404832, uint256("0x1f09fc1468fd761234db3878592bd05dd65a666654e30b861eaec9bf587c6a41"))
 	(449847, uint256("0x0771d7de81212c4efe76869db1954d83f8ca11c78f2b041d120476087de3fd5f"))
-	; 
+	(465488, uint256("0xdc18bbc2b54ce87d4e07e866d445ff3efba2f1bb6ab02c6beaab6e2857639a50"))
+	;
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-	1601863095, // * UNIX timestamp of last checkpoint block
-	937262,    // * total number of transactions between genesis and last checkpoint
+	1602819345, // * UNIX timestamp of last checkpoint block
+	977034,     // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the UpdateTip debug.log lines)
-    1440        // * estimated number of transactions per day after checkpoint
+    1400        // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of
-    (0, uint256S("0x001"))
-	; 
+    (0, uint256S("0x001"));
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
     1591225230,
@@ -126,11 +126,10 @@ public:
         networkID = CBaseChainParams::MAIN;
         strNetworkID = "main";
 
-		//uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
         genesis = CreateGenesisBlock(1574349485, 35563, 0x1e0ffff0, 1, 0 * COIN);
-		consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256("0x000006db88545c962aa391c4bbdde70e2b64ddde90b0404743b0e3771218313e"));
-        assert(genesis.hashMerkleRoot == uint256("0x92ac13a3690650dcbbb93e004b2badd2b4408823f276b059cf5afdf2e7d1072f"));
+        consensus.hashGenesisBlock = genesis.GetHash();
+        assert(consensus.hashGenesisBlock == uint256S("0x000006db88545c962aa391c4bbdde70e2b64ddde90b0404743b0e3771218313e"));
+        assert(genesis.hashMerkleRoot == uint256S("0x92ac13a3690650dcbbb93e004b2badd2b4408823f276b059cf5afdf2e7d1072f"));
 
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.powLimit   = ~UINT256_ZERO >> 20;   // UCACoin starting difficulty is 1 / 2^12
@@ -155,8 +154,8 @@ public:
         // spork keys
         consensus.strSporkPubKey = "04f6224661f5216fba336683f8569811089ad112992b8a723d482a3aa6e208884757f5e52e7bc4c76205961682884038f7ef76c0324b13da0a80c41adb3bab881d";
         consensus.strSporkPubKeyOld = "02c0eb8ac943a62b75347f4ec2207502a7d8bb69550f7430caceb8f87381f7a150";
-        consensus.nTime_EnforceNewSporkKey = 1589570680;    //!> May 15, 2020 7:24:40 PM
-        consensus.nTime_RejectOldSporkKey = 1589587200;     //!> May 16, 2020 12:00:00 AM
+        consensus.nTime_EnforceNewSporkKey = 1589570680;    //!> August 26, 2019 11:00:00 PM GMT
+        consensus.nTime_RejectOldSporkKey = 1589587200;     //!> September 26, 2019 11:00:00 PM GMT
 
         // Network upgrades
         consensus.vUpgrades[Consensus::BASE_NETWORK].nActivationHeight =
@@ -183,23 +182,23 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x01;
-        pchMessageStart[1] = 0xf3;
-        pchMessageStart[2] = 0x02;
-        pchMessageStart[3] = 0xa4;
+		pchMessageStart[0] = 0x01;
+		pchMessageStart[1] = 0xf3;
+		pchMessageStart[2] = 0x02;
+		pchMessageStart[3] = 0xa4;
         nDefaultPort = 33210;
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-		vSeeds.push_back(CDNSSeedData("95.217.21.41", "95.217.21.41"));
-		vSeeds.push_back(CDNSSeedData("2a01:4f9:c010:66e3::1", "2a01:4f9:c010:66e3::1"));
-		vSeeds.push_back(CDNSSeedData("167.71.245.49", "167.71.245.49"));
-		vSeeds.push_back(CDNSSeedData("178.128.98.125", "178.128.98.125"));
-		vSeeds.push_back(CDNSSeedData("142.93.175.145", "142.93.175.145"));
-		vSeeds.push_back(CDNSSeedData("135.181.37.92", "135.181.37.92"));   
-
+		vSeeds.push_back(CDNSSeedData("95.217.21.41", "95.217.21.41", true));
+		vSeeds.push_back(CDNSSeedData("2a01:4f9:c010:66e3::1", "2a01:4f9:c010:66e3::1", true));
+		vSeeds.push_back(CDNSSeedData("167.71.245.49", "167.71.245.49", true));
+		vSeeds.push_back(CDNSSeedData("178.128.98.125", "178.128.98.125", true));
+		vSeeds.push_back(CDNSSeedData("142.93.175.145", "142.93.175.145", true));
+		vSeeds.push_back(CDNSSeedData("135.181.37.92", "135.181.37.92", true));
+		
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 68);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 130);
-        base58Prefixes[STAKING_ADDRESS] = std::vector<unsigned char>(1, 28);    
+        base58Prefixes[STAKING_ADDRESS] = std::vector<unsigned char>(1, 28);     // starting with 'S'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 192);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x01)(0x33)(0xB1)(0x2E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x01)(0x33)(0xAE)(0xE3).convert_to_container<std::vector<unsigned char> >();
@@ -207,6 +206,12 @@ public:
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0xde).convert_to_container<std::vector<unsigned char> >();
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
+
+        // Sapling
+        bech32HRPs[SAPLING_PAYMENT_ADDRESS]      = "ps";
+        bech32HRPs[SAPLING_FULL_VIEWING_KEY]     = "pviews";
+        bech32HRPs[SAPLING_INCOMING_VIEWING_KEY] = "pivks";
+        bech32HRPs[SAPLING_EXTENDED_SPEND_KEY]         = "p-secret-spending-key-main";
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const
@@ -230,8 +235,8 @@ public:
 
         genesis = CreateGenesisBlock(1454124731, 2402015, 0x1e0ffff0, 1, 250 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-       // assert(consensus.hashGenesisBlock == uint256S("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
-       // assert(genesis.hashMerkleRoot == uint256S("0x1b2ef6e2f28be914103a277377ae7729dcd125dfeb8bf97bd5964ba72b6dc39b"));
+        //assert(consensus.hashGenesisBlock == uint256S("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
+        //assert(genesis.hashMerkleRoot == uint256S("0x1b2ef6e2f28be914103a277377ae7729dcd125dfeb8bf97bd5964ba72b6dc39b"));
 
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.powLimit   = ~UINT256_ZERO >> 20;   // UCACoin starting difficulty is 1 / 2^12
@@ -256,8 +261,8 @@ public:
         // spork keys
         consensus.strSporkPubKey = "04E88BB455E2A04E65FCC41D88CD367E9CCE1F5A409BE94D8C2B4B35D223DED9C8E2F4E061349BA3A38839282508066B6DC4DB72DD432AC4067991E6BF20176127";
         consensus.strSporkPubKeyOld = "04A8B319388C0F8588D238B9941DC26B26D3F9465266B368A051C5C100F79306A557780101FE2192FE170D7E6DEFDCBEE4C8D533396389C0DAFFDBC842B002243C";
-        consensus.nTime_EnforceNewSporkKey = 1600531200;    //!> August 26, 2019 11:00:00 PM GMT
-        consensus.nTime_RejectOldSporkKey = 1600707600;     //!> September 26, 2019 11:00:00 PM GMT
+        consensus.nTime_EnforceNewSporkKey = 1566860400;    //!> August 26, 2019 11:00:00 PM GMT
+        consensus.nTime_RejectOldSporkKey = 1569538800;     //!> September 26, 2019 11:00:00 PM GMT
 
         // Network upgrades
         consensus.vUpgrades[Consensus::BASE_NETWORK].nActivationHeight =
@@ -309,6 +314,12 @@ public:
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
+
+        // Sapling
+        bech32HRPs[SAPLING_PAYMENT_ADDRESS]      = "ptestsapling";
+        bech32HRPs[SAPLING_FULL_VIEWING_KEY]     = "pviewtestsapling";
+        bech32HRPs[SAPLING_INCOMING_VIEWING_KEY] = "bcktestsapling";
+        bech32HRPs[SAPLING_EXTENDED_SPEND_KEY]         = "p-secret-spending-key-test";
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const
@@ -331,8 +342,8 @@ public:
 
         genesis = CreateGenesisBlock(1454124731, 2402015, 0x1e0ffff0, 1, 250 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-      //  assert(consensus.hashGenesisBlock == uint256S("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
-       // assert(genesis.hashMerkleRoot == uint256S("0x1b2ef6e2f28be914103a277377ae7729dcd125dfeb8bf97bd5964ba72b6dc39b"));
+        //assert(consensus.hashGenesisBlock == uint256S("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
+        //assert(genesis.hashMerkleRoot == uint256S("0x1b2ef6e2f28be914103a277377ae7729dcd125dfeb8bf97bd5964ba72b6dc39b"));
 
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.powLimit   = ~UINT256_ZERO >> 20;   // UCACoin starting difficulty is 1 / 2^12

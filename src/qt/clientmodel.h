@@ -87,6 +87,10 @@ public:
 
     bool getTorInfo(std::string& ip_port) const;
 
+    // Start/Stop the masternode polling timer
+    void startMasternodesTimer();
+    void stopMasternodesTimer();
+
 private:
     QString getMasternodeCountString() const;
     OptionsModel* optionsModel;

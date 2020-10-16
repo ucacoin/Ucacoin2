@@ -11,5 +11,5 @@ Type=Application
 Icon=${SNAP}/share/pixmaps/ucacoin_testnet.png
 MimeType=x-scheme-handler/uca;
 Categories=X-Office;X-Finance;
-Keywords=internet;ucacoin;zuca;tucacoin;core;wallet;qt;testnet;snap;launchpad;crypto;digital;currency;coin;token;zerocoin;
+Keywords=internet;ucacoin;zuca;tbc;core;wallet;qt;testnet;snap;launchpad;crypto;digital;currency;coin;token;zerocoin;
 Version=1.0

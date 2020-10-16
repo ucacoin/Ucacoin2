@@ -77,6 +77,7 @@ git merge commit are mentioned.
 
 ### RPC and other APIs
 - #366 `f361344` Do not stringify beyond OP_ZEROCOINSPEND for CScript::ToString() (presstab)
+- #385 `732bfb0` getspentzerocoinamount RPC call. (whateverpal)
 - #417 `f97b409` [RPC] Fix typo for `obfuscation` RPC command (Patrick Collins)
 
 ### Block and Transaction Handling

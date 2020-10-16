@@ -17,7 +17,7 @@
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@.@CLIENT_VERSION_BUILD@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers, 2015-@COPYRIGHT_YEAR@ The ucacoin developers</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@.@CLIENT_VERSION_BUILD@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers, 2015-@COPYRIGHT_YEAR@ The UCACoin developers</string>
 
   <key>CFBundleShortVersionString</key>
   <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@</string>
@@ -38,7 +38,7 @@
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>io.ucacoin.UcaCoin-Qt</string>
+  <string>io.ucacoin.UCACoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.ucacoin.UcaCoinPayment</string>
+      <string>io.ucacoin.UCACoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>ucacoin</string>
@@ -60,7 +60,7 @@
       <key>UTTypeIdentifier</key>
       <string>io.ucacoin.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>UcaCoin payment request</string>
+      <string>UCACoin payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>

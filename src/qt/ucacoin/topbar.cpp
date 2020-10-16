@@ -1,4 +1,3 @@
-// Copyright (c) 2019-2020 The PIVX developers
 // Copyright (C) 2019-2020 The ucacoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -53,9 +52,9 @@ TopBar::TopBar(UCACoinGUI* _mainWindow, QWidget *parent) :
 
     // Amount information top
     ui->widgetTopAmount->setVisible(false);
-    setCssProperty({ui->labelAmountTopUca}, "amount-small-topbar");
+    setCssProperty({ui->labelAmountTopBc}, "amount-small-topbar");
     setCssProperty({ui->labelAmountUca}, "amount-topbar");
-    setCssProperty({ui->labelPendingUca, ui->labelImmatureUca}, "amount-small-topbar");
+    setCssProperty({ui->labelPendingBc, ui->labelImmatureBc}, "amount-small-topbar");
 
     // Progress Sync
     progressBar = new QProgressBar(ui->layoutSync);
@@ -616,15 +615,11 @@ void TopBar::updateDisplayUnit()
         int displayUnitPrev = nDisplayUnit;
         nDisplayUnit = walletModel->getOptionsModel()->getDisplayUnit();
         if (displayUnitPrev != nDisplayUnit)
-            updateBalances(walletModel->getBalance(), walletModel->getUnconfirmedBalance(), walletModel->getImmatureBalance(),
-                           walletModel->getWatchBalance(), walletModel->getWatchUnconfirmedBalance(), walletModel->getWatchImmatureBalance(),
-                           walletModel->getDelegatedBalance(), walletModel->getColdStakedBalance());
+            updateBalances(walletModel->GetWalletBalances());
     }
 }
 
-void TopBar::updateBalances(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance,
-                            const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance,
-                            const CAmount& delegatedBalance, const CAmount& coldStakedBalance)
+void TopBar::updateBalances(const interfaces::WalletBalances& newBalance)
 {
     // Locked balance. //TODO move this to the signal properly in the future..
     CAmount nLockedBalance = 0;
@@ -634,15 +629,15 @@ void TopBar::updateBalances(const CAmount& balance, const CAmount& unconfirmedBa
     ui->labelTitle1->setText(nLockedBalance > 0 ? tr("Available (Locked included)") : tr("Available"));
 
     // UCA Total
-    QString totalUca = GUIUtil::formatBalance(balance, nDisplayUnit);
+    QString totalBc = GUIUtil::formatBalance(newBalance.balance, nDisplayUnit);
 
     // UCA
     // Top
-    ui->labelAmountTopUca->setText(totalUca);
+    ui->labelAmountTopBc->setText(totalBc);
     // Expanded
-    ui->labelAmountUca->setText(totalUca);
-    ui->labelPendingUca->setText(GUIUtil::formatBalance(unconfirmedBalance, nDisplayUnit));
-    ui->labelImmatureUca->setText(GUIUtil::formatBalance(immatureBalance, nDisplayUnit));
+    ui->labelAmountUca->setText(totalBc);
+    ui->labelPendingBc->setText(GUIUtil::formatBalance(newBalance.unconfirmed_balance, nDisplayUnit));
+    ui->labelImmatureBc->setText(GUIUtil::formatBalance(newBalance.immature_balance, nDisplayUnit));
 }
 
 void TopBar::resizeEvent(QResizeEvent *event)
@@ -682,7 +677,7 @@ void TopBar::updateHDState(const bool& upgraded, const QString& upgradeError)
             }
         } else {
             inform(tr("Wallet upgraded successfully, but no backup created.") + "\n" +
-                    tr("WARNING: remember to make a copy of your wallet.dat file!"));
+                    tr("WARNING: remember to make a copy of your wallet file!"));
         }
     } else {
         warn(tr("Upgrade Wallet Error"), upgradeError);

@@ -59,7 +59,7 @@ public:
 
     size_t DynamicMemoryUsage() const { return 0; }
 
-    uint256 GetHash();
+    uint256 GetHash() const;
 
 };
 
@@ -268,7 +268,6 @@ public:
 
     // Compute modified tx size for priority calculation (optionally given tx size)
     unsigned int CalculateModifiedSize(unsigned int nTxSize=0) const;
-
 
     bool IsCoinBase() const
     {

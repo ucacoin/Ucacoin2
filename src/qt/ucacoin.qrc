@@ -3,6 +3,7 @@
         <file alias="bitcoin">res/icons/bitcoin.png</file>
         <file alias="bitcoin_testnet">res/icons/bitcoin_testnet.png</file>
         <file alias="bitcoin_regtest">res/icons/bitcoin_regtest.png</file>
+        <file alias="overview">res/icons/overview.png</file>
         <file alias="ic-transaction-mint">res/icons/ic-transaction-mint.png</file>
         <file alias="ic-transaction-received">res/icons/ic-transaction-received.png</file>
         <file alias="ic-transaction-sent">res/icons/ic-transaction-sent.png</file>
@@ -11,6 +12,7 @@
         <file alias="lock_open">res/icons/lock_open.png</file>
     </qresource>
     <qresource prefix="/css">
+        <file>res/css/default.css</file>
         <file alias="default-dark">ucacoin/res/css/style_dark.css</file>
         <file alias="default">ucacoin/res/css/style_light.css</file>
     </qresource>
@@ -18,7 +20,6 @@
         <file alias="about">res/images/about.png</file>
     </qresource>
     <qresource prefix="/">
-        <file alias="bg-splash">ucacoin/res/img/bg-splash.png</file>
         <file alias="bg-splash-png">ucacoin/res/img/bg-splash.png</file>
         <file alias="img-logo-ucacoin-png">ucacoin/res/img/img-logo-ucacoin.png</file>
         <file alias="img-logo-ucacoin-2x">ucacoin/res/img/img-logo-ucacoin@2x.png</file>
@@ -181,6 +182,7 @@
         <file alias="ic-arrow-drop-down-purple">ucacoin/res/img/ic-arrow-drop-down-purple.png</file>
         <file alias="ic-arrow-drop-up-purple">ucacoin/res/img/ic-arrow-drop-up-purple.png</file>
         <file alias="img-logo-ucacoin">ucacoin/res/img/img-logo-ucacoin.png</file>
+        <file alias="bg-welcome-container">ucacoin/res/img/bg-welcome-container.png</file>
         <file alias="bg-welcome">ucacoin/res/img/bg-welcome.png</file>
         <file alias="bg-welcome-container-png">ucacoin/res/img/bg-welcome-container.png</file>
         <file alias="bg-welcome-container-2x">ucacoin/res/img/bg-welcome-container@2x.png</file>

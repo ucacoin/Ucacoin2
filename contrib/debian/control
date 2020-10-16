@@ -61,4 +61,4 @@ Description: peer-to-peer network based digital currency - Qt GUI
  Full transaction history is stored locally at each client.  This
  requires 18.5+ GB of space, slowly growing.
  .
- This package provides UcaCoin-Qt, a GUI for UCACoin based on Qt.
+ This package provides UCACoin-Qt, a GUI for UCACoin based on Qt.

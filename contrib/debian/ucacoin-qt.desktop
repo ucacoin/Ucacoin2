@@ -10,4 +10,4 @@ Type=Application
 Icon=ucacoin128
 MimeType=x-scheme-handler/ucacoin;
 Categories=Office;Finance;
-StartupWMClass=UcaCoin-qt
+StartupWMClass=UCACoin-qt

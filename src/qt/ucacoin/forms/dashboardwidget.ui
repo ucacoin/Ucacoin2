@@ -663,7 +663,7 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLabel" name="labelSquareUcaCoin">
+                 <widget class="QLabel" name="labelSquareBc">
                   <property name="minimumSize">
                    <size>
                     <width>14</width>
@@ -682,7 +682,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="labelUcaCoin">
+                 <widget class="QLabel" name="labelBc">
                   <property name="text">
                    <string notr="true">UCA</string>
                   </property>
