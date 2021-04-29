@@ -3949,9 +3949,7 @@ There was an error trying to save the address list to %1. Please try again.</tra
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           We have support channels in most of our official chat groups, for example
-                           &lt;a style='color: #b07d00' href='https://discord.UCACoin.org'&gt;
-                           #support in our Discord&lt;/a&gt;.
+                           We have support channels in most of our official chat groups.
                            If you prefer to submit a ticket, You can do so at
                            &lt;a style='color: #b07d00' href='https://UCACoin.freshdesk.com'&gt;
                            our Freshdesk support site&lt;/a&gt;.
@@ -3959,9 +3957,7 @@ There was an error trying to save the address list to %1. Please try again.</tra
                          </source>
         <translation>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           We have support channels in most of our official chat groups, for example
-                           &lt;a style='color: #b07d00' href='https://discord.UCACoin.org'&gt;
-                           #support in our Discord&lt;/a&gt;.
+                           We have support channels in most of our official chat groups.
                            If you prefer to submit a ticket, You can do so at
                            &lt;a style='color: #b07d00' href='https://UCACoin.freshdesk.com'&gt;
                            our Freshdesk support site&lt;/a&gt;.

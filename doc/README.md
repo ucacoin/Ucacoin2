@@ -29,7 +29,6 @@ Drag UCACoin-Qt to your applications folder, and then run UCACoin-Qt.
 * See the documentation at the [UCACoin Wiki](https://github.com/UCACoin-Project/UCACoin/wiki)
 for help and more information.
 * Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [UCACoin Forum](http://forum.ucacoin.org/).
-* Join our Discord server [Discord Server](https://discord.ucacoin.org)
 
 Building
 ---------------------
@@ -57,7 +56,6 @@ The UCACoin repo's [root README](/README.md) contains relevant information on th
 
 ### Resources
 * Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [UCACoin](http://forum.ucacoin.org/) forum.
-* Join the [UCACoin Discord](https://discord.ucacoin.org).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
