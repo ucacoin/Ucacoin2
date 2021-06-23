@@ -445,30 +445,26 @@ static const unsigned int REJECT_ALREADY_KNOWN = 0x101;
 /** Transaction conflicts with a transaction already known */
 static const unsigned int REJECT_CONFLICT = 0x102;
 
-inline int64_t GetMNCollateral(int nHeight) {
+inline int64_t GetMNCollateral()
+{
+	int nHeight = chainActive.Height();
 
-	nHeight = chainActive.Height();
-
-	if (nHeight < 350000) {
+	if( nHeight < 350000) 
 		return 150000;		// MASTERNODE_COLLATERAL
-	}
-	else if (nHeight < 450000 && nHeight >= 350000) {
+	
+    if( nHeight < 450000 ) 
 		return 300000;		// MASTERNODE_COLLATERAL2
-	}
-	else if (nHeight < 550000 && nHeight >= 450000) {
+	
+	if( nHeight < 550000 ) 
 		return 500000;		// MASTERNODE_COLLATERAL3
-	}
-	else if (nHeight < 650000 && nHeight >= 550000) {
+	
+	if( nHeight < 650000 ) 
 		return 800000;		// MASTERNODE_COLLATERAL4
-	}
-	else if (nHeight < 750000 && nHeight >= 650000) {
+	
+	if( nHeight < 750000 ) 
 		return 1000000;		// MASTERNODE_COLLATERAL5
-	}
-	else if (nHeight >= 750000) {
-		return 150000;		// MASTERNODE_COLLATERAL6
-	}
 
-	return 150000;
+	return 1500000;         // MASTERNODE_COLLATERAL6
 }
 
 #endif // BITCOIN_MAIN_H

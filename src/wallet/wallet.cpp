@@ -1347,7 +1347,7 @@ CAmount CWalletTx::GetLockedCredit() const
         }
 
         // Add masternode collaterals which are handled like locked coins
-        else if (fMasterNode && vout[i].nValue == GetMNCollateral(chainActive.Height()) * COIN) {
+        else if (fMasterNode && vout[i].nValue == GetMNCollateral() * COIN) {
             nCredit += pwallet->GetCredit(txout, ISMINE_SPENDABLE);
         }
 
@@ -1941,8 +1941,9 @@ bool CWallet::GetMasternodeVinAndKeys(CTxIn& txinRet, CPubKey& pubKeyRet, CKey& 
     CTxOut txOut = wtx.vout[nOutputIndex];
 
     // Masternode collateral value
-    if (txOut.nValue != GetMNCollateral(chainActive.Height()) * COIN) {
-        strError = "Invalid collateral tx value, must be 10,000 UCA";
+    int64_t coll = GetMNCollateral();
+    if (txOut.nValue != coll * COIN) {
+        strError = "Invalid collateral tx value, must be "+std::to_string(coll)+" UCA";
         return error("%s: tx %s, index %d not a masternode collateral", __func__, strTxHash, nOutputIndex);
     }
 
@@ -2013,7 +2014,7 @@ bool CWallet::AvailableCoins(std::vector<COutput>* pCoins,      // --> populates
             for (unsigned int i = 0; i < pcoin->vout.size(); i++) {
 
                 // Check for only 10k utxo
-                if (nCoinType == ONLY_10000 && pcoin->vout[i].nValue != GetMNCollateral(chainActive.Height()) * COIN) continue;
+                if (nCoinType == ONLY_10000 && pcoin->vout[i].nValue != GetMNCollateral() * COIN) continue;
 
                 // Check if the utxo was spent.
                 if (IsSpent(wtxid, i)) continue;
