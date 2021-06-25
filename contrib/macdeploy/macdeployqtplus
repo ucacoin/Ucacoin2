@@ -554,7 +554,8 @@ if len(config.fancy) == 1:
         sys.exit(1)
 
     try:
-        fancy = plistlib.readPlist(p)
+        with open(p, 'rb') as fp:
+            fancy = plistlib.load(fp)
     except:
         if verbose >= 1:
             sys.stderr.write("Error: Could not parse fancy disk image plist at \"%s\"\n" % (p))
@@ -874,3 +875,4 @@ if verbose >= 2:
     print("+ Done +")
 
 sys.exit(0)
+
