@@ -42,17 +42,7 @@ Masternode Governance:
 ```
 # Debian/Ubuntu Linux Daemon Build Instructions
 
-```
-git clone https://github.com/ucacoin/Ucacoin2.git
-cd Ucacoin2
-./autogen.sh
-./configure --disable-tests
-make -j2 (2 is must be changed for number os Cpus that have VPS)
-cd src
-strip ucacoind ucacoin-cli
-./ucacoind -daemon
-
-```
+See [doc/BUILD.md](doc/BUILD.md) for build instaructions.
 
 # Docker
 

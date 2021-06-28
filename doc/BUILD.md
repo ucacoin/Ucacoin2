@@ -48,6 +48,7 @@ Once this is prepared, compilation steps are common to the Linux ones.
 cd /Ucacoin2/depends
 make HOST=x86_64-w64-mingw32
 cd /Ucacoin2
+make clean # to cleanup up previous linux (or whatever) builds
 ./autogen.sh
 CONFIG_SITE=$(pwd)/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/ --disable-online-rust
 make
