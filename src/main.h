@@ -445,9 +445,11 @@ static const unsigned int REJECT_ALREADY_KNOWN = 0x101;
 /** Transaction conflicts with a transaction already known */
 static const unsigned int REJECT_CONFLICT = 0x102;
 
-inline int64_t GetMNCollateral()
+inline int64_t GetMNCollateral(int protocolVersion=-1)
 {
 	int nHeight = chainActive.Height();
+    if( protocolVersion < 0 )
+        protocolVersion = PROTOCOL_VERSION;
 
 	if( nHeight < 350000) 
 		return 150000;		// MASTERNODE_COLLATERAL
@@ -463,6 +465,10 @@ inline int64_t GetMNCollateral()
 	
 	if( nHeight < 750000 ) 
 		return 1000000;		// MASTERNODE_COLLATERAL5
+
+    // be gentle with wrong collateral for clients V3.3.0
+    if ( protocolVersion == PEER_PROTO_VERSION_WRONG_MN_COLL )
+        return 150000; 
 
 	return 1500000;         // MASTERNODE_COLLATERAL6
 }
